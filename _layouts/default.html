@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }}{% if page.date %} - {{ page.date | date: "%B %Y" }}{% endif %} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<meta name="author" content="Prollad">
+<!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title | default: site.title }}">
+  <meta name="twitter:description" content="{{ page.description | default: site.description }}">
+  <meta name="twitter:image" content="{{ page.image | default: site.image }}">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{{ page.image | default: site.image }}">
+
+  <!-- Last Modified Date -->
+  <meta name="last-modified" content="{{ page.last_modified_at | date: '%Y-%m-%dT%H:%M:%S%:z' }}">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css' rel='stylesheet'/>
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<link rel="icon" href="{{ site.baseurl }}/assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{ site.baseurl }}/"><i class="bi bi-gift-fill"></i> <b>Bonus Collector</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+      <ul class="navbar-nav">
+      <li class="nav-item">
+      <a class="nav-link" href="{{ site.baseurl }}/">Home</a>
+      </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ site.baseurl }}/about/">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ site.baseurl }}/contact/">Contact</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+            <li><a class="dropdown-item" href="{{ site.baseurl }}/privacy-policy/">Privacy Policy</a></li>
+            <li><a class="dropdown-item" href="{{ site.baseurl }}/disclaimer/">Disclaimer</a></li>
+            <li><a class="dropdown-item" href="{{ site.baseurl }}/dmca/">DMCA</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  </header>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{{ site.baseurl }}/"><i class="bi bi-house-fill"></i> Home</a></li>
+    {% if page.categories %}
+      {% for category in page.categories %}
+        <li class="breadcrumb-item"><a href="{{ site.baseurl }}/{{ category | downcase }}/">{{ category }}</a></li>
+      {% endfor %}
+    {% endif %}
+    <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+  </ol>
+</nav>
+
+<!--search start -->
+{% if page.url == "/" %}
+<div class="container mt-4">
+  <div class="input-group">
+    <input type="search" id="search-input" class="form-control" placeholder="Search for Games..." aria-label="Search">
+    <div class="input-group-append">
+      <button class="btn btn-primary" type="button">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </div>
+  <div id="results-container" class="mt-4"></div>
+</div>
+{% endif %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simple-jekyll-search/1.7.2/simple-jekyll-search.min.js"></script>
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '{{ site.baseurl }}/search.json',
+    searchResultTemplate: '<div><a href="{url}">{title}</a></div>',
+    noResultsText: 'No results found',
+    limit: 10,
+    fuzzy: false
+  });
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!-- search end -->
+
+  <main class="container">
+    {{ content }}
+  </main>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p>Copyright &copy; <script type='text/javascript'>var creditsyear = new Date();document.write(creditsyear.getFullYear());</script> | <a href="{{ site.baseurl }}/">Bonus Collector</a>. All Rights Reserved.</p>
+<p>
+  <a href="{{ site.baseurl }}/about" class="text-white">About</a> |
+  <a href="{{ site.baseurl }}/contact/" class="text-white">Contact</a>
+</p>
+    </div>
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
