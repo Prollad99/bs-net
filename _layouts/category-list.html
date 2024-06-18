@@ -1,0 +1,81 @@
+---
+layout: default
+---
+
+<!-- Post Content -->
+<div class="card shadow-sm mb-2">
+  <div class="card-body">
+  <h1>{{ page.title }}</h1>
+<p class="post-meta">By {{ page.author }} on {{ page.date | date: "%B %d, %Y" }}</p>
+<p>Last modified on {{ page.last_modified_at | date: "%B %d, %Y" }}</p>
+  {{ content }}
+
+{% if page.tags %}
+  <div class="tags mt-3 mb-3">
+    <span class="badge badge-primary">Tags:</span>
+    {% for tag in page.tags %}
+      <a href="{{ site.baseurl }}/tag/{{ tag }}" class="badge badge-secondary">{{ tag }}</a>
+    {% endfor %}
+  </div>
+{% endif %}
+
+<div class="social-share mt-4">
+  <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank" class="btn btn-primary mb-2 me-2">
+    <i class="bi bi-facebook"></i> Share on Facebook
+  </a>
+  <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" target="_blank" class="btn btn-info mb-2 me-2">
+    <i class="bi bi-twitter"></i> Tweet
+  </a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank" class="btn btn-primary mb-2 me-2">
+    <i class="bi bi-linkedin"></i> Share on LinkedIn
+  </a>
+  <a href="https://reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank" class="btn btn-danger mb-2 me-2">
+    <i class="bi bi-reddit"></i> Share on Reddit
+  </a>
+  <a href="https://api.whatsapp.com/send?text={{ page.title }} {{ site.url }}{{ page.url }}" target="_blank" class="btn btn-success mb-3 me-2">
+    <i class="bi bi-whatsapp"></i> Share on WhatsApp
+  </a>
+</div>
+
+  <!-- List of Posts in the Same Category -->
+  <h2>Other Games in {{ page.categories | first | capitalize }}</h2>
+  <ul>
+    {% assign category = page.categories | first %}
+    {% for post in site.categories[category] %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+
+<!-- List of All Posts -->
+  <h2>All Games</h2>
+
+<div class="container mt-4">
+  <div class="input-group">
+    <input type="search" id="search-input" class="form-control" placeholder="Search for Games..." aria-label="Search">
+    <div class="input-group-append">
+      <button class="btn btn-primary" type="button">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </div>
+  <div id="results-container" class="mt-4"></div>
+</div>
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '{{ site.baseurl }}/search.json',
+    searchResultTemplate: '<div><a href="{url}">{title}</a></div>',
+    noResultsText: 'No results found',
+    limit: 10,
+    fuzzy: false
+  });
+</script>
+
+  <ul>
+    {% for post in site.posts %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+  </div>
+        </div>
