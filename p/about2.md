@@ -3,6 +3,7 @@ layout: post
 title: "About"
 author: "Prollad"
 date: 2024-06-18
+permalink: /about2/
 ---
 
 ## About BonusCollector.Net
