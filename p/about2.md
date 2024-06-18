@@ -12,7 +12,7 @@ BonusCollector.Net is a premier online platform dedicated to helping gamers unlo
 
 ## Our Founder: Prollad Mondal
 
-<img alt="author" width="100%" src="/assets/images/author.jpg"/>
+{% include bingo-blitz.html %}
 
 Prollad Mondal is an avid gamer and entrepreneur with a passion for enhancing the gaming community. As the Founder and CEO of BonusCollector.Net, he has leveraged his extensive knowledge and expertise to create a one-stop destination for gamers seeking to maximize their in-game achievements and enjoyment.
 
