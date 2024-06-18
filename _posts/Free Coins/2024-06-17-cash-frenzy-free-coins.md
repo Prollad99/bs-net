@@ -2,7 +2,6 @@
 layout: category-list
 title: "Cash Frenzy Free Coins"
 description: "Get Cash Frenzy free coins easily. Discover how to collect Cash Frenzy casino free coins through Twitter, in-game events, and more. Maximize your free Cash Frenzy chips today."
-permalink: /cash-frenzy-free-coins/
 author: "Prollad"
 date: 2024-06-17
 categories: Free-Coins
