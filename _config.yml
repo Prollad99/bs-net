@@ -14,8 +14,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-last-modified-at
 
-permalink: /:title/
-
 collections:
   pages:
     output: true
