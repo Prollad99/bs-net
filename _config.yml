@@ -1,0 +1,21 @@
+title: Bonus Collector
+description: Get free coins, chips, spins, and various other rewards on our website. Enjoy exclusive bonuses and elevate your gaming experience with our daily updated offers and tips.
+baseurl: "" # Leave this empty or set it to the subpath of your site if any
+url: "https://bonuscollector.net" # Replace with your actual site URL
+
+# Build settings
+markdown: kramdown
+
+paginate: 20
+paginate_path: "/page:num/"
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-last-modified-at
+
+permalink: /:title/
+
+collections:
+  pages:
+    output: true
