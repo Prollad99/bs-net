@@ -2,7 +2,7 @@
 layout: post
 title: "About"
 author: "Prollad"
-date: 2024-06-13
+date: 2024-06-18
 permalink: /about/
 ---
 
