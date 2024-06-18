@@ -20,7 +20,7 @@ Match Masters free gifts are first shared on this website which we collect from 
 
 Match Masters Free Gifts are promotional rewards designed to enhance players' experiences in the Match Masters mobile game. These rewards, usually provided by the game developers, offer players benefits such as additional boosters, stickers, or special in-game items. By clicking on valid reward links, players can extend their gameplay and potentially improve their chances of winning.
 
-<img alt="match masters free gifts" width="100%" src="/assets/images/match-masters-free-gifts.jpg"/>
+![match masters free gifts](/assets/images/match-masters-free-gifts.jpg)
 
 Free gifts in Match Masters are virtual items that players can obtain without spending real money. These gifts are utilized to play various game modes and engage in other activities within the game. They can be earned as daily bonuses or as rewards for completing specific challenges or achievements. Acquiring free gifts and items enables players to continue playing even when their initial resources are low.
 
