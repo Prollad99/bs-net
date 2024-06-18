@@ -15,7 +15,3 @@ plugins:
   - jekyll-last-modified-at
 
 permalink: /:categories/:year/:month/:day/:title/
-
-collections:
-  pages:
-    output: true
