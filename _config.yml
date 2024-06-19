@@ -19,6 +19,3 @@ permalink: /:title/
 collections:
   pages:
     output: true
-
-# Global last modified date
-last_modified_at: 2024-06-19 15:30:00 +0000
