@@ -66,3 +66,10 @@ jobs:
           else
             echo "No changes to commit"
           fi
+
+      - name: Set output status
+        id: set-output
+        run: echo "::set-output name=status::success"
+
+    outputs:
+      status: ${{ steps.set-output.outputs.status }}
