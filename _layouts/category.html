@@ -40,6 +40,8 @@ layout: default
 </a>
             <p class="card-meta">
               <small>By {{ post.author }} on {{ post.date | date: "%B %d, %Y" }}</small>
+              <br>
+              <small>Last updated on {{ site.time | date: '%B %d, %Y' }}</small>
             </p>
   <p class="card-text">{{ post.excerpt }}</p>
   <a href="{{ post.url }}" class="btn btn-primary">Claim Now</a>
