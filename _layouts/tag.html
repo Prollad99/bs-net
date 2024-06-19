@@ -2,21 +2,25 @@
 layout: default
 ---
 
-<div class="container mt-5">
+<div class="row mt-4">
+<h1>Posts Tagged with "{{ page.tag }}"</h1>
   {% for post in site.tags[page.tag] %}
+  <div class="col-md-4">
   <div class="card mb-4">
-    <div class="card-header text-white bg-primary">
-      {{ post.title }}
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">{{ post.title }}</h5>
-      <p class="card-text">
-        By {{ post.author }} on {{ post.date | date: "%B %d, %Y" }} <br>
-        Last updated on {{ site.time | date: '%B %d, %Y' }}
-      </p>
-      <p class="card-text">{{ post.excerpt }}</p>
-      <a href="{{ post.url }}" class="btn btn-primary">Claim Now</a>
-    </div>
+  <img class="card-img-top" src="{{ post.image }}" alt="Card image cap">
+  <div class="card-body">
+<a href="{{ post.url }}">
+  <h5 class="card-title">{{ post.title }}</h5>
+</a>
+            <p class="card-meta">
+              <small>By {{ post.author }} on {{ post.date | date: "%B %d, %Y" }}</small>
+              <br>
+              <small>Last updated on {{ site.time | date: '%B %d, %Y' }}</small>
+            </p>
+  <p class="card-text">{{ post.excerpt }}</p>
+  <a href="{{ post.url }}" class="btn btn-primary">Claim Now</a>
+  </div>
+  </div>
   </div>
   {% endfor %}
-</div>
+  </div>
