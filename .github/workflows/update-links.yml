@@ -69,7 +69,7 @@ jobs:
 
       - name: Set output status
         id: set-output
-        run: echo "::set-output name=status::success"
+        run: echo "::set-output name=status::completed"
 
     outputs:
       status: ${{ steps.set-output.outputs.status }}
