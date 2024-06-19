@@ -19,8 +19,3 @@ permalink: /:title/
 collections:
   pages:
     output: true
-
-# Last modified date settings
-last-modified-at:
-  enabled: true
-  cache: false
