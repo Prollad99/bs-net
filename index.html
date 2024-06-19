@@ -17,7 +17,7 @@ layout: default
             <p class="card-meta">
               <small>By {{ post.author }} on {{ post.date | date: "%B %d, %Y" }}</small>
               <br>
-              <small>Last modified on {{ post.last_modified_at | date: "%B %d, %Y" }}</small>
+              <small>Last updated on {{ site.time | date: '%B %d, %Y' }}</small>
             </p>
             <p class="card-text">{{ post.excerpt }}</p>
             <a href="{{ post.url }}" class="btn btn-primary">Claim Now</a>
