@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        game: [hit-it-rich, huuuge-casino, pop-slots, jackpot-world, slotomania, house-of-fun, coin-master, monopoly-go, crazy-fox, bingo-blitz, match-masters, willy-wonka, bingo-bash, caesars-slots, cash-frenzy]
+        game: [hit-it-rich, huuuge-casino, pop-slots, jackpot-world, slotomania, house-of-fun, coin-master, monopoly-go, crazy-fox, bingo-blitz, match-masters, willy-wonka, bingo-bash, caesars-slots, cash-frenzy, island-king]
 
     steps:
       - name: Checkout repository
