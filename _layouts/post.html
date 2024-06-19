@@ -7,7 +7,7 @@ layout: default
 
           <h1 class="card-title">{{ page.title }}</h1>
 <p class="post-meta">By {{ page.author }} on {{ page.date | date: "%B %d, %Y" }}</p>
-<p>Last modified on {{ page.last_modified_at | date: "%B %d, %Y" }}</p>
+<p>Last updated on {{ site.time | date: '%B %d, %Y' }}</p>
           <div class="card-text">{{ content }}</div>
 
 {% if page.tags %}
