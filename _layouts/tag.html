@@ -2,8 +2,9 @@
 layout: default
 ---
 
+<div class="container">
+  <h1 class="my-4">{{ page.tag }}</h1>
 <div class="row mt-4">
-<h1>Posts Tagged with "{{ page.tag }}"</h1>
   {% for post in site.tags[page.tag] %}
   <div class="col-md-4">
   <div class="card mb-4">
@@ -24,3 +25,4 @@ layout: default
   </div>
   {% endfor %}
   </div>
+</div>
