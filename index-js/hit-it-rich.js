@@ -18,7 +18,6 @@ axios.get(url)
 
     console.log('Fetched links:', links);
 
-    // Ensure the directory exists
     const dir = 'links-json';
     if (!fs.existsSync(dir)){
       fs.mkdirSync(dir);
@@ -30,5 +29,5 @@ axios.get(url)
   })
   .catch(err => {
     console.error('Error fetching links:', err);
-    process.exit(1); // Exit with an error code
+    process.exit(1);
   });
