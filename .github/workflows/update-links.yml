@@ -1,12 +1,3 @@
-name: Update Links and Deploy
-
-on:
-  schedule:
-    - cron: '*/30 * * * *' # Runs every 30 minutes
-  push:
-    branches:
-      - main
-
 jobs:
   update-links:
     runs-on: ubuntu-latest
@@ -31,7 +22,6 @@ jobs:
           - island-king
           - cashman-casino
           - piggy-go
-          # Add more games as needed
 
     steps:
       - name: Checkout repository
