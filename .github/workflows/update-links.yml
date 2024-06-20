@@ -67,30 +67,16 @@ jobs:
           git config --global user.email "prolladmail@gmail.com"
           git config --global user.name "Prollad99"
 
-      - name: Check for Changes
-        run: git diff --exit-code || exit 0
-
-      - name: Commit and Push changes with Retry
+      - name: Commit and Push changes
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         run: |
           git add _includes/${{ matrix.game }}.html links-json/${{ matrix.game }}.json
           git diff --exit-code || git commit -m "Update ${{ matrix.game }} reward links"
           
-          # Add stash to handle uncommitted changes
-          if ! git diff --quiet; then
-            git stash push -m "stash before rebase"
-          fi
+          # Pull with rebase and handle uncommitted changes
+          git stash push -m "stash before rebase" || true
+          git pull --rebase || true
+          git stash pop || true
 
-          for i in {1..5}; do
-            if git pull --rebase && git push https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/Prollad99/bs-net.git; then
-              break
-            else
-              sleep 10
-            fi
-          done
-
-          # Apply stash if it exists
-          if git stash list | grep -q "stash before rebase"; then
-            git stash pop
-          fi
+          git push https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/Prollad99/bs-net.git
