@@ -39,7 +39,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14.x' # Ensure the correct Node.js version
+          node-version: '14'
 
       - name: Cache node modules
         uses: actions/cache@v2
@@ -73,6 +73,7 @@ jobs:
 
       - name: Check for Changes
         run: |
+          git status
           git add _includes/${{ matrix.game }}.html links-json/${{ matrix.game }}.json
           git diff --exit-code || git commit -m "Update ${{ matrix.game }} reward links"
 
