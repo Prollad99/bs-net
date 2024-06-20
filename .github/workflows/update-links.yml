@@ -74,13 +74,24 @@ jobs:
       - name: Check for Changes
         run: |
           git status
-          git add _includes/${{ matrix.game }}.html links-json/${{ matrix.game }}.json
-          git diff --exit-code || git commit -m "Update ${{ matrix.game }} reward links"
+          if ! git diff --quiet; then
+            git stash --include-untracked
+          fi
+
+      - name: Pull with Rebase
+        run: |
+          git pull --rebase
+
+      - name: Apply Stashed Changes (if any)
+        run: |
+          git stash apply || true
 
       - name: Commit and Push changes with Retry
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         run: |
+          git add _includes/${{ matrix.game }}.html links-json/${{ matrix.game }}.json
+          git diff --exit-code || git commit -m "Update ${{ matrix.game }} reward links"
           for i in {1..5}; do
             git pull --rebase && git push https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/Prollad99/bs-net.git && break || sleep 10
           done
