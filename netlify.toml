@@ -1,6 +1,0 @@
-[build]
-  command = "bundle exec jekyll build --incremental"
-  publish = "_site"
-
-[[plugins]]
-  package = "@netlify/plugin-cache"
