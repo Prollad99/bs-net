@@ -68,8 +68,7 @@ jobs:
           git config --global user.name "Prollad99"
 
       - name: Check for Changes
-        run: |
-          git diff --exit-code || exit 0
+        run: git diff --exit-code || exit 0
 
       - name: Commit and Push changes with Retry
         env:
@@ -77,6 +76,21 @@ jobs:
         run: |
           git add _includes/${{ matrix.game }}.html links-json/${{ matrix.game }}.json
           git diff --exit-code || git commit -m "Update ${{ matrix.game }} reward links"
+          
+          # Add stash to handle uncommitted changes
+          if ! git diff --quiet; then
+            git stash push -m "stash before rebase"
+          fi
+
           for i in {1..5}; do
-            git pull --rebase && git push https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/Prollad99/bs-net.git && break || sleep 10
+            if git pull --rebase && git push https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/Prollad99/bs-net.git; then
+              break
+            else
+              sleep 10
+            fi
           done
+
+          # Apply stash if it exists
+          if git stash list | grep -q "stash before rebase"; then
+            git stash pop
+          fi
