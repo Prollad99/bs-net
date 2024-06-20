@@ -31,29 +31,26 @@ jobs:
           - island-king
           - cashman-casino
           - piggy-go
+          # Add more games as needed
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Log in to Docker Hub
-        uses: docker/login-action@v2
+      - name: Cache node modules
+        uses: actions/cache@v2
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          file: ./Dockerfile
-          push: true
-          tags: prollad99/prollad:latest
+      - name: Install dependencies
+        run: npm install jq axios cheerio
 
-      - name: Use Docker image
+      - name: Fetch and Update Links
         run: |
-          docker pull prollad99/prollad:latest
-          docker run prollad99/prollad:latest node index-js/${{ matrix.game }}.js
+          node index-js/${{ matrix.game }}.js
           echo "Content of links-json/${{ matrix.game }}.json:"
           cat links-json/${{ matrix.game }}.json
 
@@ -70,12 +67,16 @@ jobs:
           git config --global user.email "prolladmail@gmail.com"
           git config --global user.name "Prollad99"
 
-      - name: Commit and Push changes with Retry
+      - name: Commit and Push changes
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         run: |
           git add _includes/${{ matrix.game }}.html links-json/${{ matrix.game }}.json
           git diff --exit-code || git commit -m "Update ${{ matrix.game }} reward links"
-          for i in {1..5}; do
-            git pull --rebase && git push https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/Prollad99/bs-net.git && break || sleep 10
-          done
+          
+          # Pull with rebase and handle uncommitted changes
+          git stash push -m "stash before rebase" || true
+          git pull --rebase || true
+          git stash pop || true
+
+          git push https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/Prollad99/bs-net.git
