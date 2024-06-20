@@ -18,7 +18,6 @@ axios.get(url)
 
     console.log('Fetched links:', links);
 
-    // Ensure the directory exists
     const dir = 'links-json';
     if (!fs.existsSync(dir)){
       fs.mkdirSync(dir);
