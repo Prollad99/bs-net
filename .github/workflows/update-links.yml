@@ -22,12 +22,22 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20.x'
-          cache: 'npm'
 
       - name: Install dependencies and jq
         run: |
           sudo apt-get update && sudo apt-get install -y jq
           npm install axios cheerio
+
+      - name: Generate package-lock.json if missing
+        run: |
+          if [ ! -f package-lock.json ]; then
+            npm install
+            git config --global user.email "prolladmail@gmail.com"
+            git config --global user.name "Prollad99"
+            git add package-lock.json
+            git commit -m "Add package-lock.json"
+            git push https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/Prollad99/bs-net.git
+          fi
 
       - name: Fetch and Update Links
         run: node index-js/${{ matrix.game }}.js
