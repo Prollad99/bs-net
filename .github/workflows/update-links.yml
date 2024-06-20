@@ -10,6 +10,8 @@ on:
 jobs:
   update-links:
     runs-on: ubuntu-latest
+    container:
+      image: your-dockerhub-username/your-image-name:latest
     strategy:
       matrix:
         game:
@@ -36,17 +38,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-
-      - name: Cache node modules
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install dependencies
-        run: npm install jq axios cheerio
 
       - name: Fetch and Update Links
         run: |
