@@ -12,22 +12,41 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        game: [hit-it-rich, huuuge-casino, pop-slots, jackpot-world, slotomania, house-of-fun, coin-master, monopoly-go, crazy-fox, bingo-blitz, match-masters, willy-wonka, bingo-bash, caesars-slots, cash-frenzy, island-king, cashman-casino, piggy-go]
+        game:
+          - hit-it-rich
+          - huuuge-casino
+          - pop-slots
+          - jackpot-world
+          - slotomania
+          - house-of-fun
+          - coin-master
+          - monopoly-go
+          - crazy-fox
+          - bingo-blitz
+          - match-masters
+          - willy-wonka
+          - bingo-bash
+          - caesars-slots
+          - cash-frenzy
+          - island-king
+          - cashman-casino
+          - piggy-go
+          # Add more games as needed
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - name: Cache node modules
+        uses: actions/cache@v2
         with:
-          node-version: '20.x'
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Install dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y jq
-          npm install axios cheerio
+        run: npm install jq axios cheerio
 
       - name: Fetch and Update Links
         run: |
@@ -50,19 +69,14 @@ jobs:
 
       - name: Check for Changes
         run: |
-          git status
-          git diff
+          git diff --exit-code || exit 0
 
       - name: Commit and Push changes with Retry
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         run: |
           git add _includes/${{ matrix.game }}.html links-json/${{ matrix.game }}.json
-          if ! git diff-index --quiet HEAD; then
-            git commit -m "Update ${{ matrix.game }} reward links"
-            for i in {1..5}; do
-              git pull --rebase && git push https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/Prollad99/bs-net.git && break || sleep 10
-            done
-          else
-            echo "No changes to commit"
-          fi
+          git diff --exit-code || git commit -m "Update ${{ matrix.game }} reward links"
+          for i in {1..5}; do
+            git pull --rebase && git push https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/Prollad99/bs-net.git && break || sleep 10
+          done
