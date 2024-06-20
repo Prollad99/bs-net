@@ -6,7 +6,7 @@ author: "Prollad"
 date: 2024-06-20
 categories: Free-Dice
 tags: [piggy go free dice, piggy go codes, piggy go free rolls, piggy go gift codes, free dice piggy go, piggy go free dice codes]
-image: /assets/images/piggy-go.jpg
+image: /assets/images/piggy-go-free-dice.jpg
 ---
 
 Love playing mobile games? If yes, then you must’ve undoubtedly come across [Piggy Go](https://app.adjust.com/dxy09nx). As one of the most popular games in play stores by [Forever9 Games](https://www.forevernine.com/), it has over 10M+ downloads.
