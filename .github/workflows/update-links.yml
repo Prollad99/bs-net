@@ -46,7 +46,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies
-        run: npm install jq axios cheerio
+        run: npm ci
 
       - name: Fetch and Update Links
         run: |
