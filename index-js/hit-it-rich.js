@@ -1,22 +1,34 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 const fs = require('fs');
+const path = require('path');
 
 const url = 'https://techyhigher.com/hit-it-rich-coins-free/';
 
-axios.get(url).then(({ data }) => {
-  const $ = cheerio.load(data);
-  const links = [];
+axios.get(url)
+  .then(({ data }) => {
+    const $ = cheerio.load(data);
+    const links = [];
 
-  $('a[href*="web.hititrich.zynga.com"], a[href*="zynga.social"]').each((index, element) => {
-    const link = $(element).attr('href');
-    const text = $(element).text().trim();
-    links.push({ href: link, text: text });
+    $('a[href*="web.hititrich.zynga.com"], a[href*="zynga.social"]').each((index, element) => {
+      const link = $(element).attr('href');
+      const text = $(element).text().trim();
+      links.push({ href: link, text: text });
+    });
+
+    console.log('Fetched links:', links);
+
+    // Ensure the directory exists
+    const dir = 'links-json';
+    if (!fs.existsSync(dir)){
+      fs.mkdirSync(dir);
+    }
+
+    const filePath = path.join(dir, 'hit-it-rich.json');
+    fs.writeFileSync(filePath, JSON.stringify(links, null, 2));
+    console.log(`Links saved to ${filePath}`);
+  })
+  .catch(err => {
+    console.error('Error fetching links:', err);
+    process.exit(1); // Exit with an error code
   });
-
-  console.log('Fetched links:', links);
-  fs.writeFileSync('links-json/hit-it-rich.json', JSON.stringify(links, null, 2));
-}).catch(err => {
-  console.error('Error fetching links:', err);
-  process.exit(1); // Exit with an error code
-});
