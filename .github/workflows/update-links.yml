@@ -72,7 +72,8 @@ jobs:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         run: |
           git add _includes/${{ matrix.game }}.html links-json/${{ matrix.game }}.json
-          git diff --exit-code || git commit -m "Update ${{ matrix.game }} reward links"
+          git add package.json package-lock.json || true
+          git commit -m "Update ${{ matrix.game }} reward links" || true
           
           # Pull with rebase and handle uncommitted changes
           git stash push -m "stash before rebase" || true
@@ -80,3 +81,4 @@ jobs:
           git stash pop || true
 
           git push https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/Prollad99/bs-net.git
+
