@@ -3,7 +3,6 @@ description: Get free coins, chips, spins, and various other rewards on our webs
 baseurl: ""
 url: "https://bonuscollector.net"
 
-# Build settings
 markdown: kramdown
 
 paginate: 20
