@@ -33,6 +33,8 @@ jobs:
           - piggy-go
           # Add more games as needed
 
+    continue-on-error: true
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
