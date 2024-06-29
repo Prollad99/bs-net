@@ -3,7 +3,7 @@ layout: post
 title: "Huuuge Casino Free Chips"
 date: 2024-06-29
 tags: [Huuuge Casino, free chips, slot games, daily rewards]
-author: "BonusCollector.Net"
+author: "BonusCollector.net"
 description: "Daily updated links for Huuuge Casino free chips. Keep your gameplay exciting and uninterrupted with our verified free chip offers."
 permalink: /huuuge-casino-free-chips/
 image: /assets/images/huuuge-casino.webp
