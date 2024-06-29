@@ -16,6 +16,7 @@ Welcome to Bonus Collector, your ultimate destination for daily **House of Fun f
 House of Fun offers numerous opportunities for players to collect free coins. Here are the best methods:
 
 1. **Daily Coin Links**: Check our website daily for updated links to free coins. These links are valid for a limited time, so collect them as soon as possible.
+
 {% include house-of-fun.html %}
 
 2. **Daily Challenges**: Complete daily challenges such as spinning a certain number of times or winning a specific amount of coins to earn rewards.
