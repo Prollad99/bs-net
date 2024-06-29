@@ -4,7 +4,7 @@ title: "Daily Slotomania Free Coins"
 description: "Discover daily Slotomania free coins on BonusCollector.net! Get the latest links and tips to maximize your rewards and enhance your gaming experience. No sign-ups, just free coins every day."
 date: 2024-06-29
 tags: [slotomania, free coins, daily rewards, bonuscollector]
-author: BonusCollector.Net
+author: BonusCollector.net
 permalink: /slotomania-free-coins/
 image: /assets/images/gifts.svg
 ---
