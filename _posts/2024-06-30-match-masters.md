@@ -21,7 +21,7 @@ Redeeming your Match Masters free gifts is easy! Just follow these simple steps:
 
 > **Note**: If the game doesn’t open automatically, select the “App Store” or “Google Play” option. After the game launches, return to the gift page and tap “Continue” to claim your rewards.
 
-### Today's Free Gift Links
+## Today's Free Gift Links
 
 {% include match-masters.html %}
 
