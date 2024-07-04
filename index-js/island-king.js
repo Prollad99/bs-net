@@ -3,14 +3,14 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 const path = require('path');
 
-const url = 'https://mosttechs.com/island-king-free-spins-and-coins/';
+const url = 'https://rezortricks.com/island-king-free-spins-and-coins/';
 
 axios.get(url)
   .then(({ data }) => {
     const $ = cheerio.load(data);
     const links = [];
 
-    $('a[href*="bit.ly"]').each((index, element) => {
+    $('a[href*="islandking-static-jy.forevernine.com"], a[href*="bit.ly"], a[href*="islandking-static.forevernine.com"]').each((index, element) => {
       const link = $(element).attr('href');
       const text = $(element).text().trim();
       links.push({ href: link, text: text });
