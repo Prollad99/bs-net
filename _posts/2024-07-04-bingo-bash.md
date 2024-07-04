@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Bingo Bash Free Chips"
 date: 2024-07-04
 tags: [Bingo Bash, Free Chips, Daily Rewards, Slots]
