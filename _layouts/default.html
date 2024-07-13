@@ -6,17 +6,14 @@
   <title>
   {% if page.title %}
     {{ page.title }}
-    {% if page.date %}
-      - {{ page.date | date: "%B %Y" }}
-    {% endif %}
+    - {{ 'now' | date: "%B %Y" }}
   {% else %}
     {{ site.title }}
+    - {{ 'now' | date: "%B %Y" }}
   {% endif %}
 </title>
-
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9883001954705974"
      crossorigin="anonymous"></script>
-
 <meta name="description" content="{{ page.description | default: site.description }}">
 <meta name="author" content="Prollad">
 <!-- Twitter Card Tags -->
