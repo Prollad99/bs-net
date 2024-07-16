@@ -4,6 +4,7 @@ title: "Bingo Blitz Free Credits: Today’s Free Links"
 date: 2024-06-30
 tags: [Bingo Blitz, Free Credits, Daily Rewards, In-Game Bonuses]
 description: "Discover how to collect daily Bingo Blitz free credits. Stay updated with the latest free credit links and maximize your gameplay."
+lang: en
 author: "BonusCollector.net"
 permalink: /bingo-blitz-free-credits/
 image: /assets/images/bingo-blitz.webp
