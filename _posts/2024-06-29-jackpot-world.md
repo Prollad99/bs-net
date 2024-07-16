@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Jackpot World Free Coins"
+title: "Jackpot World Free Coins: Today's Freebies"
 date: 2024-06-29
 tags: [Jackpot World, Free Coins, Slots, Mobile Games, Rewards]
 author: BonusCollector.net
