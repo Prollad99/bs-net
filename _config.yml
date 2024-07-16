@@ -13,7 +13,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-last-modified-at
 
-permalink: /:title/
+permalink: /:lang/:title/
 
 collections:
   pages:
