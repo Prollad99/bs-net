@@ -5,6 +5,7 @@ date: 2024-06-29
 tags: [Jackpot World, Free Coins, Slots, Mobile Games, Rewards]
 author: BonusCollector.net
 description: "Get daily updates on Jackpot World free coins. Find links to collect your rewards and maximize your Jackpot World experience."
+lang: en
 permalink: /jackpot-world-free-coins/
 image: /assets/images/jackpot-world.webp
 ---
