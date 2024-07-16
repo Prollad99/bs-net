@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Cash Frenzy Free Coins"
+title: "Cash Frenzy Free Coins: Today's Free Bonuses"
 date: 2024-07-04
 tags: [Cash Frenzy, free coins, daily rewards]
 author: BonusCollector.net
