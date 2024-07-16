@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "House of Fun Free Coins"
+title: "House of Fun Free Coins: Updated Daily"
 date: 2024-06-29
 tags: [House of Fun, free coins, daily rewards, gaming, slots]
 author: BonusCollector.net
