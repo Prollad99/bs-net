@@ -5,6 +5,7 @@ date: 2024-06-29
 tags: [Coin Master, Free Spins, Daily Rewards, Gaming Tips]
 author: "BonusCollector.net"
 description: "Get your daily Coin Master free spins and discover tips to maximize your rewards. Bookmark our site for the latest updates!"
+lang: en
 permalink: /coin-master-free-spins/
 image: /assets/images/coin-master.webp
 ---
