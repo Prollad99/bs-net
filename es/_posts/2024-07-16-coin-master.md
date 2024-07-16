@@ -6,7 +6,7 @@ tags: [Coin Master, giros gratis, monedas gratis, recompensas diarias]
 author: BonusCollector.net
 description: "Consigue los últimos enlaces para giros gratis y monedas en Coin Master actualizados diariamente. Aumenta tus recompensas sin costo."
 lang: es
-permalink: /coin-master-giros-gratis/
+permalink: /es/coin-master-giros-gratis/
 image: /assets/images/coin-master.webp
 ---
 
