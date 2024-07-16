@@ -19,7 +19,6 @@ collections:
   pages:
     output: true
 
-# Multilingual setup
 defaults:
   - scope:
       path: ""
@@ -38,6 +37,24 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      lang: "de"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      lang: "en"
+  - scope:
+      path: "es"
+      type: "pages"
+    values:
+      layout: "page"
+      lang: "es"
+  - scope:
+      path: "de"
+      type: "pages"
+    values:
+      layout: "page"
       lang: "de"
 
 exclude:
