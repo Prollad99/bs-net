@@ -5,6 +5,7 @@ date: 2024-06-29
 tags: [House of Fun, free coins, daily rewards, gaming, slots]
 author: BonusCollector.net
 description: "Stay updated with the latest House of Fun free coins links. Collect daily rewards and enhance your gaming experience without spending a dime."
+lang: en
 permalink: /house-of-fun-free-coins/
 image: /assets/images/gifts.svg
 ---
