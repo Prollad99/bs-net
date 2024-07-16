@@ -5,6 +5,7 @@ date: 2024-07-04
 tags: [Bingo Bash, Free Chips, Daily Rewards, Slots]
 author: BonusCollector.net
 description: "Discover how to get your Bingo Bash free chips daily and maximize your gameplay with our updated links."
+lang: en
 permalink: /bingo-bash-free-chips/
 image: /assets/images/bingo-bash.webp
 ---
