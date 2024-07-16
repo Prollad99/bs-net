@@ -5,6 +5,7 @@ date: 2024-07-04
 tags: [Cashman Casino, free coins, daily rewards]
 author: BonusCollector.net
 description: "Discover how to get daily free coins for Cashman Casino and maximize your gaming experience with our up-to-date links and tips."
+lang: en
 permalink: /cashman-casino-free-coins/
 image: /assets/images/cashman-casino.webp
 ---
