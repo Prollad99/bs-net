@@ -12,6 +12,9 @@
   </title>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9883001954705974"
      crossorigin="anonymous"></script>
+  {% if page.layout == "tag" %}
+    <meta name="robots" content="noindex">
+  {% endif %}
 <meta name="description" content="{{ page.description | default: site.description }}">
 <meta name="author" content="BonusCollector.net">
 <!-- Twitter Card Tags -->
