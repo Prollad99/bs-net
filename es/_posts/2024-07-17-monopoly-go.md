@@ -50,4 +50,4 @@ Los enlaces proporcionados en este artículo son verificados y actualizados regu
 
 ---
 
-Para más información y actualizaciones diarias, no olvides seguir visitando [BonusCollector.net](https://www.bonuscollector.net/es/).
+Para más información y actualizaciones diarias, no olvides seguir visitando [BonusCollector.net](https://bonuscollector.net/es/).
