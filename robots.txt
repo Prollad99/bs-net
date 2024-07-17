@@ -2,6 +2,4 @@ User-agent: *
 Disallow: /tag/
 Disallow: /assets/
 
-Allow: /
-
 Sitemap: https://bonuscollector.net/sitemap.xml
