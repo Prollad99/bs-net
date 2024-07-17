@@ -1,5 +1,6 @@
 User-agent: *
 Disallow: /tag/
+Disallow: /assets/
 
 Allow: /
 
