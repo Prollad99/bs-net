@@ -46,4 +46,4 @@ Síguenos en nuestras redes sociales y mantente al tanto de nuevas promociones y
 
 ---
 
-Para más información y enlaces de recompensas diarias, visita nuestra [página principal](https://www.bonuscollector.net/es/).
+Para más información y enlaces de recompensas diarias, visita nuestra [página principal](https://bonuscollector.net/es/).
