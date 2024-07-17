@@ -23,7 +23,6 @@ Cada día, puedes reclamar bonos diarios simplemente iniciando sesión en el jue
 
 ### Enlaces de Recompensas
 Visita nuestro sitio diariamente para encontrar enlaces actualizados que te otorgarán **Slotomania Free Coins**:
-
 {% include slotomania.html %}
 
 ### Eventos Especiales
