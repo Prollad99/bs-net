@@ -13,8 +13,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-last-modified-at
 
-permalink: /:lang/:title/
-
 collections:
   pages:
     output: true
@@ -37,22 +35,4 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      lang: "de"
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
-      lang: "en"
-  - scope:
-      path: "es"
-      type: "pages"
-    values:
-      layout: "page"
-      lang: "es"
-  - scope:
-      path: "de"
-      type: "pages"
-    values:
-      layout: "page"
       lang: "de"
