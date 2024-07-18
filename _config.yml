@@ -56,20 +56,3 @@ defaults:
     values:
       layout: "page"
       lang: "de"
-
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-
-languages:
-  - code: en
-    name: English
-  - code: es
-    name: Español
-  - code: de
-    name: Deutsch
