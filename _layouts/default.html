@@ -137,7 +137,11 @@
       {% assign current_language = 'en' %}
       {% assign current_path = page.url | remove_first: '/' %}
     {% else %}
-      {% assign current_path = current_path | remove_first: current_language | remove_first: '/' %}
+      {% assign current_path_parts = current_path | split: '/' %}
+      {% assign current_path = current_path_parts | join: '/' %}
+      {% if current_path_parts.size > 1 %}
+        {% assign current_path = current_path_parts.last %}
+      {% endif %}
     {% endif %}
     
     {% for lang in site.languages %}
