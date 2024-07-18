@@ -4,6 +4,7 @@ title: "DMCA"
 author: "Prollad"
 date: 2024-06-13
 permalink: /dmca/
+show_language_dropdown: false
 ---
 
 ## BonusCollector.Net – DMCA Policy
