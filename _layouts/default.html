@@ -144,7 +144,11 @@
       {% if lang.code == 'en' %}
         {% assign lang_url = current_path %}
       {% else %}
-        {% assign lang_url = lang.code | prepend: '/' | append: current_path %}
+        {% if current_path == '' %}
+          {% assign lang_url = '/' | append: lang.code | append: '/' %}
+        {% else %}
+          {% assign lang_url = '/' | append: lang.code | append: current_path %}
+        {% endif %}
       {% endif %}
       <li><a class="dropdown-item" href="{{ lang_url }}">{{ lang.name }}</a></li>
     {% endfor %}
