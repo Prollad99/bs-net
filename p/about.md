@@ -4,6 +4,7 @@ title: "About"
 author: "Prollad"
 date: 2024-06-13
 permalink: /about/
+show_language_dropdown: false
 ---
 
 ## About BonusCollector.Net
