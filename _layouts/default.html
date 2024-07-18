@@ -130,12 +130,20 @@
     <i class="bi bi-translate"></i> Language
   </button>
   <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-    {% assign current_language = page.url | split: '/' | first %}
-    {% if current_language == '' or current_language == 'index.html' %}
+    {% assign current_path = page.url | remove_first: '/' %}
+    {% assign current_language = current_path | split: '/' | first %}
+    {% if site.languages | where: "code", current_language | size == 0 %}
       {% assign current_language = 'en' %}
+      {% assign current_path = page.url %}
+    {% else %}
+      {% assign current_path = current_path | remove_first: current_language | prepend: '/' %}
     {% endif %}
     {% for lang in site.languages %}
-      {% assign lang_url = page.url | remove_first: '/' | remove_first: current_language | prepend: '/' | prepend: lang.code %}
+      {% if lang.code == 'en' %}
+        {% assign lang_url = current_path %}
+      {% else %}
+        {% assign lang_url = lang.code | append: current_path %}
+      {% endif %}
       <li><a class="dropdown-item" href="{{ lang_url }}">{{ lang.name }}</a></li>
     {% endfor %}
   </ul>
