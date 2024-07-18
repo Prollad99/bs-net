@@ -4,6 +4,7 @@ title: "Disclaimer"
 author: "Prollad"
 date: 2024-06-13
 permalink: /disclaimer/
+show_language_dropdown: false
 ---
 
 ## Disclaimer for Bonus Collector
