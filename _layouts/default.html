@@ -132,9 +132,15 @@
   <ul class="dropdown-menu" aria-labelledby="languageDropdown">
     {% for lang in site.data.languages.languages %}
       <li>
-        <a class="dropdown-item" href="{{ page.url | remove_lang_prefix | prepend: lang.code | prepend: '/' }}">
-          {{ lang.name }}
-        </a>
+        {% if lang.default %}
+          <a class="dropdown-item" href="{{ page.url | remove_lang_prefix }}">
+            {{ lang.name }}
+          </a>
+        {% else %}
+          <a class="dropdown-item" href="{{ page.url | remove_lang_prefix | prepend: lang.code | prepend: '/' }}">
+            {{ lang.name }}
+          </a>
+        {% endif %}
       </li>
     {% endfor %}
   </ul>
