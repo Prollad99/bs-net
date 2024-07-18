@@ -124,18 +124,18 @@
   <a href="{{ site.baseurl }}/about" class="text-white">About</a> |
   <a href="{{ site.baseurl }}/contact/" class="text-white">Contact</a>
 </p>
-      <!-- Language Dropdown -->
+<!-- Language Dropdown -->
 <div class="dropdown mt-3">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
     <i class="bi bi-translate"></i> Language
   </button>
   <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-    {% assign languages = '/en,/es,/de' | split: ',' %}
+    {% assign languages = '/es,/de' | split: ',' %}
     {% for lang in languages %}
       {% if page.url contains lang %}
-        {% assign new_url = page.url | remove_first: lang | prepend: '/' %}
+        {% capture new_url %}{{ page.url | remove_first: lang | prepend: '/' }}{% endcapture %}
       {% else %}
-        {% assign new_url = page.url | prepend: lang %}
+        {% capture new_url %}{{ page.url | prepend: lang }}{% endcapture %}
       {% endif %}
       <li><a class="dropdown-item" href="{{ new_url }}">{{ lang | remove_first: '/' }}</a></li>
     {% endfor %}
