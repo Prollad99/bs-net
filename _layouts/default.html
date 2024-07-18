@@ -132,19 +132,18 @@
   <ul class="dropdown-menu" aria-labelledby="languageDropdown">
     {% assign current_path = page.url | remove_first: '/' %}
     {% assign current_language = current_path | split: '/' | first %}
+    {% assign current_path = current_path | split: '/' | rest | join: '/' %}
     {% if site.languages | where: "code", current_language | size == 0 %}
       {% assign current_language = 'en' %}
       {% assign current_path = page.url %}
-    {% else %}
-      {% assign current_path = current_path | remove_first: current_language | prepend: '/' %}
     {% endif %}
     {% for lang in site.languages %}
       {% if lang.code == 'en' %}
         {% assign lang_url = current_path %}
       {% else %}
-        {% assign lang_url = lang.code | append: current_path %}
+        {% assign lang_url = lang.code | append: '/' | append: current_path %}
       {% endif %}
-      <li><a class="dropdown-item" href="{{ lang_url }}">{{ lang.name }}</a></li>
+      <li><a class="dropdown-item" href="/{{ lang_url }}">{{ lang.name }}</a></li>
     {% endfor %}
   </ul>
 </div>
