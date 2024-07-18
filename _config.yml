@@ -65,3 +65,11 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+languages:
+  - code: en
+    name: English
+  - code: es
+    name: Español
+  - code: de
+    name: Deutsch
