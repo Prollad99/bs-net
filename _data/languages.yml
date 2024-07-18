@@ -1,9 +1,9 @@
-# _data/languages.yml
 languages:
   - code: en
     name: English
+    default: true
   - code: es
     name: Español
   - code: de
     name: Deutsch
-  # Add more languages here
+  # Add more languages here as needed
