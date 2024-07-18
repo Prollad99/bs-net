@@ -130,10 +130,15 @@
     <i class="bi bi-translate"></i> Language
   </button>
   <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-    <!-- Link to the current page with different language prefixes -->
-    <li><a class="dropdown-item" href="{{ page.url }}">English</a></li>
-    <li><a class="dropdown-item" href="{{ page.url | prepend: '/es' }}">Español</a></li>
-    <li><a class="dropdown-item" href="{{ page.url | prepend: '/de' }}">Deutsch</a></li>
+    {% assign languages = '/en,/es,/de' | split: ',' %}
+    {% for lang in languages %}
+      {% if page.url contains lang %}
+        {% assign new_url = page.url | remove_first: lang | prepend: '/' %}
+      {% else %}
+        {% assign new_url = page.url | prepend: lang %}
+      {% endif %}
+      <li><a class="dropdown-item" href="{{ new_url }}">{{ lang | remove_first: '/' }}</a></li>
+    {% endfor %}
   </ul>
 </div>
     </div>
