@@ -137,20 +137,16 @@
       {% assign current_language = 'en' %}
       {% assign current_path = page.url | remove_first: '/' %}
     {% else %}
-      {% assign current_path_parts = current_path | split: '/' %}
-      {% assign current_path = current_path_parts | join: '/' %}
-      {% if current_path_parts.size > 1 %}
-        {% assign current_path = current_path_parts.last %}
-      {% endif %}
+      {% assign current_path = current_path | remove_first: current_language | remove_first: '/' %}
     {% endif %}
     
     {% for lang in site.languages %}
       {% if lang.code == 'en' %}
         {% assign lang_url = current_path %}
       {% else %}
-        {% assign lang_url = lang.code | append: '/' | append: current_path %}
+        {% assign lang_url = lang.code | prepend: '/' | append: current_path %}
       {% endif %}
-      <li><a class="dropdown-item" href="/{{ lang_url }}">{{ lang.name }}</a></li>
+      <li><a class="dropdown-item" href="{{ lang_url }}">{{ lang.name }}</a></li>
     {% endfor %}
   </ul>
 </div>
