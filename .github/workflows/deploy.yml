@@ -28,10 +28,10 @@ jobs:
       - name: Create .vercelignore
         run: echo '_site/*' > .vercelignore
 
-      - name: Debug network
+      - name: Debug network with curl
         run: |
-          echo "Checking network connectivity"
-          ping -c 4 api.vercel.com
+          echo "Checking network connectivity with curl"
+          curl -v https://api.vercel.com
 
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v20
