@@ -12,6 +12,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-last-modified-at
+  - generate_tags
 
 collections:
   pages:
