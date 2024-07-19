@@ -7,7 +7,7 @@ show_language_dropdown: false
   <h1 class="my-4">{{ page.tag }}</h1>
 
   <div class="row">
-    {% assign formatted_tag = page.tag | downcase | replace: ' ', '-' %}
+    {% assign formatted_tag = page.formatted_tag %}
     {% for post in site.tags[formatted_tag] %}
       <div class="col-md-6 mb-4">
         <div class="card shadow-sm">
