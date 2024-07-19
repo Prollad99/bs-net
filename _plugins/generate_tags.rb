@@ -28,7 +28,6 @@ module Jekyll
 end
 
 class String
-  # Convert a string into a slug
   def to_slug
     self.strip.downcase.gsub(' ', '-').gsub(/[^\w-]/, '')
   end
