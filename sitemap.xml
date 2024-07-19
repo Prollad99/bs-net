@@ -2,6 +2,13 @@
 layout: null
 ---
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage URL -->
+  <url>
+    <loc>{{ site.url }}/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Pages -->
   {% for page in site.pages %}
     {% if page.layout != "tag" %}
       <url>
@@ -9,15 +16,19 @@ layout: null
         {% if page.last_modified_at %}
           <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
         {% endif %}
+        <priority>0.5</priority>
       </url>
     {% endif %}
   {% endfor %}
+
+  <!-- Posts -->
   {% for post in site.posts %}
     <url>
       <loc>{{ site.url }}{{ post.url }}</loc>
       {% if post.last_modified_at %}
         <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
       {% endif %}
+      <priority>1.0</priority>
     </url>
   {% endfor %}
 </urlset>
