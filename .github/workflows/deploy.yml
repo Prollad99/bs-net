@@ -25,6 +25,14 @@ jobs:
       - name: Build Jekyll site
         run: bundle exec jekyll build
 
+      - name: Create .vercelignore
+        run: echo '_site/*' > .vercelignore
+
+      - name: Debug network
+        run: |
+          echo "Checking network connectivity"
+          ping -c 4 api.vercel.com
+
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v20
         with:
