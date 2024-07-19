@@ -32,6 +32,7 @@ jobs:
           - cashman-casino
           - piggy-go
           - doubleu-casino
+          - doubledown-casino
 
     steps:
       - name: Checkout repository
