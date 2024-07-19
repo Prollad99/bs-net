@@ -31,6 +31,7 @@ jobs:
           - island-king
           - cashman-casino
           - piggy-go
+          - doubleu-casino
 
     steps:
       - name: Checkout repository
