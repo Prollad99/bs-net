@@ -1,4 +1,3 @@
-# _plugins/generate_tags.rb
 module Jekyll
   class TagPage < Page
     def initialize(site, base, dir, tag, formatted_tag)
