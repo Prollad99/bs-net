@@ -36,3 +36,13 @@ defaults:
     values:
       layout: "post"
       lang: "de"
+
+assets:
+  compress:
+    css: true
+    js: true
+  autoprefixer:
+    browsers:
+      - "last 2 versions"
+  digest: true
+  gzip: true
