@@ -10,7 +10,7 @@ layout: null
 
   <!-- Pages -->
   {% for page in site.pages %}
-    {% if page.layout != "tag" %}
+    {% if page.url and page.url != "" and page.layout == "page" %}
       <url>
         <loc>{{ site.url }}{{ page.url }}</loc>
         {% if page.last_modified_at %}
