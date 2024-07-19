@@ -23,6 +23,7 @@ module Jekyll
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'tag.html')
       self.data['tag'] = tag
+      self.data['formatted_tag'] = tag.downcase.gsub(' ', '-')
       self.data['title'] = "Posts Tagged with \"#{tag}\""
     end
   end
