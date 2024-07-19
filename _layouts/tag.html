@@ -7,6 +7,9 @@ show_language_dropdown: false
   <h1 class="my-4">{{ page.title }}</h1>
 
   <div class="row">
+    <p>Tag: {{ page.tag }}</p>
+    <p>Formatted Tag: {{ page.tag | slugify }}</p>
+    <p>Available Tags: {{ site.tags | inspect }}</p>
     {% assign formatted_tag = page.tag | slugify %}
     {% for post in site.tags[formatted_tag] %}
       <div class="col-md-6 mb-4">
