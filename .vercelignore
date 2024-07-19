@@ -1,0 +1,8 @@
+# .vercelignore
+node_modules/
+vendor/
+.bundle/
+.sass-cache/
+_site/
+.jekyll-cache/
+.jekyll-metadata
