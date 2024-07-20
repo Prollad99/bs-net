@@ -10,9 +10,9 @@ layout: default
 {% if page.last_modified_at %}
   <meta name="last-modified" content="{{ page.last_modified_at | date: "%Y-%m-%dT%H:%M:%S%z" }}" />
   <p>Last updated: {{ page.last_modified_at | date: "%B %d, %Y" }}</p>
+{% else %}
+  <p>No last modified date available.</p>
 {% endif %}
-
-<p>Debug: {{ page.last_modified_at | inspect }}</p>
 
     <div class="card-text">{{ content }}</div>
 
