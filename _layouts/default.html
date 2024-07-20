@@ -87,21 +87,20 @@
     </ol>
   </nav>
 
-  <!-- search start -->
-{% assign homepages = "/" | append: ",/en/,/es/,/it/" %}
-{% assign homepages_array = homepages | split: "," %}
-{% if homepages_array contains page.url %}
-  <div class="container mt-4">
-    <div class="input-group">
-      <input type="search" id="search-input" class="form-control" placeholder="Search for Games..." aria-label="Search">
-      <div class="input-group-append">
-        <button class="btn btn-primary" type="button" id="search-button">
-          <i class="bi bi-search"></i>
-        </button>
-      </div>
+  <!--search start -->
+{% if page.url == "/" or page.url matches '^/[a-z]{2}/$' %}
+<div class="container mt-4">
+  <div class="input-group">
+    <input type="search" id="search-input" class="form-control" placeholder="Search for Games..." aria-label="Search">
+    <div class="input-group-append">
+      <button class="btn btn-primary" type="button">
+        <i class="bi bi-search"></i>
+      </button>
     </div>
-    <div id="results-container" class="mt-4"></div>
   </div>
+  <div id="results-container" class="mt-4"></div>
+</div>
+{% endif %}
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-jekyll-search/1.7.2/simple-jekyll-search.min.js"></script>
                   <script>
