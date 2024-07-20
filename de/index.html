@@ -27,6 +27,11 @@ lang: de
                 </div>
               </div>
             </div>
+<div class="card-footer text-center">
+  <p class="text-muted">
+    <small>Von {{ post.author }} | Letzte Aktualisierung: {{ post.last_modified_at | date: "%d. %B %Y" }}</small>
+  </p>
+</div>
           </div>
         </div>
       {% endif %}
