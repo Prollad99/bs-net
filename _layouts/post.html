@@ -61,30 +61,35 @@ layout: default
       var resultsContainer = document.getElementById('results-container');
       var searchButton = document.getElementById('search-button');
 
-      function performSearch(query) {
-        fetch('{{ site.baseurl }}/search.json')
-          .then(response => response.json())
-          .then(data => {
-            var results = data.filter(post => post.content.includes(query) && post.lang === currentLang);
-            console.log("Filtered results:", results);
-            resultsContainer.innerHTML = '';
-            if (results.length > 0) {
-              results.forEach(result => {
-                var div = document.createElement('div');
-                div.innerHTML = '<a href="' + result.url + '">' + result.title + '</a>';
-                resultsContainer.appendChild(div);
-              });
-            } else {
-              resultsContainer.innerHTML = 'No results found';
-            }
+      SimpleJekyllSearch({
+        searchInput: searchInput,
+        resultsContainer: resultsContainer,
+        json: '{{ site.baseurl }}/search.json',
+        searchResultTemplate: '<div><a href="{url}">{title}</a></div>',
+        noResultsText: 'No results found',
+        limit: 10,
+        fuzzy: false,
+        success: function(results) {
+          var filteredResults = results.filter(function(result) {
+            return result.lang === currentLang;
           });
-      }
+          resultsContainer.innerHTML = '';
+          if (filteredResults.length > 0) {
+            filteredResults.forEach(function(result) {
+              var div = document.createElement('div');
+              div.innerHTML = '<a href="' + result.url + '">' + result.title + '</a>';
+              resultsContainer.appendChild(div);
+            });
+          } else {
+            resultsContainer.innerHTML = 'No results found';
+          }
+        }
+      });
 
       searchButton.addEventListener('click', function() {
         var query = searchInput.value.trim();
-        console.log("Search query:", query);
         if (query) {
-          performSearch(query);
+          SimpleJekyllSearch.search(query);
         } else {
           resultsContainer.innerHTML = '';
         }
@@ -93,9 +98,8 @@ layout: default
       searchInput.addEventListener('keypress', function(event) {
         if (event.key === 'Enter') {
           var query = searchInput.value.trim();
-          console.log("Search query:", query);
           if (query) {
-            performSearch(query);
+            SimpleJekyllSearch.search(query);
           } else {
             resultsContainer.innerHTML = '';
           }
