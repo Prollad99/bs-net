@@ -6,4 +6,6 @@ languages:
     name: Español
   - code: de
     name: Deutsch
+  - code: it
+    name: Italiano
   # Add more languages here as needed
