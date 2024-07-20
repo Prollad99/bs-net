@@ -87,20 +87,24 @@
     </ol>
   </nav>
 
-  <!--search start -->
-  {% if page.url == "/" %}
+  <!-- search start -->
+{% assign homepages = "/" | split: "," %}
+{% for lang in site.languages %}
+  {% assign homepages = homepages | push: "/" | append: lang | append: "/" %}
+{% endfor %}
+{% if homepages contains page.url %}
   <div class="container mt-4">
     <div class="input-group">
       <input type="search" id="search-input" class="form-control" placeholder="Search for Games..." aria-label="Search">
       <div class="input-group-append">
-        <button class="btn btn-primary" type="button">
+        <button class="btn btn-primary" type="button" id="search-button">
           <i class="bi bi-search"></i>
         </button>
       </div>
     </div>
     <div id="results-container" class="mt-4"></div>
   </div>
-  {% endif %}
+{% endif %}
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-jekyll-search/1.7.2/simple-jekyll-search.min.js"></script>
                   <script>
