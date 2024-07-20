@@ -1,0 +1,69 @@
+---
+layout: default
+lang: it
+---
+
+<div class="container">
+  <h1 class="my-4">Elenco dei giochi</h1>
+
+  <div class="row">
+    {% assign current_lang = page.lang | default: 'it' %}
+    {% for post in site.posts %}
+      {% if post.lang == current_lang %}
+        <div class="col-md-6 mb-4">
+          <div class="card shadow-sm">
+            <div class="row no-gutters">
+              <div class="col-4 d-flex flex-column align-items-center justify-content-center">
+                {% if post.image %}
+                  <img src="{{ post.image }}" class="card-img" alt="{{ post.title }}" style="max-width: 80px; max-height: 80px; margin: 10px;">
+                {% endif %}
+                <a href="{{ post.url }}" class="btn btn-primary btn-sm mt-2 mb-2">Richiedi Ora</a>
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <a href="{{ post.url }}">
+                    <h5 class="card-title" style="font-size: 1rem;">{{ post.title }}</h5>
+                  </a>
+                  <p class="card-text" style="font-size: 0.9rem;">{{ post.description }}</p>
+                </div>
+              </div>
+            </div>
+<div class="card-footer text-center">
+  <p class="text-muted">
+    <small>Di {{ post.author }} | Ultimo aggiornamento: {{ post.last_modified_at | date: "%d %B %Y" }}</small>
+  </p>
+</div>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  {% if paginator.next_page %}
+    <div class="text-center mb-4">
+      <button id="load-more-btn" class="btn btn-primary" data-next-page="{{ paginator.next_page_path }}">Carica altro</button>
+    </div>
+  {% endif %}
+</div>
+
+<script>
+  document.getElementById('load-more-btn').addEventListener('click', function() {
+    const button = this;
+    const nextPage = button.getAttribute('data-next-page');
+    fetch(nextPage)
+      .then(response => response.text())
+      .then(html => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const newPosts = doc.querySelectorAll('.post');
+        const postsContainer = document.querySelector('.posts');
+        newPosts.forEach(post => postsContainer.appendChild(post));
+        const newNextPage = doc.querySelector('#load-more-btn')?.getAttribute('data-next-page');
+        if (newNextPage) {
+          button.setAttribute('data-next-page', newNextPage);
+        } else {
+          button.remove();
+        }
+      });
+  });
+</script>
