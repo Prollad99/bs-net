@@ -48,7 +48,7 @@ layout: default
       <div class="input-group">
         <input type="search" id="search-input" class="form-control" placeholder="Search for Games..." aria-label="Search">
         <div class="input-group-append">
-          <button class="btn btn-primary" type="button">
+          <button class="btn btn-primary" type="button" id="search-button">
             <i class="bi bi-search"></i>
           </button>
         </div>
@@ -71,9 +71,11 @@ layout: default
           limit: 10,
           fuzzy: false,
           success: function(results) {
+            console.log("Raw results:", results);
             var filteredResults = results.filter(function(result) {
               return result.lang === currentLang;
             });
+            console.log("Filtered results:", filteredResults);
             resultsContainer.innerHTML = '';
             if (filteredResults.length > 0) {
               filteredResults.forEach(function(result) {
@@ -90,6 +92,7 @@ layout: default
 
       searchButton.addEventListener('click', function() {
         var query = searchInput.value.trim();
+        console.log("Search query:", query);
         if (query) {
           performSearch(query);
         } else {
@@ -100,6 +103,7 @@ layout: default
       searchInput.addEventListener('keypress', function(event) {
         if (event.key === 'Enter') {
           var query = searchInput.value.trim();
+          console.log("Search query:", query);
           if (query) {
             performSearch(query);
           } else {
