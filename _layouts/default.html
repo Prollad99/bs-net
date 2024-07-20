@@ -87,22 +87,22 @@
     </ol>
   </nav>
 
-  <!-- search start -->
-{% assign homepages = site.languages | map: "baseurl" %}
-{% assign current_page_url = page.url | remove: site.baseurl %}
-
-{% if current_page_url == "/" or homepages contains current_page_url %}
-  <div class="container mt-4">
-    <div class="input-group">
-      <input type="search" id="search-input" class="form-control" placeholder="Search for Games..." aria-label="Search">
-      <div class="input-group-append">
-        <button class="btn btn-primary" type="button" id="search-button">
-          <i class="bi bi-search"></i>
-        </button>
+  <!-- Search Box -->
+  {% assign homepages = site.languages | map: "baseurl" %}
+  {% assign current_page_url = page.url | remove: site.baseurl %}
+  
+  {% if current_page_url == "/" or homepages contains current_page_url %}
+    <div class="container mt-4">
+      <div class="input-group">
+        <input type="search" id="search-input" class="form-control" placeholder="Search for Games..." aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button" id="search-button">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
       </div>
+      <div id="results-container" class="mt-4"></div>
     </div>
-    <div id="results-container" class="mt-4"></div>
-  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-jekyll-search/1.7.2/simple-jekyll-search.min.js"></script>
                   <script>
