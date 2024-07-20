@@ -42,3 +42,9 @@ defaults:
     values:
       layout: "post"
       lang: "de"
+  - scope:
+      path: "it"
+      type: "posts"
+    values:
+      layout: "post"
+      lang: "it"
