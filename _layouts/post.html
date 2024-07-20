@@ -42,41 +42,42 @@ layout: default
       <div id="results-container" class="mt-4"></div>
     </div>
     <script>
-      var currentLang = '{{ page.lang }}';
-
-      function initializeSearch() {
-        SimpleJekyllSearch({
-          searchInput: document.getElementById('search-input'),
-          resultsContainer: document.getElementById('results-container'),
-          json: '{{ site.baseurl }}/search.json',
-          searchResultTemplate: '<div><a href="{url}">{title}</a></div>',
-          noResultsText: 'No results found',
-          limit: 10,
-          fuzzy: false,
-          success: function(results) {
-            var filteredResults = results.filter(function(result) {
-              return result.lang === currentLang;
-            });
-
-            if (filteredResults.length === 0) {
-              document.getElementById('results-container').innerHTML = '<div>No results found</div>';
-            } else {
-              var resultHtml = filteredResults.map(function(result) {
-                return '<div><a href="' + result.url + '">' + result.title + '</a></div>';
-              }).join('');
-              document.getElementById('results-container').innerHTML = resultHtml;
-            }
-          }
-        });
-      }
-
       document.addEventListener('DOMContentLoaded', function() {
+        var currentLang = '{{ page.lang }}';
+
+        function initializeSearch() {
+          SimpleJekyllSearch({
+            searchInput: document.getElementById('search-input'),
+            resultsContainer: document.getElementById('results-container'),
+            json: '{{ site.baseurl }}/search.json',
+            searchResultTemplate: '<div><a href="{url}">{title}</a></div>',
+            noResultsText: 'No results found',
+            limit: 10,
+            fuzzy: false,
+            success: function(results) {
+              var filteredResults = results.filter(function(result) {
+                return result.lang === currentLang;
+              });
+
+              if (filteredResults.length === 0) {
+                document.getElementById('results-container').innerHTML = '<div>No results found</div>';
+              } else {
+                var resultHtml = filteredResults.map(function(result) {
+                  return '<div><a href="' + result.url + '">' + result.title + '</a></div>';
+                }).join('');
+                document.getElementById('results-container').innerHTML = resultHtml;
+              }
+            }
+          });
+        }
+
         initializeSearch();
 
         // Event listener to trigger search only when there's input
         document.getElementById('search-input').addEventListener('input', function() {
-          if (this.value.trim() !== '') {
-            SimpleJekyllSearch.search(this.value);
+          var query = this.value.trim();
+          if (query !== '') {
+            SimpleJekyllSearch.search(query);
           } else {
             document.getElementById('results-container').innerHTML = '';
           }
