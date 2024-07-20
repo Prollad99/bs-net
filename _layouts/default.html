@@ -93,8 +93,7 @@
   {% assign is_homepage = true %}
 {% else %}
   {% for lang in site.data.languages %}
-    {% assign lang_homepage_url = '/' | append: lang.code | append: '/' %}
-    {% if page.url == lang_homepage_url %}
+    {% if page.url == '/' | append: lang.code | append: '/' %}
       {% assign is_homepage = true %}
     {% endif %}
   {% endfor %}
