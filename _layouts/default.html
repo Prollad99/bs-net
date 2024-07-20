@@ -103,17 +103,32 @@
   {% endif %}
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-jekyll-search/1.7.2/simple-jekyll-search.min.js"></script>
-  <script>
-    SimpleJekyllSearch({
-      searchInput: document.getElementById('search-input'),
-      resultsContainer: document.getElementById('results-container'),
-      json: '{{ site.baseurl }}/search.json',
-      searchResultTemplate: '<div><a href="{url}">{title}</a></div>',
-      noResultsText: 'No results found',
-      limit: 10,
-      fuzzy: false
-    });
-  </script>
+      <script>
+      var currentLang = '{{ page.lang }}';
+      SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '{{ site.baseurl }}/search.json',
+        searchResultTemplate: '<div><a href="{url}">{title}</a></div>',
+        noResultsText: 'No results found',
+        limit: 5,
+        fuzzy: false,
+        success: function(results) {
+          var filteredResults = results.filter(function(result) {
+            return result.lang === currentLang;
+          });
+
+          if (filteredResults.length === 0) {
+            document.getElementById('results-container').innerHTML = '<div>No results found</div>';
+          } else {
+            var resultHtml = filteredResults.map(function(result) {
+              return '<div><a href="' + result.url + '">' + result.title + '</a></div>';
+            }).join('');
+            document.getElementById('results-container').innerHTML = resultHtml;
+          }
+        }
+      });
+    </script>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
