@@ -7,7 +7,8 @@ layout: null
     "title": "{{ post.title | escape }}",
     "url": "{{ post.url | absolute_url }}",
     "date": "{{ post.date | date: '%B %d, %Y' }}",
-    "content": "{{ post.content | strip_html | strip_newlines | escape }}"
+    "content": "{{ post.content | strip_html | strip_newlines | escape }}",
+    "lang": "{{ post.lang }}"
   }{% if forloop.last %}{% else %},{% endif %}
   {% endfor %}
 ]
