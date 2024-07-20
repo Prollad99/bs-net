@@ -94,14 +94,11 @@
 {% else %}
   {% for lang in site.data.languages.languages %}
     {% assign lang_homepage_url = "/" | append: lang.code | append: "/" %}
-    <p>Checking: '{{ lang_homepage_url }}' against '{{ page.url }}'</p>
     {% if page.url == lang_homepage_url %}
       {% assign is_homepage = true %}
     {% endif %}
   {% endfor %}
 {% endif %}
-
-<p>Is Homepage: {{ is_homepage }}</p>
 
 {% if is_homepage %}
 <div class="container mt-4">
@@ -115,9 +112,6 @@
   </div>
   <div id="results-container" class="mt-4"></div>
 </div>
-{% else %}
-<p>Current URL: {{ page.url }}</p>
-<p>Not a homepage</p>
 {% endif %}
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-jekyll-search/1.7.2/simple-jekyll-search.min.js"></script>
