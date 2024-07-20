@@ -56,6 +56,7 @@ layout: default
       <div id="results-container" class="mt-4"></div>
     </div>
     <script>
+      var currentLang = '{{ page.lang }}';
       SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
@@ -63,7 +64,21 @@ layout: default
         searchResultTemplate: '<div><a href="{url}">{title}</a></div>',
         noResultsText: 'No results found',
         limit: 10,
-        fuzzy: false
+        fuzzy: false,
+        success: function(results) {
+          var filteredResults = results.filter(function(result) {
+            return result.lang === currentLang;
+          });
+
+          if (filteredResults.length === 0) {
+            document.getElementById('results-container').innerHTML = '<div>No results found</div>';
+          } else {
+            var resultHtml = filteredResults.map(function(result) {
+              return '<div><a href="' + result.url + '">' + result.title + '</a></div>';
+            }).join('');
+            document.getElementById('results-container').innerHTML = resultHtml;
+          }
+        }
       });
     </script>
 
