@@ -24,10 +24,24 @@ layout: default
     {% endif %}
 
     <div class="social-share mt-4">
-      <!-- Social Share buttons -->
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank" class="btn btn-primary mb-2 me-2">
+        <i class="bi bi-facebook"></i> Share on Facebook
+      </a>
+      <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" target="_blank" class="btn btn-info mb-2 me-2">
+        <i class="bi bi-twitter"></i> Tweet
+      </a>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank" class="btn btn-primary mb-2 me-2">
+        <i class="bi bi-linkedin"></i> Share on LinkedIn
+      </a>
+      <a href="https://reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank" class="btn btn-danger mb-2 me-2">
+        <i class="bi bi-reddit"></i> Share on Reddit
+      </a>
+      <a href="https://api.whatsapp.com/send?text={{ page.title }} {{ site.url }}{{ page.url }}" target="_blank" class="btn btn-success mb-3 me-2">
+        <i class="bi bi-whatsapp"></i> Share on WhatsApp
+      </a>
     </div>
 
-    <!-- Search -->
+    <!-- List of All Posts -->
     <h2>All Games</h2>
 
     <div class="container mt-4">
@@ -42,46 +56,31 @@ layout: default
       <div id="results-container" class="mt-4"></div>
     </div>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var currentLang = '{{ page.lang }}';
-
-        function initializeSearch() {
-          SimpleJekyllSearch({
-            searchInput: document.getElementById('search-input'),
-            resultsContainer: document.getElementById('results-container'),
-            json: '{{ site.baseurl }}/search.json',
-            searchResultTemplate: '<div><a href="{url}">{title}</a></div>',
-            noResultsText: 'No results found',
-            limit: 10,
-            fuzzy: false,
-            success: function(results) {
-              var filteredResults = results.filter(function(result) {
-                return result.lang === currentLang;
-              });
-
-              if (filteredResults.length === 0) {
-                document.getElementById('results-container').innerHTML = '<div>No results found</div>';
-              } else {
-                var resultHtml = filteredResults.map(function(result) {
-                  return '<div><a href="' + result.url + '">' + result.title + '</a></div>';
-                }).join('');
-                document.getElementById('results-container').innerHTML = resultHtml;
-              }
-            }
+      var currentLang = "{{ page.lang }}";
+      SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '{{ site.baseurl }}/search.json',
+        searchResultTemplate: '<div><a href="{url}">{title}</a></div>',
+        noResultsText: 'No results found',
+        limit: 10,
+        fuzzy: false,
+        success: function(results) {
+          var filteredResults = results.filter(function(result) {
+            return result.lang === currentLang;
           });
-        }
-
-        initializeSearch();
-
-        // Event listener to trigger search only when there's input
-        document.getElementById('search-input').addEventListener('input', function() {
-          var query = this.value.trim();
-          if (query !== '') {
-            SimpleJekyllSearch.search(query);
+          var resultsContainer = document.getElementById('results-container');
+          resultsContainer.innerHTML = '';
+          if (filteredResults.length > 0) {
+            filteredResults.forEach(function(result) {
+              var div = document.createElement('div');
+              div.innerHTML = '<a href="' + result.url + '">' + result.title + '</a>';
+              resultsContainer.appendChild(div);
+            });
           } else {
-            document.getElementById('results-container').innerHTML = '';
+            resultsContainer.innerHTML = 'No results found';
           }
-        });
+        }
       });
     </script>
 
