@@ -12,6 +12,8 @@ layout: default
   <p>Last updated: {{ page.last_modified_at | date: "%B %d, %Y" }}</p>
 {% endif %}
 
+<p>Debug: {{ page.last_modified_at | inspect }}</p>
+
     <div class="card-text">{{ content }}</div>
 
     {% if page.tags %}
