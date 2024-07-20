@@ -7,13 +7,6 @@ layout: default
 
     <h1 class="card-title">{{ page.title }}</h1>
 
-    {% if page.last_modified_at %}
-      <meta name="last-modified" content="{{ page.last_modified_at | date: "%Y-%m-%dT%H:%M:%S%z" }}" />
-      <p>Last updated: {{ page.last_modified_at | date: "%B %d, %Y" }}</p>
-    {% else %}
-      <p>No last modified date available.</p>
-    {% endif %}
-
     <div class="card-text">{{ content }}</div>
 
     {% if page.tags %}
