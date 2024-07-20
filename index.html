@@ -18,15 +18,6 @@ lang: en
                   <img src="{{ post.image }}" class="card-img" alt="{{ post.title }}" style="max-width: 80px; max-height: 80px; margin: 10px;">
                 {% endif %}
                 <a href="{{ post.url }}" class="btn btn-primary btn-sm mt-2 mb-2">Claim Now</a>
-                <!-- Author and Last Modified Date -->
-                <div class="card-footer text-muted text-center" style="font-size: 0.8rem;">
-                  <p>By {{ post.author }}</p>
-                  {% if post.last_modified_at %}
-                    <p>Last updated: {{ post.last_modified_at | date: "%B %d, %Y" }}</p>
-                  {% else %}
-                    <p>No last modified date available.</p>
-                  {% endif %}
-                </div>
               </div>
               <div class="col-8">
                 <div class="card-body">
@@ -36,6 +27,15 @@ lang: en
                   <p class="card-text" style="font-size: 0.9rem;">{{ post.description }}</p>
                 </div>
               </div>
+            </div>
+            <!-- Author and Last Modified Date -->
+            <div class="card-footer text-muted text-center" style="font-size: 0.8rem;">
+              <p>By {{ post.author }}</p>
+              {% if post.last_modified_at %}
+                <p>Last updated: {{ post.last_modified_at | date: "%B %d, %Y" }}</p>
+              {% else %}
+                <p>No last modified date available.</p>
+              {% endif %}
             </div>
           </div>
         </div>
