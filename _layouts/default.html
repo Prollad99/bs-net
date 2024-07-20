@@ -92,9 +92,9 @@
 {% if page.url == "/" %}
   {% assign is_homepage = true %}
 {% else %}
-  {% for lang in site.data.languages %}
-    {% assign lang_homepage_url = '/' | append: lang.code | append: '/' %}
-    <p>Checking: {{ lang_homepage_url }} against {{ page.url }}</p>
+  {% for lang in site.data.languages.languages %}
+    {% assign lang_homepage_url = "/" | append: lang.code | append: "/" %}
+    <p>Checking: '{{ lang_homepage_url }}' against '{{ page.url }}'</p>
     {% if page.url == lang_homepage_url %}
       {% assign is_homepage = true %}
     {% endif %}
