@@ -57,28 +57,53 @@ layout: default
     </div>
     <script>
       var currentLang = "{{ page.lang }}";
-      SimpleJekyllSearch({
-        searchInput: document.getElementById('search-input'),
-        resultsContainer: document.getElementById('results-container'),
-        json: '{{ site.baseurl }}/search.json',
-        searchResultTemplate: '<div><a href="{url}">{title}</a></div>',
-        noResultsText: 'No results found',
-        limit: 10,
-        fuzzy: false,
-        success: function(results) {
-          var filteredResults = results.filter(function(result) {
-            return result.lang === currentLang;
-          });
-          var resultsContainer = document.getElementById('results-container');
-          resultsContainer.innerHTML = '';
-          if (filteredResults.length > 0) {
-            filteredResults.forEach(function(result) {
-              var div = document.createElement('div');
-              div.innerHTML = '<a href="' + result.url + '">' + result.title + '</a>';
-              resultsContainer.appendChild(div);
+      var searchInput = document.getElementById('search-input');
+      var resultsContainer = document.getElementById('results-container');
+      var searchButton = document.getElementById('search-button');
+
+      function performSearch(query) {
+        SimpleJekyllSearch({
+          searchInput: searchInput,
+          resultsContainer: resultsContainer,
+          json: '{{ site.baseurl }}/search.json',
+          searchResultTemplate: '<div><a href="{url}">{title}</a></div>',
+          noResultsText: 'No results found',
+          limit: 10,
+          fuzzy: false,
+          success: function(results) {
+            var filteredResults = results.filter(function(result) {
+              return result.lang === currentLang;
             });
+            resultsContainer.innerHTML = '';
+            if (filteredResults.length > 0) {
+              filteredResults.forEach(function(result) {
+                var div = document.createElement('div');
+                div.innerHTML = '<a href="' + result.url + '">' + result.title + '</a>';
+                resultsContainer.appendChild(div);
+              });
+            } else {
+              resultsContainer.innerHTML = 'No results found';
+            }
+          }
+        });
+      }
+
+      searchButton.addEventListener('click', function() {
+        var query = searchInput.value.trim();
+        if (query) {
+          performSearch(query);
+        } else {
+          resultsContainer.innerHTML = '';
+        }
+      });
+
+      searchInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+          var query = searchInput.value.trim();
+          if (query) {
+            performSearch(query);
           } else {
-            resultsContainer.innerHTML = 'No results found';
+            resultsContainer.innerHTML = '';
           }
         }
       });
