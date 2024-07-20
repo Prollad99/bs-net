@@ -10,18 +10,6 @@
       {{ site.title | escape }}
     {% endif %}
   </title>
-{% assign all_includes = "" | split: "" %}
-  {% assign includes_dir = site.source + "/_includes" %}
-  {% for include in site.static_files %}
-    {% if include.path contains includes_dir %}
-      {% assign all_includes = all_includes | push: include %}
-    {% endif %}
-  {% endfor %}
-
-  {% assign included_file_modified = all_includes | map: "modified_time" | sort | last %}
-  {% assign post_last_modified = page.last_modified_at | default: site.time %}
-  {% assign last_modified = [post_last_modified, included_file_modified] | sort | last %}
-
   <meta name="last-modified" content="{{ last_modified | date: '%Y-%m-%dT%H:%M:%S%z' }}">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9883001954705974"
      crossorigin="anonymous"></script>
