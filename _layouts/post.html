@@ -57,13 +57,13 @@ layout: default
     </div>
     <script>
       var currentLang = '{{ page.lang }}';
-      SimpleJekyllSearch({
+      var search = new SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
         json: '{{ site.baseurl }}/search.json',
         searchResultTemplate: '<div><a href="{url}">{title}</a></div>',
         noResultsText: 'No results found',
-        limit: 5,
+        limit: 10,
         fuzzy: false,
         success: function(results) {
           var filteredResults = results.filter(function(result) {
@@ -79,6 +79,10 @@ layout: default
             document.getElementById('results-container').innerHTML = resultHtml;
           }
         }
+      });
+
+      document.getElementById('search-input').addEventListener('input', function() {
+        search.search(this.value);
       });
     </script>
 
