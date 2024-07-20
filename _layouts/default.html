@@ -88,7 +88,18 @@
   </nav>
 
   <!--search start -->
-{% if page.url == "/" or page.url matches '^/[a-z]{2}/$' %}
+{% assign is_homepage = false %}
+{% if page.url == "/" %}
+  {% assign is_homepage = true %}
+{% else %}
+  {% for lang in site.data.languages %}
+    {% if page.url == '/' | append: lang.code | append: '/' %}
+      {% assign is_homepage = true %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if is_homepage %}
 <div class="container mt-4">
   <div class="input-group">
     <input type="search" id="search-input" class="form-control" placeholder="Search for Games..." aria-label="Search">
