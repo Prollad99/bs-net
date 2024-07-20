@@ -31,7 +31,7 @@ layout: null
       {% if post.last_modified_at %}
         <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
       {% endif %}
-      <priority>0.8</priority>
+      <priority>1.0</priority>
     </url>
   {% endfor %}
 </urlset>
