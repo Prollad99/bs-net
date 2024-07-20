@@ -1,13 +1,5 @@
-{% assign all_includes = "" | split: "" %}
-{% assign includes_dir = site.source + "/_includes" %}
-{% for include in site.static_files %}
-  {% if include.path contains includes_dir %}
-    {% assign all_includes = all_includes | push: include %}
-  {% endif %}
-{% endfor %}
-
-{% assign included_file_modified = all_includes | map: "modified_time" | sort | last %}
 {% assign post_last_modified = page.last_modified_at | default: site.time %}
-{% assign last_modified = [post_last_modified, included_file_modified] | sort | last %}
+
+{% assign last_modified = post_last_modified %}
 
 <p>Last modified: {{ last_modified | date: "%Y-%m-%d %H:%M:%S" }}</p>
