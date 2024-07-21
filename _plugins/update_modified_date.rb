@@ -17,12 +17,12 @@ module Jekyll
       includes_files = Dir.glob("#{includes_dir}/**/*")
 
       post_include_files = includes_files.select do |file|
-        post.content.include?(File.basename(file))
+        post.content.include?(File.basename(file)) && File.exist?(file)
       end
 
       latest_include_mtime = post_include_files.map { |file| File.mtime(file) }.max
 
-      if latest_include_mtime && latest_include_mtime > post.date
+      if latest_include_mtime && latest_include_mtime.to_date > post.date.to_date
         update_post_front_matter(post, latest_include_mtime)
       end
     end
@@ -42,7 +42,7 @@ module Jekyll
       if front_matter =~ /last_modified_at:/
         front_matter.gsub!(/last_modified_at: .*/, "last_modified_at: #{formatted_last_modified_at}")
       else
-        front_matter << "last_modified_at: #{formatted_last_modified_at}\n"
+        front_matter = front_matter.chomp + "\nlast_modified_at: #{formatted_last_modified_at}\n"
       end
 
       # Write the updated content back to the file
