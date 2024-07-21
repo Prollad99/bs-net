@@ -1,7 +1,26 @@
 {
+  "builds": [
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "build": {
+    "env": {
+      "JEKYLL_ENV": "production"
+    },
+    "command": "bundle install && bundle exec jekyll build",
+    "outputDirectory": "_site"
+  },
   "git": {
     "deploymentEnabled": {
-      "main": false
+      "main": true
     }
   }
 }
