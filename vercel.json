@@ -1,26 +1,7 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "Gemfile",
-      "use": "@vercel/ruby"
-    },
-    {
-      "src": "Gemfile.lock",
-      "use": "@vercel/ruby"
-    },
-    {
-      "src": "_config.yml",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "_site"
-      }
+  "git": {
+    "deploymentEnabled": {
+      "main": true
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ]
+  }
 }
