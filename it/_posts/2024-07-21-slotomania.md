@@ -6,7 +6,7 @@ tags: [Slotomania, Free Coins, BonusCollector.net]
 author: BonusCollector.net
 description: "Scopri come ottenere monete gratuite su Slotomania con i nostri link aggiornati quotidianamente."
 lang: it
-permalink: /slotomania-free-coins/
+permalink: /it/slotomania-free-coins/
 image: /assets/images/gifts.svg
 ---
 
