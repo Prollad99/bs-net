@@ -1,3 +1,5 @@
+require 'fileutils'
+
 module Jekyll
   class UpdateModifiedDate < Generator
     priority :lowest
@@ -21,8 +23,26 @@ module Jekyll
       latest_include_mtime = post_include_files.map { |file| File.mtime(file) }.max
 
       if latest_include_mtime && latest_include_mtime > post.date
-        post.data['last_modified_at'] = latest_include_mtime
+        update_post_front_matter(post, latest_include_mtime)
       end
+    end
+
+    def update_post_front_matter(post, last_modified_at)
+      post_path = post.path
+      post_content = File.read(post_path)
+
+      # Extract front matter and content
+      front_matter, content = post_content.match(/\A(---\s*\n.*?\n?)^(---\s*$\n?)(.*)/m).captures
+
+      # Update or add the last_modified_at field in the front matter
+      if front_matter =~ /last_modified_at:/
+        front_matter.gsub!(/last_modified_at: .*/, "last_modified_at: #{last_modified_at.strftime('%Y-%m-%d %H:%M:%S %z')}")
+      else
+        front_matter << "last_modified_at: #{last_modified_at.strftime('%Y-%m-%d %H:%M:%S %z')}\n"
+      end
+
+      # Write the updated content back to the file
+      File.write(post_path, front_matter + "---\n" + content)
     end
   end
 end
