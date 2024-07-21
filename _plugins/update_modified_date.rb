@@ -29,10 +29,12 @@ module Jekyll
 
     def update_post_front_matter(post, last_modified_at)
       post_path = post.path
-      post_content = File.read(post_path)
+      post_content = File.read(post_path, encoding: 'utf-8')
 
       # Extract front matter and content
-      front_matter, content = post_content.match(/\A(---\s*\n.*?\n?)^(---\s*$\n?)(.*)/m).captures
+      matches = post_content.match(/\A(---\s*\n.*?\n?)^(---\s*$\n?)(.*)/m)
+      front_matter = matches[1]
+      content = matches[3]
 
       # Update or add the last_modified_at field in the front matter
       if front_matter =~ /last_modified_at:/
@@ -42,7 +44,7 @@ module Jekyll
       end
 
       # Write the updated content back to the file
-      File.write(post_path, front_matter + "---\n" + content)
+      File.write(post_path, front_matter + "---\n" + content, encoding: 'utf-8')
     end
   end
 end
