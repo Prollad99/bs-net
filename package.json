@@ -2,7 +2,7 @@
   "name": "my-jekyll-blog",
   "version": "1.0.0",
   "scripts": {
-    "vercel-build": "bundle exec jekyll build"
+    "vercel-build": "bundle install && bundle exec jekyll build"
   },
   "dependencies": {
     "axios": "^1.7.2",
