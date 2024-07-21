@@ -24,10 +24,3 @@
     }
   ]
 }
-{
-  "git": {
-    "deploymentEnabled": {
-      "main": true
-    }
-  }
-}
