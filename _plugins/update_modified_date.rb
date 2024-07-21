@@ -20,9 +20,19 @@ module Jekyll
         post.content.include?(File.basename(file)) && File.exist?(file)
       end
 
+      if post_include_files.empty?
+        Jekyll.logger.info "UpdateModifiedDate:", "No include files found for post #{post.path}"
+        return
+      end
+
       latest_include_mtime = post_include_files.map { |file| File.mtime(file) }.max
 
+      if latest_include_mtime
+        Jekyll.logger.info "UpdateModifiedDate:", "Latest include file modification time for post #{post.path}: #{latest_include_mtime}"
+      end
+
       if latest_include_mtime && latest_include_mtime.to_date > post.date.to_date
+        Jekyll.logger.info "UpdateModifiedDate:", "Updating post #{post.path} with last_modified_at: #{latest_include_mtime}"
         update_post_front_matter(post, latest_include_mtime)
       end
     end
@@ -47,6 +57,8 @@ module Jekyll
 
       # Write the updated content back to the file
       File.write(post_path, front_matter + "---\n" + content, encoding: 'utf-8')
+
+      Jekyll.logger.info "UpdateModifiedDate:", "Post #{post_path} updated with last_modified_at: #{formatted_last_modified_at}"
     end
   end
 end
