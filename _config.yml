@@ -12,13 +12,6 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-last-modified-at
-  - jekyll-last-modified
-
-jekyll_last_modified_at:
-  enabled: true
-  include_in_sitemap: true
-  include_in_feed: true
-  include_in_atom_feed: true
 
 collections:
   pages:
