@@ -37,10 +37,12 @@ module Jekyll
       content = matches[3]
 
       # Update or add the last_modified_at field in the front matter
+      formatted_last_modified_at = last_modified_at.strftime('%Y-%m-%d %H:%M:%S %z')
+
       if front_matter =~ /last_modified_at:/
-        front_matter.gsub!(/last_modified_at: .*/, "last_modified_at: #{last_modified_at.strftime('%Y-%m-%d %H:%M:%S %z')}")
+        front_matter.gsub!(/last_modified_at: .*/, "last_modified_at: #{formatted_last_modified_at}")
       else
-        front_matter << "last_modified_at: #{last_modified_at.strftime('%Y-%m-%d %H:%M:%S %z')}\n"
+        front_matter << "last_modified_at: #{formatted_last_modified_at}\n"
       end
 
       # Write the updated content back to the file
