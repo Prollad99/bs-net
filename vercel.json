@@ -1,7 +1,11 @@
 {
-  "git": {
-    "deploymentEnabled": {
-      "main": false
+  "builds": [
+    {
+      "src": "./",
+      "use": "@vercel/static-build",
+      "config": {
+        "buildCommand": "bundle exec jekyll build"
+      }
     }
-  }
+  ]
 }
