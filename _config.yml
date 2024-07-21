@@ -12,6 +12,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-last-modified-at
+  - _plugins/update_last_modified_at.rb
 
 collections:
   pages:
