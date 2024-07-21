@@ -1,10 +1,11 @@
 {
   "builds": [
     {
-      "src": ".",
+      "src": "index.html",
       "use": "@vercel/static-build",
       "config": {
-        "buildCommand": "bundle exec jekyll build"
+        "buildCommand": "bundle exec jekyll build",
+        "distDir": "_site"
       }
     }
   ]
