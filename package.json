@@ -6,11 +6,7 @@
   },
   "dependencies": {
     "jekyll": "^4.3.3",
-    "bundler": "^2.2.0"
-  }
-}
-{
-  "dependencies": {
+    "bundler": "^2.2.0",
     "axios": "^1.7.2",
     "cheerio": "^1.0.0-rc.12",
     "jq": "^1.7.2"
