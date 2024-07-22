@@ -8,6 +8,7 @@ description: "Descubre cómo obtener giros gratis en Island King diariamente. Ac
 lang: es
 permalink: /es/island-king-free-spins/
 image: /assets/images/island-king.jpg
+include_file: island-king.html
 ---
 
 Bienvenido a BonusCollector.net, tu fuente diaria de giros gratis para Island King. Mantente al día con las recompensas más recientes y maximiza tu experiencia de juego con nuestros enlaces actualizados diariamente.
