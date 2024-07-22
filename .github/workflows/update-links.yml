@@ -71,13 +71,19 @@ jobs:
           # Read the current content of _data/include_files.yml
           INCLUDE_FILES_YML="_data/include_files.yml"
 
-          # Update the entry for the current game with the new timestamp
-          if grep -q "${{ matrix.game }}.html:" "$INCLUDE_FILES_YML"; then
-            # Update the existing entry with the new timestamp
-            sed -i "/${{ matrix.game }}.html:/,/last_modified:/s|last_modified: .*|last_modified: $TIMESTAMP|" "$INCLUDE_FILES_YML"
+          # Check if the include file has been modified
+          if git diff --quiet _includes/${{ matrix.game }}.html; then
+            echo "_includes/${{ matrix.game }}.html has not been modified. Skipping last modified date update."
           else
-            # Add a new entry for the current game
-            echo -e "\n${{ matrix.game }}.html:\n  last_modified: $TIMESTAMP" >> "$INCLUDE_FILES_YML"
+            # Update the entry for the current game with the new timestamp
+            if grep -q "${{ matrix.game }}.html:" "$INCLUDE_FILES_YML"; then
+              # Update the existing entry with the new timestamp
+              sed -i "/${{ matrix.game }}.html:/,/last_modified:/s|last_modified: .*|last_modified: $TIMESTAMP|" "$INCLUDE_FILES_YML"
+            else
+              # Add a new entry for the current game
+              echo -e "\n${{ matrix.game }}.html:\n  last_modified: $TIMESTAMP" >> "$INCLUDE_FILES_YML"
+            fi
+            echo "Updated last modified date for _includes/${{ matrix.game }}.html"
           fi
 
           # Display the updated content
