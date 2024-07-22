@@ -8,6 +8,7 @@ description: "Get your daily Hit It Rich free coins here! Updated daily to ensur
 lang: en
 permalink: /hit-it-rich-free-coins/
 image: /assets/images/hit-it-rich.jpeg
+include_file: hit-it-rich.html
 ---
 
 ## Daily Free Coins for Hit It Rich Slots
