@@ -8,6 +8,7 @@ description: "Get the latest Island King free spins links updated daily. Learn h
 lang: en
 permalink: /island-king-free-spins/
 image: /assets/images/island-king.jpg
+include_file: island-king.html
 ---
 
 Welcome to BonusCollector.net, your go-to source for daily updates on **Island King free spins**. We update our links daily to ensure you never miss out on the latest rewards.
