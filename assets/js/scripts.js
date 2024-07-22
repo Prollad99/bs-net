@@ -2,11 +2,11 @@ function timeAgo(dateString) {
     const now = new Date();
     const date = new Date(dateString);
 
-    // Convert current time (now) to IST (UTC+5:30)
-    const offsetIST = 5 * 60 + 30; // 5 hours 30 minutes in minutes
-    now.setMinutes(now.getMinutes() + now.getTimezoneOffset() + offsetIST);
+    // Convert both dates to UTC
+    const nowUTC = new Date(now.toUTCString().slice(0, -4));
+    const dateUTC = new Date(date.toUTCString().slice(0, -4));
 
-    const seconds = Math.floor((now - date) / 1000);
+    const seconds = Math.floor((nowUTC - dateUTC) / 1000);
     let interval = Math.floor(seconds / 31536000);
 
     if (interval > 1) return `${interval} years ago`;
