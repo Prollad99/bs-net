@@ -4,12 +4,11 @@ lang: en
 ---
 
 <div class="container">
-  <h1 class="my-4">Games list</h1>
+  <h1 class="my-4">Game List</h1>
 
   <div class="row">
-    {% assign current_lang = page.lang | default: 'en' %}
     {% for post in site.posts %}
-      {% if post.lang == current_lang %}
+      {% if post.lang == "en" %}
         <div class="col-md-6 mb-4">
           <div class="card shadow-sm">
             <div class="row no-gutters">
@@ -28,6 +27,7 @@ lang: en
                 </div>
               </div>
             </div>
+            
 <div class="card-footer text-center">
   <p class="text-muted">
     <small>
@@ -50,6 +50,12 @@ lang: en
     </small>
   </p>
 </div>
+            
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
 
   {% if paginator.next_page %}
     <div class="text-center mb-4">
