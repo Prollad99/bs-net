@@ -6,6 +6,13 @@ layout: default
   <div class="card-body">
 
     <h1 class="card-title">{{ page.title }}</h1>
+ <!-- Display Build Time -->
+    <div id="buildTime" style="font-size: 20px; margin-top: 20px;">
+        {% assign current_time = 'now' | date: "%Y-%m-%d %H:%M:%S" %}
+        Current Time: {{ current_time }}
+    </div>
+
+
     <p class="card-subtitle text-muted mb-3">
       By <strong>{{ page.author }}</strong> | 
       {% assign include_file = page.include_file | prepend: "_includes/" %}
