@@ -8,9 +8,9 @@ module Jekyll
 
     def render(context)
       site_source = context.registers[:site].source
-      file_path = File.join(site_source, '_includes', @file_name)
+      include_file = context[@file_name] || @file_name
+      file_path = File.join(site_source, '_includes', include_file)
 
-      # Debug information
       if File.exist?(file_path)
         File.mtime(file_path).strftime("%Y-%m-%d %H:%M:%S")
       else
