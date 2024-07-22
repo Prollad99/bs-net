@@ -3,8 +3,10 @@ function timeAgo(dateString) {
     const date = new Date(dateString);
 
     // Convert both dates to UTC
-    const nowUTC = new Date(now.toUTCString().slice(0, -4));
-    const dateUTC = new Date(date.toUTCString().slice(0, -4));
+    const nowUTC = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(),
+                            now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds());
+    const dateUTC = Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(),
+                             date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds());
 
     const seconds = Math.floor((nowUTC - dateUTC) / 1000);
     let interval = Math.floor(seconds / 31536000);
