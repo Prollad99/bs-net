@@ -8,6 +8,7 @@ description: "Get daily updates on Willy Wonka free coins to enhance your gaming
 lang: en
 permalink: /willy-wonka-free-coins/
 image: /assets/images/willy-wonka.jpeg
+include_file: willy-wonka.html
 ---
 
 Welcome to **BonusCollector.net**, your go-to source for daily rewards in Willy Wonka Slots! If you're looking to enhance your gaming experience with free coins and credits, you've come to the right place. We provide updated links every day so you can enjoy the game without spending a dime.
