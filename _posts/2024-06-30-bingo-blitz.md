@@ -8,6 +8,7 @@ lang: en
 author: "BonusCollector.net"
 permalink: /bingo-blitz-free-credits/
 image: /assets/images/bingo-blitz.webp
+include_file: bingo-blitz.html
 ---
 
 Welcome to your daily source for **Bingo Blitz free credits**! Get ready to maximize your Bingo fun without spending a dime. Here, you’ll find all the latest free credit links to keep you playing and winning.
