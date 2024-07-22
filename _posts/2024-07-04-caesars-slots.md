@@ -8,6 +8,7 @@ description: "Discover the best ways to collect and utilize Caesars Slots free c
 lang: en
 permalink: /caesars-slots-free-coins/
 image: /assets/images/caesars-slots.webp
+include_file: caesars-slots.html
 ---
 
 Welcome to BonusCollector.net, your ultimate source for **Caesars Slots free coins**. We publish daily updates to help you maximize your coin collection and enjoy endless fun in the game. 
