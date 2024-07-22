@@ -1,14 +1,12 @@
 function timeAgo(dateString) {
-    // Convert the provided date string to a Date object in UTC
-    const date = new Date(dateString);
-    
-    // Calculate the difference in milliseconds
     const now = new Date();
-    const offset = now.getTimezoneOffset() * 60000; // Offset in milliseconds
-    const localNow = new Date(now.getTime() - offset); // Local time in milliseconds
-    const localDate = new Date(date.getTime() + offset); // Adjust date to local time
-    
-    const seconds = Math.floor((localNow - localDate) / 1000);
+    const date = new Date(dateString);
+
+    // Convert current time (now) to IST (UTC+5:30)
+    const offsetIST = 5 * 60 + 30; // 5 hours 30 minutes in minutes
+    now.setMinutes(now.getMinutes() + now.getTimezoneOffset() + offsetIST);
+
+    const seconds = Math.floor((now - date) / 1000);
     let interval = Math.floor(seconds / 31536000);
 
     if (interval > 1) return `${interval} years ago`;
