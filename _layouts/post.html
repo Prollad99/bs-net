@@ -11,7 +11,7 @@ layout: default
       {% assign include_file = page.include_file | prepend: "_includes/" %}
       {% if site.data.include_files[page.include_file].last_modified %}
         Last updated: 
-        <strong>{{ site.data.include_files[page.include_file].last_modified | date: "%Y-%m-%d %H:%M:%S" }}</strong>
+        <strong id="last-updated" data-last-modified="{{ site.data.include_files[page.include_file].last_modified | date: "%Y-%m-%dT%H:%M:%S" }}"></strong>
       {% else %}
         Last updated: <strong>Not available</strong>
       {% endif %}
