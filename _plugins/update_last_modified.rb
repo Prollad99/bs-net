@@ -8,20 +8,21 @@ module Jekyll
 
     def generate(site)
       site.posts.docs.each do |post|
-        # Get the modification time of the post file itself
+        # Initialize the last modified time with the post's file modification time
         last_modified = File.mtime(post.path)
 
-        # Check for any related files (e.g., images, data files)
-        post_dir = File.dirname(post.path)
-        Dir.glob("#{post_dir}/**/*").each do |file|
-          next if file == post.path # Skip the post file itself
-          next if File.directory?(file) # Skip directories
-
-          # Update last_modified to the latest modification time found
-          last_modified = [last_modified, File.mtime(file)].max
+        # Extract include files from the post content
+        post.content.scan(/\{% include (.*?) %\}/).each do |include_file|
+          include_path = File.join(site.in_source_dir("_includes"), include_file.first.strip)
+          
+          # Check if the include file exists and is a file
+          if File.exist?(include_path) && File.file?(include_path)
+            # Update the last_modified to the include file's modification time if it's newer
+            last_modified = [last_modified, File.mtime(include_path)].max
+          end
         end
 
-        # Assign the last modified time to the post's data
+        # Set the last modified date in the post's data
         post.data['last_modified'] = last_modified
 
         # Debug output to verify last modified time is being set
