@@ -5,16 +5,15 @@ module Jekyll
     def generate(site)
       site.posts.docs.each do |post|
         begin
-          # Find include files in the post content
           includes = post.content.scan(/\{% include (.*?) %\}/).map(&:first).map(&:strip)
-          
+
           # Start with the post's own modification time
           last_modified = [File.mtime(post.path)]
           puts "Post: #{post.path}"
           puts "Initial last_modified: #{last_modified.last}"
 
           includes.each do |include_file|
-            include_path = File.join(site.in_source_dir("_includes"), include_file)
+            include_path = File.join(site.source, '_includes', include_file)
             if File.exist?(include_path)
               include_mtime = File.mtime(include_path)
               last_modified << include_mtime
