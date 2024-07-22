@@ -6,18 +6,16 @@ layout: default
   <div class="card-body">
 
     <h1 class="card-title">{{ page.title }}</h1>
-    
-    {% assign include_file = page.include_file %}
-    {% assign include_metadata = site.data.include_files[include_file] %}
-    {% if include_metadata %}
-      <div class="last-modified">
-        Last updated: {{ include_metadata.last_modified }}
-      </div>
-    {% else %}
-      <div class="last-modified">
-        Last updated: Not available
-      </div>
-    {% endif %}
+    <p class="card-subtitle text-muted mb-3">
+      By <strong>{{ page.author }}</strong> | 
+      {% assign include_file = page.include_file | prepend: "_includes/" %}
+      {% if site.data.include_files[page.include_file].last_modified %}
+        Last updated: 
+        <strong>{{ site.data.include_files[page.include_file].last_modified | date: "%Y-%m-%d %H:%M:%S" }}</strong>
+      {% else %}
+        Last updated: <strong>Not available</strong>
+      {% endif %}
+    </p>
 
     <div class="card-text">{{ content }}</div>
 
