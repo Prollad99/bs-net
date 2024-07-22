@@ -7,10 +7,10 @@ layout: default
 
     <h1 class="card-title">{{ page.title }}</h1>
     
-    {% if page.include_last_modified %}
-      <p class="last-updated">
-        Last updated: {{ page.include_last_modified | date: "%Y-%m-%d %H:%M:%S" }}
-      </p>
+    {% if page.include_file %}
+      <div class="last-modified">
+        Last updated: {% last_modified {{ page.include_file }} %}
+      </div>
     {% endif %}
 
     <div class="card-text">{{ content }}</div>
