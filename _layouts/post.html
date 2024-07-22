@@ -9,7 +9,7 @@ layout: default
     
     {% if page.include_last_modified %}
       <p class="last-updated">
-        Last updated: {{ page.include_last_modified | date: "%Y-%m-%d" }}
+        Last updated: {{ page.include_last_modified | date: "%Y-%m-%d %H:%M:%S" }}
       </p>
     {% endif %}
 
