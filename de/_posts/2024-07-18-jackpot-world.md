@@ -8,6 +8,7 @@ description: "Erhalte tägliche kostenlose Münzen und Belohnungen für Jackpot 
 lang: de
 permalink: /de/jackpot-world-free-coins/
 image: /assets/images/jackpot-world.webp
+include_file: jackpot-world.html
 ---
 
 Willkommen bei BonusCollector.net! Hier findest du täglich aktualisierte Links zu kostenlosen Münzen und anderen Belohnungen für Jackpot World. Spiele dein Lieblings-Casino-Spiel und erhalte jeden Tag neue Münzen, um deine Gewinnchancen zu erhöhen und mehr Spaß zu haben.
