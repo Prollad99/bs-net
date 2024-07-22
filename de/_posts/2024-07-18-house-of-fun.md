@@ -8,6 +8,7 @@ description: "Erhalten Sie täglich kostenlose Münzen für House of Fun. Bleibe
 lang: de
 permalink: /de/house-of-fun-free-coins/
 image: /assets/images/gifts.svg
+include_file: house-of-fun.html
 ---
 
 Willkommen bei BonusCollector.net! Wir bieten Ihnen täglich aktualisierte Links, um kostenlose Münzen für House of Fun zu sammeln. Kein Suchen, kein Aufwand – einfach hier vorbeischauen und Ihre Belohnungen einsammeln!
