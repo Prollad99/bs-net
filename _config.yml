@@ -12,6 +12,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-last-modified-at
+  - custom_last_modified
 
 last_modified_at:
   enabled: true
