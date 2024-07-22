@@ -36,16 +36,8 @@ lang: en
       {% if site.data.include_files[page.include_file].last_modified %}
         Last updated: 
         <strong class="last-updated" data-last-modified="{{ site.data.include_files[page.include_file].last_modified | date: "%Y-%m-%dT%H:%M:%SZ" }}"></strong>
-        <!-- Debug information -->
-        <span style="display: none;">
-          Data exists: {{ site.data.include_files[page.include_file].last_modified }}
-        </span>
       {% else %}
         Last updated: <strong>Not available</strong>
-        <!-- Debug information -->
-        <span style="display: none;">
-          No data for: {{ page.include_file }}
-        </span>
       {% endif %}
     </small>
   </p>
