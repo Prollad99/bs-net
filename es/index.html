@@ -29,8 +29,17 @@ lang: es
             </div>
 <div class="card-footer text-center">
   <p class="text-muted">
-    <small>Por {{ post.author }} | Última actualización: {{ post.last_modified_at | date: "%d de %B de %Y" }}</small>
-  </p>
+  <small>
+    Por <strong>{{ page.author }}</strong> | 
+    {% assign include_file = page.include_file | prepend: "_includes/" %}
+    {% if site.data.include_files[page.include_file].last_modified %}
+      Última actualización: 
+      <strong id="last-updated" data-last-modified="{{ site.data.include_files[page.include_file].last_modified | date: "%Y-%m-%dT%H:%M:%SZ" }}"></strong>
+    {% else %}
+      Última actualización: <strong>No disponible</strong>
+    {% endif %}
+  </small>
+</p>
 </div>
           </div>
         </div>
