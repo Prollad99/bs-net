@@ -7,9 +7,15 @@ layout: default
 
     <h1 class="card-title">{{ page.title }}</h1>
     
-    {% if page.include_file %}
+    {% assign include_file = page.include_file %}
+    {% assign include_metadata = site.data.include_files[include_file] %}
+    {% if include_metadata %}
       <div class="last-modified">
-        Last updated: {% last_modified page.include_file %}
+        Last updated: {{ include_metadata.last_modified }}
+      </div>
+    {% else %}
+      <div class="last-modified">
+        Last updated: Not available
       </div>
     {% endif %}
 
