@@ -33,16 +33,10 @@ function timeAgo(dateString) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const lastUpdatedElements = document.querySelectorAll('.last-updated');
-    lastUpdatedElements.forEach(function(element) {
-        const lastModifiedDate = element.getAttribute('data-last-modified');
-        console.log('Processing element:', element); // Debug log
-        console.log('Last modified date:', lastModifiedDate); // Debug log
-        if (lastModifiedDate) {
-            const lastModifiedDateUTC = new Date(lastModifiedDate).toISOString();
-            console.log('Last modified date in UTC:', lastModifiedDateUTC); // Debug log
-            element.textContent = timeAgo(lastModifiedDateUTC);
-            console.log('Updated text content:', element.textContent); // Debug log
-        }
-    });
+    const lastUpdatedElement = document.getElementById('last-updated');
+    if (lastUpdatedElement) {
+        const lastModifiedDate = lastUpdatedElement.getAttribute('data-last-modified');
+        const lastModifiedDateUTC = new Date(lastModifiedDate).toISOString();
+        lastUpdatedElement.textContent = timeAgo(lastModifiedDateUTC);
+    }
 });
