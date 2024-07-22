@@ -8,6 +8,7 @@ description: "Erhalte tägliche Island King Free Spins und steigere deine Spielg
 lang: de
 permalink: /de/island-king-free-spins/
 image: /assets/images/island-king.jpg
+include_file: island-king.html
 ---
 
 Willkommen bei BonusCollector.net! Wenn du ein begeisterter Spieler von Island King bist, haben wir großartige Neuigkeiten für dich. Hier findest du täglich die neuesten Island King Free Spins, um dein Spielerlebnis zu maximieren.
