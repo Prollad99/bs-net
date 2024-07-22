@@ -18,6 +18,8 @@ module Jekyll
         if File.exist?(include_path)
           last_modified_time = File.mtime(include_path)
           post.data['include_last_modified'] = last_modified_time
+        else
+          post.data['include_last_modified'] = nil
         end
       end
     end
