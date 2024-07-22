@@ -10,10 +10,11 @@ module Jekyll
       site_source = context.registers[:site].source
       file_path = File.join(site_source, '_includes', @file_name)
 
+      # Debug information
       if File.exist?(file_path)
         File.mtime(file_path).strftime("%Y-%m-%d %H:%M:%S")
       else
-        "File not found"
+        "File not found: #{file_path}"
       end
     end
   end
