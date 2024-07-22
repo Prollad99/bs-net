@@ -8,6 +8,7 @@ description: "Erhalte tägliche kostenlose Geschenke in Match Masters, einschlie
 lang: de
 permalink: /de/match-masters-free-gifts/
 image: /assets/images/match-masters.webp
+include_file: match-masters.html
 ---
 
 Willkommen bei BonusCollector.net! Hier findest du täglich aktualisierte Links zu kostenlosen Geschenken für Match Masters, einschließlich Münzen, Booster, Sticker und mehr. Nutze die untenstehenden Links, um deine Belohnungen einzusammeln und dein Spielerlebnis zu verbessern.
