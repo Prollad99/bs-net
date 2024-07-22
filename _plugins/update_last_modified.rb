@@ -8,11 +8,18 @@ module Jekyll
 
     def generate(site)
       site.posts.docs.each do |post|
-        # Read the content of the file with UTF-8 encoding
-        content = File.read(post.path, encoding: 'UTF-8')
-
-        # Get the last modified time of the file
+        # Get the modification time of the post file itself
         last_modified = File.mtime(post.path)
+
+        # Check for any related files (e.g., images, data files)
+        post_dir = File.dirname(post.path)
+        Dir.glob("#{post_dir}/**/*").each do |file|
+          next if file == post.path # Skip the post file itself
+          next if File.directory?(file) # Skip directories
+
+          # Update last_modified to the latest modification time found
+          last_modified = [last_modified, File.mtime(file)].max
+        end
 
         # Assign the last modified time to the post's data
         post.data['last_modified'] = last_modified
