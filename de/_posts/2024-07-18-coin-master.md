@@ -8,6 +8,7 @@ description: "Erhalte tägliche Coin Master Free Spins und Münzen. Besuche unse
 lang: de
 permalink: /de/coin-master-free-spins/
 image: /assets/images/coin-master.webp
+include_file: coin-master.html
 ---
 
 Willkommen bei BonusCollector.net! Hier findest du täglich aktualisierte Links zu kostenlosen Spins und Münzen für Coin Master. Verpasse keine Belohnung und verbessere dein Spielerlebnis mit unseren täglichen Updates.
