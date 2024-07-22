@@ -1,32 +1,32 @@
-# Ensure the default external and internal encoding is set to UTF-8
-Encoding.default_external = Encoding::UTF_8
-Encoding.default_internal = Encoding::UTF_8
-
 module Jekyll
   class LastModifiedGenerator < Generator
     priority :low
 
     def generate(site)
-      site.posts.docs.each do |post|
-        # Initialize the last modified time with the post's file modification time
-        last_modified = File.mtime(post.path)
+      # Track which include files have been modified
+      modified_includes = site.posts.docs.flat_map do |post|
+        includes = post.content.scan(/\{% include (.*?) %\}/).map(&:first).map(&:strip)
+        includes.select { |include_file| File.exist?(File.join(site.in_source_dir("_includes"), include_file)) && File.mtime(File.join(site.in_source_dir("_includes"), include_file)) > File.mtime(post.path) }
+      end.uniq
 
-        # Extract include files from the post content
-        post.content.scan(/\{% include (.*?) %\}/).each do |include_file|
-          include_path = File.join(site.in_source_dir("_includes"), include_file.first.strip)
-          
-          # Check if the include file exists and is a file
-          if File.exist?(include_path) && File.file?(include_path)
-            # Update the last_modified to the include file's modification time if it's newer
-            last_modified = [last_modified, File.mtime(include_path)].max
+      # Update last_modified for posts that include modified files
+      site.posts.docs.each do |post|
+        includes = post.content.scan(/\{% include (.*?) %\}/).map(&:first).map(&:strip)
+        if (includes & modified_includes).any?
+          last_modified = [File.mtime(post.path)] # Start with the post's own modification time
+
+          includes.each do |include_file|
+            include_path = File.join(site.in_source_dir("_includes"), include_file)
+            if File.exist?(include_path)
+              last_modified << File.mtime(include_path) # Add include file's modification time if it exists
+            end
           end
+
+          post.data['last_modified'] = last_modified.max # Set last_modified to the most recent date
         end
 
-        # Set the last modified date in the post's data
-        post.data['last_modified'] = last_modified
-
         # Debug output to verify last modified time is being set
-        puts "Set last_modified for #{post.path} to #{last_modified}"
+        puts "Set last_modified for #{post.path} to #{post.data['last_modified']}"
       end
     end
   end
