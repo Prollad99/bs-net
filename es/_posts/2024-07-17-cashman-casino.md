@@ -8,6 +8,7 @@ description: "Obtén monedas gratis diarias para Cashman Casino y maximiza tu ex
 lang: es
 permalink: /es/cashman-casino-free-coins/
 image: /assets/images/cashman-casino.webp
+include_file: cashman-casino.html
 ---
 
 Bienvenidos a BonusCollector.net, tu fuente diaria de **monedas gratis para Cashman Casino**. Aquí encontrarás enlaces actualizados diariamente para obtener las mejores recompensas y maximizar tu diversión en Cashman Casino.
