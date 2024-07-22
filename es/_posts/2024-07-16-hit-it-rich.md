@@ -8,6 +8,7 @@ description: "Obtén tus monedas gratis diarias para Hit It Rich Slots y sigue j
 lang: es
 permalink: /es/hit-it-rich-free-coins/
 image: /assets/images/hit-it-rich.jpeg
+include_file: hit-it-rich.html
 ---
 
 ## ¿Cómo conseguir monedas gratis en Hit It Rich Slots?
