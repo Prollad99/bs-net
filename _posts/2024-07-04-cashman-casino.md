@@ -8,6 +8,7 @@ description: "Discover how to get daily free coins for Cashman Casino and maximi
 lang: en
 permalink: /cashman-casino-free-coins/
 image: /assets/images/cashman-casino.webp
+include_file: cashman-casino.html
 ---
 
 If you're a fan of **Cashman Casino**, you know how crucial free coins are to keep the excitement going. At BonusCollector.net, we provide daily updates on the best ways to earn **Cashman Casino free coins** to enhance your gaming experience. Here’s everything you need to know about collecting these valuable rewards.
