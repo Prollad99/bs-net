@@ -8,6 +8,7 @@ description: "Scopri come ottenere monete gratuite per Hit It Rich ogni giorno s
 lang: it
 permalink: /it/hit-it-rich-free-coins/
 image: /assets/images/hit-it-rich.jpeg
+include_file: hit-it-rich.html
 ---
 
 Benvenuti su BonusCollector.net! Se sei un appassionato di Hit It Rich, sei nel posto giusto. Ogni giorno, pubblichiamo nuovi link per ottenere monete gratuite, permettendoti di continuare a giocare e vincere senza spendere un centesimo.
