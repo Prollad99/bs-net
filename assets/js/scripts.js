@@ -33,10 +33,12 @@ function timeAgo(dateString) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const lastUpdatedElement = document.getElementById('last-updated');
-    if (lastUpdatedElement) {
-        const lastModifiedDate = lastUpdatedElement.getAttribute('data-last-modified');
-        const lastModifiedDateUTC = new Date(lastModifiedDate).toISOString();
-        lastUpdatedElement.textContent = timeAgo(lastModifiedDateUTC);
-    }
+    const lastUpdatedElements = document.querySelectorAll('.last-updated');
+    lastUpdatedElements.forEach(function(element) {
+        const lastModifiedDate = element.getAttribute('data-last-modified');
+        if (lastModifiedDate) {
+            const lastModifiedDateUTC = new Date(lastModifiedDate).toISOString();
+            element.textContent = timeAgo(lastModifiedDateUTC);
+        }
+    });
 });
