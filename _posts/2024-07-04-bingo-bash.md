@@ -8,6 +8,7 @@ description: "Discover how to get your Bingo Bash free chips daily and maximize 
 lang: en
 permalink: /bingo-bash-free-chips/
 image: /assets/images/bingo-bash.webp
+include_file: bingo-bash.html
 ---
 
 Welcome to BonusCollector, your ultimate destination for daily **Bingo Bash free chips**. We update our links daily to ensure you never run out of free chips to enhance your gaming experience.
