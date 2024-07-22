@@ -8,6 +8,7 @@ description: Tägliche kostenlose Münzen und Belohnungen für Hit It Rich! Hole
 lang: de
 permalink: /de/hit-it-rich-free-coins/
 image: /assets/images/hit-it-rich.jpeg
+include_file: hit-it-rich.html
 ---
 
 Willkommen zu Ihrer täglichen Quelle für **Hit It Rich Free Coins**! Bei BonusCollector.net bieten wir Ihnen täglich aktualisierte Links zu kostenlosen Münzen für das beliebte Hit It Rich Slots Spiel.
