@@ -8,6 +8,7 @@ description: "Find daily Monopoly Go free dice links at BonusCollector.net. Neve
 lang: en
 permalink: /monopoly-go-free-dice/
 image: /assets/images/monopoly-go.webp
+include_file: monopoly-go.html
 ---
 
 Welcome to BonusCollector.net! Here, we provide you with the latest **Monopoly Go free dice** links updated daily. Bookmark this page and check back often to ensure you never miss out on any free dice rolls.
