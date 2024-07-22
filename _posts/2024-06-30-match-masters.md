@@ -8,6 +8,7 @@ description: "Discover daily Match Masters free gift links at BonusCollector.net
 lang: en
 permalink: /match-masters-free-gifts/
 image: /assets/images/match-masters.webp
+include_file: match-masters.html
 ---
 
 Welcome to your daily source for **Match Masters free gifts**! Here at BonusCollector.net, we provide you with the latest and most up-to-date free gift links to enhance your Match Masters experience. 
