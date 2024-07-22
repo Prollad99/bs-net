@@ -8,6 +8,7 @@ description: "Descubre cómo obtener monedas gratis en Cash Frenzy diariamente y
 lang: es
 permalink: /es/cash-frenzy-free-coins/
 image: /assets/images/cash-frenzy.webp
+include_file: cash-frenzy.html
 ---
 
 En Cash Frenzy, las monedas gratuitas son esenciales para prolongar tu diversión sin tener que gastar dinero real. A continuación, te mostramos cómo puedes obtener monedas gratis diariamente y disfrutar al máximo de este emocionante juego de casino.
