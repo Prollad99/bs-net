@@ -12,7 +12,8 @@ module Jekyll
       file_path = File.join(site_source, '_includes', include_file)
 
       if File.exist?(file_path)
-        File.mtime(file_path).strftime("%Y-%m-%d %H:%M:%S")
+        last_modified = File.mtime(file_path).strftime("%Y-%m-%d %H:%M:%S")
+        "Last modified: #{last_modified} (File path: #{file_path})"
       else
         "File not found: #{file_path}"
       end
