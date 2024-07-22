@@ -31,17 +31,16 @@ lang: en
 <div class="card-footer text-center">
   <p class="text-muted">
     <small>
-      By <strong>{{ page.author }}</strong> | 
-      {% assign include_file = page.include_file | prepend: "_includes/" %}
-      {% if site.data.include_files[page.include_file].last_modified %}
-        Last updated: 
-        <strong class="last-updated" data-last-modified="{{ site.data.include_files[page.include_file].last_modified | date: "%Y-%m-%dT%H:%M:%SZ" }}"></strong>
+      By <strong>{{ site.author }}</strong> |
+      {% if site.data.site_info.last_modified %}
+        Last updated:
+        <strong class="last-updated" data-last-modified="{{ site.data.site_info.last_modified | date: "%Y-%m-%dT%H:%M:%SZ" }}"></strong>
       {% else %}
         Last updated: <strong>Not available</strong>
       {% endif %}
+    </p>
     </small>
-  </p>
-</div>
+    </div>
           </div>
         </div>
       {% endif %}
