@@ -8,6 +8,7 @@ description: "Get your daily dose of DoubleDown Casino free chips with our lates
 lang: en
 permalink: /doubledown-casino-free-chips/
 image: /assets/images/doubledown-casino.jpeg
+include_file: doubledown-casino.html
 ---
 
 Welcome to BonusCollector.net, your ultimate source for **DoubleDown Casino free chips**. Here, we update daily with the latest promo codes and rewards so you can enjoy your favorite casino games without spending a dime.
