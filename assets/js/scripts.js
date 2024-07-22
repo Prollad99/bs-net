@@ -5,21 +5,31 @@ function timeAgo(dateString) {
     let interval = Math.floor(seconds / 31536000);
 
     if (interval > 1) return `${interval} years ago`;
+    if (interval === 1) return `1 year ago`;
+    
     interval = Math.floor(seconds / 2592000);
     if (interval > 1) return `${interval} months ago`;
+    if (interval === 1) return `1 month ago`;
+
     interval = Math.floor(seconds / 86400);
     if (interval > 1) return `${interval} days ago`;
+    if (interval === 1) return `1 day ago`;
+
     interval = Math.floor(seconds / 3600);
     if (interval > 1) return `${interval} hours ago`;
+    if (interval === 1) return `1 hour ago`;
+
     interval = Math.floor(seconds / 60);
     if (interval > 1) return `${interval} minutes ago`;
-    return `${Math.floor(seconds)} seconds ago`;
-  }
+    if (interval === 1) return `1 minute ago`;
 
-  document.addEventListener('DOMContentLoaded', function() {
+    return `${Math.floor(seconds)} seconds ago`;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
     const lastUpdatedElement = document.getElementById('last-updated');
     if (lastUpdatedElement) {
-      const lastModifiedDate = lastUpdatedElement.getAttribute('data-last-modified');
-      lastUpdatedElement.textContent = timeAgo(lastModifiedDate);
+        const lastModifiedDate = lastUpdatedElement.getAttribute('data-last-modified');
+        lastUpdatedElement.textContent = timeAgo(lastModifiedDate);
     }
-  });
+});
