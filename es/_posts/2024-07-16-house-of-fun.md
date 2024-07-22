@@ -8,6 +8,7 @@ description: "Descubre cómo obtener tus monedas gratis diarias en House of Fun 
 lang: es
 permalink: /es/house-of-fun-free-coins/
 image: /assets/images/gifts.svg
+include_file: house-of-fun.html
 ---
 
 ¡Bienvenidos a BonusCollector.net! Aquí podrás encontrar las mejores y más recientes recompensas diarias de **House of Fun Free Coins**. Si eres un entusiasta de los juegos de casino, seguramente no querrás perderte estas ofertas.
