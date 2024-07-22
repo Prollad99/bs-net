@@ -8,6 +8,7 @@ description: "Consigue tus giros y monedas gratuitos de Coin Master actualizados
 lang: es
 permalink: /es/coin-master-free-spins/
 image: /assets/images/coin-master.webp
+include_file: coin-master.html
 ---
 
 ¡Bienvenidos a BonusCollector.net! Aquí te ofrecemos los últimos enlaces para obtener giros y monedas gratuitos en Coin Master. Nos aseguramos de actualizar nuestra lista a diario para que nunca te pierdas ninguna recompensa. ¡Asegúrate de visitar nuestra página todos los días y maximizar tus recompensas!
