@@ -16,6 +16,9 @@ module Jekyll
 
         # Assign the last modified time to the post's data
         post.data['last_modified'] = last_modified
+
+        # Debug output to verify last modified time is being set
+        puts "Set last_modified for #{post.path} to #{last_modified}"
       end
     end
   end
