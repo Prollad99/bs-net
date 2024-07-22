@@ -8,6 +8,7 @@ description: "Erhalten Sie täglich aktualisierte Links zu kostenlosen Münzen f
 lang: de
 permalink: /de/willy-wonka-free-coins/
 image: /assets/images/willy-wonka.jpeg
+include_file: willy-wonka.html
 ---
 
 Willkommen bei BonusCollector.net, deiner besten Quelle für **Willy Wonka Free Coins**! Wir aktualisieren unsere Seite täglich mit den neuesten Links, damit du immer genügend Münzen hast, um dein Spielerlebnis zu maximieren.
