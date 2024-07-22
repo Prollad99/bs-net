@@ -31,21 +31,25 @@ lang: en
 <div class="card-footer text-center">
   <p class="text-muted">
     <small>
-      By <strong>{{ site.author }}</strong> |
-      {% if site.data.site_info.last_modified %}
-        Last updated:
-        <strong class="last-updated" data-last-modified="{{ site.data.site_info.last_modified | date: "%Y-%m-%dT%H:%M:%SZ" }}"></strong>
+      By <strong>{{ page.author }}</strong> |
+      {% assign include_file = page.include_file | prepend: "_includes/" %}
+      {% if site.data.include_files[page.include_file].last_modified %}
+        Last updated: 
+        <strong class="last-updated" data-last-modified="{{ site.data.include_files[page.include_file].last_modified | date: "%Y-%m-%dT%H:%M:%SZ" }}"></strong>
+        <!-- Debug information -->
+        <span style="display: none;">
+          Data exists: {{ site.data.include_files[page.include_file].last_modified }}
+        </span>
       {% else %}
         Last updated: <strong>Not available</strong>
+        <!-- Debug information -->
+        <span style="display: none;">
+          No data for: {{ page.include_file }}
+        </span>
       {% endif %}
-    </p>
     </small>
-    </div>
-          </div>
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
+  </p>
+</div>
 
   {% if paginator.next_page %}
     <div class="text-center mb-4">
