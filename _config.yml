@@ -12,6 +12,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-last-modified-at
+  - update_last_modified # Adding the custom plugin
 
 collections:
   pages:
