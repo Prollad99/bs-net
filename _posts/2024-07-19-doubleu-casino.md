@@ -8,6 +8,7 @@ description: "Get your daily dose of DoubleU Casino free chips with our updated 
 lang: en
 permalink: /doubleu-casino-free-chips/
 image: /assets/images/doubleu-casino.jpg
+include_file: doubleu-casino.html
 ---
 
 Welcome to BonusCollector.net! If you’re an avid player of DoubleU Casino, you’ve come to the right place for your daily dose of free chips and bonuses. We update our rewards daily to ensure you never miss out on the latest freebies. 
