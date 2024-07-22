@@ -9,6 +9,7 @@ description: "Get your daily Coin Master free spins and discover tips to maximiz
 lang: en
 permalink: /coin-master-free-spins/
 image: /assets/images/coin-master.webp
+include_file: coin-master.html
 ---
 
 Welcome to your ultimate destination for **Coin Master free spins**! We update this page daily to ensure you never miss out on the latest rewards. Bookmark this page and check back regularly to stay ahead in the game.
