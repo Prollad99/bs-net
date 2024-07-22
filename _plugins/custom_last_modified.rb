@@ -1,7 +1,7 @@
-# _plugins/last-modified.rb
+# _plugins/custom_last_modified.rb
 
 module Jekyll
-  class LastModifiedAt < Jekyll::Generator
+  class CustomLastModifiedAt < Jekyll::Generator
     safe true
     priority :low
 
