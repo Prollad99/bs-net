@@ -47,6 +47,8 @@ lang: en
                     {% endif %}
                     <br> <!-- Debugging Output -->
                     <small>Include file: {{ include_file }}</small>
+                    <br>
+                    <small>File Info: {{ file_info | jsonify }}</small>
                   <!-- Hidden input for include_file -->
                   <input type="hidden" name="include_file" value="{{ post.include_file }}">
   </small>
