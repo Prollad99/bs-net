@@ -26,11 +26,30 @@ show_language_dropdown: false
               </div>
             </div>
           </div>
+<!-- xx -->
 <div class="card-footer text-center">
   <p class="text-muted">
-    <small>By {{ post.author }} | Last updated: {{ post.last_modified_at | date: "%B %d, %Y" }}</small>
+    <small>
+      By <strong>{{ post.author }}</strong> |
+      {% assign include_file = post.include_file %}
+      {% assign file_info = site.data.include_files[include_file] %}
+      {% if file_info %}
+        {% assign last_modified = file_info.last_modified %}
+        {% if last_modified %}
+          Last updated:
+          <strong class="last-updated" data-last-modified="{{ last_modified }}"></strong>
+        {% else %}
+          Last updated: <strong>Not available</strong>
+        {% endif %}
+      {% else %}
+        Last updated: <strong>{{ post.last_modified_at | date: "%B %d, %Y" }}</strong>
+      {% endif %}
+      <!-- Hidden input for include_file -->
+      <input type="hidden" name="include_file" value="{{ post.include_file }}">
+    </small>
   </p>
 </div>
+<!-- xx -->
         </div>
       </div>
     {% endfor %}
