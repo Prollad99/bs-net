@@ -42,9 +42,10 @@ lang: en
                         Last updated: <strong>Not available</strong>
                       {% endif %}
                     {% else %}
-                      Include file not found.
+                      Last updated: <strong>Include file not found</strong>
                     {% endif %}
                   <!-- Hidden input for include_file -->
+<p>Include file: {{ post.include_file }}</p>
                   <input type="hidden" name="include_file" value="{{ post.include_file }}">
   </small>
   </p>
