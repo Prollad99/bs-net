@@ -43,7 +43,7 @@ lang: en
             Last updated: <strong>Not available</strong>
           {% endif %}
         {% else %}
-          Last updated: <strong>{{ site.last_modified_at | date: '%Y-%m-%d' }} ({{ site.last_modified_at | date: '%B %d, %Y' }})</strong>
+          Last updated: <strong>{{ post.last_modified_at | date: "%B %d, %Y" }}</strong>
         {% endif %}
       <!-- Hidden input for include_file -->
       <input type="hidden" name="include_file" value="{{ post.include_file }}">
