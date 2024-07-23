@@ -4,12 +4,11 @@ lang: it
 ---
 
 <div class="container">
-  <h1 class="my-4">Elenco dei giochi</h1>
+  <h1 class="my-4">Elenco dei Giochi</h1>
 
   <div class="row">
-    {% assign current_lang = page.lang | default: 'it' %}
     {% for post in site.posts %}
-      {% if post.lang == current_lang %}
+      {% if post.lang == "it" %}
         <div class="col-md-6 mb-4">
           <div class="card shadow-sm">
             <div class="row no-gutters">
@@ -28,20 +27,30 @@ lang: it
                 </div>
               </div>
             </div>
+<!-- xx -->
 <div class="card-footer text-center">
   <p class="text-muted">
-  <small>
-    Di <strong>{{ page.author }}</strong> | 
-    {% assign include_file = page.include_file | prepend: "_includes/" %}
-    {% if site.data.include_files[page.include_file].last_modified %}
-      Ultimo aggiornamento: 
-      <strong id="last-updated" data-last-modified="{{ site.data.include_files[page.include_file].last_modified | date: "%Y-%m-%dT%H:%M:%SZ" }}"></strong>
-    {% else %}
-      Ultimo aggiornamento: <strong>Non disponibile</strong>
-    {% endif %}
-  </small>
-</p>
+    <small>
+      Di <strong>{{ post.author }}</strong> |
+      {% assign include_file = post.include_file %}
+      {% assign file_info = site.data.include_files[include_file] %}
+      {% if file_info %}
+        {% assign last_modified = file_info.last_modified %}
+        {% if last_modified %}
+          Ultimo aggiornamento:
+          <strong class="last-updated" data-last-modified="{{ last_modified }}"></strong>
+        {% else %}
+          Ultimo aggiornamento: <strong>Non disponibile</strong>
+        {% endif %}
+      {% else %}
+        Ultimo aggiornamento: <strong>{{ post.last_modified_at | date: "%d %B %Y" }}</strong>
+      {% endif %}
+      <!-- Campo di input nascosto per include_file -->
+      <input type="hidden" name="include_file" value="{{ post.include_file }}">
+    </small>
+  </p>
 </div>
+<!-- xx -->
           </div>
         </div>
       {% endif %}
@@ -50,7 +59,7 @@ lang: it
 
   {% if paginator.next_page %}
     <div class="text-center mb-4">
-      <button id="load-more-btn" class="btn btn-primary" data-next-page="{{ paginator.next_page_path }}">Carica altro</button>
+      <button id="load-more-btn" class="btn btn-primary" data-next-page="{{ paginator.next_page_path }}">Carica Altro</button>
     </div>
   {% endif %}
 </div>
