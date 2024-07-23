@@ -31,15 +31,21 @@ lang: en
 <div class="card-footer text-center">
   <p class="text-muted">
   <small>
-By <strong>{{ site.author }}</strong> | 
-  {% assign include_file = page.include_file | prepend: "_includes/" %}
-  {% if site.data.include_files[page.include_file].last_modified %}
-    Last updated: 
-    <strong id="last-updated" data-last-modified="{{ site.data.include_files[page.include_file].last_modified | date: "%Y-%m-%dT%H:%M:%SZ" }}"></strong>
-  {% else %}
-    Last updated: <strong>Not available</strong>
-  {% endif %}
-  <input name="include_file" value="{{ post.include_file }}">
+   By <strong>{{ post.author }}</strong> |
+                    {% assign include_file = post.include_file | prepend: "_includes/" %}
+                    {% if site.data.include_files[post.include_file] %}
+                      {% assign last_modified = site.data.include_files[post.include_file].last_modified %}
+                      {% if last_modified %}
+                        Last updated:
+                        <strong id="last-updated" data-last-modified="{{ last_modified | date: "%Y-%m-%dT%H:%M:%SZ" }}"></strong>
+                      {% else %}
+                        Last updated: <strong>Not available</strong>
+                      {% endif %}
+                    {% else %}
+                      Include file not found.
+                    {% endif %}
+                  <!-- Hidden input for include_file -->
+                  <input type="hidden" name="include_file" value="{{ post.include_file }}">
   </small>
   </p>
   </div>
