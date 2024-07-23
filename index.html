@@ -38,7 +38,7 @@ lang: en
                       {% assign last_modified = file_info.last_modified %}
                       {% if last_modified %}
                         Last updated:
-                        <strong id="last-updated" data-last-modified="{{ last_modified | date: "%Y-%m-%dT%H:%M:%SZ" }}"></strong>
+                        <strong class="last-updated" data-last-modified="{{ last_modified }}"></strong>
                       {% else %}
                         Last updated: <strong>Not available</strong>
                       {% endif %}
