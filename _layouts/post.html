@@ -14,7 +14,7 @@ layout: default
     Last updated: 
     <strong id="last-updated" data-last-modified="{{ site.data.include_files[page.include_file].last_modified | date: "%Y-%m-%dT%H:%M:%SZ" }}"></strong>
   {% else %}
-    Last updated: <strong>{{ post.last_modified_at | date: "%B %d, %Y" }}</strong>
+    Last updated: <strong>{{ page.last_modified_at | date: "%B %d, %Y" }}</strong>
   {% endif %}
 </p>
 
