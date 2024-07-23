@@ -32,9 +32,9 @@ lang: en
   <p class="text-muted">
   <small>
    By <strong>{{ post.author }}</strong> |
-                    {% assign include_file = post.include_file | prepend: "_includes/" %}
-                    {% if site.data.include_files[post.include_file] %}
-                      {% assign last_modified = site.data.include_files[post.include_file].last_modified %}
+                    {% assign include_file = post.include_file %}
+                    {% if site.data.include_files[include_file] %}
+                      {% assign last_modified = site.data.include_files[include_file].last_modified %}
                       {% if last_modified %}
                         Last updated:
                         <strong id="last-updated" data-last-modified="{{ last_modified | date: "%Y-%m-%dT%H:%M:%SZ" }}"></strong>
@@ -44,9 +44,11 @@ lang: en
                     {% else %}
                       Last updated: <strong>Include file not found</strong>
                     {% endif %}
+                    <br> <!-- Debugging Output -->
+                    <small>Include file: {{ include_file }}</small>
                   <!-- Hidden input for include_file -->
-<p>Include file: {{ post.include_file }}</p>
                   <input type="hidden" name="include_file" value="{{ post.include_file }}">
+<pre>{{ site.data.include_files | jsonify }}</pre>
   </small>
   </p>
   </div>
