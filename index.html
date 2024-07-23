@@ -24,21 +24,18 @@ lang: en
                     <h5 class="card-title" style="font-size: 1rem;">{{ post.title }}</h5>
                   </a>
                   <p class="card-text" style="font-size: 0.9rem;">{{ post.description }}</p>
-                  <p class="card-subtitle text-muted mb-3">
-                    By <strong>{{ post.author }}</strong> |
-                    {% assign include_file = post.include_file | prepend: "_includes/" %}
-                    {% if site.data.include_files[post.include_file].last_modified %}
-                      Last updated:
-                      <strong id="last-updated" data-last-modified="{{ site.data.include_files[post.include_file].last_modified | date: "%Y-%m-%dT%H:%M:%SZ" }}"></strong>
-                    {% else %}
-                      Last updated: <strong>Not available</strong>
-                    {% endif %}
-                  </p>
-                  <!-- Hidden input for include_file -->
-                  <input type="hidden" name="include_file" value="{{ post.include_file }}">
                 </div>
               </div>
             </div>
+            <!-- xx -->
+<div class="card-footer text-center">
+  <p class="text-muted">
+  <small>
+  <input name="include_file" value="{{ post.include_file }}">
+  </small>
+  </p>
+  </div>
+  <!-- xx -->
           </div>
         </div>
       {% endif %}
