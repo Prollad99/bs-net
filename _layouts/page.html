@@ -7,8 +7,8 @@ layout: default
           <h1 class="card-title">{{ page.title }}</h1>
 
     <!-- Author and Last Updated Date -->
-    <p class="text-muted">
-      <small>By {{ page.author }} | Last updated: {{ page.last_modified_at | date: "%B %d, %Y" }}</small>
+    <p class="card-subtitle text-muted mb-3">
+      By <strong>{{ page.author }}</strong> | Last updated: <strong>{{ page.last_modified_at | date: "%B %d, %Y" }}</strong>
     </p>
 
           <div class="card-text">{{ content }}</div>
