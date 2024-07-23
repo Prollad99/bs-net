@@ -4,7 +4,7 @@ lang: de
 ---
 
 <div class="container">
-  <h1 class="my-4">Liste der Spiele</h1>
+  <h1 class="my-4">Spieleliste</h1>
 
   <div class="row">
     {% for post in site.posts %}
@@ -27,23 +27,30 @@ lang: de
                 </div>
               </div>
             </div>
+<!-- xx -->
 <div class="card-footer text-center">
   <p class="text-muted">
-  <small>
-    Von <strong>{{ page.author }}</strong> | 
-    {% assign include_file = page.include_file | prepend: "_includes/" %}
-    {% if site.data.include_files[page.include_file].last_modified %}
-      Zuletzt aktualisiert: 
-      <strong id="last-updated" data-last-modified="{{ site.data.include_files[page.include_file].last_modified | date: "%Y-%m-%dT%H:%M:%SZ" }}"></strong>
-    {% else %}
-      Zuletzt aktualisiert: <strong>Nicht verfügbar</strong>
-    {% endif %}
-  </small>
-</p>
+    <small>
+      Von <strong>{{ post.author }}</strong> |
+      {% assign include_file = post.include_file %}
+      {% assign file_info = site.data.include_files[include_file] %}
+      {% if file_info %}
+        {% assign last_modified = file_info.last_modified %}
+        {% if last_modified %}
+          Zuletzt aktualisiert:
+          <strong class="last-updated" data-last-modified="{{ last_modified }}"></strong>
+        {% else %}
+          Zuletzt aktualisiert: <strong>Nicht verfügbar</strong>
+        {% endif %}
+      {% else %}
+        Zuletzt aktualisiert: <strong>{{ post.last_modified_at | date: "%d. %B %Y" }}</strong>
+      {% endif %}
+      <!-- Verstecktes Eingabefeld für include_file -->
+      <input type="hidden" name="include_file" value="{{ post.include_file }}">
+    </small>
+  </p>
 </div>
-<!-- Hidden input for include_file -->
-                  <input type="hidden" name="include_file" value="{{ post.include_file }}">
-
+<!-- xx -->
           </div>
         </div>
       {% endif %}
