@@ -1,0 +1,70 @@
+name: Index URLs
+
+on:
+  push:
+    branches:
+      - main  # Adjust as necessary
+    paths:
+      - _posts/**  # Adjust if you want it to run only when post files change
+      - sitemap.xml  # Run when sitemap is updated
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        pip install google-api-python-client google-auth google-auth-oauthlib google-auth-httplib2 requests xmltodict
+
+    - name: Fetch and index URLs from sitemap
+      env:
+        GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+      run: |
+        echo "$GOOGLE_APPLICATION_CREDENTIALS" > credentials.json
+        python <<EOF
+        import requests
+        import xmltodict
+        from google.oauth2 import service_account
+        from googleapiclient.discovery import build
+
+        # Fetch sitemap
+        sitemap_url = 'https://bonuscollector.net/sitemap.xml'
+        response = requests.get(sitemap_url)
+        sitemap = xmltodict.parse(response.content)
+
+        # Extract URLs from sitemap
+        urls = [url['loc'] for url in sitemap['urlset']['url']]
+
+        # Google Indexing API setup
+        KEY_FILE_LOCATION = 'credentials.json'
+        SCOPES = ['https://www.googleapis.com/auth/indexing']
+        ENDPOINT = 'https://indexing.googleapis.com/v3/urlNotifications:publish'
+
+        def get_credentials():
+            credentials = service_account.Credentials.from_service_account_file(
+                KEY_FILE_LOCATION, scopes=SCOPES)
+            return credentials
+
+        def index_url(url):
+            credentials = get_credentials()
+            service = build('indexing', 'v3', credentials=credentials)
+            body = {
+                "url": url,
+                "type": "URL_UPDATED"
+            }
+            response = service.urlNotifications().publish(body=body).execute()
+            print(response)
+
+        # Index each URL
+        for url in urls:
+            index_url(url)
+        EOF
