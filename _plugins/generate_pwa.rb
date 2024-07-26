@@ -6,14 +6,14 @@ module Jekyll
       site.posts.docs.each do |post|
         path = File.join(site.dest, post.url)
         FileUtils.mkdir_p(path) unless File.exist?(path)
-        
+
         # Create manifest.json
         manifest = File.read(File.join(site.source, '_includes', 'manifest.json'))
-        File.write(File.join(path, 'manifest.json'), post.render_liquid(manifest))
+        File.write(File.join(path, 'manifest.json'), post.render_with_liquid(manifest))
 
         # Create service-worker.js
         sw = File.read(File.join(site.source, '_includes', 'service-worker.js'))
-        File.write(File.join(path, 'service-worker.js'), post.render_liquid(sw))
+        File.write(File.join(path, 'service-worker.js'), post.render_with_liquid(sw))
       end
     end
   end
