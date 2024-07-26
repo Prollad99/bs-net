@@ -78,16 +78,20 @@ line-height:1.625;
       background: rgba(255, 255, 255, 0.5);
     }
 
-    #installButton {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      padding: 10px 20px;
+#installButton {
       background-color: #007bff;
       color: white;
       border: none;
       border-radius: 5px;
-      display: none;
       cursor: pointer;
-      z-index: 1000;
-}
+    }
+    .install-bar {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      left: 20px;
+      background-color: #f8f9fa;
+      padding: 10px 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
