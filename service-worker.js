@@ -1,8 +1,8 @@
 const CACHE_NAME = '{{ page.url | slugify }}-cache-v1';
 const urlsToCache = [
   '{{ page.url }}',
-  '{{ site.baseurl }}/assets/css/style.css',
-  '{{ site.baseurl }}/assets/js/script.js'
+  '{{ site.baseurl }}/assets/css/styles.css',
+  '{{ site.baseurl }}/assets/js/timeAgo.js'
 ];
 
 self.addEventListener('install', function(event) {
