@@ -77,3 +77,17 @@ line-height:1.625;
     .custom-glass-button:hover {
       background: rgba(255, 255, 255, 0.5);
     }
+
+    #installButton {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      display: none;
+      cursor: pointer;
+      z-index: 1000;
+}
