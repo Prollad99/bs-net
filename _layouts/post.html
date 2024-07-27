@@ -39,31 +39,7 @@ layout: default
       </a>
     </div>
 
-    {% assign current_url = page.url %}
-<p>Current URL: {{ current_url }}</p>
-
-{% assign app_found = false %}
-{% assign app_name = '' %}
-
-{% for app in site.data.apps %}
-  {% for url in app.urls %}
-    {% if url == current_url %}
-      {% assign app_name = app.name %}
-      {% assign app_found = true %}
-      {% break %}
-    {% endif %}
-  {% endfor %}
-  {% if app_found %}
-    {% break %}
-  {% endif %}
-{% endfor %}
-
-{% if app_name %}
-  <span class="me-2">{{ app_name }}</span>
-  <button id="install-button" class="btn btn-primary">Install</button>
-{% else %}
-  <span class="me-2">App not found</span>
-{% endif %}
+<button id="install-button" class="btn btn-primary">Install</button>
     <script>
       let deferredPrompt;
       const installButton = document.getElementById('install-button');
