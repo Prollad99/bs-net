@@ -52,7 +52,7 @@ layout: default
   <button id="install-button" class="btn btn-primary">Install</button>
 </div>
 <!-- Debugging -->
-<p>Current URL: {{ page.url }}</p>
+<p>URLs to Check: {{ site.data.apps | json }}</p>
     <script>
       let deferredPrompt;
       const installButton = document.getElementById('install-button');
