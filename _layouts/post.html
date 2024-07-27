@@ -42,13 +42,13 @@ layout: default
     <script>
       let deferredPrompt;
       const installButton = document.getElementById('install-button');
-      installButton.style.display = 'none';
+      installButton.style.display = 'none'; // Initially hide the button
 
       window.addEventListener('beforeinstallprompt', (e) => {
         console.log('beforeinstallprompt event fired');
         e.preventDefault();
         deferredPrompt = e;
-        installButton.style.display = 'block';
+        installButton.style.display = 'block'; // Show the button
 
         installButton.addEventListener('click', () => {
           console.log('Install button clicked');
