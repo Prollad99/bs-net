@@ -42,7 +42,7 @@ layout: default
     <!-- PWA Install Button -->
     <div class="d-flex align-items-center mt-4">
       <img src="{{ site.baseurl }}/assets/icons/icon-192x192.png" alt="App Logo" class="me-2" style="width: 40px; height: 40px;">
-      <span class="me-2">{{ page.title }}</span>
+      <span class="me-2">{{ site.data.apps | where: "url", page.url | first.name }}</span> <!-- Display the app name -->
       <button id="install-button" class="btn btn-primary">Install</button>
     </div>
     <script>
