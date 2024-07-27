@@ -23,7 +23,14 @@ self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
     .then(response => {
-      return response || fetch(event.request);
+      // Return cached response or fetch from network if not cached
+      return response || fetch(event.request).then(networkResponse => {
+        // Optionally cache the fetched response
+        return caches.open(CACHE_NAME).then(cache => {
+          cache.put(event.request, networkResponse.clone());
+          return networkResponse;
+        });
+      });
     })
   );
 });
@@ -31,7 +38,6 @@ self.addEventListener('fetch', event => {
 // Activate event
 self.addEventListener('activate', event => {
   console.log('Service Worker activating.');
-  // Clean up old caches if necessary
   event.waitUntil(
     caches.keys().then(cacheNames => {
       return Promise.all(
