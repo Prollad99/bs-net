@@ -51,6 +51,7 @@ layout: default
       installButton.style.display = 'none';
 
       window.addEventListener('beforeinstallprompt', (e) => {
+        console.log('beforeinstallprompt event fired');
         e.preventDefault();
         deferredPrompt = e;
         installButton.style.display = 'block';
@@ -69,7 +70,7 @@ layout: default
       });
 
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('{{ page.url }}sw.js')
+        navigator.serviceWorker.register('{{ site.baseurl }}{{ page.url }}sw.js')
         .then(registration => {
           console.log('Service Worker registered with scope:', registration.scope);
         }).catch(error => {
@@ -78,6 +79,6 @@ layout: default
       }
     </script>
 
-    <link rel="manifest" href="{{ page.url }}manifest.json">
+    <link rel="manifest" href="{{ site.baseurl }}{{ page.url }}manifest.json">
   </div>
 </div>
