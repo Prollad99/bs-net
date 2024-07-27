@@ -4,19 +4,11 @@ layout: default
 
 <div class="card shadow-sm mb-2">
   <div class="card-body">
-
     <h1 class="card-title">{{ page.title }}</h1>
- 
-<p class="card-subtitle text-muted mb-3">
-  By <strong>{{ page.author }}</strong> | 
-  {% assign include_file = page.include_file | prepend: "_includes/" %}
-  {% if site.data.include_files[page.include_file].last_modified %}
-    Last updated: 
-    <strong id="last-updated" data-last-modified="{{ site.data.include_files[page.include_file].last_modified | date: "%Y-%m-%dT%H:%M:%SZ" }}"></strong>
-  {% else %}
-    Last updated: <strong>{{ page.last_modified_at | date: "%B %d, %Y" }}</strong>
-  {% endif %}
-</p>
+    <p class="card-subtitle text-muted mb-3">
+      By <strong>{{ page.author }}</strong> |
+      Last updated: <strong>{{ page.last_modified_at | date: "%B %d, %Y" }}</strong>
+    </p>
 
     <div class="card-text">{{ content }}</div>
 
@@ -47,73 +39,45 @@ layout: default
       </a>
     </div>
 
-    <!-- List of All Posts -->
-    <h2>All Games</h2>
-
-    <div class="container mt-4">
-      <div class="input-group">
-        <input type="search" id="search-input" class="form-control" placeholder="Search for Games..." aria-label="Search">
-        <div class="input-group-append">
-          <button class="btn btn-primary" type="button" id="search-button">
-            <i class="bi bi-search"></i>
-          </button>
-        </div>
-      </div>
-      <div id="results-container" class="mt-4"></div>
+    <!-- PWA Install Button -->
+    <div class="d-flex align-items-center mt-4">
+      <img src="/assets/icons/icon-192x192.png" alt="App Logo" class="me-2" style="width: 40px; height: 40px;">
+      <span class="me-2">{{ page.title }}</span>
+      <button id="install-button" class="btn btn-primary">Install</button>
     </div>
     <script>
-      var currentLang = "{{ page.lang }}";
-      var searchInput = document.getElementById('search-input');
-      var resultsContainer = document.getElementById('results-container');
-      var searchButton = document.getElementById('search-button');
+      let deferredPrompt;
+      const installButton = document.getElementById('install-button');
+      installButton.style.display = 'none';
 
-      function performSearch(query) {
-        fetch('{{ site.baseurl }}/search.json')
-          .then(response => response.json())
-          .then(data => {
-            var results = data.filter(post => post.content.includes(query) && post.lang === currentLang);
-            resultsContainer.innerHTML = '';
-            if (results.length > 0) {
-              results.forEach(result => {
-                var div = document.createElement('div');
-                div.innerHTML = '<a href="' + result.url + '">' + result.title + '</a>';
-                resultsContainer.appendChild(div);
-              });
+      window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        installButton.style.display = 'block';
+
+        installButton.addEventListener('click', () => {
+          deferredPrompt.prompt();
+          deferredPrompt.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === 'accepted') {
+              console.log('User accepted the A2HS prompt');
             } else {
-              resultsContainer.innerHTML = 'No results found';
+              console.log('User dismissed the A2HS prompt');
             }
+            deferredPrompt = null;
           });
+        });
+      });
+
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('{{ page.url }}sw.js')
+        .then(registration => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        }).catch(error => {
+          console.log('Service Worker registration failed:', error);
+        });
       }
-
-      searchButton.addEventListener('click', function() {
-        var query = searchInput.value.trim();
-        if (query) {
-          performSearch(query);
-        } else {
-          resultsContainer.innerHTML = '';
-        }
-      });
-
-      searchInput.addEventListener('keypress', function(event) {
-        if (event.key === 'Enter') {
-          var query = searchInput.value.trim();
-          if (query) {
-            performSearch(query);
-          } else {
-            resultsContainer.innerHTML = '';
-          }
-        }
-      });
     </script>
 
-    <ul>
-      {% assign current_lang = page.lang %}
-      {% for post in site.posts %}
-        {% if post.lang == current_lang %}
-          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-
+    <link rel="manifest" href="{{ page.url }}manifest.json">
   </div>
 </div>
