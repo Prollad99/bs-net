@@ -6,7 +6,7 @@ self.addEventListener('install', event => {
         '{{ site.baseurl }}/assets/css/styles.css',
         '{{ site.baseurl }}/assets/icons/icon-192x192.png',
         '{{ site.baseurl }}/assets/icons/icon-512x512.png',
-        '{{ site.baseurl }}/assets/js/main.js', // Assuming you have a main.js file
+        '{{ site.baseurl }}/assets/js/timeAgo.js',
       ]);
     })
   );
