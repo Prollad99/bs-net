@@ -1,14 +1,17 @@
+const CACHE_NAME = '{{ page.title | replace: ' ', '-' | downcase }}-static-cache';
+const urlsToCache = [
+  '{{ page.url }}',
+  '{{ page.url }}index.html',
+  '{{ page.url }}manifest.json',
+  '{{ site.baseurl }}/assets/css/styles.css',
+  '{{ site.baseurl }}/assets/icons/icon-192x192.png',
+  '{{ site.baseurl }}/assets/icons/icon-512x512.png'
+];
+
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open('{{ page.title | replace: ' ', '-' | downcase }}-static-cache').then(cache => {
-      return cache.addAll([
-        '{{ page.url }}',
-        '{{ page.url }}index.html',
-        '{{ site.baseurl }}/manifest.json',
-        '{{ site.baseurl }}/assets/css/styles.css',
-        '{{ site.baseurl }}/assets/icons/icon-192x192.png',
-        '{{ site.baseurl }}/assets/icons/icon-512x512.png'
-      ]);
+    caches.open(CACHE_NAME).then(cache => {
+      return cache.addAll(urlsToCache);
     })
   );
 });
