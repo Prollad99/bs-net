@@ -2,6 +2,19 @@
 <div>
   <h4>Debugging Information</h4>
   <p>Page Permalink: {{ page.permalink }}</p>
+  <p>Apps Data:</p>
+  <ul>
+    {% for app in site.data.apps %}
+      <li>
+        <strong>{{ app.name }}</strong>
+        <ul>
+          {% for url in app.urls %}
+            <li>{{ url }}</li>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
   {% if app %}
     <p>Matched App: {{ app.name }}</p>
   {% else %}
