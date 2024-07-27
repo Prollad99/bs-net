@@ -10,7 +10,7 @@
       {{ site.title | escape }}
     {% endif %}
   </title>
-<link rel="manifest" href="{{ '/manifests/' | append: page.url | replace: '/', '-' | append: '.json' }}" />
+<link rel="manifest" href="{{ '/manifests/' | append: page.url | remove: '/' | replace: '/', '-' | append: '.json' }}" />
 <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
