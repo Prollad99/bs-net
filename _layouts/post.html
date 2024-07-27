@@ -123,7 +123,7 @@ layout: default
       document.addEventListener('DOMContentLoaded', function() {
         const manifestLink = document.getElementById('manifest-link');
         if (manifestLink) {
-          // Set dynamic app-specific data
+          // Generate a manifest file URL with dynamic data
           const manifestData = {
             name: "{{ page.title }}",
             short_name: "{{ page.title }}",
@@ -144,29 +144,15 @@ layout: default
             ]
           };
 
-          // Update the manifest dynamically
-          fetch('/manifest.json')
-            .then(response => response.json())
-            .then(data => {
-              // Overwrite static manifest data with dynamic values
-              const updatedManifest = { ...data, ...manifestData };
-              
-              // Create a Blob URL to simulate a dynamically updated manifest
-              const blob = new Blob([JSON.stringify(updatedManifest)], { type: 'application/json' });
-              const dynamicManifestUrl = URL.createObjectURL(blob);
+          // Create a Blob URL for the dynamic manifest
+          const blob = new Blob([JSON.stringify(manifestData)], { type: 'application/json' });
+          const dynamicManifestUrl = URL.createObjectURL(blob);
 
-              // Update manifest link href
-              manifestLink.href = dynamicManifestUrl;
-            })
-            .catch(error => {
-              console.error('Error updating manifest:', error);
-            });
+          // Update manifest link href
+          manifestLink.href = dynamicManifestUrl;
         }
       });
     </script>
-
-    <!-- Install button -->
-    <button id="install-button" class="btn btn-primary">Install</button>
 
     <!-- Install button logic -->
     <script>
@@ -202,6 +188,8 @@ layout: default
         });
       }
     </script>
+  </div>
+</div>
 
   </div>
 </div>
