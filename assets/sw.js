@@ -1,21 +1,34 @@
+const CACHE_NAME = 'my-app-cache-v1'; // Update cache version as needed
+const urlsToCache = [
+  '/assets/css/styles.css',
+  '/assets/icons/icon-192x192.png',
+  '/assets/icons/icon-512x512.png',
+  '/assets/js/timeAgo.js',
+];
+
+// Install event
 self.addEventListener('install', event => {
-  const appName = 'app-name-placeholder'; // Replace with your dynamic logic if needed
+  console.log('Service Worker installing.');
   event.waitUntil(
-    caches.open(`${appName}-static-cache`).then(cache => {
-      return cache.addAll([
-        '{{ site.baseurl }}/assets/css/styles.css',
-        '{{ site.baseurl }}/assets/icons/icon-192x192.png',
-        '{{ site.baseurl }}/assets/icons/icon-512x512.png',
-        '{{ site.baseurl }}/assets/js/timeAgo.js',
-      ]);
+    caches.open(CACHE_NAME)
+    .then(cache => {
+      console.log('Caching app assets');
+      return cache.addAll(urlsToCache);
     })
   );
 });
 
+// Fetch event
 self.addEventListener('fetch', event => {
   event.respondWith(
-    caches.match(event.request).then(response => {
+    caches.match(event.request)
+    .then(response => {
       return response || fetch(event.request);
     })
   );
+});
+
+// Activate event
+self.addEventListener('activate', event => {
+  console.log('Service Worker activating.');
 });
