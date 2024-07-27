@@ -129,17 +129,14 @@ layout: default
 <!-- Install button logic -->
 <script>
   let deferredPrompt;
-  const installSection = document.getElementById('app-install-section');
   const installButton = document.getElementById('install-button');
-  
-  // Initially hide the entire section
-  installSection.style.display = 'none'; 
+  const appInstallSection = document.getElementById('app-install-section');
+  appInstallSection.style.display = 'none'; // Initially hide the section
 
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
-    // Show the entire section
-    installSection.style.display = 'flex'; 
+    appInstallSection.style.display = 'flex'; // Show the section
 
     installButton.addEventListener('click', () => {
       deferredPrompt.prompt();
@@ -164,5 +161,6 @@ layout: default
     });
   }
 </script>
+
   </div>
 </div>
