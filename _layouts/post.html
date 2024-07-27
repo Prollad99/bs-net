@@ -4,18 +4,19 @@ layout: default
 
 <div class="card shadow-sm mb-2">
   <div class="card-body">
-    <h1 class="card-title">{{ page.title }}</h1>
 
-    <p class="card-subtitle text-muted mb-3">
-      By <strong>{{ page.author }}</strong> |
-      {% assign include_file = page.include_file | prepend: "_includes/" %}
-      {% if site.data.include_files[page.include_file].last_modified %}
-        Last updated:
-        <strong id="last-updated" data-last-modified="{{ site.data.include_files[page.include_file].last_modified | date: "%Y-%m-%dT%H:%M:%SZ" }}"></strong>
-      {% else %}
-        Last updated: <strong>{{ page.last_modified_at | date: "%B %d, %Y" }}</strong>
-      {% endif %}
-    </p>
+    <h1 class="card-title">{{ page.title }}</h1>
+ 
+<p class="card-subtitle text-muted mb-3">
+  By <strong>{{ page.author }}</strong> | 
+  {% assign include_file = page.include_file | prepend: "_includes/" %}
+  {% if site.data.include_files[page.include_file].last_modified %}
+    Last updated: 
+    <strong id="last-updated" data-last-modified="{{ site.data.include_files[page.include_file].last_modified | date: "%Y-%m-%dT%H:%M:%SZ" }}"></strong>
+  {% else %}
+    Last updated: <strong>{{ page.last_modified_at | date: "%B %d, %Y" }}</strong>
+  {% endif %}
+</p>
 
     <div class="card-text">{{ content }}</div>
 
@@ -44,13 +45,6 @@ layout: default
       <a href="https://api.whatsapp.com/send?text={{ page.title }} {{ site.url }}{{ page.url }}" target="_blank" class="btn btn-success mb-3 me-2">
         <i class="bi bi-whatsapp"></i> Share on WhatsApp
       </a>
-    </div>
-
-    <!-- PWA Install Button -->
-    <div class="d-flex align-items-center mt-4">
-      <img src="{{ site.baseurl }}/assets/images/app-logo.png" alt="App Logo" class="me-3" style="width: 40px; height: 40px;">
-      <span class="me-3">{{ page.title }}</span>
-      <button id="install-button" class="btn btn-primary">Install App</button>
     </div>
 
     <!-- List of All Posts -->
@@ -123,30 +117,3 @@ layout: default
 
   </div>
 </div>
-
-<script>
-  let deferredPrompt;
-  const installButton = document.getElementById('install-button');
-
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    installButton.style.display = 'block';
-
-    installButton.addEventListener('click', () => {
-      deferredPrompt.prompt();
-      deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-          console.log('User accepted the install prompt');
-        } else {
-          console.log('User dismissed the install prompt');
-        }
-        deferredPrompt = null;
-      });
-    });
-  });
-
-  window.addEventListener('appinstalled', (evt) => {
-    console.log('a2hs', 'installed');
-  });
-</script>
