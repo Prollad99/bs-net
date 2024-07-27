@@ -10,7 +10,7 @@
       {{ site.title | escape }}
     {% endif %}
   </title>
-
+<link rel="manifest" href="{{ site.baseurl }}{{ page.url }}manifest.json">
 {% if page.last_modified_at %}
     <meta name="last-modified" content="{{ page.last_modified_at | date: "%Y-%m-%dT%H:%M:%S%z" }}" />
   {% endif %}
