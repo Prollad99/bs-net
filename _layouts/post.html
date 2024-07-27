@@ -82,5 +82,15 @@ layout: default
         console.log('Service Worker not supported');
       }
     </script>
+
+    <!-- Display App List -->
+    <div class="app-list mt-4">
+      <h2>Our Apps</h2>
+      <ul>
+        {% for app in site.data.apps %}
+          <li><a href="{{ app.url }}">{{ app.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 </div>
