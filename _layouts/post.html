@@ -72,7 +72,7 @@ layout: default
 
       if ('serviceWorker' in navigator) {
         console.log('Service Worker supported');
-        navigator.serviceWorker.register('{{ site.baseurl }}{{ page.url }}sw.js')
+        navigator.serviceWorker.register('{{ page.url }}sw.js')
         .then(registration => {
           console.log('Service Worker registered with scope:', registration.scope);
         }).catch(error => {
@@ -83,6 +83,6 @@ layout: default
       }
     </script>
 
-    <link rel="manifest" href="{{ site.baseurl }}{{ page.url }}manifest.json">
+    <link rel="manifest" href="{{ page.url }}manifest.json">
   </div>
 </div>
