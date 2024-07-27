@@ -1,4 +1,14 @@
 {% assign app = site.data.apps | where_exp: "item", "item.urls contains page.permalink" | first %}
+<div>
+  <h4>Debugging Information</h4>
+  <p>Page Permalink: {{ page.permalink }}</p>
+  {% if app %}
+    <p>Matched App: {{ app.name }}</p>
+  {% else %}
+    <p>No matching app found</p>
+  {% endif %}
+</div>
+
 {% if app %}
   <div class="app-install mt-4">
     <img src="{{ app.logo }}" alt="{{ app.name }} logo" class="app-logo mb-2" style="max-width: 50px;">
