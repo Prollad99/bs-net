@@ -1,4 +1,4 @@
-'const CACHE_NAME = 'app-cache-v1';
+const CACHE_NAME = 'app-cache-v1';
 const urlsToCache = [
   '/assets/css/styles.css',
   '/assets/icons/icon-192x192.png',
