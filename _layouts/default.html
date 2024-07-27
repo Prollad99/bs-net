@@ -11,21 +11,22 @@
     {% endif %}
   </title>
 <!-- Link to the dynamic manifest -->
-    <link rel="manifest" href="{{ page.manifest_path }}{{ page.slug }}.json" />
- <!-- Service Worker Registration -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('{{ site.baseurl }}/assets/sw.js')
-        .then(registration => {
-          console.log('Service Worker registered with scope:', registration.scope);
-        })
-        .catch(error => {
-          console.log('Service Worker registration failed:', error);
-        });
+<link rel="manifest" href="{{ page.manifest_path | default: '/manifest.json' }}" />
+
+<!-- Service Worker Registration -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('{{ site.baseurl }}/assets/sw.js')
+      .then(registration => {
+        console.log('Service Worker registered with scope:', registration.scope);
+      })
+      .catch(error => {
+        console.log('Service Worker registration failed:', error);
       });
-    }
-  </script>
+    });
+  }
+</script>
 {% if page.last_modified_at %}
     <meta name="last-modified" content="{{ page.last_modified_at | date: "%Y-%m-%dT%H:%M:%S%z" }}" />
   {% endif %}
