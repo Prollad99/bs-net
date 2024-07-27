@@ -1,4 +1,6 @@
-const CACHE_NAME = 'my-app-cache-v1'; // Update cache version as needed
+// Service Worker Cache Names
+const CACHE_NAME = 'app-cache-v1'; // Base cache name
+const dynamicCacheName = `${CACHE_NAME}-${self.location.pathname.split('/')[1] || 'default'}`;
 const urlsToCache = [
   '/assets/css/styles.css',
   '/assets/icons/icon-192x192.png',
@@ -10,7 +12,7 @@ const urlsToCache = [
 self.addEventListener('install', event => {
   console.log('Service Worker installing.');
   event.waitUntil(
-    caches.open(CACHE_NAME)
+    caches.open(dynamicCacheName)
     .then(cache => {
       console.log('Caching app assets');
       return cache.addAll(urlsToCache);
@@ -31,4 +33,16 @@ self.addEventListener('fetch', event => {
 // Activate event
 self.addEventListener('activate', event => {
   console.log('Service Worker activating.');
+  // Optionally, clean up old caches
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.filter(cacheName => {
+          return cacheName !== dynamicCacheName;
+        }).map(cacheName => {
+          return caches.delete(cacheName);
+        })
+      );
+    })
+  );
 });
