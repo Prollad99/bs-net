@@ -39,35 +39,32 @@ layout: default
       </a>
     </div>
 
-    <!-- PWA Install Button -->
-<div class="d-flex align-items-center mt-4">
-  <img src="{{ site.baseurl }}/assets/icons/icon-192x192.png" alt="App Logo" class="me-2" style="width: 40px; height: 40px;">
-  
-  {% assign app_name = '' %}
-  {% assign current_url = page.url %}
-  {% for app in site.data.apps %}
-    {% for url in app.urls %}
-      {% if url == current_url %}
-        {% assign app_name = app.name %}
-        {% break %}
-      {% endif %}
-    {% endfor %}
-    {% if app_name != '' %}
+    {% assign app_name = '' %}
+{% assign current_url = page.url %}
+
+<!-- Debug Output -->
+<p>Current URL: {{ current_url }}</p>
+
+{% for app in site.data.apps %}
+  {% for url in app.urls %}
+    {% if url == current_url %}
+      {% assign app_name = app.name %}
+      <!-- Debug Output -->
+      <p>Matched App Name: {{ app_name }}</p>
       {% break %}
     {% endif %}
   {% endfor %}
-
-  {% if app_name %}
-    <span class="me-2">{{ app_name }}</span>
-    <button id="install-button" class="btn btn-primary">Install</button>
-  {% else %}
-    <span class="me-2">App not found</span>
+  {% if app_name != '' %}
+    {% break %}
   {% endif %}
-</div>
-<div class="debug-info">
-  <p>Current URL: {{ page.url }}</p>
-  <p>App Name: {{ app_name }}</p>
-</div>
+{% endfor %}
+
+{% if app_name %}
+  <span class="me-2">{{ app_name }}</span>
+  <button id="install-button" class="btn btn-primary">Install</button>
+{% else %}
+  <span class="me-2">App not found</span>
+{% endif %}
     <script>
       let deferredPrompt;
       const installButton = document.getElementById('install-button');
