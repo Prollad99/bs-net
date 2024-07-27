@@ -1,7 +1,18 @@
-{% assign app = site.data.apps | where_exp: "item", "item.urls contains page.permalink" | first %}
+{% assign matched_app = nil %}
+{% assign page_permalink = page.permalink | strip %}
+
+{% for app in site.data.apps %}
+  {% for url in app.urls %}
+    {% assign app_url = url | strip %}
+    {% if app_url == page_permalink %}
+      {% assign matched_app = app %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
 <div>
   <h4>Debugging Information</h4>
-  <p>Page Permalink: {{ page.permalink | inspect }}</p>
+  <p>Page Permalink: "{{ page_permalink }}"</p>
   <p>Apps Data:</p>
   <ul>
     {% for app in site.data.apps %}
@@ -9,24 +20,24 @@
         <strong>{{ app.name }}</strong>
         <ul>
           {% for url in app.urls %}
-            <li>{{ url | inspect }}</li>
+            <li>"{{ url | strip }}"</li>
           {% endfor %}
         </ul>
       </li>
     {% endfor %}
   </ul>
-  {% if app %}
-    <p>Matched App: {{ app.name }}</p>
+  {% if matched_app %}
+    <p>Matched App: {{ matched_app.name }}</p>
   {% else %}
     <p>No matching app found</p>
   {% endif %}
 </div>
 
-{% if app %}
+{% if matched_app %}
   <div class="app-install mt-4">
-    <img src="{{ app.logo }}" alt="{{ app.name }} logo" class="app-logo mb-2" style="max-width: 50px;">
+    <img src="{{ matched_app.logo }}" alt="{{ matched_app.name }} logo" class="app-logo mb-2" style="max-width: 50px;">
     <div class="app-info">
-      <h3>{{ app.name }}</h3>
+      <h3>{{ matched_app.name }}</h3>
       <button id="install-button" class="btn btn-primary">Install</button>
     </div>
   </div>
