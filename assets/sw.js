@@ -18,20 +18,21 @@ self.addEventListener('install', event => {
   );
 });
 
-// Fetch event
+// Fetch event with network-first strategy
 self.addEventListener('fetch', event => {
   event.respondWith(
-    caches.match(event.request)
-    .then(response => {
-      // Return cached response or fetch from network if not cached
-      return response || fetch(event.request).then(networkResponse => {
-        // Optionally cache the fetched response
+    fetch(event.request)
+      .then(networkResponse => {
+        // Update the cache with the fresh response
         return caches.open(CACHE_NAME).then(cache => {
           cache.put(event.request, networkResponse.clone());
           return networkResponse;
         });
-      });
-    })
+      })
+      .catch(() => {
+        // If network fetch fails, use cached response
+        return caches.match(event.request);
+      })
   );
 });
 
@@ -41,11 +42,8 @@ self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(cacheNames => {
       return Promise.all(
-        cacheNames.filter(cacheName => {
-          return cacheName !== CACHE_NAME;
-        }).map(cacheName => {
-          return caches.delete(cacheName);
-        })
+        cacheNames.filter(cacheName => cacheName !== CACHE_NAME)
+          .map(cacheName => caches.delete(cacheName))
       );
     })
   );
