@@ -1,7 +1,7 @@
 {% assign app = site.data.apps | where_exp: "item", "item.urls contains page.permalink" | first %}
 <div>
   <h4>Debugging Information</h4>
-  <p>Page Permalink: {{ page.permalink }}</p>
+  <p>Page Permalink: {{ page.permalink | inspect }}</p>
   <p>Apps Data:</p>
   <ul>
     {% for app in site.data.apps %}
@@ -9,7 +9,7 @@
         <strong>{{ app.name }}</strong>
         <ul>
           {% for url in app.urls %}
-            <li>{{ url }}</li>
+            <li>{{ url | inspect }}</li>
           {% endfor %}
         </ul>
       </li>
