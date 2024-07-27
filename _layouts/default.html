@@ -10,7 +10,8 @@
       {{ site.title | escape }}
     {% endif %}
   </title>
-<link rel="manifest" href="{{ site.baseurl }}/manifest.json">
+<!-- Dynamically include the manifest for this post -->
+    <link rel="manifest" href="{{ page.permalink | replace: '/', '_manifest' | append: '.json' }}" />
  <!-- Service Worker Registration -->
   <script>
     if ('serviceWorker' in navigator) {
