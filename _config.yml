@@ -12,14 +12,9 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-last-modified-at
-  # Add any other necessary plugins here
 
 collections:
   pages:
-    output: true
-  posts:
-    output: true
-  manifests:
     output: true
 
 defaults:
