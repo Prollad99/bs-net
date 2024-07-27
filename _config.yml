@@ -16,6 +16,8 @@ plugins:
 collections:
   pages:
     output: true
+  posts:
+    output: true
 
 defaults:
   - scope:
