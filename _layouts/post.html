@@ -39,22 +39,21 @@ layout: default
       </a>
     </div>
 
-    {% assign app_name = '' %}
-{% assign current_url = page.url %}
-
-<!-- Debug Output -->
+    {% assign current_url = page.url %}
 <p>Current URL: {{ current_url }}</p>
+
+{% assign app_found = false %}
+{% assign app_name = '' %}
 
 {% for app in site.data.apps %}
   {% for url in app.urls %}
     {% if url == current_url %}
       {% assign app_name = app.name %}
-      <!-- Debug Output -->
-      <p>Matched App Name: {{ app_name }}</p>
+      {% assign app_found = true %}
       {% break %}
     {% endif %}
   {% endfor %}
-  {% if app_name != '' %}
+  {% if app_found %}
     {% break %}
   {% endif %}
 {% endfor %}
