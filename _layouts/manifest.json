@@ -1,0 +1,21 @@
+{
+  "name": "{{ page.title }}",
+  "short_name": "{{ page.title }}",
+  "description": "{{ page.description }}",
+  "start_url": "{{ page.url }}",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#007bff",
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
