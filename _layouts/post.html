@@ -118,43 +118,7 @@ layout: default
       {% endfor %}
     </ul>
 
-<!-- Dynamic Manifest Updates -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const manifestLink = document.getElementById('manifest-link');
-        if (manifestLink) {
-          // Generate a manifest file URL with dynamic data
-          const manifestData = {
-            name: "{{ page.title }}",
-            short_name: "{{ page.title }}",
-            start_url: "{{ page.url }}",
-            background_color: "#ffffff",
-            theme_color: "#000000",
-            icons: [
-              {
-                src: "{{ page.image | default: '/assets/icons/icon-192x192.png' }}",
-                sizes: "192x192",
-                type: "image/png"
-              },
-              {
-                src: "{{ page.image | default: '/assets/icons/icon-512x512.png' }}",
-                sizes: "512x512",
-                type: "image/png"
-              }
-            ]
-          };
-
-          // Create a Blob URL for the dynamic manifest
-          const blob = new Blob([JSON.stringify(manifestData)], { type: 'application/json' });
-          const dynamicManifestUrl = URL.createObjectURL(blob);
-
-          // Update manifest link href
-          manifestLink.href = dynamicManifestUrl;
-        }
-      });
-    </script>
-
-    <!-- Install button logic -->
+<!-- Install button logic -->
     <script>
       let deferredPrompt;
       const installButton = document.getElementById('install-button');
