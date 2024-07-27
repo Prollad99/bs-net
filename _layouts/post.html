@@ -57,6 +57,7 @@ layout: default
         installButton.style.display = 'block';
 
         installButton.addEventListener('click', () => {
+          console.log('Install button clicked');
           deferredPrompt.prompt();
           deferredPrompt.userChoice.then((choiceResult) => {
             if (choiceResult.outcome === 'accepted') {
@@ -70,12 +71,15 @@ layout: default
       });
 
       if ('serviceWorker' in navigator) {
+        console.log('Service Worker supported');
         navigator.serviceWorker.register('{{ site.baseurl }}{{ page.url }}sw.js')
         .then(registration => {
           console.log('Service Worker registered with scope:', registration.scope);
         }).catch(error => {
           console.log('Service Worker registration failed:', error);
         });
+      } else {
+        console.log('Service Worker not supported');
       }
     </script>
 
