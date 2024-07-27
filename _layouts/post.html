@@ -28,6 +28,16 @@ layout: default
     <!-- Link to the dynamic manifest -->
     <link rel="manifest" href="{{ page.permalink | replace: '/', '_manifest' | append: '.json' }}" />
 
+ <div class="app-install mt-4">
+      {% if page.app_logo %}
+        <img src="{{ page.app_logo }}" alt="{{ page.app_name }} logo" class="app-logo mb-2" style="max-width: 50px;">
+      {% endif %}
+      <div class="app-info">
+        <h3>{{ page.app_name }}</h3>
+        <button id="install-button" class="btn btn-primary">Install</button>
+      </div>
+    </div>
+
     <!-- Install button logic -->
     <script>
       let deferredPrompt;
