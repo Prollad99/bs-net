@@ -4,11 +4,22 @@ layout: default
 
 <div class="card shadow-sm mb-2">
   <div class="card-body">
+
     <h1 class="card-title">{{ page.title }}</h1>
-    <p class="card-subtitle text-muted mb-3">
-      By <strong>{{ page.author }}</strong> |
-      Last updated: <strong>{{ page.last_modified_at | date: "%B %d, %Y" }}</strong>
-    </p>
+ 
+<p class="card-subtitle text-muted mb-3">
+  By <strong>{{ page.author }}</strong> | 
+  {% assign include_file = page.include_file | prepend: "_includes/" %}
+  {% if site.data.include_files[page.include_file].last_modified %}
+    Last updated: 
+    <strong id="last-updated" data-last-modified="{{ site.data.include_files[page.include_file].last_modified | date: "%Y-%m-%dT%H:%M:%SZ" }}"></strong>
+  {% else %}
+    Last updated: <strong>{{ page.last_modified_at | date: "%B %d, %Y" }}</strong>
+  {% endif %}
+</p>
+
+<!-- Install button -->
+    <button id="install-button" class="btn btn-primary">Install</button>
 
     <div class="card-text">{{ content }}</div>
 
@@ -22,33 +33,103 @@ layout: default
     {% endif %}
 
     <div class="social-share mt-4">
-      <!-- Social Share Buttons -->
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank" class="btn btn-primary mb-2 me-2">
+        <i class="bi bi-facebook"></i> Share on Facebook
+      </a>
+      <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" target="_blank" class="btn btn-info mb-2 me-2">
+        <i class="bi bi-twitter"></i> Tweet
+      </a>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank" class="btn btn-primary mb-2 me-2">
+        <i class="bi bi-linkedin"></i> Share on LinkedIn
+      </a>
+      <a href="https://reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank" class="btn btn-danger mb-2 me-2">
+        <i class="bi bi-reddit"></i> Share on Reddit
+      </a>
+      <a href="https://api.whatsapp.com/send?text={{ page.title }} {{ site.url }}{{ page.url }}" target="_blank" class="btn btn-success mb-3 me-2">
+        <i class="bi bi-whatsapp"></i> Share on WhatsApp
+      </a>
     </div>
 
- <div class="app-install mt-4">
-      {% if page.app_logo %}
-        <img src="{{ page.app_logo }}" alt="{{ page.app_name }} logo" class="app-logo mb-2" style="max-width: 50px;">
-      {% endif %}
-      <div class="app-info">
-        <h3>{{ page.app_name }}</h3>
-        <button id="install-button" class="btn btn-primary">Install</button>
+    <!-- List of All Posts -->
+    <h2>All Games</h2>
+
+    <div class="container mt-4">
+      <div class="input-group">
+        <input type="search" id="search-input" class="form-control" placeholder="Search for Games..." aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button" id="search-button">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
       </div>
+      <div id="results-container" class="mt-4"></div>
     </div>
+    <script>
+      var currentLang = "{{ page.lang }}";
+      var searchInput = document.getElementById('search-input');
+      var resultsContainer = document.getElementById('results-container');
+      var searchButton = document.getElementById('search-button');
 
-    <!-- Install button logic -->
+      function performSearch(query) {
+        fetch('{{ site.baseurl }}/search.json')
+          .then(response => response.json())
+          .then(data => {
+            var results = data.filter(post => post.content.includes(query) && post.lang === currentLang);
+            resultsContainer.innerHTML = '';
+            if (results.length > 0) {
+              results.forEach(result => {
+                var div = document.createElement('div');
+                div.innerHTML = '<a href="' + result.url + '">' + result.title + '</a>';
+                resultsContainer.appendChild(div);
+              });
+            } else {
+              resultsContainer.innerHTML = 'No results found';
+            }
+          });
+      }
+
+      searchButton.addEventListener('click', function() {
+        var query = searchInput.value.trim();
+        if (query) {
+          performSearch(query);
+        } else {
+          resultsContainer.innerHTML = '';
+        }
+      });
+
+      searchInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+          var query = searchInput.value.trim();
+          if (query) {
+            performSearch(query);
+          } else {
+            resultsContainer.innerHTML = '';
+          }
+        }
+      });
+    </script>
+
+    <ul>
+      {% assign current_lang = page.lang %}
+      {% for post in site.posts %}
+        {% if post.lang == current_lang %}
+          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+<!-- Install button logic -->
     <script>
       let deferredPrompt;
       const installButton = document.getElementById('install-button');
       installButton.style.display = 'none'; // Initially hide the button
 
       window.addEventListener('beforeinstallprompt', (e) => {
-        console.log('beforeinstallprompt event fired');
         e.preventDefault();
         deferredPrompt = e;
         installButton.style.display = 'block'; // Show the button
 
         installButton.addEventListener('click', () => {
-          console.log('Install button clicked');
           deferredPrompt.prompt();
           deferredPrompt.userChoice.then((choiceResult) => {
             if (choiceResult.outcome === 'accepted') {
@@ -65,10 +146,12 @@ layout: default
         navigator.serviceWorker.register('{{ site.baseurl }}/assets/sw.js')
         .then(registration => {
           console.log('Service Worker registered with scope:', registration.scope);
-        }).catch(error => {
+        })
+        .catch(error => {
           console.log('Service Worker registration failed:', error);
         });
       }
     </script>
+
   </div>
 </div>
