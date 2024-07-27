@@ -31,7 +31,7 @@ self.addEventListener('fetch', event => {
 // Activate event
 self.addEventListener('activate', event => {
   console.log('Service Worker activating.');
-  // Optional: Clean up old caches
+  // Clean up old caches if necessary
   event.waitUntil(
     caches.keys().then(cacheNames => {
       return Promise.all(
