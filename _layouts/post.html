@@ -18,8 +18,12 @@ layout: default
   {% endif %}
 </p>
 
-<!-- Install button -->
-    <button id="install-button" class="btn btn-primary">Install</button>
+<!-- App Install Section -->
+    <div class="d-flex align-items-center mt-4">
+      <img src="{{ page.app_logo | default: '/assets/icons/icon-512x512.png' }}" alt="{{ page.app_name }} logo" class="rounded mr-2" style="max-width: 50px;">
+      <span class="font-weight-bold mr-2">{{ page.app_name }}</span>
+      <button id="install-button" class="btn btn-primary">Install</button>
+    </div>
 
     <div class="card-text">{{ content }}</div>
 
