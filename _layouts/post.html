@@ -42,10 +42,10 @@ layout: default
     <!-- PWA Install Button -->
 <div class="d-flex align-items-center mt-4">
   <img src="{{ site.baseurl }}/assets/icons/icon-192x192.png" alt="App Logo" class="me-2" style="width: 40px; height: 40px;">
-  {% assign apps = site.data.apps | where: "url", page.url %}
-  {% if apps.size > 0 %}
-    {% assign app = apps[0] %}
-    <span class="me-2">{{ app.name | default: 'App Name' }}</span>
+  {% assign matching_apps = site.data.apps | where: "url", page.url %}
+  {% if matching_apps.size > 0 %}
+    {% assign app = matching_apps[0] %}
+    <span class="me-2">{{ app.name }}</span>
   {% else %}
     <span class="me-2">App Name</span>
   {% endif %}
