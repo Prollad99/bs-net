@@ -42,17 +42,19 @@ layout: default
     <!-- PWA Install Button -->
 <div class="d-flex align-items-center mt-4">
   <img src="{{ site.baseurl }}/assets/icons/icon-192x192.png" alt="App Logo" class="me-2" style="width: 40px; height: 40px;">
-  {% assign matching_apps = site.data.apps | where_exp: 'app', 'app.urls contains page.url' %}
-  {% if matching_apps.size > 0 %}
-    {% assign app = matching_apps[0] %}
-    <span class="me-2">{{ app.name }}</span>
-  {% else %}
-    <span class="me-2">App Name</span>
-  {% endif %}
+  {% assign app_name = 'App Name' %}
+  {% for app in site.data.apps %}
+    {% if app.urls contains page.url %}
+      {% assign app_name = app.name %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  <span class="me-2">{{ app_name }}</span>
   <button id="install-button" class="btn btn-primary">Install</button>
 </div>
-<!-- Debugging -->
-<p>URLs to Check: {{ site.data.apps | json }}</p>
+<!-- Debug Information -->
+<p>Current URL: {{ page.url }}</p>
+<p>URLs in Data: {{ site.data.apps | json }}</p>
     <script>
       let deferredPrompt;
       const installButton = document.getElementById('install-button');
