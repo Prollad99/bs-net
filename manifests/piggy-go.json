@@ -1,7 +1,7 @@
 {
-  "name": "Piggy Go Free Spins",
-  "short_name": "Piggy Go Spins",
-  "start_url": "/piggy-go-free-spins/",
+  "name": "Piggy Go Free Dice",
+  "short_name": "Piggy Go Dice",
+  "start_url": "/piggy-go-free-dice/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
