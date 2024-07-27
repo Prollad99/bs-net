@@ -44,9 +44,15 @@ layout: default
   <img src="{{ site.baseurl }}/assets/icons/icon-192x192.png" alt="App Logo" class="me-2" style="width: 40px; height: 40px;">
   
   {% assign app_name = '' %}
+  {% assign current_url = page.url %}
   {% for app in site.data.apps %}
-    {% if app.urls contains page.url %}
-      {% assign app_name = app.name %}
+    {% for url in app.urls %}
+      {% if url == current_url %}
+        {% assign app_name = app.name %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    {% if app_name != '' %}
       {% break %}
     {% endif %}
   {% endfor %}
@@ -57,6 +63,10 @@ layout: default
   {% else %}
     <span class="me-2">App not found</span>
   {% endif %}
+</div>
+<div class="debug-info">
+  <p>Current URL: {{ page.url }}</p>
+  <p>App Name: {{ app_name }}</p>
 </div>
     <script>
       let deferredPrompt;
