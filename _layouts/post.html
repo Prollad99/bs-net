@@ -42,7 +42,8 @@ layout: default
     <!-- PWA Install Button -->
     <div class="d-flex align-items-center mt-4">
       <img src="{{ site.baseurl }}/assets/icons/icon-192x192.png" alt="App Logo" class="me-2" style="width: 40px; height: 40px;">
-      <span class="me-2">{{ site.data.apps | where: "url", page.url | first.name }}</span> <!-- Display the app name -->
+      {% assign app = site.data.apps | where: "url", page.url | first %}
+      <span class="me-2">{{ app.name }}</span> <!-- Display the app name -->
       <button id="install-button" class="btn btn-primary">Install</button>
     </div>
     <script>
@@ -82,15 +83,5 @@ layout: default
         console.log('Service Worker not supported');
       }
     </script>
-
-    <!-- Display App List -->
-    <div class="app-list mt-4">
-      <h2>Our Apps</h2>
-      <ul>
-        {% for app in site.data.apps %}
-          <li><a href="{{ app.url }}">{{ app.name }}</a></li>
-        {% endfor %}
-      </ul>
-    </div>
   </div>
 </div>
