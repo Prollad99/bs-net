@@ -10,11 +10,7 @@
       {{ site.title | escape }}
     {% endif %}
   </title>
- <!-- Link to the manifest.json file -->
-  <link rel="manifest" href="{{ site.baseurl }}/assets/manifest.json">
-  
-  <!-- Include the service worker script -->
-  <script>
+ <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('{{ site.baseurl }}/assets/sw.js')
       .then(function(registration) {
