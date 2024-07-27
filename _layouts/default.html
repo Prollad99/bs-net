@@ -10,12 +10,20 @@
       {{ site.title | escape }}
     {% endif %}
   </title>
-<link rel="manifest" href="{{ page.url }}manifest.json">
-<script type="text/javascript">
-  const script = document.createElement('script');
-  script.src = "{{ page.url }}sw.js";
-  document.head.appendChild(script);
-</script>
+<!-- Link to the manifest.json file -->
+  <link rel="manifest" href="{{ site.baseurl }}/{{ page.url | relative_url }}/manifest.json">
+  
+  <!-- Include the service worker script -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('{{ site.baseurl }}/{{ page.url | relative_url }}/sw.js')
+      .then(function(registration) {
+        console.log('Service Worker registered with scope:', registration.scope);
+      }).catch(function(error) {
+        console.log('Service Worker registration failed:', error);
+      });
+    }
+  </script>
 {% if page.last_modified_at %}
     <meta name="last-modified" content="{{ page.last_modified_at | date: "%Y-%m-%dT%H:%M:%S%z" }}" />
   {% endif %}
