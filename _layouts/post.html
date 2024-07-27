@@ -25,16 +25,10 @@ layout: default
       <!-- Social Share Buttons -->
     </div>
 
-    <div class="app-install mt-4">
-      {% if page.app_logo %}
-        <img src="{{ page.app_logo }}" alt="{{ page.app_name }} logo" class="app-logo mb-2" style="max-width: 50px;">
-      {% endif %}
-      <div class="app-info">
-        <h3>{{ page.app_name }}</h3>
-        <button id="install-button" class="btn btn-primary">Install</button>
-      </div>
-    </div>
+    <!-- Link to the dynamic manifest -->
+    <link rel="manifest" href="{{ page.permalink | replace: '/', '_manifest' | append: '.json' }}" />
 
+    <!-- Install button logic -->
     <script>
       let deferredPrompt;
       const installButton = document.getElementById('install-button');
@@ -61,15 +55,12 @@ layout: default
       });
 
       if ('serviceWorker' in navigator) {
-        console.log('Service Worker supported');
         navigator.serviceWorker.register('{{ site.baseurl }}/assets/sw.js')
         .then(registration => {
           console.log('Service Worker registered with scope:', registration.scope);
         }).catch(error => {
           console.log('Service Worker registration failed:', error);
         });
-      } else {
-        console.log('Service Worker not supported');
       }
     </script>
   </div>
