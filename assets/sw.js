@@ -1,13 +1,12 @@
 self.addEventListener('install', event => {
+  const appName = 'app-name-placeholder'; // Replace with your dynamic logic if needed
   event.waitUntil(
-    caches.open('{{ page.title | replace: ' ', '-' | downcase }}-static-cache').then(cache => {
+    caches.open(`${appName}-static-cache`).then(cache => {
       return cache.addAll([
-        '{{ page.url }}',
-        '{{ page.url }}index.html',
-        '{{ site.baseurl }}/manifest.json',
         '{{ site.baseurl }}/assets/css/styles.css',
         '{{ site.baseurl }}/assets/icons/icon-192x192.png',
-        '{{ site.baseurl }}/assets/icons/icon-512x512.png'
+        '{{ site.baseurl }}/assets/icons/icon-512x512.png',
+        '{{ site.baseurl }}/assets/js/main.js', // Assuming you have a main.js file
       ]);
     })
   );
