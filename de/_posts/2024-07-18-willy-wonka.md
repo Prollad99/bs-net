@@ -9,6 +9,8 @@ lang: de
 permalink: /de/willy-wonka-free-coins/
 image: /assets/images/willy-wonka.jpeg
 include_file: willy-wonka.html
+manifest: /manifests/de/willy-wonka.json
+app_name: "Willy Wonka Free Coins"
 ---
 
 Willkommen bei BonusCollector.net, deiner besten Quelle für **Willy Wonka Free Coins**! Wir aktualisieren unsere Seite täglich mit den neuesten Links, damit du immer genügend Münzen hast, um dein Spielerlebnis zu maximieren.
