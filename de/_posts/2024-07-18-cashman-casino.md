@@ -9,6 +9,8 @@ lang: de
 permalink: /de/cashman-casino-free-coins/
 image: /assets/images/cashman-casino.webp
 include_file: cashman-casino.html
+manifest: /manifests/de/cashman-casino.json
+app_name: "Cashman Casino Free Coins"
 ---
 
 Cashman Casino ist ein beliebtes mobiles und Facebook-basiertes Casino-Spiel, das eine Vielzahl von Spielautomaten und Casinospielen bietet. Jeden Tag können Sie auf unserer Website kostenlose Münzen für Cashman Casino sammeln, um Ihr Spielvergnügen zu maximieren.
