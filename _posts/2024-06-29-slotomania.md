@@ -9,6 +9,8 @@ author: BonusCollector.net
 permalink: /slotomania-free-coins/
 image: /assets/images/gifts.svg
 include_file: slotomania.html
+manifest: /manifests/slotomania.json
+app_name: "Slotomania Free Coins"
 ---
 
 Welcome to BonusCollector.net, your go-to destination for daily Slotomania free coins! We know how important those extra coins can be for maximizing your gaming experience, and we're here to make it easy for you to collect them without any hassle.
