@@ -9,6 +9,8 @@ lang: es
 permalink: /es/cash-frenzy-free-coins/
 image: /assets/images/cash-frenzy.webp
 include_file: cash-frenzy.html
+manifest: /manifests/es/cash-frenzy.json
+app_name: "Cash Frenzy Free Coins"
 ---
 
 En Cash Frenzy, las monedas gratuitas son esenciales para prolongar tu diversión sin tener que gastar dinero real. A continuación, te mostramos cómo puedes obtener monedas gratis diariamente y disfrutar al máximo de este emocionante juego de casino.
