@@ -9,6 +9,8 @@ lang: de
 permalink: /de/monopoly-go-free-dice/
 image: /assets/images/monopoly-go.webp
 include_file: monopoly-go.html
+manifest: /manifests/de/monopoly-go.json
+app_name: "Monopoly Go Free Dice"
 ---
 
 Willkommen auf BonusCollector.net! Hier finden Sie täglich aktualisierte Links zu kostenlosen Würfen für Monopoly Go. Mit diesen Links können Sie Ihre Würfelanzahl erhöhen und Ihre Chancen im Spiel verbessern. Schauen Sie regelmäßig vorbei, um keine Belohnung zu verpassen!
