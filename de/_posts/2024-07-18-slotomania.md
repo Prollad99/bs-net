@@ -9,6 +9,8 @@ lang: de
 permalink: /de/slotomania-free-coins/
 image: /assets/images/gifts.svg
 include_file: slotomania.html
+manifest: /manifests/de/slotomania.json
+app_name: "Slotomania Free Coins"
 ---
 
 Willkommen bei BonusCollector.net! Hier finden Sie täglich aktualisierte Links zu kostenlosen Slotomania-Münzen, um Ihr Spiel zu verbessern und ohne finanzielles Risiko zu genießen.
