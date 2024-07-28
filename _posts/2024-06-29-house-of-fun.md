@@ -9,6 +9,8 @@ lang: en
 permalink: /house-of-fun-free-coins/
 image: /assets/images/gifts.svg
 include_file: house-of-fun.html
+manifest: /manifests/house-of-fun.json
+app_name: "House of Fun Free Coins"
 ---
 
 Welcome to your ultimate resource for **House of Fun free coins**! Here, you’ll find daily updates with the latest free coin links to keep your gameplay exciting and rewarding. Whether you’re a seasoned player or new to the game, our daily updated links ensure you never run out of coins.
