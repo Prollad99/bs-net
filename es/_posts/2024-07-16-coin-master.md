@@ -9,6 +9,8 @@ lang: es
 permalink: /es/coin-master-free-spins/
 image: /assets/images/coin-master.webp
 include_file: coin-master.html
+manifest: /manifests/es/coin-master.json
+app_name: "Coin Master Free Spins"
 ---
 
 ¡Bienvenidos a BonusCollector.net! Aquí te ofrecemos los últimos enlaces para obtener giros y monedas gratuitos en Coin Master. Nos aseguramos de actualizar nuestra lista a diario para que nunca te pierdas ninguna recompensa. ¡Asegúrate de visitar nuestra página todos los días y maximizar tus recompensas!
