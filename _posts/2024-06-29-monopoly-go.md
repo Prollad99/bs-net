@@ -9,6 +9,8 @@ lang: en
 permalink: /monopoly-go-free-dice/
 image: /assets/images/monopoly-go.webp
 include_file: monopoly-go.html
+manifest: /manifests/monopoly-go.json
+app_name: "Monopoly Go Free Dice"
 ---
 
 Welcome to BonusCollector.net! Here, we provide you with the latest **Monopoly Go free dice** links updated daily. Bookmark this page and check back often to ensure you never miss out on any free dice rolls.
