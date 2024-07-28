@@ -9,6 +9,8 @@ lang: es
 permalink: /es/doubleu-casino-free-chips/
 image: /assets/images/doubleu-casino.jpg
 include_file: doubleu-casino.html
+manifest: /manifests/es/doubleu-casino.json
+app_name: "DoubleU Casino Free Chips"
 ---
 
 En BonusCollector.net, te ofrecemos **fichas gratis de DoubleU Casino** todos los días. Mantente al día con nuestras actualizaciones diarias para aprovechar al máximo las recompensas disponibles y disfrutar de tus juegos favoritos sin gastar dinero.
