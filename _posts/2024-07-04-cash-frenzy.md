@@ -9,6 +9,8 @@ lang: en
 permalink: /cash-frenzy-free-coins/
 image: /assets/images/cash-frenzy.webp
 include_file: cash-frenzy.html
+manifest: /manifests/cash-frenzy.json
+app_name: "Cash Frenzy Free Coins"
 ---
 
 Welcome to your ultimate source for **Cash Frenzy free coins**! Every day, we provide the latest links to help you collect free coins and maximize your winnings in the game. No need to search through multiple sites—find everything you need right here on BonusCollector.net.
