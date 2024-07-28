@@ -9,6 +9,8 @@ lang: en
 permalink: /bingo-bash-free-chips/
 image: /assets/images/bingo-bash.webp
 include_file: bingo-bash.html
+manifest: /manifests/bingo-bash.json
+app_name: "Bingo Bash Free Chips"
 ---
 
 Welcome to BonusCollector, your ultimate destination for daily **Bingo Bash free chips**. We update our links daily to ensure you never run out of free chips to enhance your gaming experience.
