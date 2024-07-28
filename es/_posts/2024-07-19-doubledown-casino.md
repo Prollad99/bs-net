@@ -9,6 +9,8 @@ lang: es
 permalink: /es/doubledown-casino-free-chips/
 image: /assets/images/doubledown-casino.jpeg
 include_file: doubledown-casino.html
+manifest: /manifests/es/doubledown-casino.json
+app_name: "DoubleDown Casino Free Chips"
 ---
 
 ¿Estás buscando fichas gratis para Doubledown Casino? ¡Estás en el lugar correcto! En BonusCollector.net, actualizamos diariamente los enlaces para que puedas obtener tus fichas gratis sin complicaciones. Solo tienes que visitar nuestra página y hacer clic en los enlaces para reclamar tus recompensas.
