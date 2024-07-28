@@ -9,6 +9,8 @@ lang: en
 permalink: /jackpot-world-free-coins/
 image: /assets/images/jackpot-world.webp
 include_file: jackpot-world.html
+manifest: /manifests/jackpot-world.json
+app_name: "Jackpot World Free Coins"
 ---
 
 Welcome to **BonusCollector.net**, your daily source for **Jackpot World free coins**. We provide updated links to help you collect your bonuses effortlessly. Dive into the exciting world of Jackpot World and maximize your rewards with our daily updates!
