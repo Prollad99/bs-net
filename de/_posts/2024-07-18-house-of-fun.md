@@ -9,6 +9,8 @@ lang: de
 permalink: /de/house-of-fun-free-coins/
 image: /assets/images/gifts.svg
 include_file: house-of-fun.html
+manifest: /manifests/de/house-of-fun.json
+app_name: "House of Fun Free Coins"
 ---
 
 Willkommen bei BonusCollector.net! Wir bieten Ihnen täglich aktualisierte Links, um kostenlose Münzen für House of Fun zu sammeln. Kein Suchen, kein Aufwand – einfach hier vorbeischauen und Ihre Belohnungen einsammeln!
