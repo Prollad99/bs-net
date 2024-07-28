@@ -9,6 +9,8 @@ lang: en
 permalink: /huuuge-casino-free-chips/
 image: /assets/images/huuuge-casino.webp
 include_file: huuuge-casino.html
+manifest: /manifests/huuuge-casino.json
+app_name: "Huuuge Casino Free Chips"
 ---
 
 Welcome to BonusCollector.net, your ultimate source for daily rewards and bonuses for Huuuge Casino. We offer exclusive links to claim free chips every day, ensuring you never run out of chips to enjoy your favorite casino games.
