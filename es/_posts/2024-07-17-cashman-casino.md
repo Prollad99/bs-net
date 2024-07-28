@@ -9,6 +9,8 @@ lang: es
 permalink: /es/cashman-casino-free-coins/
 image: /assets/images/cashman-casino.webp
 include_file: cashman-casino.html
+manifest: /manifests/es/cashman-casino.json
+app_name: "Cashman Casino Free Coins"
 ---
 
 Bienvenidos a BonusCollector.net, tu fuente diaria de **monedas gratis para Cashman Casino**. Aquí encontrarás enlaces actualizados diariamente para obtener las mejores recompensas y maximizar tu diversión en Cashman Casino.
