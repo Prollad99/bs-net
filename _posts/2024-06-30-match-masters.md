@@ -9,6 +9,8 @@ lang: en
 permalink: /match-masters-free-gifts/
 image: /assets/images/match-masters.webp
 include_file: match-masters.html
+manifest: /manifests/match-masters.json
+app_name: "Match Masters Free Gifts"
 ---
 
 Welcome to your daily source for **Match Masters free gifts**! Here at BonusCollector.net, we provide you with the latest and most up-to-date free gift links to enhance your Match Masters experience. 
