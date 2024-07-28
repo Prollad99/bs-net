@@ -9,6 +9,8 @@ lang: en
 permalink: /hit-it-rich-free-coins/
 image: /assets/images/hit-it-rich.jpeg
 include_file: hit-it-rich.html
+manifest: /manifests/hit-it-rich.json
+app_name: "Hit It Rich Free Coins"
 ---
 
 ## Daily Free Coins for Hit It Rich Slots
