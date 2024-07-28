@@ -9,6 +9,8 @@ lang: es
 permalink: /es/hit-it-rich-free-coins/
 image: /assets/images/hit-it-rich.jpeg
 include_file: hit-it-rich.html
+manifest: /manifests/es/hit-it-rich.json
+app_name: "Hit It Rich Free Coins"
 ---
 
 ## ¿Cómo conseguir monedas gratis en Hit It Rich Slots?
