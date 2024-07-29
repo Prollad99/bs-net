@@ -9,6 +9,8 @@ lang: it
 permalink: /it/hit-it-rich-free-coins/
 image: /assets/images/hit-it-rich.jpeg
 include_file: hit-it-rich.html
+manifest: /manifests/it/hit-it-rich.json
+app_name: "Hit It Rich Free Coins"
 ---
 
 Benvenuti su BonusCollector.net! Se sei un appassionato di Hit It Rich, sei nel posto giusto. Ogni giorno, pubblichiamo nuovi link per ottenere monete gratuite, permettendoti di continuare a giocare e vincere senza spendere un centesimo.
