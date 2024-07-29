@@ -9,6 +9,8 @@ lang: it
 permalink: /it/doubledown-casino-free-chips/
 image: /assets/images/doubledown-casino.jpeg
 include_file: doubledown-casino.html
+manifest: /manifests/it/doubledown-casino.json
+app_name: "DoubleDown Casino Free Chips"
 ---
 
 Benvenuti su BonusCollector.net, il vostro punto di riferimento per ottenere i migliori **DoubleDown Casino Free Chips** ogni giorno! Se sei un appassionato di DoubleDown Casino, sai quanto possono essere importanti i chip gratuiti per prolungare il tuo tempo di gioco e aumentare le tue possibilità di vincita. Ecco come puoi raccogliere i tuoi premi quotidiani e migliorare la tua esperienza di gioco.
