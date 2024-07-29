@@ -9,6 +9,8 @@ lang: es
 permalink: /es/match-masters-free-gifts/
 image: /assets/images/match-masters.webp
 include_file: match-masters.html
+manifest: /manifests/es/match-masters.json
+app_name: "Match Masters Free Gifts"
 ---
 
 ¡Bienvenidos a BonusCollector.net! Si eres fanático de Match Masters, estás en el lugar correcto. Aquí publicamos enlaces diarios para que obtengas regalos gratuitos en el juego, tales como monedas, potenciadores, pegatinas y más.
