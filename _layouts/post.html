@@ -121,7 +121,7 @@ layout: default
       {% assign current_lang = page.lang %}
       {% for post in site.posts %}
         {% if post.lang == current_lang %}
-          <li><a href="{{ post.url }}">{{ page.app_name }}</a></li>
+          <li><a href="{{ post.url }}">{{ page.title }}</a></li>
         {% endif %}
       {% endfor %}
     </ul>
