@@ -9,6 +9,8 @@ lang: es
 permalink: /es/huuuge-casino-free-chips/
 image: /assets/images/huuuge-casino.webp
 include_file: huuuge-casino.html
+manifest: /manifests/es/huuuge-casino.json
+app_name: "Huuuge Casino Free Chips"
 ---
 
 ¿Estás buscando cómo obtener **Huuuge Casino Free Chips**? ¡Estás en el lugar correcto! En BonusCollector.net, nos dedicamos a ofrecerte enlaces diarios para que consigas fichas gratuitas y puedas seguir disfrutando de tus juegos de casino favoritos.
