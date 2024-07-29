@@ -9,6 +9,8 @@ lang: es
 permalink: /es/house-of-fun-free-coins/
 image: /assets/images/gifts.svg
 include_file: house-of-fun.html
+manifest: /manifests/es/house-of-fun.json
+app_name: "House of Fun Free Coins"
 ---
 
 ¡Bienvenidos a BonusCollector.net! Aquí podrás encontrar las mejores y más recientes recompensas diarias de **House of Fun Free Coins**. Si eres un entusiasta de los juegos de casino, seguramente no querrás perderte estas ofertas.
