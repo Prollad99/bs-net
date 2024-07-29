@@ -9,6 +9,8 @@ lang: it
 permalink: /it/cashman-casino-free-coins/
 image: /assets/images/cashman-casino.webp
 include_file: cashman-casino.html
+manifest: /manifests/it/cashman-casino.json
+app_name: "Cashman Casino Free Coins"
 ---
 
 Benvenuti su BonusCollector.net, la tua fonte principale per ottenere **monete gratuite su Cashman Casino**! Se sei un appassionato di questo fantastico gioco di slot, sai quanto è importante avere un saldo di monete sempre pieno per continuare a giocare e vincere grandi premi. Ecco come puoi ottenere i tuoi bonus giornalieri in modo semplice e veloce.
