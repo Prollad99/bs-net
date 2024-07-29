@@ -9,6 +9,8 @@ lang: it
 permalink: /it/island-king-free-spins/
 image: /assets/images/island-king.jpg
 include_file: island-king.html
+manifest: /manifests/it/island-king.json
+app_name: "Island King Free Spins"
 ---
 
 Benvenuti su BonusCollector.net, la tua fonte affidabile per ottenere **giri gratuiti giornalieri per Island King**. Qui troverai i link aggiornati quotidianamente per riscattare giri gratuiti e altre ricompense per migliorare la tua esperienza di gioco.
