@@ -11,6 +11,9 @@ axios.get(url)
     const links = [];
 
     $('a[href*="web.hititrich.zynga.com"], a[href*="zynga.social"]').each((index, element) => {
+if (links.length >= 100) {
+        return false; // Break out of the loop if we have 100 links
+      }
       const link = $(element).attr('href');
       const text = $(element).text().trim();
       links.push({ href: link, text: text });
