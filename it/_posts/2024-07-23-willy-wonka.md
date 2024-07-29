@@ -9,6 +9,8 @@ lang: it
 permalink: /it/willy-wonka-free-coins/
 image: /assets/images/willy-wonka.jpeg
 include_file: willy-wonka.html
+manifest: /manifests/it/willy-wonka.json
+app_name: "Willy Wonka Free Coins"
 ---
 
 Benvenuti su BonusCollector.net! Se sei un fan delle slot machine di Willy Wonka e cerchi modi per ottenere monete gratuite, sei nel posto giusto. Qui, pubblichiamo quotidianamente link per ottenere monete gratuite per migliorare la tua esperienza di gioco.
