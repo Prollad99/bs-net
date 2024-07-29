@@ -9,6 +9,8 @@ lang: it
 permalink: /it/caesars-slots-free-coins/
 image: /assets/images/caesars-slots.webp
 include_file: caesars-slots.html
+manifest: /manifests/it/caesars-slots.json
+app_name: "Caesars Slots Free Coins"
 ---
 
 Benvenuti su BonusCollector.net! Qui trovi i link per ottenere monete gratis su Caesars Slots, aggiornati quotidianamente per assicurarti di non perdere mai un'opportunità di vincita.
