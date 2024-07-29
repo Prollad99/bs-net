@@ -9,6 +9,8 @@ lang: es
 permalink: /es/willy-wonka-free-coins/
 image: /assets/images/willy-wonka.jpeg
 include_file: willy-wonka.html
+manifest: /manifests/es/willy-wonka.json
+app_name: "Willy Wonka Free Coins"
 ---
 
 ¿Te encanta jugar a Willy Wonka Slots y estás buscando formas de obtener monedas gratis diariamente? ¡Estás en el lugar correcto! En BonusCollector.net, publicamos enlaces diarios para que consigas **Willy Wonka Free Coins** y disfrutes al máximo de tu experiencia de juego.
