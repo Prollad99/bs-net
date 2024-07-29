@@ -9,6 +9,8 @@ lang: es
 permalink: /es/jackpot-world-free-coins/
 image: /assets/images/jackpot-world.webp
 include_file: jackpot-world.html
+manifest: /manifests/es/jackpot-world.json
+app_name: "Jackpot World Free Coins"
 ---
 
 En BonusCollector.net, nos dedicamos a proporcionarte enlaces diarios para obtener monedas gratis en Jackpot World. Si eres fanático de este emocionante juego de casino, aquí encontrarás todo lo que necesitas para maximizar tus recompensas y seguir disfrutando de la diversión sin gastar dinero.
