@@ -9,6 +9,8 @@ lang: it
 permalink: /it/cash-frenzy-free-coins/
 image: /assets/images/cash-frenzy.webp
 include_file: cash-frenzy.html
+manifest: /manifests/it/cash-frenzy.json
+app_name: "Cash Frenzy Free Coins"
 ---
 
 Cash Frenzy è un popolare gioco di slot online disponibile su Google Play Store e Apple App Store. Se sei un appassionato di questo gioco, sai quanto possono essere importanti le monete gratuite per continuare a giocare e vincere. Qui su BonusCollector.net, pubblichiamo quotidianamente link per ottenere monete gratis su Cash Frenzy. Continua a leggere per scoprire tutti i metodi per ottenere le tue monete gratuite.
