@@ -9,6 +9,8 @@ lang: it
 permalink: /it/bingo-blitz-free-credits/
 image: /assets/images/bingo-blitz.webp
 include_file: bingo-blitz.html
+manifest: /manifests/it/bingo-blitz.json
+app_name: "Bingo Blitz Free Credits"
 ---
 
 Benvenuti su BonusCollector.net! Sei pronto a ottenere i tuoi crediti gratuiti di Bingo Blitz? Ogni giorno, pubblichiamo i migliori link per raccogliere premi e potenziare la tua esperienza di gioco. Continua a leggere per scoprire come ottenere i tuoi bonus quotidiani!
