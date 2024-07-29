@@ -9,6 +9,8 @@ lang: es
 permalink: /es/slotomania-free-coins/
 image: /assets/images/gifts.svg
 include_file: slotomania.html
+manifest: /manifests/es/slotomania.json
+app_name: "Slotomania Free Coins"
 ---
 
 Slotomania es uno de los juegos de casino más populares y entretenidos disponibles en dispositivos móviles. Aquí en BonusCollector.net, actualizamos enlaces diarios para que puedas obtener tus **Slotomania Free Coins** y disfrutar al máximo del juego sin gastar dinero real.
