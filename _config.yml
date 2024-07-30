@@ -12,10 +12,6 @@ plugins:
 
 paginate: true
 paginate_path: "/page/:num/"
-pagination:
-  enabled: true
-  per_page: 20
-  permalink: "/page/:num/"
 
 defaults:
   - scope:
