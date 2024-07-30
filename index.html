@@ -1,6 +1,6 @@
 ---
 layout: default
-pagination: 
+pagination:
   enabled: true
   per_page: 20
 lang: en
@@ -47,7 +47,6 @@ lang: en
                   {% else %}
                     Last updated: <strong>{{ post.last_modified_at | date: "%B %d, %Y" }}</strong>
                   {% endif %}
-                  <input type="hidden" name="include_file" value="{{ post.include_file }}">
                 </small>
               </p>
             </div>
