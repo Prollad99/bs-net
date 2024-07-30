@@ -1,21 +1,30 @@
-title: "Bonus Collector: Free Coins, Chips, and Spins for Slot Games"
-description: Get free coins, chips, spins, and various other rewards on our website. Enjoy exclusive bonuses and elevate your gaming experience with our daily updated offers and tips.
+title: "Bonus Collector: Free Slot Game Rewards"
+description: Get daily free coins, chips, spins, and exclusive bonuses for your favorite slot games. Elevate your gaming with our updated offers and tips.
 baseurl: ""
 url: "https://bonuscollector.net"
 
 markdown: kramdown
 
-paginate: 20
-paginate_path: "/page:num/"
-
 plugins:
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-last-modified-at
 
 collections:
   pages:
     output: true
+
+paginate: 20
+
+pagination:
+  enabled: true
+  lang: [en, es, de, it]
+  per_page: 20
+  permalinks:
+    en: "/page/:num/"
+    es: "/es/page/:num/"
+    de: "/de/page/:num/"
+    it: "/it/page/:num/"
 
 defaults:
   - scope:
