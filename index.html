@@ -58,30 +58,39 @@ lang: en
   </div>
 
   {% if paginator.next_page %}
-    <div class="text-center mb-4">
-      <button id="load-more-btn" class="btn btn-primary" data-next-page="{{ paginator.next_page_path }}">Load More</button>
-    </div>
-  {% endif %}
+  <div class="text-center mb-4">
+    <button id="load-more-btn" class="btn btn-primary" data-next-page="{{ paginator.next_page_path }}">Load More</button>
+  </div>
+{% endif %}
+
 </div>
 
 <script>
-  document.getElementById('load-more-btn').addEventListener('click', function() {
-    const button = this;
-    const nextPage = button.getAttribute('data-next-page');
-    fetch(nextPage)
-      .then(response => response.text())
-      .then(html => {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        const newPosts = doc.querySelectorAll('.post');
-        const postsContainer = document.querySelector('.posts');
-        newPosts.forEach(post => postsContainer.appendChild(post));
-        const newNextPage = doc.querySelector('#load-more-btn')?.getAttribute('data-next-page');
-        if (newNextPage) {
-          button.setAttribute('data-next-page', newNextPage);
-        } else {
-          button.remove();
-        }
+  document.addEventListener('DOMContentLoaded', function() {
+    const button = document.getElementById('load-more-btn');
+    if (button) {
+      button.addEventListener('click', function() {
+        const nextPage = button.getAttribute('data-next-page');
+        fetch(nextPage)
+          .then(response => response.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const newPosts = doc.querySelectorAll('.post');
+            const postsContainer = document.querySelector('.posts');
+            newPosts.forEach(post => postsContainer.appendChild(post));
+            const newNextPage = doc.querySelector('#load-more-btn')?.getAttribute('data-next-page');
+            if (newNextPage) {
+              button.setAttribute('data-next-page', newNextPage);
+            } else {
+              button.remove();
+            }
+          })
+          .catch(error => {
+            console.error('Error loading more posts:', error);
+            // Optionally: handle errors gracefully
+          });
       });
+    }
   });
 </script>
