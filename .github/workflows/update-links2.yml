@@ -14,6 +14,7 @@ jobs:
       matrix:
         game:
           - wizard-of-oz
+          - lotsa-slots
 
     steps:
       - name: Checkout repository
