@@ -14,12 +14,6 @@ pagination:
   enabled: true
   per_page: 20
   permalink: "/page/:num/"
-  title: ":title - Page :num"
-  limit: 0
-  sort_field: "date"
-  sort_reverse: true
-  lang: [en, es, de, it]
-  category: "posts"
 
 defaults:
   - scope:
