@@ -1,0 +1,99 @@
+name: Update Links and Deploy 2
+
+on:
+  schedule:
+    - cron: '*/30 * * * *' # Runs every 30 minutes
+  push:
+    branches:
+      - main
+
+jobs:
+  update-links:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        game:
+          - wizard-of-oz
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm install jq axios cheerio
+
+      - name: Fetch and Update Links
+        run: |
+          node index-js/${{ matrix.game }}.js
+          echo "Content of links-json/${{ matrix.game }}.json:"
+          cat links-json/${{ matrix.game }}.json
+
+      - name: Update Reward Page
+        run: |
+          echo '<html><body><div class="reward"><ul>' > _includes/${{ matrix.game }}.html
+          jq -r '.[] | "<li><a href=\"" + .href + "\">" + .text + "</a></li>"' links-json/${{ matrix.game }}.json >> _includes/${{ matrix.game }}.html
+          echo '</ul></div></body></html>' >> _includes/${{ matrix.game }}.html
+          echo "Content of _includes/${{ matrix.game }}.html:"
+          cat _includes/${{ matrix.game }}.html
+
+      - name: Update Include File Last Modified Date
+        run: |
+          # Set timezone to UTC
+          export TZ=UTC
+
+          # Get the current timestamp in UTC
+          TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M:%S")
+
+          # Read the current content of _data/include_files.yml
+          INCLUDE_FILES_YML="_data/include_files.yml"
+
+          # Check if the include file has been modified
+          if git diff --quiet _includes/${{ matrix.game }}.html; then
+            echo "_includes/${{ matrix.game }}.html has not been modified. Skipping last modified date update."
+          else
+            # Update the entry for the current game with the new timestamp
+            if grep -q "${{ matrix.game }}.html:" "$INCLUDE_FILES_YML"; then
+              # Update the existing entry with the new timestamp
+              sed -i "/${{ matrix.game }}.html:/,/last_modified:/s|last_modified: .*|last_modified: $TIMESTAMP|" "$INCLUDE_FILES_YML"
+            else
+              # Add a new entry for the current game
+              echo -e "\n${{ matrix.game }}.html:\n  last_modified: $TIMESTAMP" >> "$INCLUDE_FILES_YML"
+            fi
+            echo "Updated last modified date for _includes/${{ matrix.game }}.html"
+          fi
+
+          # Display the updated content
+          echo "Updated content of $INCLUDE_FILES_YML:"
+          cat $INCLUDE_FILES_YML
+
+      - name: Configure Git
+        run: |
+          git config --global user.email "prolladmail@gmail.com"
+          git config --global user.name "Prollad99"
+
+      - name: Commit and Push changes
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        run: |
+          git add _includes/${{ matrix.game }}.html links-json/${{ matrix.game }}.json _data/include_files.yml
+          git add package.json package-lock.json || true
+          git commit -m "Update ${{ matrix.game }} reward links and last modified date" || true
+
+          # Pull with rebase to ensure the latest changes are included
+          git pull --rebase || true
+
+          # Push changes, retry if necessary
+          for i in {1..5}; do
+            git push https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/Prollad99/bs-net.git && break
+            echo "Retry $i: Push failed, retrying in 5 seconds..."
+            sleep 5
+            git pull --rebase || true
+          done
