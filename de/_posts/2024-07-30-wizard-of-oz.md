@@ -6,7 +6,7 @@ tags: [Wizard of Oz, Free Coins, Daily Rewards]
 author: BonusCollector.net
 description: Holen Sie sich täglich kostenlose Münzen für das Wizard of Oz Slots-Spiel und maximieren Sie Ihre Spielerfahrung.
 lang: de
-permalink: /wizard-of-oz-free-coins/
+permalink: /de/wizard-of-oz-free-coins/
 image: /assets/images/wizard-of-oz.webp
 include_file: wizard-of-oz.html
 manifest: /manifests/de/wizard-of-oz.json
