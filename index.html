@@ -1,8 +1,5 @@
 ---
 layout: default
-pagination:
-  enabled: true
-  per_page: 20
 lang: en
 ---
 
@@ -10,7 +7,7 @@ lang: en
   <h1 class="my-4">Game List</h1>
 
   <div class="row posts">
-    {% for post in paginator.posts %}
+    {% for post in site.posts %}
       {% if post.lang == "en" %}
         <div class="col-md-6 mb-4 post">
           <div class="card shadow-sm">
@@ -47,6 +44,7 @@ lang: en
                   {% else %}
                     Last updated: <strong>{{ post.last_modified_at | date: "%B %d, %Y" }}</strong>
                   {% endif %}
+                  <input type="hidden" name="include_file" value="{{ post.include_file }}">
                 </small>
               </p>
             </div>
@@ -62,32 +60,3 @@ lang: en
     </div>
   {% endif %}
 </div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const button = document.getElementById('load-more-btn');
-    if (button) {
-      button.addEventListener('click', function() {
-        const nextPage = button.getAttribute('data-next-page');
-        fetch(nextPage)
-          .then(response => response.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, 'text/html');
-            const newPosts = doc.querySelectorAll('.post');
-            const postsContainer = document.querySelector('.posts');
-            newPosts.forEach(post => postsContainer.appendChild(post));
-            const newNextPage = doc.querySelector('#load-more-btn')?.getAttribute('data-next-page');
-            if (newNextPage) {
-              button.setAttribute('data-next-page', newNextPage);
-            } else {
-              button.remove();
-            }
-          })
-          .catch(error => {
-            console.error('Error loading more posts:', error);
-          });
-      });
-    }
-  });
-</script>
