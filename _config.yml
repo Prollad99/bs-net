@@ -10,6 +10,8 @@ plugins:
   - jekyll-sitemap
   - jekyll-last-modified-at
 
+paginate: true
+paginate_path: "/page/:num/"
 pagination:
   enabled: true
   per_page: 20
