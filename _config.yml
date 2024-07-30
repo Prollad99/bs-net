@@ -14,7 +14,6 @@ pagination:
   enabled: true
   per_page: 20
   permalink: "/page/:num/"
-  lang: [en, es, de, it]
 
 defaults:
   - scope:
