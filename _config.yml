@@ -1,5 +1,5 @@
 title: "Bonus Collector: Free Slot Game Rewards"
-description: Bonus Collector offers daily updates on free coins, chips, spins, and other rewards for popular slot games. Enhance your gaming experience with our exclusive bonuses and tips.
+description: "Bonus Collector offers daily updates on free coins, chips, spins, and other rewards for popular slot games. Enhance your gaming experience with our exclusive bonuses and tips."
 baseurl: ""
 url: "https://bonuscollector.net"
 
@@ -14,6 +14,7 @@ pagination:
   enabled: true
   per_page: 20
   permalink: "/page/:num/"
+  lang: [en, es, de, it]
 
 defaults:
   - scope:
