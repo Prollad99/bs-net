@@ -3,14 +3,14 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 const path = require('path');
 
-const url = 'https://techyhigher.com/doubledown-casino-free-chips/';
+const url = 'https://mosttechs.com/doubledown-casino-free-chips/';
 
 axios.get(url)
   .then(({ data }) => {
     const $ = cheerio.load(data);
     const links = [];
 
-    $('a[href*="www.doubledowncasino2.com"], a[href*="www.doubledowncasino.com"]').each((index, element) => {
+    $('a[href*="www.doubledowncasino2.com"], a[href*="www.doubledowncasino.com"], a[href*="ddc.promo"]').each((index, element) => {
 if (links.length >= 100) {
         return false; // Break out of the loop if we have 100 links
       }
