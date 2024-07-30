@@ -3,7 +3,7 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 const path = require('path');
 
-const url = 'https://techyhigher.com/hit-it-rich-coins-free/';
+const url = 'https://mosttechs.com/hit-it-rich-coins-free/';
 
 axios.get(url)
   .then(({ data }) => {
