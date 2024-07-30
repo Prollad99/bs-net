@@ -6,10 +6,10 @@ lang: en
 <div class="container">
   <h1 class="my-4">Game List</h1>
 
-  <div class="row">
-    {% for post in site.posts %}
+  <div class="row posts">
+    {% for post in paginator.posts %}
       {% if post.lang == "en" %}
-        <div class="col-md-6 mb-4">
+        <div class="col-md-6 mb-4 post">
           <div class="card shadow-sm">
             <div class="row no-gutters">
               <div class="col-4 d-flex flex-column align-items-center justify-content-center">
@@ -27,7 +27,6 @@ lang: en
                 </div>
               </div>
             </div>
-            <!-- xx -->
             <div class="card-footer text-center">
               <p class="text-muted">
                 <small>
@@ -45,12 +44,10 @@ lang: en
                   {% else %}
                     Last updated: <strong>{{ post.last_modified_at | date: "%B %d, %Y" }}</strong>
                   {% endif %}
-                  <!-- Hidden input for include_file -->
                   <input type="hidden" name="include_file" value="{{ post.include_file }}">
                 </small>
               </p>
             </div>
-            <!-- xx -->
           </div>
         </div>
       {% endif %}
@@ -58,11 +55,10 @@ lang: en
   </div>
 
   {% if paginator.next_page %}
-  <div class="text-center mb-4">
-    <button id="load-more-btn" class="btn btn-primary" data-next-page="{{ paginator.next_page_path }}">Load More</button>
-  </div>
-{% endif %}
-
+    <div class="text-center mb-4">
+      <button id="load-more-btn" class="btn btn-primary" data-next-page="{{ paginator.next_page_path }}">Load More</button>
+    </div>
+  {% endif %}
 </div>
 
 <script>
