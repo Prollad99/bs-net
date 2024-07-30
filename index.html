@@ -1,6 +1,8 @@
 ---
 layout: default
 lang: en
+pagination:
+  enabled: true
 ---
 
 <div class="container">
@@ -84,7 +86,6 @@ lang: en
           })
           .catch(error => {
             console.error('Error loading more posts:', error);
-            // Optionally: handle errors gracefully
           });
       });
     }
