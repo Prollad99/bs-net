@@ -18,9 +18,8 @@ pagination:
   limit: 0
   sort_field: "date"
   sort_reverse: true
-  categories:
-    - posts
   lang: [en, es, de, it]
+  category: "posts"
 
 defaults:
   - scope:
