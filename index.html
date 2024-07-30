@@ -7,7 +7,7 @@ lang: en
   <h1 class="my-4">Game List</h1>
 
   <div class="row posts">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
       {% if post.lang == "en" %}
         <div class="col-md-6 mb-4 post">
           <div class="card shadow-sm">
