@@ -3,7 +3,7 @@ layout: default
 lang: en
 pagination:
   enabled: true
-  per_page: 10
+  per_page: 20
   permalink: '/page/:num/'
 ---
 
@@ -14,45 +14,7 @@ pagination:
     {% for post in paginator.posts %}
       {% if post.lang == "en" %}
         <div class="col-md-6 mb-4 post">
-          <div class="card shadow-sm">
-            <div class="row no-gutters">
-              <div class="col-4 d-flex flex-column align-items-center justify-content-center">
-                {% if post.image %}
-                  <img src="{{ post.image }}" class="card-img" alt="{{ post.app_name }}" style="max-width: 80px; max-height: 80px; margin: 10px;">
-                {% endif %}
-                <a href="{{ post.url }}" class="btn btn-primary btn-sm mt-2 mb-2">Claim Now</a>
-              </div>
-              <div class="col-8">
-                <div class="card-body">
-                  <a href="{{ post.url }}">
-                    <h5 class="card-title" style="font-size: 1rem;">{{ post.app_name }}</h5>
-                  </a>
-                  <p class="card-text" style="font-size: 0.9rem;">{{ post.description }}</p>
-                </div>
-              </div>
-            </div>
-            <div class="card-footer text-center">
-              <p class="text-muted">
-                <small>
-                  By <strong>{{ post.author }}</strong> |
-                  {% assign include_file = post.include_file %}
-                  {% assign file_info = site.data.include_files[include_file] %}
-                  {% if file_info %}
-                    {% assign last_modified = file_info.last_modified %}
-                    {% if last_modified %}
-                      Last updated:
-                      <strong class="last-updated" data-last-modified="{{ last_modified }}"></strong>
-                    {% else %}
-                      Last updated: <strong>Not available</strong>
-                    {% endif %}
-                  {% else %}
-                    Last updated: <strong>{{ post.last_modified_at | date: "%d %B %Y" }}</strong>
-                  {% endif %}
-                  <input type="hidden" name="include_file" value="{{ post.include_file }}">
-                </small>
-              </p>
-            </div>
-          </div>
+          <!-- Post Content Here -->
         </div>
       {% endif %}
     {% endfor %}
@@ -68,7 +30,7 @@ pagination:
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const loadMoreBtn = document.getElementById('load-more-btn');
-    
+
     if (loadMoreBtn) {
       loadMoreBtn.addEventListener('click', function() {
         const button = this;
@@ -93,6 +55,7 @@ pagination:
 
             if (newPosts.length === 0) {
               console.warn('No new posts found.');
+              button.remove();
               return;
             }
 
