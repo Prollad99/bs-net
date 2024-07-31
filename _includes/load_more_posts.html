@@ -1,5 +1,13 @@
-{% assign posts = site.posts | where: "lang", page.lang %}
-{% for post in posts offset: page.offset limit: page.limit %}
+---
+layout: null
+---
+
+{% assign offset = page.offset | default: 0 %}
+{% assign limit = page.limit | default: 10 %}
+{% assign lang = page.lang | default: "en" %}
+{% assign posts = site.posts | where: "lang", lang | offset: offset | limit: limit %}
+
+{% for post in posts %}
   <div class="col-md-6 mb-4 post">
     <div class="card shadow-sm">
       <div class="row no-gutters">
