@@ -16,6 +16,7 @@ jobs:
           - wizard-of-oz
           - lotsa-slots
           - mgm-slots-live
+          - jackpot-party
 
     steps:
       - name: Checkout repository
