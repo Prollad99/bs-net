@@ -55,7 +55,7 @@ lang: en
     const offset = parseInt(button.getAttribute('data-offset'));
     const limit = 10; // Number of posts to load each time
 
-    fetch(`/load_more_posts.html?offset=${offset}&limit=${limit}&lang=en`)
+    fetch(`/load_more_posts?offset=${offset}&limit=${limit}&lang=en`)
       .then(response => response.text())
       .then(html => {
         const parser = new DOMParser();
