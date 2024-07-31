@@ -59,17 +59,25 @@ pagination:
   </div>
 
   {% if paginator.next_page %}
-    <div class="text-center mb-4">
-      <button id="load-more-btn" class="btn btn-primary" data-next-page="{{ paginator.next_page_path }}">Load More</button>
+    <div class="pagination">
+      <a id="next-page-link" href="{{ paginator.next_page_path }}" style="display: none;"></a>
     </div>
   {% endif %}
 </div>
 
 <script>
-  document.getElementById('load-more-btn').addEventListener('click', function() {
-    const button = this;
-    const nextPage = button.getAttribute('data-next-page');
-    fetch(nextPage)
+  let loading = false;
+
+  function loadMorePosts() {
+    if (loading) return;
+    loading = true;
+
+    const nextPageLink = document.getElementById('next-page-link');
+    if (!nextPageLink) return;
+
+    const nextPageUrl = nextPageLink.href;
+
+    fetch(nextPageUrl)
       .then(response => response.text())
       .then(html => {
         const parser = new DOMParser();
@@ -77,12 +85,20 @@ pagination:
         const newPosts = doc.querySelectorAll('.post');
         const postsContainer = document.querySelector('.posts');
         newPosts.forEach(post => postsContainer.appendChild(post));
-        const newNextPage = doc.querySelector('#load-more-btn')?.getAttribute('data-next-page');
-        if (newNextPage) {
-          button.setAttribute('data-next-page', newNextPage);
+        const newNextPageLink = doc.querySelector('#next-page-link');
+        if (newNextPageLink) {
+          nextPageLink.href = newNextPageLink.href;
         } else {
-          button.remove();
+          nextPageLink.remove();
         }
-      });
+        loading = false;
+      })
+      .catch(() => loading = false);
+  }
+
+  window.addEventListener('scroll', () => {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
+      loadMorePosts();
+    }
   });
 </script>
