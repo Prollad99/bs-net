@@ -9,7 +9,7 @@ pagination:
   enabled: true
   per_page: 20
   permalink: "/page:num/"
-  title: ":title - Page :num"
+  title: ":app_name - Page :num"
   sort_field: "date"
   sort_reverse: true
 
