@@ -1,7 +1,9 @@
 ---
 layout: default
+lang: en
 pagination:
   enabled: true
+  per_page: 20
 ---
 
 <div class="container">
@@ -10,7 +12,7 @@ pagination:
   <div class="row posts">
     {% for post in paginator.posts %}
       {% if post.lang == "en" %}
-        <div class="col-md-6 mb-4">
+        <div class="col-md-6 mb-4 post">
           <div class="card shadow-sm">
             <div class="row no-gutters">
               <div class="col-4 d-flex flex-column align-items-center justify-content-center">
@@ -32,20 +34,11 @@ pagination:
               <p class="text-muted">
                 <small>
                   By <strong>{{ post.author }}</strong> |
-                  {% assign include_file = post.include_file %}
-                  {% assign file_info = site.data.include_files[include_file] %}
-                  {% if file_info %}
-                    {% assign last_modified = file_info.last_modified %}
-                    {% if last_modified %}
-                      Last updated:
-                      <strong class="last-updated" data-last-modified="{{ last_modified }}"></strong>
-                    {% else %}
-                      Last updated: <strong>Not available</strong>
-                    {% endif %}
-                  {% else %}
+                  {% if post.last_modified_at %}
                     Last updated: <strong>{{ post.last_modified_at | date: "%d %B %Y" }}</strong>
+                  {% else %}
+                    Last updated: <strong>Not available</strong>
                   {% endif %}
-                  <input type="hidden" name="include_file" value="{{ post.include_file }}">
                 </small>
               </p>
             </div>
@@ -57,32 +50,29 @@ pagination:
 
   {% if paginator.next_page %}
     <div class="text-center mb-4">
-      <a href="{{ paginator.next_page_path }}" class="btn btn-primary" id="load-more-btn">Load More</a>
+      <button id="load-more-btn" class="btn btn-primary" data-next-page="{{ paginator.next_page_path }}">Load More</button>
     </div>
   {% endif %}
 </div>
 
 <script>
-document.getElementById('load-more-btn').addEventListener('click', function(event) {
-  event.preventDefault();
-  const button = this;
-  const nextPage = button.getAttribute('href');
-
-  fetch(nextPage)
-    .then(response => response.text())
-    .then(html => {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
-      const newPosts = doc.querySelectorAll('.posts .col-md-6');
-      const postsContainer = document.querySelector('.posts');
-      newPosts.forEach(post => postsContainer.appendChild(post));
-
-      const newNextPage = doc.querySelector('#load-more-btn')?.getAttribute('href');
-      if (newNextPage) {
-        button.setAttribute('href', newNextPage);
-      } else {
-        button.remove();
-      }
-    });
-});
+  document.getElementById('load-more-btn').addEventListener('click', function() {
+    const button = this;
+    const nextPage = button.getAttribute('data-next-page');
+    fetch(nextPage)
+      .then(response => response.text())
+      .then(html => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const newPosts = doc.querySelectorAll('.post');
+        const postsContainer = document.querySelector('.posts');
+        newPosts.forEach(post => postsContainer.appendChild(post));
+        const newNextPage = doc.querySelector('#load-more-btn')?.getAttribute('data-next-page');
+        if (newNextPage) {
+          button.setAttribute('data-next-page', newNextPage);
+        } else {
+          button.remove();
+        }
+      });
+  });
 </script>
