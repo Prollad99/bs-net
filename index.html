@@ -7,7 +7,7 @@ pagination:
 <div class="container">
   <h1 class="my-4">Game List</h1>
 
-  <div class="row">
+  <div class="row posts">
     {% for post in paginator.posts %}
       {% if post.lang == "en" %}
         <div class="col-md-6 mb-4">
@@ -73,8 +73,8 @@ document.getElementById('load-more-btn').addEventListener('click', function(even
     .then(html => {
       const parser = new DOMParser();
       const doc = parser.parseFromString(html, 'text/html');
-      const newPosts = doc.querySelectorAll('.row .col-md-6');
-      const postsContainer = document.querySelector('.row');
+      const newPosts = doc.querySelectorAll('.posts .col-md-6');
+      const postsContainer = document.querySelector('.posts');
       newPosts.forEach(post => postsContainer.appendChild(post));
 
       const newNextPage = doc.querySelector('#load-more-btn')?.getAttribute('href');
