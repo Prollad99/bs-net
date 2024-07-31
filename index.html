@@ -78,7 +78,12 @@ pagination:
     const nextPageUrl = nextPageLink.href;
 
     fetch(nextPageUrl)
-      .then(response => response.text())
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text();
+      })
       .then(html => {
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, 'text/html');
@@ -93,7 +98,10 @@ pagination:
         }
         loading = false;
       })
-      .catch(() => loading = false);
+      .catch(error => {
+        console.error('Failed to load more posts:', error);
+        loading = false;
+      });
   }
 
   window.addEventListener('scroll', () => {
