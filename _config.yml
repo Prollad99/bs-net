@@ -5,13 +5,8 @@ url: "https://bonuscollector.net"
 
 markdown: kramdown
 
-pagination:
-  enabled: true
-  per_page: 20
-  permalink: "/page:num/"
-  title: ":app_name - Page :num"
-  sort_field: "date"
-  sort_reverse: true
+paginate: 20
+paginate_path: "/page:num/"
 
 plugins:
   - jekyll-paginate-v2
