@@ -31,7 +31,6 @@ pagination:
                 </div>
               </div>
             </div>
-            <!-- xx -->
             <div class="card-footer text-center">
               <p class="text-muted">
                 <small>
@@ -49,12 +48,10 @@ pagination:
                   {% else %}
                     Last updated: <strong>{{ post.last_modified_at | date: "%d %B %Y" }}</strong>
                   {% endif %}
-                  <!-- Hidden input field for include_file -->
                   <input type="hidden" name="include_file" value="{{ post.include_file }}">
                 </small>
               </p>
             </div>
-            <!-- xx -->
           </div>
         </div>
       {% endif %}
@@ -81,7 +78,7 @@ pagination:
         const postsContainer = document.querySelector('.posts');
         newPosts.forEach(post => {
           const newPostTitle = post.querySelector('.card-title');
-          const appName = newPostTitle.textContent;
+          const appName = post.querySelector('.card-title').textContent;
           newPostTitle.textContent = appName;
           postsContainer.appendChild(post);
         });
