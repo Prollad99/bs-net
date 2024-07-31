@@ -1,15 +1,16 @@
 ---
 layout: default
-lang: en
+pagination:
+  enabled: true
 ---
 
 <div class="container">
   <h1 class="my-4">Game List</h1>
 
-  <div class="row posts">
+  <div class="row">
     {% for post in paginator.posts %}
       {% if post.lang == "en" %}
-        <div class="col-md-6 mb-4 post">
+        <div class="col-md-6 mb-4">
           <div class="card shadow-sm">
             <div class="row no-gutters">
               <div class="col-4 d-flex flex-column align-items-center justify-content-center">
@@ -56,57 +57,32 @@ lang: en
 
   {% if paginator.next_page %}
     <div class="text-center mb-4">
-      <button id="load-more-btn" class="btn btn-primary" data-next-page="{{ paginator.next_page_path }}">Load More</button>
+      <a href="{{ paginator.next_page_path }}" class="btn btn-primary" id="load-more-btn">Load More</a>
     </div>
   {% endif %}
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const loadMoreBtn = document.getElementById('load-more-btn');
+document.getElementById('load-more-btn').addEventListener('click', function(event) {
+  event.preventDefault();
+  const button = this;
+  const nextPage = button.getAttribute('href');
 
-    if (loadMoreBtn) {
-      loadMoreBtn.addEventListener('click', function() {
-        const button = this;
-        const nextPage = button.getAttribute('data-next-page');
+  fetch(nextPage)
+    .then(response => response.text())
+    .then(html => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const newPosts = doc.querySelectorAll('.row .col-md-6');
+      const postsContainer = document.querySelector('.row');
+      newPosts.forEach(post => postsContainer.appendChild(post));
 
-        if (!nextPage) {
-          console.error('No next page URL found.');
-          return;
-        }
-
-        fetch(nextPage)
-          .then(response => {
-            if (!response.ok) {
-              throw new Error('Network response was not ok');
-            }
-            return response.text();
-          })
-          .then(html => {
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, 'text/html');
-            const newPosts = doc.querySelectorAll('.post');
-
-            if (newPosts.length === 0) {
-              console.warn('No new posts found.');
-              button.remove();
-              return;
-            }
-
-            const postsContainer = document.querySelector('.posts');
-            newPosts.forEach(post => postsContainer.appendChild(post));
-
-            const newNextPage = doc.querySelector('#load-more-btn')?.getAttribute('data-next-page');
-            if (newNextPage) {
-              button.setAttribute('data-next-page', newNextPage);
-            } else {
-              button.remove();
-            }
-          })
-          .catch(error => {
-            console.error('Error fetching next page:', error);
-          });
-      });
-    }
-  });
+      const newNextPage = doc.querySelector('#load-more-btn')?.getAttribute('href');
+      if (newNextPage) {
+        button.setAttribute('href', newNextPage);
+      } else {
+        button.remove();
+      }
+    });
+});
 </script>
