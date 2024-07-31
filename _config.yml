@@ -5,9 +5,6 @@ url: "https://bonuscollector.net"
 
 markdown: kramdown
 
-paginate: 20
-paginate_path: "/page:num/"
-
 plugins:
   - jekyll-paginate-v2
   - jekyll-sitemap
