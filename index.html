@@ -1,9 +1,10 @@
 ---
 layout: default
 lang: en
-pagination:
+pagination: 
   enabled: true
   per_page: 20
+  permalink: "/page:num/"
 ---
 
 <div class="container">
@@ -30,18 +31,30 @@ pagination:
                 </div>
               </div>
             </div>
+            <!-- xx -->
             <div class="card-footer text-center">
               <p class="text-muted">
                 <small>
                   By <strong>{{ post.author }}</strong> |
-                  {% if post.last_modified_at %}
-                    Last updated: <strong>{{ post.last_modified_at | date: "%d %B %Y" }}</strong>
+                  {% assign include_file = post.include_file %}
+                  {% assign file_info = site.data.include_files[include_file] %}
+                  {% if file_info %}
+                    {% assign last_modified = file_info.last_modified %}
+                    {% if last_modified %}
+                      Last updated:
+                      <strong class="last-updated" data-last-modified="{{ last_modified }}"></strong>
+                    {% else %}
+                      Last updated: <strong>Not available</strong>
+                    {% endif %}
                   {% else %}
-                    Last updated: <strong>Not available</strong>
+                    Last updated: <strong>{{ post.last_modified_at | date: "%d %B %Y" }}</strong>
                   {% endif %}
+                  <!-- Hidden input field for include_file -->
+                  <input type="hidden" name="include_file" value="{{ post.include_file }}">
                 </small>
               </p>
             </div>
+            <!-- xx -->
           </div>
         </div>
       {% endif %}
