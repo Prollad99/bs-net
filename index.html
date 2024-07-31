@@ -79,7 +79,12 @@ pagination:
         const doc = parser.parseFromString(html, 'text/html');
         const newPosts = doc.querySelectorAll('.post');
         const postsContainer = document.querySelector('.posts');
-        newPosts.forEach(post => postsContainer.appendChild(post));
+        newPosts.forEach(post => {
+          const newPostTitle = post.querySelector('.card-title');
+          const appName = newPostTitle.textContent;
+          newPostTitle.textContent = appName;
+          postsContainer.appendChild(post);
+        });
         const newNextPage = doc.querySelector('#load-more-btn')?.getAttribute('data-next-page');
         if (newNextPage) {
           button.setAttribute('data-next-page', newNextPage);
