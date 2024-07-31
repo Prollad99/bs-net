@@ -6,7 +6,6 @@ url: "https://bonuscollector.net"
 markdown: kramdown
 
 plugins:
-  - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-last-modified-at
 
@@ -39,9 +38,3 @@ defaults:
     values:
       layout: "post"
       lang: "it"
-
-pagination:
-  enabled: true
-  per_page: 20
-  permalink: "/page:num/"
-  title: ":title - page :num"
