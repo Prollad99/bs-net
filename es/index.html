@@ -27,61 +27,31 @@ lang: es
                 </div>
               </div>
             </div>
-<!-- xx -->
-<div class="card-footer text-center">
-  <p class="text-muted">
-    <small>
-      Por <strong>{{ post.author }}</strong> |
-      {% assign include_file = post.include_file %}
-      {% assign file_info = site.data.include_files[include_file] %}
-      {% if file_info %}
-        {% assign last_modified = file_info.last_modified %}
-        {% if last_modified %}
-          Última actualización:
-          <strong class="last-updated" data-last-modified="{{ last_modified }}"></strong>
-        {% else %}
-          Última actualización: <strong>No disponible</strong>
-        {% endif %}
-      {% else %}
-        Última actualización: <strong>{{ post.last_modified_at | date: "%d de %B de %Y" }}</strong>
-      {% endif %}
-      <!-- Entrada oculta para include_file -->
-      <input type="hidden" name="include_file" value="{{ post.include_file }}">
-    </small>
-  </p>
-</div>
-<!-- xx -->
+            <div class="card-footer text-center">
+              <p class="text-muted">
+                <small>
+                  Por <strong>{{ post.author }}</strong> |
+                  {% assign include_file = post.include_file %}
+                  {% assign file_info = site.data.include_files[include_file] %}
+                  {% if file_info %}
+                    {% assign last_modified = file_info.last_modified %}
+                    {% if last_modified %}
+                      Última actualización:
+                      <strong class="last-updated" data-last-modified="{{ last_modified }}"></strong>
+                    {% else %}
+                      Última actualización: <strong>No disponible</strong>
+                    {% endif %}
+                  {% else %}
+                    Última actualización: <strong>{{ post.last_modified_at | date: "%d de %B de %Y" }}</strong>
+                  {% endif %}
+                  <!-- Entrada oculta para include_file -->
+                  <input type="hidden" name="include_file" value="{{ post.include_file }}">
+                </small>
+              </p>
+            </div>
           </div>
         </div>
       {% endif %}
     {% endfor %}
   </div>
-
-  {% if paginator.next_page %}
-    <div class="text-center mb-4">
-      <button id="load-more-btn" class="btn btn-primary" data-next-page="{{ paginator.next_page_path }}">Cargar Más</button>
-    </div>
-  {% endif %}
 </div>
-
-<script>
-  document.getElementById('load-more-btn').addEventListener('click', function() {
-    const button = this;
-    const nextPage = button.getAttribute('data-next-page');
-    fetch(nextPage)
-      .then(response => response.text())
-      .then(html => {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        const newPosts = doc.querySelectorAll('.post');
-        const postsContainer = document.querySelector('.posts');
-        newPosts.forEach(post => postsContainer.appendChild(post));
-        const newNextPage = doc.querySelector('#load-more-btn')?.getAttribute('data-next-page');
-        if (newNextPage) {
-          button.setAttribute('data-next-page', newNextPage);
-        } else {
-          button.remove();
-        }
-      });
-  });
-</script>
