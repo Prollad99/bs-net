@@ -66,23 +66,50 @@ pagination:
 </div>
 
 <script>
-  document.getElementById('load-more-btn').addEventListener('click', function() {
-    const button = this;
-    const nextPage = button.getAttribute('data-next-page');
-    fetch(nextPage)
-      .then(response => response.text())
-      .then(html => {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        const newPosts = doc.querySelectorAll('.post');
-        const postsContainer = document.querySelector('.posts');
-        newPosts.forEach(post => postsContainer.appendChild(post));
-        const newNextPage = doc.querySelector('#load-more-btn')?.getAttribute('data-next-page');
-        if (newNextPage) {
-          button.setAttribute('data-next-page', newNextPage);
-        } else {
-          button.remove();
+  document.addEventListener('DOMContentLoaded', function() {
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener('click', function() {
+        const button = this;
+        const nextPage = button.getAttribute('data-next-page');
+
+        if (!nextPage) {
+          console.error('No next page URL found.');
+          return;
         }
+
+        fetch(nextPage)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.text();
+          })
+          .then(html => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const newPosts = doc.querySelectorAll('.post');
+
+            if (newPosts.length === 0) {
+              console.warn('No new posts found.');
+              return;
+            }
+
+            const postsContainer = document.querySelector('.posts');
+            newPosts.forEach(post => postsContainer.appendChild(post));
+
+            const newNextPage = doc.querySelector('#load-more-btn')?.getAttribute('data-next-page');
+            if (newNextPage) {
+              button.setAttribute('data-next-page', newNextPage);
+            } else {
+              button.remove();
+            }
+          })
+          .catch(error => {
+            console.error('Error fetching next page:', error);
+          });
       });
+    }
   });
 </script>
