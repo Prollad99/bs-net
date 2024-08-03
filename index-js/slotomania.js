@@ -1,36 +1,90 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
-const fs = require('fs');
+const fs = require('fs').promises;
 const path = require('path');
 
-const url = 'https://techyhigher.com/slotomania-free-coins-bonus/';
+// Function to get the current date in YYYY-MM-DD format
+function getCurrentDate() {
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
 
-axios.get(url)
-  .then(({ data }) => {
+// Function to format the date in "Month Day, Year" format
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
+const url = 'https://techyhigher.com/slotomania-free-coins-bonus/';
+const currentDate = getCurrentDate();
+const dir = 'links-json';
+const filePath = path.join(dir, 'slotomania.json');
+const htmlFilePath = path.join('_includes', 'slotomania.html');
+
+async function main() {
+  try {
+    let existingLinks = [];
+    if (await fs.access(filePath).then(() => true).catch(() => false)) {
+      try {
+        const fileData = await fs.readFile(filePath, 'utf8');
+        if (fileData) {
+          existingLinks = JSON.parse(fileData);
+        }
+      } catch (error) {
+        console.error('Error reading existing links:', error);
+      }
+    }
+
+    const { data } = await axios.get(url);
     const $ = cheerio.load(data);
-    const links = [];
+    const newLinks = [];
 
     $('a[href*="api.playtika.com"]').each((index, element) => {
-if (links.length >= 100) {
+      if (newLinks.length >= 100) {
         return false; // Break out of the loop if we have 100 links
       }
       const link = $(element).attr('href');
       const text = $(element).text().trim();
-      links.push({ href: link, text: text });
+      newLinks.push({ href: link, text: text, date: currentDate });
     });
 
-    console.log('Fetched links:', links);
+    // Combine new links with existing links, keeping the older dates if they exist
+    const combinedLinks = [...newLinks, ...existingLinks]
+      .reduce((acc, link) => {
+        if (!acc.find(({ href }) => href === link.href)) {
+          acc.push(link);
+        }
+        return acc;
+      }, [])
+      .slice(0, 100); // Limit to 100 links
 
-    const dir = 'links-json';
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir);
+    console.log('Final links:', combinedLinks);
+
+    if (!await fs.access(dir).then(() => true).catch(() => false)) {
+      await fs.mkdir(dir);
     }
 
-    const filePath = path.join(dir, 'slotomania.json');
-    fs.writeFileSync(filePath, JSON.stringify(links, null, 2), 'utf8');
-    console.log(`Links saved to ${filePath}`);
-  })
-  .catch(err => {
+    await fs.writeFile(filePath, JSON.stringify(combinedLinks, null, 2), 'utf8');
+
+    // Generate HTML file
+    let htmlContent = '<ul class="list-group mt-3 mb-4">\n';
+    combinedLinks.forEach(link => {
+      htmlContent += `  <li class="list-group-item d-flex justify-content-between align-items-center">\n`;
+      htmlContent += `    <span>Free Coins for ${formatDate(link.date)}</span>\n`;
+      htmlContent += `    <a href="${link.href}" class="btn btn-primary btn-sm">Collect</a>\n`;
+      htmlContent += `  </li>\n`;
+    });
+    htmlContent += '</ul>';
+
+    await fs.writeFile(htmlFilePath, htmlContent, 'utf8');
+    console.log(`HTML file saved to ${htmlFilePath}`);
+  } catch (err) {
     console.error('Error fetching links:', err);
     process.exit(1);
-  });
+  }
+}
+
+main();
