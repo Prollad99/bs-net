@@ -17,6 +17,7 @@ jobs:
           - lotsa-slots
           - mgm-slots-live
           - jackpot-party
+          - quick-hit-slots
 
     steps:
       - name: Checkout repository
