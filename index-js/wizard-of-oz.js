@@ -71,7 +71,7 @@ axios.get(url)
     let htmlContent = '<ul class="list-group mt-3 mb-4">\n';
     combinedLinks.forEach(link => {
       htmlContent += `  <li class="list-group-item d-flex justify-content-between align-items-center">\n`;
-      htmlContent += `    <span>Free Coins Link for ${formatDate(link.date)}</span>\n`;
+      htmlContent += `    <span>Free Coins for ${formatDate(link.date)}</span>\n`;
       htmlContent += `    <a href="${link.href}" class="btn btn-primary btn-sm">Collect</a>\n`;
       htmlContent += `  </li>\n`;
     });
