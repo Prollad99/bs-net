@@ -18,6 +18,7 @@ jobs:
           - mgm-slots-live
           - jackpot-party
           - quick-hit-slots
+          - heart-of-vegas
 
     steps:
       - name: Checkout repository
