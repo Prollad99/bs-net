@@ -13,7 +13,6 @@ jobs:
     strategy:
       matrix:
         game:
-          - huuuge-casino
           - pop-slots
           - jackpot-world
           - slotomania
