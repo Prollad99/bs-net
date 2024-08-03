@@ -22,7 +22,7 @@ const url = 'https://mosttechs.com/wizard-of-oz-slots-free-coins/';
 const currentDate = getCurrentDate();
 const dir = 'links-json';
 const filePath = path.join(dir, 'wizard-of-oz.json');
-const htmlFilePath = path.join('_includes', 'wizard-of-oz.html');
+const htmlFilePath = path.join('static/rewards', 'wizard-of-oz.html');
 
 // Read existing links from the JSON file if it exists
 let existingLinks = [];
@@ -43,9 +43,6 @@ axios.get(url)
     const newLinks = [];
 
     $('a[href*="zdnwoz0-a.akamaihd.net"], a[href*="zynga.social"], a[href*="wozslots.onelink.me"]').each((index, element) => {
-      if (newLinks.length >= 100) {
-        return false; // Break out of the loop if we have 100 links
-      }
       const link = $(element).attr('href');
       const existingLink = existingLinks.find(l => l.href === link);
       const date = existingLink ? existingLink.date : currentDate;
