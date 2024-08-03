@@ -68,10 +68,10 @@ axios.get(url)
     fs.writeFileSync(filePath, JSON.stringify(combinedLinks, null, 2), 'utf8');
 
     // Generate HTML file
-    let htmlContent = '<ul class="list-group mb-4 mt-2">\n';
+    let htmlContent = '<ul class="list-group mb-4 mt-3">\n';
     combinedLinks.forEach(link => {
-      htmlContent += `  <li class="list-group-item d-flex justify-content-between align-items-center">\n`;
-      htmlContent += `    <span>Free Coins Links for ${formatDate(link.date)}</span>\n`;
+      htmlContent += `  <li class="list-group-item d-flex justify-content-between align-items-center bg-light border-0 rounded-3">\n`;
+      htmlContent += `    <span class="text-dark">Free Coins Links for ${formatDate(link.date)}</span>\n`;
       htmlContent += `    <a href="${link.href}" class="btn btn-primary btn-sm">Collect</a>\n`;
       htmlContent += `  </li>\n`;
     });
