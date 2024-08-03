@@ -43,6 +43,9 @@ axios.get(url)
     const newLinks = [];
 
     $('a[href*="zdnwoz0-a.akamaihd.net"], a[href*="zynga.social"]').each((index, element) => {
+      if (newLinks.length >= 100) {
+        return false; // Break out of the loop if we have 100 links
+      }
       const link = $(element).attr('href');
       const existingLink = existingLinks.find(l => l.href === link);
       const date = existingLink ? existingLink.date : currentDate;
@@ -68,12 +71,14 @@ axios.get(url)
     fs.writeFileSync(filePath, JSON.stringify(combinedLinks, null, 2), 'utf8');
 
     // Generate HTML file
-    let htmlContent = '<ul class="list-group mt-3 mb-2">\n';
+    let htmlContent = '<ul class="list-unstyled">\n';
     combinedLinks.forEach(link => {
-      htmlContent += `  <li class="list-group-item d-flex justify-content-between align-items-center bg-light border-0 rounded-3 mb-2">\n`;
-      htmlContent += `    <span class="text-dark">Free Coins Links for ${formatDate(link.date)}</span>\n`;
-      htmlContent += `    <a href="${link.href}" class="btn btn-primary btn-sm">Collect</a>\n`;
-      htmlContent += `  </li>\n`;
+      htmlContent += '  <li class="mb-2">\n';
+      htmlContent += '    <div class="p-3 bg-light rounded d-flex justify-content-between align-items-center">\n';
+      htmlContent += `      <span class="text-dark">Free Coins Links for ${formatDate(link.date)}</span>\n`;
+      htmlContent += `      <a href="${link.href}" class="btn btn-primary btn-sm">Collect</a>\n`;
+      htmlContent += '    </div>\n';
+      htmlContent += '  </li>\n';
     });
     htmlContent += '</ul>';
 
