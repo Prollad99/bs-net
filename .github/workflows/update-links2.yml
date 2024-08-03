@@ -19,8 +19,6 @@ jobs:
           - jackpot-party
           - quick-hit-slots
           - heart-of-vegas
-          - hit-it-rich
-          - huuuge-casino
 
     steps:
       - name: Checkout repository
