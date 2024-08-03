@@ -12,9 +12,14 @@ function getCurrentDate() {
   return `${year}-${month}-${day}`;
 }
 
-// Function to format the date in "Month Day, Year" format
+// Function to format the date in "Month Day, Year" format or replace invalid dates with the current year
 function formatDate(dateString) {
   const date = new Date(dateString);
+  if (isNaN(date)) {
+    // Return the current year if the date is invalid
+    const currentYear = new Date().getFullYear();
+    return `Year ${currentYear}`;
+  }
   return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
@@ -70,8 +75,9 @@ async function main() {
     // Generate HTML file
     let htmlContent = '<ul class="list-group mt-3 mb-4">\n';
     combinedLinks.forEach(link => {
+      const formattedDate = formatDate(link.date);
       htmlContent += `  <li class="list-group-item d-flex justify-content-between align-items-center">\n`;
-      htmlContent += `    <span>Free Coins for ${formatDate(link.date)}</span>\n`;
+      htmlContent += `    <span>Free Coins for ${formattedDate}</span>\n`;
       htmlContent += `    <a href="${link.href}" class="btn btn-primary btn-sm">Collect</a>\n`;
       htmlContent += `  </li>\n`;
     });
