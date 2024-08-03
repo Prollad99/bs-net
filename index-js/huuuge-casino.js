@@ -1,6 +1,6 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
-const fs = require('fs');
+const fs = require('fs').promises;
 const path = require('path');
 
 // Function to get the current date in YYYY-MM-DD format
@@ -12,9 +12,14 @@ function getCurrentDate() {
   return `${year}-${month}-${day}`;
 }
 
-// Function to format the date in "Month Day, Year" format
+// Function to format the date in "Month Day, Year" format or replace invalid dates with the current year
 function formatDate(dateString) {
   const date = new Date(dateString);
+  if (isNaN(date)) {
+    // Return the current year if the date is invalid
+    const currentYear = new Date().getFullYear();
+    return `Year ${currentYear}`;
+  }
   return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
@@ -24,21 +29,21 @@ const dir = 'links-json';
 const filePath = path.join(dir, 'huuuge-casino.json');
 const htmlFilePath = path.join('_includes', 'huuuge-casino.html');
 
-// Read existing links from the JSON file if it exists
-let existingLinks = [];
-if (fs.existsSync(filePath)) {
+async function main() {
   try {
-    const fileData = fs.readFileSync(filePath, 'utf8');
-    if (fileData) {
-      existingLinks = JSON.parse(fileData);
+    let existingLinks = [];
+    if (await fs.access(filePath).then(() => true).catch(() => false)) {
+      try {
+        const fileData = await fs.readFile(filePath, 'utf8');
+        if (fileData) {
+          existingLinks = JSON.parse(fileData);
+        }
+      } catch (error) {
+        console.error('Error reading existing links:', error);
+      }
     }
-  } catch (error) {
-    console.error('Error reading existing links:', error);
-  }
-}
 
-axios.get(url)
-  .then(({ data }) => {
+    const { data } = await axios.get(url);
     const $ = cheerio.load(data);
     const newLinks = [];
 
@@ -61,26 +66,29 @@ axios.get(url)
 
     console.log('Final links:', combinedLinks);
 
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir);
+    if (!await fs.access(dir).then(() => true).catch(() => false)) {
+      await fs.mkdir(dir);
     }
 
-    fs.writeFileSync(filePath, JSON.stringify(combinedLinks, null, 2), 'utf8');
+    await fs.writeFile(filePath, JSON.stringify(combinedLinks, null, 2), 'utf8');
 
     // Generate HTML file
     let htmlContent = '<ul class="list-group mt-3 mb-4">\n';
     combinedLinks.forEach(link => {
+      const formattedDate = formatDate(link.date);
       htmlContent += `  <li class="list-group-item d-flex justify-content-between align-items-center">\n`;
-      htmlContent += `    <span>Free Chips for ${formatDate(link.date)}</span>\n`;
+      htmlContent += `    <span>Free Chips for ${formattedDate}</span>\n`;
       htmlContent += `    <a href="${link.href}" class="btn btn-primary btn-sm">Collect</a>\n`;
       htmlContent += `  </li>\n`;
     });
     htmlContent += '</ul>';
 
-    fs.writeFileSync(htmlFilePath, htmlContent, 'utf8');
+    await fs.writeFile(htmlFilePath, htmlContent, 'utf8');
     console.log(`HTML file saved to ${htmlFilePath}`);
-  })
-  .catch(err => {
+  } catch (err) {
     console.error('Error fetching links:', err);
     process.exit(1);
-  });
+  }
+}
+
+main();
