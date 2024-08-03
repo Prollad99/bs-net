@@ -22,7 +22,7 @@ const url = 'https://mosttechs.com/wizard-of-oz-slots-free-coins/';
 const currentDate = getCurrentDate();
 const dir = 'links-json';
 const filePath = path.join(dir, 'wizard-of-oz.json');
-const htmlFilePath = path.join('static/rewards', 'wizard-of-oz.html');
+const htmlFilePath = path.join('_includes', 'wizard-of-oz.html');
 
 // Read existing links from the JSON file if it exists
 let existingLinks = [];
@@ -42,7 +42,7 @@ axios.get(url)
     const $ = cheerio.load(data);
     const newLinks = [];
 
-    $('a[href*="zdnwoz0-a.akamaihd.net"], a[href*="zynga.social"], a[href*="wozslots.onelink.me"]').each((index, element) => {
+    $('a[href*="zdnwoz0-a.akamaihd.net"], a[href*="zynga.social"]').each((index, element) => {
       const link = $(element).attr('href');
       const existingLink = existingLinks.find(l => l.href === link);
       const date = existingLink ? existingLink.date : currentDate;
@@ -71,8 +71,8 @@ axios.get(url)
     let htmlContent = '<ul class="list-group mb-4">\n';
     combinedLinks.forEach(link => {
       htmlContent += `  <li class="list-group-item d-flex justify-content-between align-items-center">\n`;
-      htmlContent += `    <span>Free Coins Link for ${formatDate(link.date)}</span>\n`;
-      htmlContent += `    <a href="${link.href}" class="btn btn-primary btn-sm">Collect Now</a>\n`;
+      htmlContent += `    <span>Free Coins Links for ${formatDate(link.date)}</span>\n`;
+      htmlContent += `    <a href="${link.href}" class="btn btn-primary">Collect Now</a>\n`;
       htmlContent += `  </li>\n`;
     });
     htmlContent += '</ul>';
