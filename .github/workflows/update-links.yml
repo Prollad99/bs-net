@@ -13,6 +13,8 @@ jobs:
     strategy:
       matrix:
         game:
+          - hit-it-rich
+          - huuuge-casino
           - pop-slots
           - jackpot-world
           - slotomania
