@@ -43,14 +43,10 @@ async function main() {
     const newLinks = [];
 
     $('a[href*="piggygo-jy.forevernine.com"]').each((index, element) => {
-      if (newLinks.length >= 100) {
-        return false; // Break out of the loop if we have 100 links
-      }
       const link = $(element).attr('href');
-      const text = $(element).text().trim();
       const existingLink = existingLinks.find(l => l.href === link);
       const date = existingLink ? existingLink.date : currentDate;
-      newLinks.push({ href: link, text: text, date: date });
+      newLinks.push({ href: link, date: date });
     });
 
     // Combine new links with existing links, keeping the older dates if they exist
