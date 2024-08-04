@@ -1,4 +1,4 @@
-name: Update Links and Deploy 2
+name: Update Links and Deploy
 
 on:
   schedule:
