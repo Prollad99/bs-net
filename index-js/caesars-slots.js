@@ -21,8 +21,8 @@ function formatDate(dateString) {
 const url = 'https://mosttechs.com/caesars-casino-free-coins/';
 const currentDate = getCurrentDate();
 const dir = 'links-json';
-const filePath = path.join(dir, 'wizard-of-oz.json');
-const htmlFilePath = path.join('_includes', 'wizard-of-oz.html');
+const filePath = path.join(dir, 'caesars-slots.json');
+const htmlFilePath = path.join('_includes', 'caesars-slots.html');
 
 async function main() {
   try {
