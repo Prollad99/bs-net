@@ -12,14 +12,9 @@ function getCurrentDate() {
   return `${year}-${month}-${day}`;
 }
 
-// Function to format the date in "Month Day, Year" format or replace invalid dates with the current year
+// Function to format the date in "Month Day, Year" format
 function formatDate(dateString) {
   const date = new Date(dateString);
-  if (isNaN(date)) {
-    // Return the current year if the date is invalid
-    const currentYear = new Date().getFullYear();
-    return `Year ${currentYear}`;
-  }
   return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
@@ -48,14 +43,10 @@ async function main() {
     const newLinks = [];
 
     $('a[href*="islandking-static-jy.forevernine.com"], a[href*="bit.ly"]').each((index, element) => {
-      if (newLinks.length >= 100) {
-        return false; // Break out of the loop if we have 100 links
-      }
       const link = $(element).attr('href');
-      const text = $(element).text().trim();
       const existingLink = existingLinks.find(l => l.href === link);
       const date = existingLink ? existingLink.date : currentDate;
-      newLinks.push({ href: link, date: date, text: text });
+      newLinks.push({ href: link, date: date });
     });
 
     // Combine new links with existing links, keeping the older dates if they exist
@@ -79,9 +70,8 @@ async function main() {
     // Generate HTML file
     let htmlContent = '<ul class="list-group mt-3 mb-4">\n';
     combinedLinks.forEach(link => {
-      const formattedDate = formatDate(link.date);
       htmlContent += `  <li class="list-group-item d-flex justify-content-between align-items-center">\n`;
-      htmlContent += `    <span>Free Spins for ${formattedDate}</span>\n`;
+      htmlContent += `    <span>Free Spins for ${formatDate(link.date)}</span>\n`;
       htmlContent += `    <a href="${link.href}" class="btn btn-primary btn-sm">Collect</a>\n`;
       htmlContent += `  </li>\n`;
     });
