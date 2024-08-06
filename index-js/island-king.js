@@ -18,7 +18,7 @@ function formatDate(dateString) {
   return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
-const url = 'https://www.crazyashwin.com/island-king-free-spin/';
+const url = 'https://mosttechs.com/island-king-free-spins-and-coins/';
 const currentDate = getCurrentDate();
 const dir = 'links-json';
 const filePath = path.join(dir, 'island-king.json');
