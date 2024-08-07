@@ -21,7 +21,7 @@ function formatDate(dateString) {
 const url = 'https://mosttechs.com/solitaire-grand-harvest-free-coins/';
 const currentDate = getCurrentDate();
 const dir = 'links-json';
-const filePath = path.join(dir, 'wizard-of-oz.json');
+const filePath = path.join(dir, 'solitaire-grand-harvest.json');
 const htmlFilePath = path.join('_includes', 'solitaire-grand-harvest.html');
 
 async function main() {
