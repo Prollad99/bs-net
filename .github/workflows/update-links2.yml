@@ -19,6 +19,7 @@ jobs:
           - jackpot-party
           - quick-hit-slots
           - heart-of-vegas
+          - solitaire-grand-harvest
 
     steps:
       - name: Checkout repository
