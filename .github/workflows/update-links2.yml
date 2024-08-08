@@ -20,6 +20,7 @@ jobs:
           - quick-hit-slots
           - heart-of-vegas
           - solitaire-grand-harvest
+          - gold-fish-slots
 
     steps:
       - name: Checkout repository
