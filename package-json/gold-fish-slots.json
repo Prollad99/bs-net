@@ -1,7 +1,7 @@
 {
   "name": "gold-fish-slots-free-coins",
   "version": "1.0.0",
-  "description": "Automate fetching Cashman casino free coins links",
+  "description": "Automate fetching Gold fish slots free coins links",
   "main": "index-js/gold-fish-slots.js",
   "dependencies": {
     "axios": "^0.21.4",
