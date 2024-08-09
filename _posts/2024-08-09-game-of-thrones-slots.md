@@ -34,11 +34,11 @@ No tasks, no registration—just pure rewards. Bookmark this page and check back
 
 ## Tips to Maximize Your Coins and Wins
 
-1. **Join a House Early**: Align yourself with other players in a House to earn bonus coins whenever any member hits a big win. The more active the House, the bigger the rewards&#8203;:citation[oaicite:0]{index=0}&#8203;:citation[oaicite:1]{index=1}.
+1. **Join a House Early**: Align yourself with other players in a House to earn bonus coins whenever any member hits a big win. The more active the House, the bigger the rewards.
    
-2. **Set a Winning Strategy**: Establish a budget before you start spinning, and set a clear target for your winnings. Knowing when to stop can prevent losses and help you accumulate more coins over time&#8203;:citation[oaicite:2]{index=2}.
+2. **Set a Winning Strategy**: Establish a budget before you start spinning, and set a clear target for your winnings. Knowing when to stop can prevent losses and help you accumulate more coins over time.
 
-3. **Complete Quests**: Participate in various in-game quests to earn additional coins and bonuses. These quests are a great way to keep the game exciting while boosting your bankroll&#8203;:citation[oaicite:3]{index=3}.
+3. **Complete Quests**: Participate in various in-game quests to earn additional coins and bonuses. These quests are a great way to keep the game exciting while boosting your bankroll.
 
 ## Conclusion
 
