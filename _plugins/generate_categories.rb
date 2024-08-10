@@ -21,7 +21,10 @@ module Jekyll
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'category.html')
       self.data['category'] = category
-      self.data['title'] = "Posts in Category \"#{category}\""
+      
+      # Convert category slug to title case and format the title
+      formatted_category = category.split('-').map(&:capitalize).join(' ')
+      self.data['title'] = "#{formatted_category}: What You Need to Know"
     end
   end
 end
