@@ -12,6 +12,9 @@ plugins:
 collections:
   pages:
     output: true
+  game_posts:  # Add this collection for your game-specific posts
+    output: true  # Ensure the posts are generated
+    permalink: /:collection/:path/  # Customize permalink structure if needed
 
 defaults:
   - scope:
@@ -38,3 +41,9 @@ defaults:
     values:
       layout: "post"
       lang: "it"
+  - scope:
+      path: "_game_posts"  # Add this to set defaults for game-related posts
+      type: "game_posts"
+    values:
+      layout: "post"
+      lang: "en"  # You can adjust this or add more scopes for different languages
