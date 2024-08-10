@@ -3,24 +3,25 @@ module Jekyll
     safe true
 
     def generate(site)
-      site.categories.each do |category, posts|
-        site.pages << CategoryPage.new(site, site.source, category, posts)
+      if site.layouts.key? 'category'
+        site.categories.each do |category, posts|
+          site.pages << CategoryPage.new(site, site.source, category)
+        end
       end
     end
   end
 
   class CategoryPage < Page
-    def initialize(site, base, category, posts)
+    def initialize(site, base, category)
       @site = site
       @base = base
-      @dir = category
-      @name = "index.html"
+      @dir  = category
+      @name = 'index.html'
 
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'category.html')
       self.data['category'] = category
-      self.data['title'] = category.capitalize
-      self.data['posts'] = posts
+      self.data['title'] = "Posts in Category \"#{category}\""
     end
   end
 end
