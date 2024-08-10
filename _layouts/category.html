@@ -4,7 +4,7 @@ show_language_dropdown: false
 ---
 
 <div class="container">
-  <h1 class="my-4">{{ page.category | replace: '-', ' ' | capitalize_words }}</h1>
+  <h1 class="my-4">{{ page.category | capitalize }}</h1>
 
   <div class="row">
     {% assign category_posts = site.blogs | where: "category", page.category %}
