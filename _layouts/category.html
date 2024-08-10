@@ -8,7 +8,7 @@ show_language_dropdown: false
   <h1 class="my-4">{{ page.category | capitalize }}</h1>
 
   <div class="row">
-    {% assign category_posts = site.posts | where: "category", page.category %}
+    {% assign category_posts = site.blogs | where: "category", page.category %}
     {% if category_posts.size > 0 %}
       {% for post in category_posts %}
         <div class="col-md-6 mb-4">
