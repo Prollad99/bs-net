@@ -5,7 +5,10 @@ module Jekyll
     def generate(site)
       if site.layouts.key? 'category'
         site.categories.each do |category, posts|
-          site.pages << CategoryPage.new(site, site.source, File.join('', category), category)
+          # Normalize category name to slug format for the URL
+          slug = category.downcase.gsub(/\s+/, '-')
+          # Generate a page for each category
+          site.pages << CategoryPage.new(site, site.source, slug, category)
         end
       end
     end
@@ -15,8 +18,8 @@ module Jekyll
     def initialize(site, base, dir, category)
       @site = site
       @base = base
-      @dir  = dir
-      @name = 'index.html'
+      @dir  = dir  # This is the directory where the category page will reside
+      @name = 'index.html'  # Each category will have its own index.html
 
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'category.html')
