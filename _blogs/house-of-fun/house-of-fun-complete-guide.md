@@ -7,7 +7,6 @@ lang: en
 description: "Discover everything you need to know about House of Fun Casino Slots, including tips for maximizing your wins, understanding game features, and getting free coins."
 author: BonusCollector.net
 category: house-of-fun
-permalink: /house-of-fun-complete-guide/
 ---
 
 House of Fun is one of the most popular social casino games, offering a thrilling mix of slot machines that are both entertaining and rewarding. Whether you're a newbie or an experienced player, this guide will provide you with all the information you need to maximize your gaming experience, from understanding the game's features to tips for leveling up and collecting free coins.
