@@ -12,9 +12,9 @@ plugins:
 collections:
   pages:
     output: true
-  blogs:  # Collection for your blog posts
+  blogs:
     output: true
-    permalink: /:path/  # This permalink setting will mirror the directory structure
+    permalink: /:category/:title/
 
 defaults:
   - scope:
@@ -42,8 +42,9 @@ defaults:
       layout: "post"
       lang: "it"
   - scope:
-      path: "_blogs"  # Default settings for blog posts
+      path: "_blogs"
       type: "blogs"
     values:
       layout: "post"
       lang: "en"
+      permalink: /:category/:title/
