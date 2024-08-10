@@ -12,9 +12,9 @@ plugins:
 collections:
   pages:
     output: true
-  blogs:  # Add this collection for your blog posts
-    output: true  # Ensure the blog posts are generated
-    permalink: /:collection/:path/  # Customize permalink structure if needed
+  blogs:  # Collection for your blog posts
+    output: true
+    permalink: /:path/  # This permalink setting will mirror the directory structure
 
 defaults:
   - scope:
@@ -42,8 +42,8 @@ defaults:
       layout: "post"
       lang: "it"
   - scope:
-      path: "_blogs"  # Add this to set defaults for blog posts
+      path: "_blogs"  # Default settings for blog posts
       type: "blogs"
     values:
       layout: "post"
-      lang: "en"  # You can adjust this or add more scopes for different languages
+      lang: "en"
