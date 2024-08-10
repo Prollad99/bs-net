@@ -14,7 +14,7 @@ collections:
     output: true
   blogs:
     output: true
-    permalink: /:categories/:title/  # Use :categories to avoid issues if a single category isn't set
+    permalink: /:categories/:title/
 
 defaults:
   - scope:
