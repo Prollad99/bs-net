@@ -34,4 +34,15 @@ layout: null
       <priority>1.0</priority>
     </url>
   {% endfor %}
+
+  <!-- Blog Posts -->
+  {% for blog in site.blogs %}
+    <url>
+      <loc>{{ site.url }}{{ blog.url }}</loc>
+      {% if blog.last_modified_at %}
+        <lastmod>{{ blog.last_modified_at | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      <priority>0.5</priority>
+    </url>
+  {% endfor %}
 </urlset>
