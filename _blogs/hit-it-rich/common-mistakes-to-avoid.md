@@ -6,7 +6,6 @@ tags: [slots, Hit It Rich, gaming tips, mistakes]
 lang: en
 description: "Discover the top 5 common mistakes players make in Hit It Rich Slots and learn how to avoid them for a better gaming experience."
 author: BonusCollector.net
-image: /assets/images/hit-it-rich.jpeg
 category: hit-it-rich
 ---
 
