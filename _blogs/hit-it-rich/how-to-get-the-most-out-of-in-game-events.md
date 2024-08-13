@@ -6,6 +6,7 @@ tags: [Hit It Rich, Slots, In-Game Events, Zynga Games, Strategy]
 lang: en
 description: "Learn strategies to maximize your rewards and enjoyment from in-game events in Hit It Rich Slots. Get tips on how to make the most of these events and collect free coins."
 author: BonusCollector.net
+image: /assets/images/hit-it-rich.jpeg
 category: hit-it-rich
 ---
 
