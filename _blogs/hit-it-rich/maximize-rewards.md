@@ -6,7 +6,6 @@ tags: [Hit It Rich, Slot Games, Rewards, Free Coins]
 lang: en  
 description: Learn how to maximize your rewards in Hit It Rich Slots with strategies that help you climb the leaderboard and earn more coins.  
 author: BonusCollector.net
-image: /assets/images/hit-it-rich.jpeg
 category: hit-it-rich
 ---
 
