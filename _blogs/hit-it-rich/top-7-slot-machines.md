@@ -6,7 +6,6 @@ tags: ["Hit It Rich", "Slot Machines", "Big Wins", "Casino Games"]
 lang: en
 description: "Discover the top 7 slot machines to play in Hit It Rich for maximizing your chances of big wins. Learn about the features, bonuses, and strategies for success."
 author: BonusCollector.net
-image: /assets/images/hit-it-rich.jpeg
 category: hit-it-rich
 ---
 
