@@ -6,7 +6,6 @@ tags: [Hit It Rich, Slots, Bonus Features, Zynga Games, Social Casino]
 lang: en
 description: "Explore the bonus features in Hit It Rich Slots by Zynga. Learn how to maximize your gaming experience with features like Rich Pass, Elite status, and more."
 author: BonusCollector.net
-image: /assets/images/hit-it-rich.jpeg
 category: hit-it-rich
 ---
 
