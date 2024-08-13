@@ -6,7 +6,6 @@ tags: [Hit It Rich Slots, Leveling Up, Casino Games, Tips]
 lang: en
 description: "Discover effective strategies to level up faster in Hit It Rich Slots and maximize your rewards. Learn tips to enhance your gameplay and advance your VIP status."
 author: BonusCollector.net
-image: /assets/images/hit-it-rich.jpeg
 category: hit-it-rich
 ---
 
