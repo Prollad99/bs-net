@@ -6,7 +6,6 @@ tags: [Hit It Rich, Slots, Winning Tips, Casino Games]
 lang: en
 description: "Master Hit It Rich slots with these top 10 winning tips, designed to increase your chances of scoring big and having more fun."
 author: BonusCollector.net
-image: /assets/images/hit-it-rich.jpeg
 category: hit-it-rich
 ---
 
