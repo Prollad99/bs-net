@@ -1,11 +1,11 @@
 ---
 layout: post  
-title: Hit It Rich Slots: Best Strategies for Beginner Players  
+title: "Hit It Rich Slots: Best Strategies for Beginner Players"
 date: 2024-08-13  
 tags: [Hit It Rich, Slot Strategies, Beginner Tips, Free Coins]  
 lang: en  
-description: Discover the best strategies for beginner players to maximize their chances of winning big in Hit It Rich slots.  
-author: BonusCollector.net  
+description: "Discover the best strategies for beginner players to maximize their chances of winning big in Hit It Rich slots."
+author: BonusCollector.net
 category: hit-it-rich
 ---
 
