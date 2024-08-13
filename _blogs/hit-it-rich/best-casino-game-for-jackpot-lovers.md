@@ -5,7 +5,8 @@ date: 2024-08-13
 tags: [Hit It Rich, casino games, slots, jackpots]  
 lang: en  
 description: "Discover why Hit It Rich Slots is the ultimate casino game for jackpot enthusiasts. Learn about its unique features, progressive jackpots, and how it stands out in the crowded world of online slots."  
-author: BonusCollector.net  
+author: BonusCollector.net
+image: /assets/images/hit-it-rich.jpeg
 category: hit-it-rich
 ---
 
