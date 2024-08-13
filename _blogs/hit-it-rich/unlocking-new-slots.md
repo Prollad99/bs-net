@@ -6,6 +6,7 @@ tags: [Hit It Rich, slots, gaming tips, unlock new slots]
 lang: en
 description: "Discover strategies to unlock new slots in Hit It Rich and maximize your gaming experience."
 author: BonusCollector.net
+image: /assets/images/hit-it-rich.jpeg
 category: hit-it-rich
 ---
 
