@@ -5,7 +5,8 @@ date: 2024-08-13
 tags: [Hit It Rich, free coins, slots, casino games]  
 lang: en  
 description: "Discover proven strategies to earn free coins daily in Hit It Rich Slots. Maximize your rewards and enjoy endless gameplay with these expert tips."  
-author: BonusCollector.net  
+author: BonusCollector.net
+image: /assets/images/hit-it-rich.jpeg
 category: hit-it-rich
 ---
 
