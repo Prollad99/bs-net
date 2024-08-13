@@ -6,6 +6,7 @@ tags: [Hit It Rich, Slot Strategies, Beginner Tips, Free Coins]
 lang: en  
 description: "Discover the best strategies for beginner players to maximize their chances of winning big in Hit It Rich slots."
 author: BonusCollector.net
+image: /assets/images/hit-it-rich.jpeg
 category: hit-it-rich
 ---
 
