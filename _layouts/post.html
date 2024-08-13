@@ -70,7 +70,7 @@ layout: default
       {% for post in related_posts %}
         {% if post.url != page.url %}
           <li class="list-group-item">
-            <img src="{{ post.image }}" alt="{{ post.title }}" class="list-group-item-image"/>
+            <i class="bi bi-arrow-right-short"></i>
             <a href="{{ post.url }}">{{ post.title }}</a>
           </li>
         {% endif %}
