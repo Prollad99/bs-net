@@ -6,7 +6,6 @@ tags: [casino, slots, hit-it-rich, game-comparison, zynga]
 lang: en
 description: "Explore the pros and cons of Hit It Rich Slots compared to other popular casino games. Learn what sets this Zynga game apart in the world of social gaming."
 author: BonusCollector.net
-image: /assets/images/hit-it-rich.jpeg
 category: hit-it-rich
 ---
 
