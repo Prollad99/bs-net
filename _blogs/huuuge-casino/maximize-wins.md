@@ -29,8 +29,8 @@ There are various betting strategies you can apply, such as the Martingale or Pa
 ## 6. Play Progressive Jackpot Slots
 If you’re aiming for a big win, try your luck on progressive jackpot slots. These games pool a portion of each bet into a large jackpot, which can be won randomly. Keep in mind that betting the maximum amount often qualifies you for the full jackpot.
 
-## 7. Practice with Free Coins
-Use free coins to practice and familiarize yourself with different slots. This allows you to try out new games and strategies without risking your real coins. You can collect free coins from Huuuge Casino’s daily bonuses, or by visiting [BonusCollector.net](https://bonuscollector.net/hit-it-rich-free-chips/) for additional rewards.
+## 7. Practice with Free Chips
+Use free chips to practice and familiarize yourself with different slots. This allows you to try out new games and strategies without risking your real chips. You can collect free chips from Huuuge Casino’s daily bonuses, or by visiting [BonusCollector.net](https://bonuscollector.net/hit-it-rich-free-chips/) for additional rewards.
 
 ## 8. Set Win and Loss Limits
 Setting win and loss limits is a smart way to manage your time and money. Decide in advance how much you’re willing to win or lose in a session. Once you hit these limits, take a break and avoid the temptation to continue playing.
