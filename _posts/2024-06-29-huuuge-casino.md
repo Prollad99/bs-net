@@ -7,6 +7,7 @@ author: "BonusCollector.net"
 description: "Daily updated links for Huuuge Casino free chips. Keep your gameplay exciting and uninterrupted with our verified free chip offers."
 lang: en
 permalink: /huuuge-casino-free-chips/
+category: huuuge-casino
 image: /assets/images/huuuge-casino.webp
 include_file: huuuge-casino.html
 manifest: /manifests/huuuge-casino.json
