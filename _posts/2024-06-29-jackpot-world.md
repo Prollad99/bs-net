@@ -7,6 +7,7 @@ author: BonusCollector.net
 description: "Get daily updates on Jackpot World free coins. Find links to collect your rewards and maximize your Jackpot World experience."
 lang: en
 permalink: /jackpot-world-free-coins/
+category: jackpot-world
 image: /assets/images/jackpot-world.webp
 include_file: jackpot-world.html
 manifest: /manifests/jackpot-world.json
