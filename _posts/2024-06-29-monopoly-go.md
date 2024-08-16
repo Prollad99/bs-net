@@ -7,6 +7,7 @@ author: "BonusCollector.net"
 description: "Find daily Monopoly Go free dice links at BonusCollector.net. Never miss a free roll with our updated daily rewards!"
 lang: en
 permalink: /monopoly-go-free-dice/
+category: monopoly-go
 image: /assets/images/monopoly-go.webp
 include_file: monopoly-go.html
 manifest: /manifests/monopoly-go.json
