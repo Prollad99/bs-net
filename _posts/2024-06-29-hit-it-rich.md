@@ -7,7 +7,19 @@ author: "BonusCollector.net"
 description: "Get your daily Hit It Rich free coins here! Updated daily to ensure you have enough coins to keep spinning and winning."
 lang: en
 permalink: /hit-it-rich-free-coins/
-category: hit-it-rich
+redirect_from:
+  - /hit-it-rich/best-casino-game-for-jackpot-lovers/
+  - /hit-it-rich/best-strategies/
+  - /hit-it-rich/bonus-features/
+  - /hit-it-rich/common-mistakes-to-avoid/
+  - /hit-it-rich/comparison/
+  - /hit-it-rich/how-to-get-the-most-out-of-in-game-events/
+  - /hit-it-rich/level-up-faster/
+  - /hit-it-rich/maximize-rewards/
+  - /hit-it-rich/secrets-to-earning-free-coins-daily/
+  - /hit-it-rich/top-10-winning-tips/
+  - /hit-it-rich/top-7-slot-machines/
+  - /hit-it-rich/unlocking-new-slots/
 image: /assets/images/hit-it-rich.jpeg
 include_file: hit-it-rich.html
 manifest: /manifests/hit-it-rich.json
