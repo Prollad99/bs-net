@@ -13,9 +13,6 @@ plugins:
 collections:
   pages:
     output: true
-  blogs:
-    output: true
-    permalink: /:categories/:title/
 
 defaults:
   - scope:
@@ -42,9 +39,3 @@ defaults:
     values:
       layout: "post"
       lang: "it"
-  - scope:
-      path: "_blogs"
-      type: "blogs"
-    values:
-      layout: "post"
-      lang: "en"
