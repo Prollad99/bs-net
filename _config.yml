@@ -8,6 +8,7 @@ markdown: kramdown
 plugins:
   - jekyll-sitemap
   - jekyll-last-modified-at
+  - jekyll-redirect-from
 
 collections:
   pages:
