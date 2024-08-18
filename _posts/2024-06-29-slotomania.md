@@ -7,6 +7,16 @@ tags: [slotomania, free coins, daily rewards, bonuscollector]
 lang: en
 author: BonusCollector.net
 permalink: /slotomania-free-coins/
+redirect_from:
+  - /slotomania/add-friends-guide/
+  - /slotomania/charms-trade-collect/
+  - /slotomania/everything-about-slotomania-clubs/
+  - /slotomania/how-to-get-free-chips/
+  - /slotomania/maximize-rewards-strategies/
+  - /slotomania/technical-troubleshooting/
+  - /slotomania/turbo-mode-explained/
+  - /slotomania/understanding-slotomania-missions/
+  - /slotomania/unlocking-slotomania-vaults-tips-and-tricks/
 image: /assets/images/gifts.svg
 include_file: slotomania.html
 manifest: /manifests/slotomania.json
