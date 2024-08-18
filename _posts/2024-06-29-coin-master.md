@@ -8,6 +8,19 @@ description: "Get your daily Coin Master free spins and discover tips to maximiz
 lang: en
 permalink: /coin-master-free-spins/
 category: coin-master
+redirect_from:
+- /coin-master/best-time-to-use-spins/
+- /coin-master/mastering-village-building/
+- /coin-master/spin-strategies/
+- /coin-master/advanced-card-trading-tips/
+- /coin-master/event-participation-guide/
+- /coin-master/joining-teams-pros-cons/
+- /coin-master/optimize-chest-purchases/
+- /coin-master/pet-power/
+- /coin-master/save-spins-coins/
+- /coin-master/shields-defense-strategy/
+- /coin-master/smart-coin-management/
+- /coin-master/top-raiding-tips/
 image: /assets/images/coin-master.webp
 include_file: coin-master.html
 manifest: /manifests/coin-master.json
