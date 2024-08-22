@@ -18,7 +18,7 @@ function formatDate(dateString) {
   return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
-const url = 'https://techyhigher.com/jackpot-world-free-coins/';
+const url = 'https://mosttechs.com/jackpot-world-free-coins/';
 const currentDate = getCurrentDate();
 const dir = 'links-json';
 const filePath = path.join(dir, 'jackpot-world.json');
