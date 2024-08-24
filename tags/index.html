@@ -1,9 +1,13 @@
 ---
 layout: default
 ---
+
 <h1>Posts Tagged with "{{ page.tag }}"</h1>
+
 <ul>
-  {% for post in site.tags[page.tag] %}
+  {% assign current_lang = page.lang %}
+  {% assign filtered_posts = site.tags[page.tag] | where: "lang", current_lang %}
+  {% for post in filtered_posts %}
     <li><a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
