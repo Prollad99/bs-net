@@ -2,7 +2,7 @@
 layout: post
 title: "Hearts of Vegas Free Coins: Tägliche Belohnungen für Dein Spiel"
 date: 2024-08-02
-tags: [Hearts of Vegas, Free Coins, Casino Slots, Daily Rewards]
+tags: [Hearts of Vegas, Free Coins, Tägliche Belohnungen]
 author: BonusCollector.net
 description: "Sichere dir täglich kostenlose Münzen für Hearts of Vegas und verbessere dein Spielerlebnis mit unseren exklusiven Links."
 lang: de
