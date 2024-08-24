@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Coin Master Card Collections: How to Complete Them Fast"
-date: 2024-08-25
+date: 2024-08-24
 tags: [Coin Master, Gaming Tips]
 lang: en
 description: "Discover the best strategies to quickly complete your Coin Master card collections and unlock fantastic rewards."
