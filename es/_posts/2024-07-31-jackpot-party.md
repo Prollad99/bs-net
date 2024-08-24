@@ -2,7 +2,7 @@
 layout: post
 title: "Jackpot Party Free Coins: ¡Consigue tus Monedas Diarias Gratis!"
 date: 2024-07-31
-tags: [Jackpot Party, free coins, casino slots]
+tags: [Jackpot Party, Free Coins, Recompensas Diarias]
 author: BonusCollector.net
 description: "Descubre cómo obtener monedas gratis diarias para Jackpot Party. ¡Juega y gana grandes premios!"
 lang: es
