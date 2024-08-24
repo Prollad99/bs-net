@@ -1,0 +1,41 @@
+---
+layout: default
+show_language_dropdown: false
+---
+
+<div class="container">
+  <h1 class="my-4">{{ page.category | replace: '-', ' ' | capitalize }}</h1>
+
+  <div class="row">
+    {% assign category_posts = site.blogs | where: "category", page.category %}
+    {% if category_posts.size > 0 %}
+      {% for post in category_posts %}
+        <div class="col-md-6 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <!-- Title -->
+              <a href="{{ post.url }}">
+                <h5 class="card-title" style="font-size: 1rem;">{{ post.title }}</h5>
+              </a>
+              <!-- Description -->
+              <p class="card-text" style="font-size: 0.9rem;">{{ post.description }}</p>
+              <!-- Read More Button -->
+              <div class="text-right">
+                <a href="{{ post.url }}" class="btn btn-primary btn-sm mt-2 mb-2">Read More</a>
+              </div>
+            </div>
+            <!-- Card Footer -->
+            <div class="card-footer text-center">
+              <p class="text-muted">
+                <small>
+                  By <strong>{{ post.author }}</strong> |
+                  Last updated: <strong>{{ post.last_modified_at | date: "%B %d, %Y" }}</strong>
+                </small>
+              </p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>
