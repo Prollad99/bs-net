@@ -7,9 +7,7 @@ show_language_dropdown: false
   <h1 class="my-4">{{ page.tag }}</h1>
 
   <div class="row">
-    {% assign current_lang = page.lang %}
-    {% assign filtered_posts = site.tags[page.tag] | where: "lang", current_lang %}
-    {% for post in filtered_posts %}
+    {% for post in site.tags[page.tag] %}
       <div class="col-md-6 mb-4">
         <div class="card shadow-sm">
           <div class="row no-gutters">
@@ -28,27 +26,30 @@ show_language_dropdown: false
               </div>
             </div>
           </div>
-          <div class="card-footer text-center">
-            <p class="text-muted">
-              <small>
-                By <strong>{{ post.author }}</strong> |
-                {% assign include_file = post.include_file %}
-                {% assign file_info = site.data.include_files[include_file] %}
-                {% if file_info %}
-                  {% assign last_modified = file_info.last_modified %}
-                  {% if last_modified %}
-                    Last updated:
-                    <strong class="last-updated" data-last-modified="{{ last_modified }}"></strong>
-                  {% else %}
-                    Last updated: <strong>Not available</strong>
-                  {% endif %}
-                {% else %}
-                  Last updated: <strong>{{ post.last_modified_at | date: "%B %d, %Y" }}</strong>
-                {% endif %}
-                <input type="hidden" name="include_file" value="{{ post.include_file }}">
-              </small>
-            </p>
-          </div>
+<!-- xx -->
+<div class="card-footer text-center">
+  <p class="text-muted">
+    <small>
+      By <strong>{{ post.author }}</strong> |
+      {% assign include_file = post.include_file %}
+      {% assign file_info = site.data.include_files[include_file] %}
+      {% if file_info %}
+        {% assign last_modified = file_info.last_modified %}
+        {% if last_modified %}
+          Last updated:
+          <strong class="last-updated" data-last-modified="{{ last_modified }}"></strong>
+        {% else %}
+          Last updated: <strong>Not available</strong>
+        {% endif %}
+      {% else %}
+        Last updated: <strong>{{ post.last_modified_at | date: "%B %d, %Y" }}</strong>
+      {% endif %}
+      <!-- Hidden input for include_file -->
+      <input type="hidden" name="include_file" value="{{ post.include_file }}">
+    </small>
+  </p>
+</div>
+<!-- xx -->
         </div>
       </div>
     {% endfor %}
