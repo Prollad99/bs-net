@@ -2,7 +2,7 @@
 layout: post
 title: "Island King Free Spins: Daily Free Links"
 date: 2024-07-04
-tags: [Island King, free spins, daily rewards, game tips]
+tags: [Island King, Free Spins, Daily Rewards]
 author: BonusCollector.net
 description: "Get the latest Island King free spins links updated daily. Learn how to maximize your rewards in Island King with our comprehensive guide."
 lang: en
