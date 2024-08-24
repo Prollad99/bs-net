@@ -2,7 +2,7 @@
 layout: post
 title: "Island King Free Spins: Tägliche Belohnungen für dich"
 date: 2024-07-18
-tags: [Island King, Free Spins]
+tags: [Island King, Free Spins, Tägliche Belohnungen]
 author: BonusCollector.net
 description: "Erhalte tägliche Island King Free Spins und steigere deine Spielgewinne. Besuche BonusCollector.net für die aktuellsten Belohnungen."
 lang: de
