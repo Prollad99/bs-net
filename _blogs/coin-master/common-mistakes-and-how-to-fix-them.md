@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Common Coin Master Mistakes and How to Fix Them"
-date: 2024-08-25
+date: 2024-08-24
 tags: [Coin Master, Gaming Tips]
 lang: en
 description: "Learn about the most common mistakes players make in Coin Master and how to avoid them to improve your game strategy."
