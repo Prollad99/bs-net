@@ -39,3 +39,29 @@ defaults:
     values:
       layout: "post"
       lang: "it"
+
+  # Tag pages in different languages
+  - scope:
+      path: "tag"
+      type: "pages"
+    values:
+      layout: "tag"
+      lang: "en"
+  - scope:
+      path: "es/tag"
+      type: "pages"
+    values:
+      layout: "tag"
+      lang: "es"
+  - scope:
+      path: "de/tag"
+      type: "pages"
+    values:
+      layout: "tag"
+      lang: "de"
+  - scope:
+      path: "it/tag"
+      type: "pages"
+    values:
+      layout: "tag"
+      lang: "it"
