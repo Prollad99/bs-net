@@ -15,7 +15,6 @@ collections:
     output: true
   blogs:
     output: true
-    permalink: /blogs/:path/
 
 defaults:
   - scope:
