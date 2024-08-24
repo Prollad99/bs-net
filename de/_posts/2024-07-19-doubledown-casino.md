@@ -2,7 +2,7 @@
 layout: post
 title: "DoubleDown Casino Free Chips: Tägliche Belohnungen und Promo-Codes"
 date: 2024-07-19
-tags: [doubledown casino, free chips, promo codes, casino rewards]
+tags: [Doubledown Casino, Free Chips, Tägliche Belohnungen]
 author: BonusCollector.net
 description: "Erhalten Sie täglich kostenlose Chips für DoubleDown Casino mit unseren exklusiven Promo-Codes und Belohnungen."
 lang: de
