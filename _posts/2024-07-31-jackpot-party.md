@@ -2,7 +2,7 @@
 layout: post
 title: "Jackpot Party Free Coins: Daily Rewards & Tips"
 date: 2024-07-31
-tags: [Jackpot Party, Free Coins, Casino, Daily Rewards]
+tags: [Jackpot Party, Free Coins, Daily Rewards]
 author: BonusCollector.net
 description: "Get your daily Jackpot Party free coins and maximize your gameplay with our updated rewards and tips."
 lang: en
