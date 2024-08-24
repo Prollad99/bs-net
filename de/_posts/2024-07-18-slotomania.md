@@ -2,7 +2,7 @@
 layout: post
 title: "Slotomania Free Coins: Tägliche Belohnungen und Tipps"
 date: 2024-07-18
-tags: Slotomania, Free Coins, Casino, Belohnungen
+tags: [Slotomania, Free Coins, Tägliche Belohnungen]
 author: BonusCollector.net
 description: "Erfahren Sie, wie Sie täglich kostenlose Slotomania-Münzen erhalten und Ihre Spielerfahrung maximieren können."
 lang: de
