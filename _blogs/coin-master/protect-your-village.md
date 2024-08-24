@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Protect Your Village in Coin Master: Tips for Defense"
-date: 2024-08-25
+date: 2024-08-24
 tags: [Coin Master, Gaming Tips]
 lang: en
 description: "Learn the best strategies to protect your village in Coin Master from attacks and raids with these expert tips and tricks."
