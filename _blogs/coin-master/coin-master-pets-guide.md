@@ -1,7 +1,7 @@
 ---
 layout: post  
 title: "What are Coin Master Pets and How Can They Help You?"  
-date: 2024-08-25
+date: 2024-08-24
 tags: [Coin Master, Gaming Tips]  
 lang: en
 description: "Discover how Coin Master Pets like Foxy, Tiger, and Rhino can enhance your gameplay by boosting your coin earnings, protecting your village, and more."
