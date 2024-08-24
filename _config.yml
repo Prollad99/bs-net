@@ -40,28 +40,31 @@ defaults:
       layout: "post"
       lang: "it"
 
-  # Tag pages in different languages
+  defaults:
   - scope:
-      path: "tag"
+      path: "tags"
       type: "pages"
     values:
-      layout: "tag"
+      layout: "default"
       lang: "en"
+
   - scope:
-      path: "es/tag"
+      path: "es/tags"
       type: "pages"
     values:
-      layout: "tag"
+      layout: "default"
       lang: "es"
+
   - scope:
-      path: "de/tag"
+      path: "de/tags"
       type: "pages"
     values:
-      layout: "tag"
+      layout: "default"
       lang: "de"
+
   - scope:
-      path: "it/tag"
+      path: "it/tags"
       type: "pages"
     values:
-      layout: "tag"
+      layout: "default"
       lang: "it"
