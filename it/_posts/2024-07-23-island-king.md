@@ -2,7 +2,7 @@
 layout: post
 title: "Island King Free Spins: Ottieni i tuoi giri gratuiti giornalieri!"
 date: 2024-07-23
-tags: [Island King, Free Spins, Giochi, Ricompense]
+tags: [Island King, Free Spins, Bonus Giornalieri]
 author: BonusCollector.net
 description: "Scopri come ottenere giri gratuiti giornalieri per Island King e massimizza le tue ricompense nel gioco!"
 lang: it
