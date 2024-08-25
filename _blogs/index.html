@@ -4,17 +4,24 @@ title: "Blog"
 permalink: /blog/
 ---
 
+<div class="card shadow-sm mb-2">
+  <div class="card-body">
+
 <h1>Blog Posts by Category</h1>
 
 {% assign categorized_posts = site.blogs | group_by: "category" %}
 
 {% for category in categorized_posts %}
   <h2>{{ category.name }}</h2>
-  <ul>
+    <ul class="list-group fixed-height-scroll mb-3">
     {% for post in category.items %}
-      <li>
+      <li class="list-group-item">
+        <i class="bi bi-arrow-right-short"></i>
         <a href="{{ post.url }}">{{ post.title }}</a>
       </li>
     {% endfor %}
   </ul>
 {% endfor %}
+
+</div>
+</div>
