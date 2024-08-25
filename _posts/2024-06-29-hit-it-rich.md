@@ -7,6 +7,7 @@ author: "BonusCollector.net"
 description: "Get your daily Hit It Rich free coins here! Updated daily to ensure you have enough coins to keep spinning and winning."
 lang: en
 permalink: /hit-it-rich-free-coins/
+category: hit-it-rich
 redirect_from:
   - /hit-it-rich/best-casino-game-for-jackpot-lovers/
   - /hit-it-rich/best-strategies/
