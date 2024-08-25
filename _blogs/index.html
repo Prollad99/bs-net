@@ -6,8 +6,7 @@ permalink: /blog/
 
 <h1>Blog Posts by Category</h1>
 
-{% assign blog_posts = site.pages | where: "dir", "/_blogs/" %}
-{% assign categorized_posts = blog_posts | group_by: "category" %}
+{% assign categorized_posts = site.blogs | group_by: "category" %}
 
 {% for category in categorized_posts %}
   <h2>{{ category.name }}</h2>
