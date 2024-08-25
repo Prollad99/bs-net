@@ -8,15 +8,16 @@ show_language_dropdown: false
 <div class="card shadow-sm mb-2">
   <div class="card-body">
 
-    <h1>Blog Posts by Category</h1>
+    <h1 class="mb-4">Blog Posts by Category</h1>
 
     {% assign categorized_posts = site.blogs | group_by: "category" %}
 
     {% for category in categorized_posts %}
       <div class="mb-3">
-        <!-- Category header that can be clicked to toggle posts -->
+        <!-- Category header with an icon -->
         <h2 class="mt-4 mb-3">
-          <a class="text-dark text-decoration-none" data-bs-toggle="collapse" href="#category-{{ forloop.index }}" role="button" aria-expanded="false" aria-controls="category-{{ forloop.index }}">
+          <a class="text-dark text-decoration-none d-flex align-items-center" data-bs-toggle="collapse" href="#category-{{ forloop.index }}" role="button" aria-expanded="false" aria-controls="category-{{ forloop.index }}">
+            <i class="bi bi-folder-fill me-2"></i>
             {{ category.name | replace: '-', ' ' | capitalize }}
           </a>
         </h2>
