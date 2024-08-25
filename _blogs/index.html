@@ -10,34 +10,48 @@ show_language_dropdown: false
 
     <h1 class="mb-4">Blog Posts by Category</h1>
 
-    <div class="accordion" id="blogCategoriesAccordion">
-      {% assign categorized_posts = site.blogs | group_by: "category" %}
+    {% assign categorized_posts = site.blogs | group_by: "category" %}
 
-      {% for category in categorized_posts %}
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="heading-{{ forloop.index }}">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ forloop.index }}" aria-expanded="false" aria-controls="collapse-{{ forloop.index }}">
-              {{ category.name | replace: '-', ' ' | capitalize }}
-            </button>
-          </h2>
-          <div id="collapse-{{ forloop.index }}" class="accordion-collapse collapse" aria-labelledby="heading-{{ forloop.index }}" data-bs-parent="#blogCategoriesAccordion">
-            <div class="accordion-body">
-              <ul class="list-group">
-                {% for post in category.items %}
-                  {% if post.path != "_blogs/index.html" %}
-                    <li class="list-group-item">
-                      <a href="{{ post.url }}">{{ post.title }}</a>
-                    </li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
+    {% for category in categorized_posts %}
+      <div class="mb-3">
+        <!-- Category header with a plus icon -->
+        <div class="d-flex justify-content-between align-items-center border p-2 category-toggle" style="cursor: pointer;" data-bs-toggle="collapse" data-bs-target="#category-{{ forloop.index }}" aria-expanded="false" aria-controls="category-{{ forloop.index }}">
+          <span>{{ category.name | replace: '-', ' ' | capitalize }}</span>
+          <i class="bi bi-plus"></i>
         </div>
-      {% endfor %}
-    </div>
+
+        <!-- Posts under the category, initially hidden -->
+        <div class="collapse mt-2" id="category-{{ forloop.index }}">
+          <ul class="list-group">
+            {% for post in category.items %}
+              {% if post.path != "_blogs/index.html" %}
+                <li class="list-group-item">
+                  <a href="{{ post.url }}">{{ post.title }}</a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    {% endfor %}
 
   </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+<!-- Custom script to toggle the icon on click -->
+<script>
+  document.querySelectorAll('.category-toggle').forEach(function(toggle) {
+    toggle.addEventListener('click', function() {
+      const icon = this.querySelector('i');
+      if (icon.classList.contains('bi-plus')) {
+        icon.classList.remove('bi-plus');
+        icon.classList.add('bi-dash');
+      } else {
+        icon.classList.remove('bi-dash');
+        icon.classList.add('bi-plus');
+      }
+    });
+  });
+</script>
