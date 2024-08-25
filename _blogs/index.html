@@ -12,7 +12,7 @@ permalink: /blog/
 {% assign categorized_posts = site.blogs | group_by: "category" %}
 
 {% for category in categorized_posts %}
-  <h2>{{ category.name }}</h2>
+  <h2>{{ category.name | replace: '-', ' ' | capitalize }}</h2>
     <ul class="list-group fixed-height-scroll mb-3">
     {% for post in category.items %}
       <li class="list-group-item">
@@ -23,5 +23,5 @@ permalink: /blog/
   </ul>
 {% endfor %}
 
-</div>
+  </div>
 </div>
