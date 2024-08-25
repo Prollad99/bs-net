@@ -12,12 +12,15 @@ permalink: /blog/
 {% assign categorized_posts = site.blogs | group_by: "category" %}
 
 {% for category in categorized_posts %}
-  <h2 class="mt-4 mb-2">{{ category.name | replace: '-', ' ' | capitalize }}</h2>
+  <h2 class="mt-4 mb-3">{{ category.name | replace: '-', ' ' | capitalize }}</h2>
     <ul class="list-group fixed-height-scroll mb-3">
     {% for post in category.items %}
+      {% if post.path != "_blogs/index.html" %}
       <li class="list-group-item">
+        <i class="bi bi-arrow-right-short"></i>
         <a href="{{ post.url }}">{{ post.title }}</a>
       </li>
+      {% endif %}
     {% endfor %}
   </ul>
 {% endfor %}
