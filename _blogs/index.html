@@ -14,13 +14,13 @@ show_language_dropdown: false
 
     {% for category in categorized_posts %}
       <div class="mb-3">
-        <!-- Category header with an icon -->
-        <h2 class="mt-4 mb-3">
-          <a class="text-dark text-decoration-none d-flex align-items-center" data-bs-toggle="collapse" href="#category-{{ forloop.index }}" role="button" aria-expanded="false" aria-controls="category-{{ forloop.index }}">
-            <i class="bi bi-folder-fill me-2"></i>
+        <!-- Category header with an arrow icon -->
+        <h3 class="mt-4 mb-3">
+          <a class="text-dark text-decoration-none d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#category-{{ forloop.index }}" role="button" aria-expanded="false" aria-controls="category-{{ forloop.index }}">
             {{ category.name | replace: '-', ' ' | capitalize }}
+            <i class="bi bi-chevron-down"></i>
           </a>
-        </h2>
+        </h3>
 
         <!-- Posts under the category, initially hidden -->
         <div class="collapse" id="category-{{ forloop.index }}">
