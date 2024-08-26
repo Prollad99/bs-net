@@ -3,7 +3,8 @@ layout: default
 ---
 <h1>Posts Tagged with "{{ page.tag }}"</h1>
 <ul>
-  {% for post in site.tags[page.tag] %}
+  {% assign posts_with_tag = site.posts.docs | concat: site.collections.blogs.docs | where: "tags", page.tag %}
+  {% for post in posts_with_tag %}
     <li><a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
