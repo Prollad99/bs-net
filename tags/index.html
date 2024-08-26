@@ -5,7 +5,8 @@ title: Tags
 
 {% assign posts_array = site.posts | default: site.collections.posts %}
 {% assign blogs_array = site.collections.blogs | default: site.collections.blogs %}
-{% assign all_docs = posts_array.docs | push: blogs_array.docs %}
+{% assign all_docs = posts_array.docs | default: [] %}
+{% assign all_docs = all_docs | concat: (blogs_array.docs | default: []) %}
 
 <div>
   <h1>Tags</h1>
