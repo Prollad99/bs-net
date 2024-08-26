@@ -5,7 +5,7 @@ title: Tags
 
 {% assign posts_array = site.posts | default: site.collections.posts %}
 {% assign blogs_array = site.collections.blogs | default: site.collections.blogs %}
-{% assign all_docs = posts_array.docs | concat: blogs_array.docs %}
+{% assign all_docs = posts_array.docs | push: blogs_array.docs %}
 
 <div>
   <h1>Tags</h1>
@@ -13,7 +13,9 @@ title: Tags
     {% assign tags = '' | split: '' %}
 
     {% for post in all_docs %}
-      {% assign tags = tags | concat: post.tags %}
+      {% if post.tags %}
+        {% assign tags = tags | concat: post.tags %}
+      {% endif %}
     {% endfor %}
 
     {% assign tags = tags | uniq | sort %}
