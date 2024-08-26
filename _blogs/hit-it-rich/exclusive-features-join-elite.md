@@ -2,7 +2,7 @@
 layout: post  
 title: "Exclusive Features in Hit It Rich: How to Join the Elite"  
 date: 2024-08-25  
-tags: [Hit It Rich, Gaming Tips]  
+tags: [Hit It Rich]  
 lang: en  
 description: "Discover the exclusive features in Hit It Rich and learn how to join the Elite for enhanced rewards and gameplay advantages."  
 author: BonusCollector.net  
