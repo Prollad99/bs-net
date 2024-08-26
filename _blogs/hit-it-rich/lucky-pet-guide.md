@@ -2,7 +2,7 @@
 layout: post  
 title: "The Ultimate Guide to Hit It Rich Lucky Pet"  
 date: 2024-08-25  
-tags: [Hit It Rich, Gaming Tips]  
+tags: [Hit It Rich]  
 lang: en  
 description: "Discover how to maximize your success with the Lucky Pet feature in Hit It Rich! This guide offers tips and strategies to enhance your gaming experience."  
 author: BonusCollector.net  
