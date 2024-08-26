@@ -3,10 +3,9 @@ layout: default
 title: Tags
 ---
 
-{% assign posts = site.posts | default: [] %}
-{% assign blogs = site.collections.blogs.docs | default: [] %}
-
-{% assign all_docs = posts | concat: blogs %}
+{% assign posts_array = site.posts | default: site.collections.posts %}
+{% assign blogs_array = site.collections.blogs | default: site.collections.blogs %}
+{% assign all_docs = posts_array.docs | concat: blogs_array.docs %}
 
 <div>
   <h1>Tags</h1>
