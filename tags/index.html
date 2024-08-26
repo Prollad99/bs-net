@@ -1,28 +1,31 @@
 ---
 layout: default
-title: Tags
+title: "Tags"
 ---
 
-{% assign posts_array = site.posts | default: site.collections.posts %}
-{% assign blogs_array = site.collections.blogs | default: site.collections.blogs %}
-{% assign all_docs = posts_array.docs | default: [] %}
-{% assign all_docs = all_docs | concat: (blogs_array.docs | default: []) %}
+<h1>Tags</h1>
 
-<div>
-  <h1>Tags</h1>
-  <ul>
-    {% assign tags = '' | split: '' %}
+{% assign empty_array = "" | split: "" %}
 
-    {% for post in all_docs %}
-      {% if post.tags %}
-        {% assign tags = tags | concat: post.tags %}
-      {% endif %}
-    {% endfor %}
+{%- comment -%}
+Initialize posts_array.docs and blogs_array.docs with empty arrays if they are not defined.
+{%- endcomment -%}
 
-    {% assign tags = tags | uniq | sort %}
+{% assign posts_docs = posts_array.docs | default: empty_array %}
+{% assign blogs_docs = blogs_array.docs | default: empty_array %}
 
-    {% for tag in tags %}
-      <li><a href="/tags/{{ tag | slugify }}">{{ tag }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+{%- comment -%}
+Concatenate all_docs with blogs_docs.
+{%- endcomment -%}
+
+{% assign combined_docs = all_docs | concat: blogs_docs %}
+
+{%- comment -%}
+Now you can use combined_docs safely as it should be an array.
+{%- endcomment -%}
+
+<ul>
+  {%- for doc in combined_docs -%}
+    <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+  {%- endfor -%}
+</ul>
