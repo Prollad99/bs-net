@@ -4,8 +4,11 @@ layout: default
 <h1>Posts Tagged with "{{ page.tag }}"</h1>
 
 <ul>
-  {% assign combined_posts = site.posts | concat: site.blogs %}
-  
+  {% assign posts_array = site.posts | default: [] %}
+  {% assign blogs_array = site.collections.blogs.docs | default: [] %}
+
+  {% assign combined_posts = posts_array | concat: blogs_array %}
+
   {% assign tagged_posts = "" | split: "" %}
 
   {% for post in combined_posts %}
