@@ -2,7 +2,7 @@
 layout: post
 title: "Monopoly Go Free Dice: Get Your Free Rolls"
 date: 2024-06-29
-tags: [Monopoly Go, Free Dice, Daily Rewards]
+tags: [Monopoly Go, Free Dice, Daily Rewards, Gaming Tips]
 author: "BonusCollector.net"
 description: "Find daily Monopoly Go free dice links at BonusCollector.net. Never miss a free roll with our updated daily rewards!"
 lang: en
