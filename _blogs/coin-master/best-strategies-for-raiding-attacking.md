@@ -2,7 +2,7 @@
 layout: post
 title: "The Best Strategies for Raiding and Attacking in Coin Master"
 date: 2024-08-24
-tags: [Coin Master, Gaming Tips]
+tags: [Coin Master]
 lang: en
 description: "Discover the best strategies for raiding and attacking in Coin Master to maximize your coin earnings and protect your village."
 author: BonusCollector.net
