@@ -2,7 +2,7 @@
 layout: post
 title: "Hit It Rich Profile Features: Customizing Your Game Experience"
 date: 2024-08-25
-tags: [Hit It Rich, Gaming Tips]
+tags: [Hit It Rich]
 lang: en
 description: "Discover how to personalize your Hit It Rich profile to enhance your gaming experience."
 author: BonusCollector.net
