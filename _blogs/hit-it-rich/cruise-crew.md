@@ -2,7 +2,7 @@
 layout: post
 title: "Everything You Need to Know About Hit It Rich Cruise Crew"
 date: 2024-08-25
-tags: [Hit It Rich, Gaming Tips]
+tags: [Hit It Rich]
 lang: en
 description: ["Learn about the Hit It Rich Cruise Crew, how to participate, collect mementos, and earn rewards in this popular social casino game."]
 author: BonusCollector.net
