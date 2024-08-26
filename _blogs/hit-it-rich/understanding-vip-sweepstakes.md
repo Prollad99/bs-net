@@ -2,7 +2,7 @@
 layout: post
 title: "Hit It Rich: Understanding VIP Sweepstakes"
 date: 2024-08-25
-tags: [Hit It Rich, Gaming Tips]
+tags: [Hit It Rich]
 lang: en
 description: "Discover everything you need to know about the Hit It Rich VIP Sweepstakes, including how to enter, benefits, and tips to maximize your chances of winning."
 author: BonusCollector.net
