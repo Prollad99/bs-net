@@ -2,7 +2,7 @@
 layout: post
 title: "Maximizing Your Earnings with Vault Blast in Hit It Rich"
 date: 2024-08-25
-tags: [Hit It Rich, Gaming Tips]
+tags: [Hit It Rich]
 lang: en
 description: "Learn how to maximize your earnings using the Vault Blast feature in Hit It Rich, a popular casino-style slots game."
 author: BonusCollector.net
