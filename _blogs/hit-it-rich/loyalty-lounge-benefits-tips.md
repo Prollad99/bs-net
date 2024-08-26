@@ -2,7 +2,7 @@
 layout: post  
 title: "Hit It Rich Loyalty Lounge: Benefits and Tips"  
 date: 2024-08-25  
-tags: [Hit It Rich, Gaming Tips]  
+tags: [Hit It Rich]  
 lang: en  
 description: "Discover the benefits of the Hit It Rich Loyalty Lounge and essential tips for maximizing your rewards."  
 author: BonusCollector.net  
