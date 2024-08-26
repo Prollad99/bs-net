@@ -2,7 +2,7 @@
 layout: post  
 title: "Unlocking Rich Pass Rewards in Hit It Rich"  
 date: 2024-08-25  
-tags: [Hit It Rich, Gaming Tips]  
+tags: [Hit It Rich]  
 lang: en  
 description: "Discover how to maximize your rewards and elevate your gaming experience with the Rich Pass in Hit It Rich."
 author: BonusCollector.net  
