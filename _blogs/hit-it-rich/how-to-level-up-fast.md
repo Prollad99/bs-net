@@ -2,7 +2,7 @@
 layout: post  
 title: "How to Level Up Fast in Hit It Rich"  
 date: 2024-08-25  
-tags: [Hit It Rich, Gaming Tips]  
+tags: [Hit It Rich]  
 lang: en  
 description: "Master the strategies to level up quickly in Hit It Rich and unlock more exciting slots and rewards. Learn the best tips and tricks for faster progression."  
 author: BonusCollector.net  
