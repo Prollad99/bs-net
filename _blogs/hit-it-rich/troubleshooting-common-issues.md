@@ -2,7 +2,7 @@
 layout: post  
 title: "Troubleshooting Common Issues in Hit It Rich"  
 date: 2024-08-25  
-tags: [Hit It Rich, Gaming Tips]  
+tags: [Hit It Rich]  
 lang: en  
 description: "Learn how to troubleshoot and resolve common issues in Hit It Rich, from loading problems to game crashes."  
 author: BonusCollector.net  
