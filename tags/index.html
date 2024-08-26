@@ -1,31 +1,20 @@
 ---
 layout: default
-title: "Tags"
 ---
-
-<h1>Tags</h1>
-
-{% assign empty_array = "" | split: "" %}
-
-{%- comment -%}
-Initialize posts_array.docs and blogs_array.docs with empty arrays if they are not defined.
-{%- endcomment -%}
-
-{% assign posts_docs = posts_array.docs | default: empty_array %}
-{% assign blogs_docs = blogs_array.docs | default: empty_array %}
-
-{%- comment -%}
-Concatenate all_docs with blogs_docs.
-{%- endcomment -%}
-
-{% assign combined_docs = all_docs | concat: blogs_docs %}
-
-{%- comment -%}
-Now you can use combined_docs safely as it should be an array.
-{%- endcomment -%}
+<h1>Posts Tagged with "{{ page.tag }}"</h1>
 
 <ul>
-  {%- for doc in combined_docs -%}
-    <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
-  {%- endfor -%}
+  {% assign combined_posts = site.posts | concat: site.blogs %}
+  
+  {% assign tagged_posts = "" | split: "" %}
+
+  {% for post in combined_posts %}
+    {% if post.tags contains page.tag %}
+      {% assign tagged_posts = tagged_posts | push: post %}
+    {% endif %}
+  {% endfor %}
+
+  {% for post in tagged_posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
 </ul>
