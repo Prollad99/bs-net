@@ -140,7 +140,8 @@ layout: default
 
     <ul class="list-group fixed-height-scroll">
   {% assign current_lang = page.lang %}
-  {% for post in site.posts %}
+  {% assign sorted_posts = site.posts | sort: 'app_name' %}
+  {% for post in sorted_posts %}
     {% if post.lang == current_lang %}
       <li class="list-group-item">
         <img src="{{ post.image }}" alt="{{ post.app_name }}" class="list-group-item-image"/>
