@@ -99,16 +99,22 @@
   </header>
 
   <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="{{ site.baseurl }}/"><i class="bi bi-house-fill"></i> Home</a></li>
-      {% if page.categories %}
-        {% for category in page.categories %}
-          <li class="breadcrumb-item"><a href="{{ site.baseurl }}/{{ category | downcase }}/">{{ category }}</a></li>
-        {% endfor %}
-      {% endif %}
-      <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
-    </ol>
-  </nav>
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a href="{{ site.baseurl }}/"><i class="bi bi-house-fill"></i> Home</a>
+    </li>
+    {% if page.categories %}
+      {% for category in page.categories %}
+        <li class="breadcrumb-item">
+          <a href="{{ site.baseurl }}/{{ category | downcase }}/">
+            {{ category | split: '-' | map: 'capitalize' | join: ' ' }}
+          </a>
+        </li>
+      {% endfor %}
+    {% endif %}
+    <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+  </ol>
+</nav>
 
   <!--search start -->
 {% assign is_homepage = false %}
