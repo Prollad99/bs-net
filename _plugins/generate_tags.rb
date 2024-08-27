@@ -5,10 +5,7 @@ module Jekyll
     def generate(site)
       if site.layouts.key? 'tag'
         site.tags.each do |tag, posts|
-          # Replace spaces with hyphens and downcase the tag
-          slugified_tag = tag.downcase.gsub(' ', '-')
-          puts "Generating tag page for: #{tag} at /tag/#{slugified_tag}/"
-          site.pages << TagPage.new(site, site.source, File.join('tag', slugified_tag), tag)
+          site.pages << TagPage.new(site, site.source, File.join('tag', tag), tag)
         end
       end
     end
