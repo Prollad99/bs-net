@@ -13,7 +13,7 @@ show_language_dropdown: false
     {% assign categorized_posts = site.blogs | group_by: "category" %}
 
     {% for category in categorized_posts %}
-      {% assign valid_posts = category.items | where_exp: "post", "post.path != '_blogs/index.html'" %}
+      {% assign valid_posts = category.items | where_exp: "post", "post.path != '_blogs/index.html'" | sort: 'title' %}
       {% if valid_posts.size > 0 %}
         <div class="mb-3">
           <!-- Category header with a plus icon -->
