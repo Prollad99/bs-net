@@ -104,7 +104,7 @@
         {% if page.categories %}
             {% for category in page.categories %}
                 <li class="breadcrumb-item">
-                    <a href="{{ site.baseurl }}/{{ category | downcase }}/">{{ category | replace: "-", " " | split: " " | map: "capitalize" | join: " " }}</a>
+                    <a href="{{ site.baseurl }}/{{ category | downcase }}/">{{ category | replace: "-", " " | capitalize }}</a>
                 </li>
             {% endfor %}
         {% endif %}
