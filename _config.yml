@@ -43,7 +43,6 @@ defaults:
       lang: "it"
 
 languages:
-  - en
   - es
   - de
   - it
