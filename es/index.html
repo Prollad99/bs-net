@@ -7,7 +7,8 @@ lang: es
   <h1 class="my-4">Lista de Juegos</h1>
 
   <div class="row">
-    {% for post in site.posts %}
+    {% assign sorted_posts = site.posts | sort: 'app_name' %}
+    {% for post in sorted_posts %}
       {% if post.lang == "es" %}
         <div class="col-md-6 mb-4">
           <div class="card shadow-sm">
