@@ -104,11 +104,14 @@
       <a href="{{ site.baseurl }}/"><i class="bi bi-house-fill"></i> Home</a>
     </li>
     {% if page.category %}
+      <p>Category: {{ page.category }}</p> <!-- Debugging line -->
       <li class="breadcrumb-item">
         <a href="{{ site.baseurl }}/{{ page.category | downcase }}/">
           {{ page.category | split: '-' | map: 'capitalize' | join: ' ' }}
         </a>
       </li>
+    {% else %}
+      <p>No category found</p> <!-- Debugging line -->
     {% endif %}
     <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
   </ol>
