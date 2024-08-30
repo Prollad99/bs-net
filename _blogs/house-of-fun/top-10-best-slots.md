@@ -1,8 +1,7 @@
 ---
 layout: post  
 title: "Top 10 Best Slots to Play in House of Fun"  
-date: 2024-08-28  
-tags: [House of Fun]  
+date: 2024-08-28
 lang: en  
 description: "Discover the top 10 most entertaining and rewarding slots to play in the House of Fun app, complete with unique features and engaging themes."  
 author: BonusCollector.net
