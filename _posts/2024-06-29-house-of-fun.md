@@ -7,7 +7,7 @@ author: BonusCollector.net
 description: "Stay updated with the latest House of Fun free coins links. Collect daily rewards and enhance your gaming experience without spending a dime."
 lang: en
 permalink: /house-of-fun-free-coins/
-category: house-of-fun
+category: blog/house-of-fun
 redirect_from:
   - /house-of-fun/complete-guide/
   - /house-of-fun/features/
