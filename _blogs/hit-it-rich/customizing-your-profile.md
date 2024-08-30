@@ -9,7 +9,7 @@ author: BonusCollector.net
 category: hit-it-rich
 permalink: /hit-it-rich/customizing-your-profile/
 redirect_from:
-  - //blog/hit-it-rich/customizing-your-profile/
+  - /blog/hit-it-rich/customizing-your-profile/
 ---
 
 In the vibrant world of **Hit It Rich**, one of the most engaging aspects of the game is the ability to customize your profile. Whether you're a casual player or a dedicated fan, understanding and utilizing the profile features can significantly enhance your gaming experience. Here’s a comprehensive guide to mastering these features.
