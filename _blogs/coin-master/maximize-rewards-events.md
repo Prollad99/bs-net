@@ -7,7 +7,9 @@ lang: en
 description: "Learn how to maximize your rewards in Coin Master events with these expert tips and strategies."
 author: BonusCollector.net  
 category: coin-master  
-permalink: /blog/coin-master/maximize-rewards-events/  
+permalink: /coin-master/maximize-rewards-events/
+redirect_from:
+  - /blog/coin-master/maximize-rewards-events/
 ---
 
 Coin Master is a wildly popular mobile game that offers a variety of events, each providing unique opportunities to boost your progress and rewards. To help you get the most out of these events, here’s a guide filled with strategies and tips to maximize your rewards.
