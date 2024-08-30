@@ -6,9 +6,7 @@ tags: [House of Fun]
 lang: en  
 description: "Discover the best strategies to maximize your coin earnings in House of Fun. Learn about daily bonuses, game features, and tips to enhance your gameplay experience."  
 author: BonusCollector.net  
-categories:
-  - blog
-  - house-of-fun
+category: house-of-fun
 permalink: /blog/house-of-fun/earn-more-coins-tips-tricks/  
 ---
 
