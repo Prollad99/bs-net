@@ -7,7 +7,9 @@ lang: en
 description: "Discover how to maximize your rewards and elevate your gaming experience with the Rich Pass in Hit It Rich."
 author: BonusCollector.net  
 category: hit-it-rich  
-permalink: /blog/hit-it-rich/unlocking-rich-pass-rewards/  
+permalink: /hit-it-rich/unlocking-rich-pass-rewards/
+redirect_from:
+  - /blog/hit-it-rich/unlocking-rich-pass-rewards/
 ---
 
 The **Rich Pass** in *Hit It Rich!* by Zynga offers players an exciting way to enhance their gameplay experience by unlocking exclusive rewards and bonuses. This guide will provide you with everything you need to know to make the most out of the Rich Pass and elevate your gaming to the next level.
