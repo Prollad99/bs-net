@@ -64,13 +64,12 @@ layout: default
   <h2>Related Posts</h2>
   <ul class="list-group fixed-height-scroll mb-3">
     {% assign current_categories = page.categories %}
-    
-    <!-- Filter related posts that share a category, but exclude 'blog' -->
-    {% assign related_posts = site.posts | where_exp: "post", "post.categories contains current_categories[0]" %}
-    {% assign filtered_related_posts = related_posts | where_exp: "post", "post.categories contains 'blog' == false" %}
-    
-    {% if filtered_related_posts.size > 0 %}
-      {% for post in filtered_related_posts %}
+
+    <!-- Find related posts that share a category but exclude 'blog' -->
+    {% assign related_posts = site.posts | where_exp: "post", "post.categories contains current_categories[0] and post.categories contains 'blog' == false" %}
+
+    {% if related_posts.size > 0 %}
+      {% for post in related_posts %}
         {% if post.url != page.url %}
           <li class="list-group-item">
             <i class="bi bi-arrow-right-short"></i>
