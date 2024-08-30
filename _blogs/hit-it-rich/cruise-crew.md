@@ -7,7 +7,9 @@ lang: en
 description: ["Learn about the Hit It Rich Cruise Crew, how to participate, collect mementos, and earn rewards in this popular social casino game."]
 author: BonusCollector.net
 category: hit-it-rich
-permalink: /blog/hit-it-rich/cruise-crew/
+permalink: /hit-it-rich/cruise-crew/
+redirect_from:
+  - /blog/hit-it-rich/cruise-crew/
 ---
 
 The "Hit It Rich Cruise Crew" is a team-based event in the popular social casino game *Hit It Rich! Slots* by Zynga. This event allows players to join forces in completing various objectives to earn in-game rewards. Whether you're new to the game or a seasoned player, understanding how Cruise Crew works can enhance your gaming experience and maximize your rewards.
