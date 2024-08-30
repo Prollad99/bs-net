@@ -6,9 +6,7 @@ tags: [House of Fun]
 lang: en  
 description: "Discover the various slot machine themes and gameplay styles available in House of Fun. Learn about classic slots, video slots, and more, along with tips on how to enjoy these games to the fullest."  
 author: BonusCollector.net  
-categories:
-  - blog
-  - house-of-fun
+category: house-of-fun
 permalink: /blog/house-of-fun/exploring-different-types-slot-machines/  
 ---
 
