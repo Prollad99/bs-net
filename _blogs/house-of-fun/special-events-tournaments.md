@@ -6,9 +6,7 @@ tags: [House of Fun]
 lang: en
 description: "Discover how to maximize your winnings in House of Fun by participating in special events and tournaments. Learn strategies to succeed and enjoy the game to its fullest."
 author: BonusCollector.net
-categories:
-  - blog
-  - house-of-fun
+category: house-of-fun
 permalink: /blog/house-of-fun/special-events-tournaments/
 ---
 
