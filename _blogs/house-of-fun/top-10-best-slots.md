@@ -5,8 +5,10 @@ date: 2024-08-28
 tags: [House of Fun]  
 lang: en  
 description: "Discover the top 10 most entertaining and rewarding slots to play in the House of Fun app, complete with unique features and engaging themes."  
-author: BonusCollector.net  
-category: blog/house-of-fun  
+author: BonusCollector.net
+categories:
+  - blog
+  - house-of-fun
 permalink: /blog/house-of-fun/top-10-best-slots/  
 ---
 
