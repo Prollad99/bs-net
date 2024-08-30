@@ -6,9 +6,7 @@ tags: [House of Fun]
 lang: en  
 description: "Learn how daily coin bonuses work in House of Fun, from claiming hourly rewards to maximizing your free spins. Get the most out of your gameplay with our complete guide."  
 author: BonusCollector.net  
-categories:
-  - blog
-  - house-of-fun
+category: house-of-fun
 permalink: /blog/house-of-fun/daily-coin-bonuses-guide/
 ---
 
