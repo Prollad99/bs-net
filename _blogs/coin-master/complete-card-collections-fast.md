@@ -7,7 +7,9 @@ lang: en
 description: "Discover the best strategies to quickly complete your Coin Master card collections and unlock fantastic rewards."
 author: BonusCollector.net
 category: coin-master
-permalink: /blog/coin-master/complete-card-collections-fast/
+permalink: /coin-master/complete-card-collections-fast/
+redirect_from:
+  - /blog/coin-master/complete-card-collections-fast/
 ---
 
 Completing card collections in Coin Master is one of the most rewarding aspects of the game. However, it can be a daunting task, especially when you’re missing those elusive rare cards. This guide will provide you with the best strategies to complete your card sets quickly, maximizing your rewards and helping you progress faster in the game.
