@@ -7,7 +7,9 @@ lang: en
 description: "Learn how to troubleshoot and resolve common issues in Hit It Rich, from loading problems to game crashes."  
 author: BonusCollector.net  
 category: hit-it-rich  
-permalink: /blog/hit-it-rich/troubleshooting-common-issues/  
+permalink: /hit-it-rich/troubleshooting-common-issues/
+redirect_from:
+  - /blog/hit-it-rich/troubleshooting-common-issues/
 ---
 
 "Hit It Rich!" is a popular casino slots game enjoyed by players around the world. However, like many apps, it can sometimes encounter problems that disrupt gameplay. Below, we outline some common issues players face and provide effective solutions to get you back to spinning those reels without a hitch.
