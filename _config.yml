@@ -12,18 +12,12 @@ plugins:
   - jekyll-last-modified-at
   - jekyll-redirect-from
 
-# Collections (for different subdomains)
+# Collections (Define collections if you need them)
 collections:
   pages:
     output: true
   blogs:
     output: true
-  wsopfreechips:
-    output: true
-    permalink: /:collection/:path/
-  hititrichfreecoins:
-    output: true
-    permalink: /:collection/:path/
 
 # Defaults to control content scope
 defaults:
@@ -58,7 +52,6 @@ defaults:
   # WSOP Free Chips (Isolating content for wsopfreechips subdomain)
   - scope:
       path: "wsopfreechips"
-      type: "wsopfreechips"
     values:
       layout: "default"
       lang: "en"
@@ -68,7 +61,6 @@ defaults:
   # Hit It Rich Free Coins (Isolating content for hititrichfreecoins subdomain)
   - scope:
       path: "hititrichfreecoins"
-      type: "hititrichfreecoins"
     values:
       layout: "default"
       lang: "en"
