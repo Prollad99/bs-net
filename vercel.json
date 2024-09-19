@@ -22,6 +22,16 @@
           "value": "wsopfreechips.bonuscollector.net"
         }
       ]
+    },
+    {
+      "source": "/",
+      "destination": "/games/wsopfreechips/index.html",
+      "has": [
+        {
+          "type": "host",
+          "value": "wsopfreechips.bonuscollector.net"
+        }
+      ]
     }
   ]
 }
