@@ -3,10 +3,7 @@
     "deploymentEnabled": {
       "main": true
     }
-  }
-}
-
-{
+  },
   "rewrites": [
     {
       "source": "/",
