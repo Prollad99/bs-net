@@ -12,7 +12,7 @@ plugins:
   - jekyll-last-modified-at
   - jekyll-redirect-from
 
-# Collections (Define collections if you need them)
+# Collections (Optional: Define collections if needed)
 collections:
   pages:
     output: true
@@ -49,39 +49,20 @@ defaults:
       layout: "post"
       lang: "it"
 
-  # WSOP Free Chips (Isolating content for wsopfreechips subdomain)
-  - scope:
-      path: "wsopfreechips"
-    values:
-      layout: "default"
-      lang: "en"
-      baseurl: "/wsopfreechips"
-      url: "https://wsopfreechips.bonuscollector.net"
-
-  # Hit It Rich Free Coins (Isolating content for hititrichfreecoins subdomain)
-  - scope:
-      path: "hititrichfreecoins"
-    values:
-      layout: "default"
-      lang: "en"
-      baseurl: "/hititrichfreecoins"
-      url: "https://hititrichfreecoins.bonuscollector.net"
-
-# Language Settings (Only for Root Domain)
-languages:
-  - es
-  - de
-  - it
-
 # Custom subdomain settings
+
+# WSOP Free Chips Subdomain
 wsopfreechips:
   title: "WSOP Free Chips - Daily Rewards"
   description: "Get the latest free chips and bonuses for WSOP on WSOPFreeChips."
   baseurl: "/wsopfreechips"
   url: "https://wsopfreechips.bonuscollector.net"
+  path: "wsopfreechips"
 
+# Hit It Rich Free Coins Subdomain
 hititrichfreecoins:
   title: "Hit It Rich Free Coins - Daily Bonuses"
   description: "Daily free coins and bonuses for Hit It Rich on HitItRichFreeCoins."
   baseurl: "/hititrichfreecoins"
   url: "https://hititrichfreecoins.bonuscollector.net"
+  path: "hititrichfreecoins"
