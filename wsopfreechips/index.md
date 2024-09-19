@@ -1,9 +1,9 @@
 ---
 layout: default
-title: "Subdomain 1 - Free Slot Rewards"
-description: "Exclusive rewards for slot games available at Subdomain 1."
+title: "WSOP Free Chips - Daily Rewards"
+description: "Get the latest free chips and bonuses for WSOP here."
 permalink: "/"
 ---
 
-# Subdomain 1 Content
-Welcome to Subdomain 1 of Bonus Collector!
+# WSOP Free Chips
+Get your daily free chips and bonuses for WSOP poker games!
