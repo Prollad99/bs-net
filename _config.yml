@@ -25,7 +25,7 @@ collections:
 
 # Defaults to control content scope
 defaults:
-  # Root Domain Defaults (Main site content)
+  # Root Domain Defaults (Main site content with language-specific posts)
   - scope:
       path: ""
       type: "posts"
@@ -33,25 +33,7 @@ defaults:
       layout: "post"
       lang: "en"
 
-  # WSOP Free Chips (Isolating content for wsopfreechips subdomain)
-  - scope:
-      path: "wsopfreechips"
-    values:
-      layout: "default"
-      lang: "en"
-      baseurl: "/wsopfreechips"
-      url: "https://wsopfreechips.bonuscollector.net"
-
-  # Hit it Rich Free Coins (Isolating content for hititrichfreecoins subdomain)
-  - scope:
-      path: "hititrichfreecoins"
-    values:
-      layout: "default"
-      lang: "en"
-      baseurl: "/hititrichfreecoins"
-      url: "https://hititrichfreecoins.bonuscollector.net"
-
-  # Translations for the Root Domain (only root)
+  # Language-specific posts for Root Domain only
   - scope:
       path: "es"
       type: "posts"
@@ -71,7 +53,25 @@ defaults:
       layout: "post"
       lang: "it"
 
-# Language Settings
+  # WSOP Free Chips (Isolating content for wsopfreechips subdomain)
+  - scope:
+      path: "wsopfreechips"
+    values:
+      layout: "default"
+      lang: "en"
+      baseurl: "/wsopfreechips"
+      url: "https://wsopfreechips.bonuscollector.net"
+
+  # Hit It Rich Free Coins (Isolating content for hititrichfreecoins subdomain)
+  - scope:
+      path: "hititrichfreecoins"
+    values:
+      layout: "default"
+      lang: "en"
+      baseurl: "/hititrichfreecoins"
+      url: "https://hititrichfreecoins.bonuscollector.net"
+
+# Language Settings (Only for Root Domain)
 languages:
   - es
   - de
