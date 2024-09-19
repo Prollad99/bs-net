@@ -1,7 +1,7 @@
 {
   "redirects": [
     {
-      "source": "/",
+      "source": "/wsopfreechips",
       "destination": "/games/wsopfreechips/index.html",
       "statusCode": 301
     }
