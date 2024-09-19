@@ -1,17 +1,7 @@
 {
   "git": {
     "deploymentEnabled": {
-      "main": true
+      "main": false
     }
-  },
-  "rewrites": [
-    {
-      "source": "/games/wsopfreechips/(.*)",
-      "destination": "/games/wsopfreechips/$1"
-    },
-    {
-      "source": "/",
-      "destination": "/index.html"
-    }
-  ]
+  }
 }
