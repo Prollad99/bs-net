@@ -13,12 +13,5 @@
       "source": "/games/wsopfreechips/(.*)",
       "destination": "/games/wsopfreechips/$1"
     }
-  ],
-  "redirects": [
-    {
-      "source": "/wsopfreechips/(.*)",
-      "destination": "/games/wsopfreechips/$1",
-      "permanent": true
-    }
   ]
 }
