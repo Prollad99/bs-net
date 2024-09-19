@@ -1,0 +1,8 @@
+# _config.subdomain.yml (Subdomain Configuration)
+
+title: "WSOP Free Chips"
+description: "Collect WSOP Free Chips and earn amazing rewards!"
+baseurl: "/games/wsopfreechips"  # Base URL for subdomain content
+url: "https://wsopfreechips.bonuscollector.net"
+exclude:
+  - "index.html"  # Exclude root domain content
