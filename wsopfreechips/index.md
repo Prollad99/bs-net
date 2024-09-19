@@ -1,9 +1,12 @@
 ---
-layout: default
+layout: wsopfreechips
 title: "WSOP Free Chips - Daily Rewards"
-description: "Get the latest free chips and bonuses for WSOP here."
-permalink: "/"
+description: "Get the latest free chips and bonuses for WSOP on WSOPFreeChips."
+permalink: /
 ---
 
-# WSOP Free Chips
-Get your daily free chips and bonuses for WSOP poker games!
+## Welcome to WSOP Free Chips!
+
+Here you will find the latest updates and rewards for WSOP. Enjoy our daily free chips and bonuses!
+
+<!-- Add more content specific to WSOP Free Chips -->
