@@ -12,20 +12,22 @@ plugins:
   - jekyll-last-modified-at
   - jekyll-redirect-from
 
-# Collections (Add new content collections for subdomains)
+# Collections (for different subdomains)
 collections:
   pages:
     output: true
   blogs:
     output: true
-  wsopfreechips_content:
+  wsopfreechips:
     output: true
-  hititrichfreecoins_content:
+    permalink: /:collection/:path/
+  hititrichfreecoins:
     output: true
+    permalink: /:collection/:path/
 
 # Defaults to control content scope
 defaults:
-  # Root Domain Defaults (Main site content with language-specific posts)
+  # Root Domain Defaults (Main site content)
   - scope:
       path: ""
       type: "posts"
@@ -56,6 +58,7 @@ defaults:
   # WSOP Free Chips (Isolating content for wsopfreechips subdomain)
   - scope:
       path: "wsopfreechips"
+      type: "wsopfreechips"
     values:
       layout: "default"
       lang: "en"
@@ -65,6 +68,7 @@ defaults:
   # Hit It Rich Free Coins (Isolating content for hititrichfreecoins subdomain)
   - scope:
       path: "hititrichfreecoins"
+      type: "hititrichfreecoins"
     values:
       layout: "default"
       lang: "en"
