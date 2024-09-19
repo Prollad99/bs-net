@@ -6,24 +6,12 @@
   },
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/games/wsopfreechips/$1",
-      "has": [
-        {
-          "type": "host",
-          "value": "wsopfreechips.bonuscollector.net"
-        }
-      ]
+      "source": "/",
+      "destination": "/index.html"
     },
     {
-      "source": "/",
-      "destination": "/games/wsopfreechips/index.html",
-      "has": [
-        {
-          "type": "host",
-          "value": "wsopfreechips.bonuscollector.net"
-        }
-      ]
+      "source": "/wsopfreechips/(.*)",
+      "destination": "/games/wsopfreechips/$1"
     }
   ]
 }
