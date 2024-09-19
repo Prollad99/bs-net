@@ -1,7 +1,9 @@
+# _config.yml for Root Domain (bonuscollector.net)
+
 title: "Bonus Collector: Free Slot Game Rewards"
 description: "Bonus Collector offers daily updates on free coins, chips, spins, and other rewards for popular slot games. Enhance your gaming experience with our exclusive bonuses and tips."
-baseurl: "/games/wsopfreechips" # Make sure this points to the subdomain or subdirectory
-url: "https://bonuscollector.net" # Main URL of your site
+baseurl: ""  # Leave baseurl empty for the root domain
+url: "https://bonuscollector.net"  # Main URL for the root domain
 
 markdown: kramdown
 
@@ -10,15 +12,13 @@ plugins:
   - jekyll-last-modified-at
   - jekyll-redirect-from
 
-# Collections (if you have content specific to /games/wsopfreechips)
 collections:
   pages:
     output: true
   blogs:
     output: true
-  wsopfreechips:
-    output: true
 
+# Set up defaults for language support (if required)
 defaults:
   - scope:
       path: ""
@@ -27,7 +27,13 @@ defaults:
       layout: "post"
       lang: "en"
 
+# Additional language support (optional)
 languages:
+  - en
   - es
   - de
   - it
+
+# Exclude subdomain content from the root domain
+exclude:
+  - "games/wsopfreechips/*"
