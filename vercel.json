@@ -12,6 +12,16 @@
     {
       "source": "/wsopfreechips/(.*)",
       "destination": "/games/wsopfreechips/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/games/wsopfreechips/$1",
+      "has": [
+        {
+          "type": "host",
+          "value": "wsopfreechips.bonuscollector.net"
+        }
+      ]
     }
   ]
 }
