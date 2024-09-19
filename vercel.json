@@ -7,11 +7,18 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/index.html"
+      "destination": "/index.html"  # Root domain content
     },
     {
       "source": "/games/wsopfreechips/(.*)",
-      "destination": "/games/wsopfreechips/$1"
+      "destination": "/games/wsopfreechips/$1"  # Subdomain content
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/wsopfreechips/(.*)",
+      "destination": "/games/wsopfreechips/$1",
+      "permanent": true
     }
   ]
 }
