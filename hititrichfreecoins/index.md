@@ -1,9 +1,9 @@
 ---
 layout: default
-title: "Subdomain 2 - Free Slot Game Bonuses"
-description: "Get the latest bonuses for your favorite slot games at Subdomain 2."
+title: "Hit It Rich Free Coins - Daily Bonuses"
+description: "Get daily free coins for Hit It Rich slots."
 permalink: "/"
 ---
 
-# Subdomain 2 Content
-Welcome to Subdomain 2 of Bonus Collector!
+# Hit It Rich Free Coins
+Claim your daily free coins and bonuses for Hit It Rich slots!
