@@ -11,7 +11,7 @@
     },
     {
       "source": "/wsopfreechips/(.*)",
-      "destination": "/games/wsopfreechips/$1"
+      "destination": "/games/wsopfreechips/index.html"
     }
   ]
 }
