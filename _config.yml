@@ -1,4 +1,4 @@
-# Site-wide Settings for Root Domain
+# Site-wide Settings
 title: "Bonus Collector: Free Slot Game Rewards"
 description: "Bonus Collector offers daily updates on free coins, chips, spins, and other rewards for popular slot games. Enhance your gaming experience with our exclusive bonuses and tips."
 baseurl: "" # Root domain baseurl
@@ -12,7 +12,7 @@ plugins:
   - jekyll-last-modified-at
   - jekyll-redirect-from
 
-# Collections (Define collections if needed)
+# Collections
 collections:
   pages:
     output: true
