@@ -1,28 +1,57 @@
+# Site-wide Settings for Root Domain
 title: "Bonus Collector: Free Slot Game Rewards"
 description: "Bonus Collector offers daily updates on free coins, chips, spins, and other rewards for popular slot games. Enhance your gaming experience with our exclusive bonuses and tips."
-baseurl: ""
-url: "https://bonuscollector.net"
+baseurl: "" # Root domain baseurl
+url: "https://bonuscollector.net" # Root domain URL
 
 markdown: kramdown
 
+# Plugins
 plugins:
   - jekyll-sitemap
   - jekyll-last-modified-at
   - jekyll-redirect-from
 
+# Collections (Add new content collections for subdomains)
 collections:
   pages:
     output: true
   blogs:
     output: true
+  wsopfreechips_content:
+    output: true
+  hititrichfreecoins_content:
+    output: true
 
+# Defaults to control content scope
 defaults:
+  # Root Domain Defaults (Main site content)
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
       lang: "en"
+
+  # WSOP Free Chips (Isolating content for wsopfreechips subdomain)
+  - scope:
+      path: "wsopfreechips"
+    values:
+      layout: "default"
+      lang: "en"
+      baseurl: "/wsopfreechips"
+      url: "https://wsopfreechips.bonuscollector.net"
+
+  # Hit it Rich Free Coins (Isolating content for hititrichfreecoins subdomain)
+  - scope:
+      path: "hititrichfreecoins"
+    values:
+      layout: "default"
+      lang: "en"
+      baseurl: "/hititrichfreecoins"
+      url: "https://hititrichfreecoins.bonuscollector.net"
+
+  # Translations for the Root Domain (only root)
   - scope:
       path: "es"
       type: "posts"
@@ -42,7 +71,21 @@ defaults:
       layout: "post"
       lang: "it"
 
+# Language Settings
 languages:
   - es
   - de
   - it
+
+# Custom subdomain settings
+wsopfreechips:
+  title: "WSOP Free Chips - Daily Rewards"
+  description: "Get the latest free chips and bonuses for WSOP on WSOPFreeChips."
+  baseurl: "/wsopfreechips"
+  url: "https://wsopfreechips.bonuscollector.net"
+
+hititrichfreecoins:
+  title: "Hit It Rich Free Coins - Daily Bonuses"
+  description: "Daily free coins and bonuses for Hit It Rich on HitItRichFreeCoins."
+  baseurl: "/hititrichfreecoins"
+  url: "https://hititrichfreecoins.bonuscollector.net"
