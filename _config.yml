@@ -17,11 +17,6 @@ collections:
     output: true
 
 defaults:
-  - if: "site.url == 'https://wsopfreechips.bonuscollector.net'"
-    values:
-      title: "WSOP Free Chips"
-      description: "Collect WSOP Free Chips and earn amazing rewards!"
-      baseurl: "/games/wsopfreechips"
   - scope:
       path: ""
       type: "posts"
