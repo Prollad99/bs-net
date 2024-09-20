@@ -2,7 +2,7 @@
 layout: default
 title: "Página Principal"
 description: "Bienvenido a Bonus Collector. Obtén actualizaciones diarias sobre monedas, fichas, giros y otras recompensas para tus juegos de tragamonedas favoritos."
-lang: "es"
+lang: "en"
 ---
 
 # Bienvenido a Bonus Collector
