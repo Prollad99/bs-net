@@ -1,7 +1,35 @@
 {
   "git": {
     "deploymentEnabled": {
-      "main": true
+      "main": false
     }
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/wsopfreechips(.*)",
+      "destination": "/wsopfreechips/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/hititrichfreecoins(.*)",
+      "destination": "/hititrichfreecoins/index.html",
+      "permanent": false
+    }
+  ],
+  "routes": [
+    {
+      "src": "/wsopfreechips",
+      "dest": "/wsopfreechips/index.html"
+    },
+    {
+      "src": "/hititrichfreecoins",
+      "dest": "/hititrichfreecoins/index.html"
+    }
+  ]
 }
