@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.subdomains.wsopfreechips.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.subdomains.wsopfreechips.description }}">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>{{ page.title | default: site.subdomains.wsopfreechips.title }}</h1>
+    </header>
+    <main>
+        {{ content }}
+    </main>
+    <footer>
+        <p>&copy; {{ "now" | date: "%Y" }} Bonus Collector.</p>
+    </footer>
+</body>
+</html>
