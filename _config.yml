@@ -1,21 +1,26 @@
+# Main site configuration (bonuscollector.net)
 title: "Bonus Collector: Free Slot Game Rewards"
 description: "Bonus Collector offers daily updates on free coins, chips, spins, and other rewards for popular slot games. Enhance your gaming experience with our exclusive bonuses and tips."
-baseurl: ""
+baseurl: ""  # This means the root of the main site
 url: "https://bonuscollector.net"
 
+# Markdown settings
 markdown: kramdown
 
+# Plugins
 plugins:
   - jekyll-sitemap
   - jekyll-last-modified-at
   - jekyll-redirect-from
 
+# Collections for all pages
 collections:
   pages:
     output: true
   blogs:
     output: true
 
+# Language-specific settings (for the main domain)
 defaults:
   - scope:
       path: ""
@@ -42,7 +47,31 @@ defaults:
       layout: "post"
       lang: "it"
 
+# Language list
 languages:
   - es
   - de
   - it
+
+# Subdomain configuration for wsopfreechips.bonuscollector.net
+subdomain_wsopfreechips:
+  title: "WSOP Free Chips - Bonus Collector"
+  description: "Get daily updates on free chips, tips, and bonuses for World Series of Poker (WSOP)."
+  baseurl: "/wsopfreechips"  # This indicates the subdomain content is in a subfolder
+  url: "https://wsopfreechips.bonuscollector.net"  # Subdomain URL
+  markdown: kramdown  # Optional: If you want to reuse the same markdown settings
+
+# Subdomain-specific collection (optional)
+collections:
+  wsopfreechips_pages:
+    output: true
+    permalink: /:collection/:path/
+
+# Add a default for the subdomain pages if necessary
+defaults:
+  - scope:
+      path: "wsopfreechips"
+      type: "pages"
+    values:
+      layout: "default"
+      lang: "en"
