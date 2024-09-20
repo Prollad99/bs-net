@@ -12,10 +12,6 @@
     {
       "source": "/hititrichfreecoins",
       "destination": "/hititrichfreecoins/index.html"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
     }
   ],
   "redirects": [
