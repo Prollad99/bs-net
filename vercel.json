@@ -1,17 +1,7 @@
 {
   "git": {
     "deploymentEnabled": {
-      "main": true
+      "main": false
     }
-  },
-  "rewrites": [
-    {
-      "source": "/wsopfreechips",
-      "destination": "/wsopfreechips/index.html"
-    },
-    {
-      "source": "/hititrichfreecoins",
-      "destination": "/hititrichfreecoins/index.html"
-    }
-  ]
+  }
 }
