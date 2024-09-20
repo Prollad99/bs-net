@@ -6,6 +6,14 @@
   },
   "rewrites": [
     {
+      "source": "/wsopfreechips",
+      "destination": "/wsopfreechips/index.html"
+    },
+    {
+      "source": "/hititrichfreecoins",
+      "destination": "/hititrichfreecoins/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
@@ -20,16 +28,6 @@
       "source": "/hititrichfreecoins(.*)",
       "destination": "/hititrichfreecoins/index.html",
       "permanent": false
-    }
-  ],
-  "routes": [
-    {
-      "src": "/wsopfreechips",
-      "dest": "/wsopfreechips/index.html"
-    },
-    {
-      "src": "/hititrichfreecoins",
-      "dest": "/hititrichfreecoins/index.html"
     }
   ]
 }
