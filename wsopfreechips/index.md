@@ -1,14 +1,9 @@
 ---
 layout: default
-title: "WSOP Free Chips"
-description: "Daily updates on free chips and bonuses for World Series of Poker (WSOP)."
-lang: "en"
+title: "WSOP Free Chips - Bonus Collector"
+permalink: /
 ---
 
-# WSOP Free Chips
+# Welcome to WSOP Free Chips
 
-Welcome to the WSOP Free Chips page! Here you'll find daily updates on free chips, tips, and exclusive bonuses for WSOP games.
-
-## Today's Free Chips
-- **Free Chips**: Claim your free chips for WSOP [here](#).
-- **Bonus Tips**: Learn how to maximize your chips and winnings in WSOP.
+Get daily updates on free chips and bonuses for WSOP (World Series of Poker). Check back regularly for more offers!
