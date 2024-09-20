@@ -1,6 +1,6 @@
 title: "Bonus Collector: Free Slot Game Rewards"
 description: "Bonus Collector offers daily updates on free coins, chips, spins, and other rewards for popular slot games. Enhance your gaming experience with our exclusive bonuses and tips."
-baseurl: ""  # This remains empty unless you're hosting the site in a subdirectory
+baseurl: ""
 url: "https://bonuscollector.net"
 
 markdown: kramdown
@@ -16,7 +16,6 @@ collections:
   blogs:
     output: true
 
-# Defaults configuration for multilingual content (optional)
 defaults:
   - scope:
       path: ""
@@ -47,12 +46,3 @@ languages:
   - es
   - de
   - it
-
-# Subdomain specific settings
-subdomains:
-  wsopfreechips:
-    title: "WSOP Free Chips"
-    description: "Daily bonuses and free chips for WSOP poker. Claim your rewards now!"
-  hititrichfreecoins:
-    title: "Hit It Rich Free Coins"
-    description: "Daily free coins and rewards for Hit It Rich. Don't miss out on your bonuses!"
