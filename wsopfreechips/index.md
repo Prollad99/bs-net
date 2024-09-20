@@ -1,22 +1,14 @@
 ---
-layout: wsop
-title: "Página Principal"
-description: "Bienvenido a Bonus Collector. Obtén actualizaciones diarias sobre monedas, fichas, giros y otras recompensas para tus juegos de tragamonedas favoritos."
+layout: default
+title: "WSOP Free Chips"
+description: "Daily updates on free chips and bonuses for World Series of Poker (WSOP)."
 lang: "en"
 ---
 
-# Bienvenido a Bonus Collector
+# WSOP Free Chips
 
-En Bonus Collector, te ofrecemos las mejores recompensas y actualizaciones diarias para tus juegos de tragamonedas favoritos. Disfruta de monedas gratuitas, fichas, giros y mucho más. ¡No te pierdas nuestras ofertas exclusivas y consejos para mejorar tu experiencia de juego!
+Welcome to the WSOP Free Chips page! Here you'll find daily updates on free chips, tips, and exclusive bonuses for WSOP games.
 
-## Nuestras Ofertas
-
-- **Monedas Gratis**: Actualizaciones diarias para obtener monedas adicionales.
-- **Fichas**: Beneficios especiales y recompensas.
-- **Giros**: Oportunidades para ganar grandes premios.
-
-## Contáctanos
-
-Si tienes alguna pregunta o necesitas asistencia, no dudes en [ponerte en contacto con nosotros](#).
-
-¡Gracias por visitar Bonus Collector y esperamos que disfrutes de nuestras ofertas!
+## Today's Free Chips
+- **Free Chips**: Claim your free chips for WSOP [here](#).
+- **Bonus Tips**: Learn how to maximize your chips and winnings in WSOP.
