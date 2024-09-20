@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: wsop
 title: "WSOP Free Chips - Bonus Collector"
 permalink: /
 ---
