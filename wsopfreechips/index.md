@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: wsop
 title: "Página Principal"
 description: "Bienvenido a Bonus Collector. Obtén actualizaciones diarias sobre monedas, fichas, giros y otras recompensas para tus juegos de tragamonedas favoritos."
 lang: "en"
