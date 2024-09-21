@@ -46,3 +46,16 @@ languages:
   - es
   - de
   - it
+
+# Subdomain-specific configurations
+wsopfreechips:
+  url: "https://wsopfreechips.bonuscollector.net"
+  baseurl: "/wsopfreechips"
+  title: "WSOP Free Chips"
+  description: "Get your daily free WSOP chips and other rewards."
+
+hititrichfreecoins:
+  url: "https://hititrichfreecoins.bonuscollector.net"
+  baseurl: "/hititrichfreecoins"
+  title: "Hit It Rich Free Coins"
+  description: "Claim free coins for Hit It Rich slots and enjoy bonuses."
