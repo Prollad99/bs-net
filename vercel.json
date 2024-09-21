@@ -8,6 +8,10 @@
     {
       "src": "_config.yml",
       "use": "@vercel/static"
+    },
+    {
+      "src": "**/*.html",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -18,6 +22,10 @@
     {
       "src": "/hititrichfreecoins/(.*)",
       "dest": "/hititrichfreecoins/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ],
   "git": {
