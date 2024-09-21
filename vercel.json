@@ -10,9 +10,6 @@
       "use": "@vercel/static"
     }
   ],
-  "scripts": {
-    "build": "jekyll build"
-  },
   "routes": [
     {
       "src": "/wsopfreechips/(.*)",
@@ -25,7 +22,7 @@
   ],
   "git": {
     "deploymentEnabled": {
-      "main": true
+      "main": false
     }
   }
 }
