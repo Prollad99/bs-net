@@ -1,37 +1,4 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "_config.yml",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "wsopfreechips/index.md",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "hititrichfreecoins/index.md",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/wsopfreechips/(.*)",
-      "dest": "/wsopfreechips/$1"
-    },
-    {
-      "src": "/hititrichfreecoins/(.*)",
-      "dest": "/hititrichfreecoins/$1"
-    },
-    {
-      "src": "/",
-      "dest": "/index.html"
-    }
-  ],
   "git": {
     "deploymentEnabled": {
       "main": true
