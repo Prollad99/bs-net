@@ -1,7 +1,31 @@
 {
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "_config.yml",
+      "use": "@vercel/static"
+    }
+  ],
+  "scripts": {
+    "build": "jekyll build"
+  },
+  "routes": [
+    {
+      "src": "/wsopfreechips/(.*)",
+      "dest": "/wsopfreechips/$1"
+    },
+    {
+      "src": "/hititrichfreecoins/(.*)",
+      "dest": "/hititrichfreecoins/$1"
+    }
+  ],
   "git": {
     "deploymentEnabled": {
-      "main": true
+      "main": false
     }
   }
 }
