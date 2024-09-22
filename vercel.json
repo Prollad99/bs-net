@@ -4,14 +4,6 @@
     {
       "src": "Gemfile",
       "use": "@vercel/ruby"
-    },
-    {
-      "src": "_config.yml",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
