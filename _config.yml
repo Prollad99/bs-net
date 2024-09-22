@@ -15,6 +15,12 @@ collections:
     output: true
   blogs:
     output: true
+  wsopfreechips:
+    output: true
+    permalink: /wsopfreechips/:path/
+  hititrichfreecoins:
+    output: true
+    permalink: /hititrichfreecoins/:path/
 
 defaults:
   - scope:
