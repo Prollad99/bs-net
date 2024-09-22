@@ -11,16 +11,16 @@ plugins:
   - jekyll-redirect-from
 
 collections:
-  pages:
-    output: true
-  blogs:
-    output: true
   wsopfreechips:
     output: true
     permalink: /wsopfreechips/:path/
   hititrichfreecoins:
     output: true
     permalink: /hititrichfreecoins/:path/
+  pages:
+    output: true
+  blogs:
+    output: true
 
 defaults:
   - scope:
