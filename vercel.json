@@ -10,9 +10,6 @@
       "use": "@vercel/static"
     }
   ],
-  "scripts": {
-    "build": "jekyll build"
-  },
   "routes": [
     {
       "src": "/wsopfreechips/(.*)",
