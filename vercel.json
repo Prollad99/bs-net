@@ -1,17 +1,12 @@
 {
-  "git": {
-    "deploymentEnabled": {
-      "main": true
-    }
-  },
   "routes": [
     {
-      "src": "/wsopfreechips/(.*)",
-      "dest": "/_site/wsopfreechips/$1"
+      "src": "^/wsopfreechips(/.*)?$",
+      "dest": "/wsopfreechips/index.html"
     },
     {
-      "src": "/hititrichfreecoins/(.*)",
-      "dest": "/_site/hititrichfreecoins/$1"
+      "src": "^/hititrichfreecoins(/.*)?$",
+      "dest": "/hititrichfreecoins/index.html"
     }
   ]
 }
