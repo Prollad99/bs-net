@@ -1,28 +1,7 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "_site/**/*",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/wsopfreechips/(.*)",
-      "dest": "/_site/wsopfreechips/$1"
-    },
-    {
-      "src": "/hititrichfreecoins/(.*)",
-      "dest": "/_site/hititrichfreecoins/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/_site/$1"
-    }
-  ],
   "git": {
     "deploymentEnabled": {
-      "main": true
+      "main": false
     }
   }
 }
