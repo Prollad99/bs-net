@@ -2,27 +2,30 @@
   "version": 2,
   "builds": [
     {
-      "src": "Gemfile",
-      "use": "@vercel/ruby"
+      "src": "index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "_config.yml",
+      "use": "@vercel/static"
     }
   ],
+  "scripts": {
+    "build": "jekyll build"
+  },
   "routes": [
     {
-      "src": "^/wsopfreechips/(.*)",
-      "dest": "/_site/wsopfreechips/$1"
+      "src": "/wsopfreechips/(.*)",
+      "dest": "/wsopfreechips/$1"
     },
     {
-      "src": "^/hititrichfreecoins/(.*)",
-      "dest": "/_site/hititrichfreecoins/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
+      "src": "/hititrichfreecoins/(.*)",
+      "dest": "/hititrichfreecoins/$1"
     }
   ],
   "git": {
     "deploymentEnabled": {
-      "main": true
+      "main": false
     }
   }
 }
