@@ -12,10 +12,13 @@ function getCurrentDate() {
   return `${year}-${month}-${day}`;
 }
 
-// Function to format the date in "Month Day, Year" format
-function formatDate(dateString) {
+// Function to format the date in "MM-DD-YYYY" format
+function formatDateCustom(dateString) {
   const date = new Date(dateString);
-  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  const month = String(date.getMonth() + 1).padStart(2, '0'); // Get month and pad with 0 if needed
+  const day = String(date.getDate()).padStart(2, '0'); // Get day and pad with 0 if needed
+  const year = date.getFullYear();
+  return `${month}-${day}-${year}`; // Return formatted date
 }
 
 const url = 'https://mosttechs.com/gold-fish-casino-free-coins/';
@@ -67,11 +70,12 @@ async function main() {
 
     await fs.writeFile(filePath, JSON.stringify(combinedLinks, null, 2), 'utf8');
 
-    // Generate HTML file
+    // Generate HTML file with the custom date format and text
     let htmlContent = '<ul class="list-group mt-3 mb-4">\n';
     combinedLinks.forEach(link => {
+      const formattedDate = formatDateCustom(link.date); // Format date as MM-DD-YYYY
       htmlContent += `  <li class="list-group-item d-flex justify-content-between align-items-center">\n`;
-      htmlContent += `    <span>Free Coins for ${formatDate(link.date)}</span>\n`;
+      htmlContent += `    <span>Gold Fish Slots Coins ${formattedDate}</span>\n`; // Custom text with formatted date
       htmlContent += `    <a href="${link.href}" class="btn btn-primary btn-sm">Collect</a>\n`;
       htmlContent += `  </li>\n`;
     });
