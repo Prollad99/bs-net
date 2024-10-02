@@ -2,8 +2,7 @@
 layout: post
 title: "House of Fun Free Coins: ¡Consigue tus Recompensas Diarias!"
 date: 2024-07-17
-tags: [House of Fun, Free Coins, Recompensas Diarias]
-author: BonusCollector.net
+author: "Admin"
 description: "Descubre cómo obtener tus monedas gratis diarias en House of Fun y disfruta de las mejores recompensas sin complicaciones."
 lang: es
 permalink: /es/house-of-fun-free-coins/
