@@ -2,8 +2,7 @@
 layout: post
 title: "DoubleU Casino Free Chips: Collezione Giornaliera"
 date: 2024-07-23
-tags: [doubleu casino, free chips, bonus giornalieri]
-author: BonusCollector.net
+author: "Admin"
 description: "Ottieni le ultime chips gratuite di DoubleU Casino ogni giorno su BonusCollector.net!"
 lang: it
 permalink: /it/doubleu-casino-free-chips/
