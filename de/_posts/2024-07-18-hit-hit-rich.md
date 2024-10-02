@@ -2,8 +2,7 @@
 layout: post
 title: "Hit It Rich Free Coins: Tägliche Belohnungen und Boni"
 date: 2024-07-18
-tags: [Hit It Rich, Free Coins, Tägliche Belohnungen]
-author: BonusCollector.net
+author: "Admin"
 description: Tägliche kostenlose Münzen und Belohnungen für Hit It Rich! Holen Sie sich jetzt Ihre kostenlosen Münzen und spielen Sie Ihre Lieblings-Slotspiele.
 lang: de
 permalink: /de/hit-it-rich-free-coins/
