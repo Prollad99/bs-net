@@ -2,8 +2,7 @@
 layout: post
 title: "Coin Master Free Spins: Tägliche Belohnungen und Tipps"
 date: 2024-07-18
-tags: [Coin Master, Free Spins, Tägliche Belohnungen]
-author: BonusCollector.net
+author: "Admin"
 description: "Erhalte tägliche Coin Master Free Spins und Münzen. Besuche unsere Seite für die neuesten Belohnungslinks und verbessere dein Spielerlebnis."
 lang: de
 permalink: /de/coin-master-free-spins/
