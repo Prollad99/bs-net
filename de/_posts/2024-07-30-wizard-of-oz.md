@@ -2,8 +2,7 @@
 layout: post
 title: "Wizard of Oz Free Coins: Tägliche Belohnungen und Boni"
 date: 2024-07-30
-tags: [Wizard of Oz, Free Coins, Tägliche Belohnungen]
-author: BonusCollector.net
+author: "Admin"
 description: Holen Sie sich täglich kostenlose Münzen für das Wizard of Oz Slots-Spiel und maximieren Sie Ihre Spielerfahrung.
 lang: de
 permalink: /de/wizard-of-oz-free-coins/
