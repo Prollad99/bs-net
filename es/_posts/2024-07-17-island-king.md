@@ -2,8 +2,7 @@
 layout: post
 title: "Island King Free Spins: ¡Obtén tus recompensas diarias aquí!"
 date: 2024-07-17
-tags: [Island King, Free Spins, Recompensas diarias]
-author: BonusCollector.net
+author: "Admin"
 description: "Descubre cómo obtener giros gratis en Island King diariamente. Actualizaciones diarias con enlaces de recompensas exclusivas."
 lang: es
 permalink: /es/island-king-free-spins/
