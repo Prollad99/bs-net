@@ -2,8 +2,7 @@
 layout: post
 title: "Quick Hit Slots Free Coins: Daily Rewards and Tips"
 date: 2024-08-01
-tags: [Quick Hit Slots, Free Coins, Casino, Slots]
-author: BonusCollector.net
+author: "Admin"
 description: "Discover how to get daily Quick Hit Slots free coins to boost your gameplay. Updated daily with the latest rewards."
 lang: en
 permalink: /quick-hit-slots-free-coins/
