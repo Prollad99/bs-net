@@ -2,8 +2,7 @@
 layout: post
 title: "Solitaire Grand Harvest Free Coins: Daily Updated Links and Tips"
 date: 2024-08-07
-tags: [Solitaire, Grand Harvest, Free Coins, Rewards]
-author: BonusCollector.net
+author: "Admin"
 description: Discover the latest Solitaire Grand Harvest free coins links updated daily, along with tips to maximize your rewards.
 lang: en
 permalink: /solitaire-grand-harvest-free-coins/
