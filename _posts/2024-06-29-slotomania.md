@@ -12,7 +12,7 @@ manifest: /manifests/slotomania.json
 app_name: "Slotomania Free Coins"
 ---
 
-Welcome to BonusCollector.net, your go-to destination for daily Slotomania free coins! We know how important those extra coins can be for maximizing your gaming experience, and we're here to make it easy for you to collect them without any hassle.
+Welcome to BonusCollector.net, your go-to destination for daily Slotomania free coins and rewards! We know how important those extra coins and bonuses can be for maximizing your Slotomania gaming experience, and we're here to make it easy for you to collect them without any hassle. Whether you're looking for the latest Slotomania coin links, free spins, or other in-game perks, we've got everything you need to keep your gameplay exciting and fun.
 
 ### Why Choose Us?
 
