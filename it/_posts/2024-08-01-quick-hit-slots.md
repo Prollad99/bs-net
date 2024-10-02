@@ -2,8 +2,7 @@
 layout: post
 title: "Quick Hit Slots Free Coins: Aggiornamenti Quotidiani e Bonus"
 date: 2024-08-01
-tags: [Quick Hit Slots, Free Coins, Bonus Giornalieri]
-author: BonusCollector.net
+author: "Admin"
 description: "Ottieni monete gratuite ogni giorno su Quick Hit Slots con i nostri link aggiornati quotidianamente."
 lang: it
 permalink: /it/quick-hit-slots-free-coins/
