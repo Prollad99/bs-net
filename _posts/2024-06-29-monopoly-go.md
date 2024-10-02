@@ -7,29 +7,6 @@ author: "BonusCollector.net"
 description: "Find daily Monopoly Go free dice links at BonusCollector.net. Never miss a free roll with our updated daily rewards!"
 lang: en
 permalink: /monopoly-go-free-dice/
-redirect_from:
-  - /monopoly-go/adding-friends/
-  - /monopoly-go/beginners-guide/
-  - /monopoly-go/event-strategies-maximizing-rewards/
-  - /monopoly-go/exploring-boards/
-  - /monopoly-go/invite-links/
-  - /monopoly-go/latest-features-events/
-  - /monopoly-go/mastering-monopoly-go/
-  - /monopoly-go/power-of-teamwork-partners-events/
-  - /monopoly-go/troubleshooting-fixes/
-  - /monopoly-go/ultimate-sticker-collection/
-  - /monopoly-go/understanding-stickers/
-  - /monopoly-go/unlocking-fun-guide-daily-treats/
-  - /monopoly-go/beginners-guide-golden-blitz/
-  - /monopoly-go/maximizing-tycoon-statistics/
-  - /monopoly-go/shields-skin-guide/
-  - /monopoly-go/bank-heist-patterns-guide/
-  - /monopoly-go/community-chest-strategies/
-  - /monopoly-go/events-calendar/
-  - /monopoly-go/sticker-albums-guide/
-  - /monopoly-go/sticker-guide/
-  - /monopoly-go/wild-stickers-guide/
-  - /monopoly-go/ultimate-guide-events-tips-strategies/
 image: /assets/images/monopoly-go.webp
 include_file: monopoly-go.html
 manifest: /manifests/monopoly-go.json
