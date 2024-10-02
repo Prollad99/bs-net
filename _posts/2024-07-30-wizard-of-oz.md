@@ -2,8 +2,7 @@
 layout: post
 title: "Wizard of Oz Free Coins: Daily Updates and Rewards"
 date: 2024-07-30
-tags: [Wizard of Oz, Free Coins, Slots]
-author: BonusCollector.net
+author: "Admin"
 description: "Discover the latest daily updates and rewards for Wizard of Oz Slots. Collect free coins effortlessly from a reliable source."
 lang: en
 permalink: /wizard-of-oz-free-coins/
