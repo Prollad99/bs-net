@@ -2,8 +2,7 @@
 layout: post
 title: "Solitaire Grand Harvest free coins: Ottieni monete gratis ogni giorno"
 date: 2024-08-07
-tags: [Solitaire Grand Harvest, Free Coins, Bonus Giornalieri]
-author: BonusCollector.net
+author: "Admin"
 description: "Scopri come ottenere monete gratuite quotidianamente in Solitaire Grand Harvest. Visita per link aggiornati giornalmente."
 lang: it
 permalink: /it/solitaire-grand-harvest-free-coins/
