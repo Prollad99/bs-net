@@ -12,7 +12,7 @@ manifest: /manifests/monopoly-go.json
 app_name: "Monopoly Go Free Dice"
 ---
 
-Welcome to BonusCollector.net! Here, we provide you with the latest **Monopoly Go free dice** links updated daily. Bookmark this page and check back often to ensure you never miss out on any free dice rolls.
+Welcome to BonusCollector.net! Here, we provide you with the latest Monopoly Go free dice links updated daily, including bonus rolls, free tokens, and in-game rewards. Bookmark this page and check back often to ensure you never miss out on any Monopoly Go free dice rolls, extra moves, or other free dice rewards to enhance your gameplay and maximize your winnings. Stay ahead of the competition with our regularly updated Monopoly Go free rolls and special promotions.
 
 ## Today's Free Dice Links
 Get your free dice rolls by clicking on the links below:
