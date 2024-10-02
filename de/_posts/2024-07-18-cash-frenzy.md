@@ -2,8 +2,7 @@
 layout: post
 title: "Cash Frenzy Free Coins: Tägliche Belohnungen und Tipps"
 date: 2024-07-18
-tags: [Cash Frenzy, Free Coins, Tägliche Belohnungen]
-author: BonusCollector.net
+author: "Admin"
 description: "Erhalte täglich kostenlose Münzen für Cash Frenzy und steigere dein Spielerlebnis mit unseren exklusiven Tipps und Tricks."
 lang: de
 permalink: /de/cash-frenzy-free-coins/
