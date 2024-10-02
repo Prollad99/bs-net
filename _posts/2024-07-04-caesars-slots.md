@@ -2,8 +2,7 @@
 layout: post
 title: "Caesars Slots Free Coins: Get Today’s Free Coins"
 date: 2024-07-04
-tags: [Caesars Slots, free coins, daily rewards]
-author: BonusCollector.net
+author: "Admin"
 description: "Discover the best ways to collect and utilize Caesars Slots free coins with daily updates and exclusive rewards."
 lang: en
 permalink: /caesars-slots-free-coins/
