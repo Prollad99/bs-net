@@ -2,8 +2,7 @@
 layout: post
 title: "Bingo Blitz Free Credits: ¡Consigue tus Recompensas Diarias!"
 date: 2024-07-17
-tags: [Bingo Blitz, Free Credits, Recompensas Diarias]
-author: BonusCollector.net
+author: "Admin"
 description: "Obtén créditos gratuitos diarios en Bingo Blitz. Visita diariamente para las últimas recompensas."
 lang: es
 permalink: /es/bingo-blitz-free-credits/
