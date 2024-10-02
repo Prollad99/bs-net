@@ -2,8 +2,7 @@
 layout: post
 title: "Quick Hit Slots Free Coins: ¡Recompensas Diarias!"
 date: 2024-08-01
-tags: [Quick Hit Slots, Free Coins, Recompensas Diarias]
-author: BonusCollector.net
+author: "Admin"
 description: "Obtén monedas gratis diariamente para Quick Hit Slots. Disfruta de las mejores recompensas y juega sin límites."
 lang: es
 permalink: /es/quick-hit-slots-free-coins/
