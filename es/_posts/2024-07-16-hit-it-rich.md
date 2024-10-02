@@ -2,8 +2,7 @@
 layout: post
 title: "Hit It Rich Free Coins: Consigue tus monedas gratis diarias"
 date: 2024-07-16
-tags: [Hit It Rich, Free Coins, Recompensas Diarias]
-author: BonusCollector.net
+author: "Admin"
 description: "Obtén tus monedas gratis diarias para Hit It Rich Slots y sigue jugando sin gastar dinero."
 lang: es
 permalink: /es/hit-it-rich-free-coins/
