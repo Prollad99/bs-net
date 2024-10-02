@@ -2,8 +2,7 @@
 layout: post
 title: "Game of Thrones Slots Free Coins: Daily Rewards for Epic Wins"
 date: 2024-08-09
-tags: [Game of Thrones Slots, Free Coins, Slots Rewards]
-author: BonusCollector.net
+author: "Admin"
 description: "Discover daily updated Game of Thrones Slots Free Coins links and maximize your in-game rewards with our exclusive tips and strategies."
 lang: en
 permalink: /game-of-thrones-slots-free-coins/
