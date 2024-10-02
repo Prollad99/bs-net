@@ -2,8 +2,7 @@
 layout: post
 title: "Hit It Rich Free Coins: Collect Today’s Bonuses"
 date: 2024-06-29
-tags: [Hit It Rich, free coins, slot games, daily rewards]
-author: "BonusCollector.net"
+author: "Admin"
 description: "Get your daily Hit It Rich free coins here! Updated daily to ensure you have enough coins to keep spinning and winning."
 lang: en
 permalink: /hit-it-rich-free-coins/
