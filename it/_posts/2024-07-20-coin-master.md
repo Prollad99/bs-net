@@ -2,8 +2,7 @@
 layout: post
 title: "Coin Master Free Spins: Ottieni le Tue Ricompense Quotidiane"
 date: 2024-07-20
-tags: [Coin Master, Free Spins, Bonus Giornalieri]
-author: BonusCollector.net
+author: "Admin"
 description: "Raccogli ogni giorno i tuoi Coin Master Free Spins aggiornati e incrementa il tuo villaggio con le migliori ricompense."
 lang: it
 permalink: /it/coin-master-free-spins/
