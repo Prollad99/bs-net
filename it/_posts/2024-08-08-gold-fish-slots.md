@@ -2,8 +2,7 @@
 layout: post
 title: "Gold Fish Slots Free Coins: Ottieni Monete Gratuite Quotidiane"
 date: 2024-08-08
-tags: [Gold Fish Slots, Free Coins, Bonus Giornalieri]
-author: BonusCollector.net
+author: "Admin"
 description: "Scopri come ottenere monete gratuite quotidiane per Gold Fish Slots. Aggiorniamo i link delle ricompense ogni giorno!"
 lang: it
 permalink: /it/gold-fish-slots-free-coins/
