@@ -2,8 +2,7 @@
 layout: post
 title: "Bingo Blitz Free Credits: Colleziona i Tuoi Bonus Quotidiani!"
 date: 2024-07-21
-tags: [Bingo Blitz, Free Credits, Bonus Giornalieri]
-author: BonusCollector.net
+author: "Admin"
 description: Scopri come ottenere i tuoi crediti gratuiti di Bingo Blitz ogni giorno. Aggiorniamo quotidianamente con i migliori link per i tuoi premi.
 lang: it
 permalink: /it/bingo-blitz-free-credits/
