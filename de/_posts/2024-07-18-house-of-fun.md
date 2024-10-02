@@ -2,8 +2,7 @@
 layout: post
 title: "House of Fun Free Coins: Tägliche Belohnungen Einfach Erhalten"
 date: 2024-07-18
-tags: [House of Fun, Free Coins, Tägliche Belohnungen]
-author: BonusCollector.net
+author: "Admin"
 description: "Erhalten Sie täglich kostenlose Münzen für House of Fun. Bleiben Sie informiert und maximieren Sie Ihre Spielbelohnungen."
 lang: de
 permalink: /de/house-of-fun-free-coins/
