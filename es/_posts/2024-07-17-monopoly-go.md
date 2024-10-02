@@ -2,8 +2,7 @@
 layout: post
 title: "Monopoly Go Free Dice: ¡Consigue tus dados gratis diarios!"
 date: 2024-07-17
-tags: [Monopoly Go, Free Dice, Recompensas Diarias]
-author: BonusCollector.net
+author: "Admin"
 description: "Descubre cómo obtener dados gratis para Monopoly Go cada día y mantente al día con las últimas recompensas."
 lang: es
 permalink: /es/monopoly-go-free-dice/
