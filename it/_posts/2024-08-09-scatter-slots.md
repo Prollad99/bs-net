@@ -2,8 +2,7 @@
 layout: post
 title: "Scatter Slots Free Coins: Colleziona Oggi Stesso!"
 date: 2024-08-09
-tags: [Scatter Slots, Free Coins, Bonus Giornalieri]
-author: BonusCollector.net
+author: "Admin"
 description: "Scopri come ottenere le migliori offerte di Scatter Slots Free Coins quotidianamente. Aggiorniamo ogni giorno con nuovi link per raccogliere monete gratis."
 lang: it
 permalink: /it/scatter-slots-free-coins/
