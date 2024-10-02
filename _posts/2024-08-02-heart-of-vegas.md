@@ -2,8 +2,7 @@
 layout: post
 title: "Hearts of Vegas Free Coins: Daily Rewards and Bonuses"
 date: 2024-08-02
-tags: [Hearts of Vegas, Free Coins, Daily Rewards, Bonuses]
-author: BonusCollector.net
+author: "Admin"
 description: Get the latest Hearts of Vegas free coins updated daily. Enjoy your favorite slot game with our daily rewards.
 lang: en
 permalink: /hearts-of-vegas-free-coins/
