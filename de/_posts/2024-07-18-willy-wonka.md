@@ -2,8 +2,7 @@
 layout: post
 title: "Willy Wonka Free Coins: Tägliche Belohnungen"
 date: 2024-07-18
-tags: [Willy Wonka, Free Coins, Tägliche Belohnungen]
-author: BonusCollector.net
+author: "Admin"
 description: "Erhalten Sie täglich aktualisierte Links zu kostenlosen Münzen für das Willy Wonka Spiel und maximieren Sie Ihr Spielerlebnis."
 lang: de
 permalink: /de/willy-wonka-free-coins/
