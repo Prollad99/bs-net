@@ -2,8 +2,7 @@
 layout: post
 title: "Hearts of Vegas Free Coins: Ottieni le Tue Ricompense Quotidiane"
 date: 2024-08-02
-tags: [Hearts of Vegas, Free Coins, Bonus Giornalieri]
-author: BonusCollector.net
+author: "Admin"
 description: Scopri come ottenere monete gratuite su Hearts of Vegas ogni giorno con i nostri link aggiornati.
 lang: it
 permalink: /it/hearts-of-vegas-free-coins/
