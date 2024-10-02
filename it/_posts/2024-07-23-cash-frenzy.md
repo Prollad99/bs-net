@@ -2,8 +2,7 @@
 layout: post
 title: "Cash Frenzy Free Coins: Ottieni i Tuoi Premi Quotidiani"
 date: 2024-07-23
-tags: [Cash Frenzy, Free Coins, Bonus Giornalieri]
-author: BonusCollector.net
+author: "Admin"
 description: "Scopri come ottenere monete gratis ogni giorno su Cash Frenzy per continuare a giocare e vincere senza spendere soldi."
 lang: it
 permalink: /it/cash-frenzy-free-coins/
