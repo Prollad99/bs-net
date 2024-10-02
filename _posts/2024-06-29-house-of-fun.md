@@ -12,7 +12,7 @@ manifest: /manifests/house-of-fun.json
 app_name: "House of Fun Free Coins"
 ---
 
-Welcome to your ultimate resource for **House of Fun free coins**! Here, you’ll find daily updates with the latest free coin links to keep your gameplay exciting and rewarding. Whether you’re a seasoned player or new to the game, our daily updated links ensure you never run out of coins.
+Welcome to your ultimate resource for House of Fun free coins and free spins! Here, you’ll find daily updates with the latest free coin links, bonus rewards, and promotional offers to keep your gameplay exciting and rewarding. Whether you’re a seasoned player or new to the game, our daily updated links, including coin giveaways and slot machine rewards, ensure you never run out of coins and can enjoy all the features of House of Fun slots.
 
 ## How to Collect House of Fun Free Coins
 
