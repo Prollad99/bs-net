@@ -2,8 +2,7 @@
 layout: post
 title: "Gold Fish Slots Free Coins: Daily Bonuses and Rewards"
 date: 2024-08-08
-tags: [goldfish, slots, free-coins, bonuses]
-author: BonusCollector.net
+author: "Admin"
 description: "Get your daily dose of free coins for Gold Fish Casino Slots. Check out our latest updates for bonuses and exclusive rewards!"
 lang: en
 permalink: /gold-fish-slots-free-coins/
