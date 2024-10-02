@@ -2,8 +2,7 @@
 layout: post
 title: "Caesars Slots Free Coins: ¡Recompensas diarias imperdibles!"
 date: 2024-07-17
-tags: [Caesars Slots, Free Coins, Recompensas Diarias]
-author: BonusCollector.net
+author: "Admin"
 description: "Descubre cómo obtener monedas gratis diariamente en Caesars Slots y disfruta de las emocionantes características de este juego de casino online."
 lang: es
 permalink: /es/caesars-slots-free-coins/
