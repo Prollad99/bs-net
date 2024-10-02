@@ -2,8 +2,7 @@
 layout: post
 title: "Caesars Slots Free Coins: Tägliche Belohnungen"
 date: 2024-07-18
-tags: [Caesars Slots, Free Coins, Tägliche Belohnungen]
-author: BonusCollector.net
+author: "Admin"
 description: Holen Sie sich täglich kostenlose Münzen für Caesars Slots und maximieren Sie Ihr Spielerlebnis mit BonusCollector.net.
 lang: de
 permalink: /de/caesars-slots-free-coins/
