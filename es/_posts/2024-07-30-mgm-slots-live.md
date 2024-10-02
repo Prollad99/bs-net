@@ -2,8 +2,7 @@
 layout: post
 title: "MGM Slots Live Free Chips: ¡Obtén tus recompensas diarias!"
 date: 2024-07-30
-tags: [MGM Slots, Free Chips, Recompensas Diarias]
-author: BonusCollector.net
+author: "Admin"
 description: "Descubre cómo obtener fichas gratis diariamente para MGM Slots Live y maximiza tus oportunidades de ganar en este emocionante juego de casino."
 lang: es
 permalink: /es/mgm-slots-live-free-chips/
