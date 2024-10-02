@@ -2,8 +2,7 @@
 layout: post
 title: "Wizard of Oz Free Coins: ¡Consigue tus recompensas diarias!"
 date: 2024-07-30
-tags: [Wizard of Oz, Free Coins, Recompensas Diarias]
-author: BonusCollector.net
+author: "Admin"
 description: "Obtén monedas gratis diariamente en Wizard of Oz Slots y mejora tu experiencia de juego."
 lang: es
 permalink: /es/wizard-of-oz-free-coins/
