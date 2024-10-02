@@ -2,8 +2,7 @@
 layout: post
 title: "Wizard of Oz Free Coins: Ottieni Monete Gratuite Ogni Giorno!"
 date: 2024-07-30
-tags: [Wizard of Oz, Free Coins, Bonus Giornalieri]
-author: BonusCollector.net
+author: "Admin"
 description: "Scopri come ottenere monete gratuite ogni giorno per il gioco Wizard of Oz e continua a divertirti con i tuoi personaggi preferiti!"
 lang: it
 permalink: /it/wizard-of-oz-free-coins/
