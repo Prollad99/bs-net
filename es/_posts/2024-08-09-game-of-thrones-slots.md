@@ -1,9 +1,8 @@
 ---
 layout: post  
 title: "Game of Thrones Slots Free Coins: Conseguir tus monedas diarias aquí"  
-date: 2024-08-09  
-tags: [Game of Thrones Slots, Free Coins, Recompensas Diarias]  
-author: BonusCollector.net  
+date: 2024-08-09
+author: "Admin"
 description: "Descubre cómo obtener Game of Thrones Slots Free Coins diariamente en BonusCollector.net y juega sin gastar dinero."  
 lang: es  
 permalink: /es/game-of-thrones-slots-free-coins/
