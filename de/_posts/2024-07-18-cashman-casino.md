@@ -2,8 +2,7 @@
 layout: post
 title: "Cashman Casino Free Coins: Tägliche Belohnungen und Tipps"
 date: 2024-07-18
-tags: [Cashman Casino, Free Coins, Tägliche Belohnungen]
-author: BonusCollector.net
+author: "Admin"
 description: "Sichern Sie sich täglich kostenlose Münzen für Cashman Casino und genießen Sie endlose Spielmöglichkeiten."
 lang: de
 permalink: /de/cashman-casino-free-coins/
