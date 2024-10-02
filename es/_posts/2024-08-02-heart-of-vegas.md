@@ -2,8 +2,7 @@
 layout: post
 title: "Hearts of Vegas Free Coins: ¡Consigue tus recompensas diarias!"
 date: 2024-08-02
-tags: [Hearts of Vegas, Free Coins, Recompensas Diarias]
-author: BonusCollector.net
+author: "Admin"
 description: "Descubre cómo obtener monedas gratis en Hearts of Vegas diariamente y disfruta de tus juegos de casino favoritos sin interrupciones."
 lang: es
 permalink: /es/hearts-of-vegas-free-coins/
