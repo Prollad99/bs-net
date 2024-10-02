@@ -2,8 +2,7 @@
 layout: post
 title: "Slotomania Free Coins: Ottieni i tuoi Bonus Giornalieri"
 date: 2024-07-21
-tags: [Slotomania, Free Coins, Bonus Giornalieri]
-author: BonusCollector.net
+author: "Admin"
 description: "Scopri come ottenere monete gratuite su Slotomania con i nostri link aggiornati quotidianamente."
 lang: it
 permalink: /it/slotomania-free-coins/
