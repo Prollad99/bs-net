@@ -2,8 +2,7 @@
 layout: post
 title: "Match Masters Free Gifts: Tägliche Belohnungen und Links"
 date: 2024-07-18
-tags: [Match Masters, Free Gifts, Tägliche Belohnungen]
-author: BonusCollector.net
+author: "Admin"
 description: "Erhalte tägliche kostenlose Geschenke in Match Masters, einschließlich Münzen, Booster und mehr. Aktuelle Belohnungslinks findest du hier."
 lang: de
 permalink: /de/match-masters-free-gifts/
