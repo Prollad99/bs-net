@@ -2,8 +2,7 @@
 layout: post
 title: "Match Masters Free Gifts: ¡Obtén tus Recompensas Diarias!"
 date: 2024-07-17
-tags: [Match Masters, Free Gifts, Recompensas Diarias]
-author: BonusCollector.net
+author: "Admin"
 description: "Descubre cómo obtener regalos diarios gratuitos en Match Masters, incluyendo monedas, potenciadores y más."
 lang: es
 permalink: /es/match-masters-free-gifts/
