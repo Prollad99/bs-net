@@ -2,8 +2,7 @@
 layout: post
 title: "Hit It Rich Free Coins: Ottieni Monete Gratuite Ogni Giorno"
 date: 2024-07-20
-tags: [Hit It Rich, Free Coins, Bonus Giornalieri]
-author: BonusCollector.net
+author: "Admin"
 description: "Scopri come ottenere monete gratuite per Hit It Rich ogni giorno sul nostro sito."
 lang: it
 permalink: /it/hit-it-rich-free-coins/
