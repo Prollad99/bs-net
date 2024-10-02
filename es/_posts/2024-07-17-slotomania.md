@@ -2,8 +2,7 @@
 layout: post
 title: "Slotomania Free Coins: ¡Consigue tus Monedas Diarias!"
 date: 2024-07-17
-tags: [Slotomania, Free Coins, Recompensas Diarias]
-author: BonusCollector.net
+author: "Admin"
 description: "Descubre cómo obtener monedas gratis diariamente en Slotomania y maximiza tu diversión en el casino."
 lang: es
 permalink: /es/slotomania-free-coins/
