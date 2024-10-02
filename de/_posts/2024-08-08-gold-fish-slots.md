@@ -2,8 +2,7 @@
 layout: post
 title: "Gold Fish Slots Free Coins: Hol dir deine täglichen Belohnungen"
 date: 2024-08-08
-tags: [Gold Fish Slots, Free Coins, Tägliche Belohnungen]
-author: BonusCollector.net
+author: "Admin"
 description: "Tägliche kostenlose Münzen für Gold Fish Slots. Hol dir deine Belohnungen jetzt!"
 lang: de
 permalink: /de/gold-fish-slots-free-coins/
