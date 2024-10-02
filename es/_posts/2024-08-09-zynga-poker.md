@@ -2,8 +2,7 @@
 layout: post
 title: "Zynga Poker Free Chips: Consigue tus Fichas Gratis Hoy"
 date: 2024-08-09
-tags: [Zynga Poker, Free Chips, Recompensas Diarias]
-author: BonusCollector.net
+author: "Admin"
 description: "Descubre cómo conseguir Zynga Poker Free Chips todos los días con nuestros enlaces actualizados. No te pierdas las últimas recompensas."
 lang: es
 permalink: /es/zynga-poker-free-chips/
