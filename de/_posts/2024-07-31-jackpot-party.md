@@ -2,8 +2,7 @@
 layout: post
 title: "Jackpot Party Free Coins: Hol dir täglich kostenlose Münzen!"
 date: 2024-07-31
-tags: [Jackpot Party, Free Coins, Tägliche Belohnungen]
-author: BonusCollector.net
+author: "Admin"
 description: Täglich aktualisierte Links für kostenlose Münzen im Jackpot Party Casino. Erhalte deine Belohnungen und genieße das Spiel!
 lang: de
 permalink: /de/jackpot-party-free-coins/
