@@ -2,8 +2,7 @@
 layout: post
 title: "Coin Master Free Spins - Actualización Diaria"
 date: 2024-07-16
-tags: [Coin Master, Free Spins, Recompensas Diarias]
-author: BonusCollector.net
+author: "Admin"
 description: "Consigue tus giros y monedas gratuitos de Coin Master actualizados diariamente. No te pierdas ninguna recompensa con nuestra lista actualizada."
 lang: es
 permalink: /es/coin-master-free-spins/
