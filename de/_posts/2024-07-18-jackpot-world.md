@@ -2,8 +2,7 @@
 layout: post
 title: "Jackpot World Free Coins: Tägliche Belohnungen für dich"
 date: 2024-07-18
-tags: [Jackpot World, Free Coins, Tägliche Belohnungen]
-author: BonusCollector.net
+author: "Admin"
 description: "Erhalte tägliche kostenlose Münzen und Belohnungen für Jackpot World. Bleib auf dem Laufenden mit den neuesten Angeboten."
 lang: de
 permalink: /de/jackpot-world-free-coins/
