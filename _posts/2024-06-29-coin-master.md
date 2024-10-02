@@ -12,7 +12,7 @@ manifest: /manifests/coin-master.json
 app_name: "Coin Master Free Spins"
 ---
 
-Welcome to your ultimate destination for **Coin Master free spins**! We update this page daily to ensure you never miss out on the latest rewards. Bookmark this page and check back regularly to stay ahead in the game.
+Welcome to your ultimate destination for Coin Master free spins and coins! We update this page daily with the latest Coin Master rewards, free spins links, and bonuses to ensure you never miss out on the newest offers. Bookmark this page and check back regularly to stay ahead in the game, whether you're after Coin Master free spin rewards, daily free spins, or spins and coins to boost your progress.
 
 ## Daily Free Spins Links
 
