@@ -12,7 +12,7 @@ manifest: /manifests/jackpot-party.json
 app_name: "Jackpot Party Free Coins"
 ---
 
-Welcome to BonusCollector.net, your one-stop destination for daily Jackpot Party free coins. We update this page every day to ensure you never miss out on the latest rewards and bonuses.
+Welcome to BonusCollector.net, your one-stop destination for daily Jackpot Party free coins and spins. We update this page every day with the latest Jackpot Party Casino free coins links, bonus codes, and other special offers to ensure you never miss out on the most recent rewards, free spins, and exclusive bonuses. Whether you're looking for free coin giveaways, social rewards, or event-based promotions, we've got you covered with the best ways to collect Jackpot Party free coins.
 
 ## Daily Jackpot Party Free Coins
 
