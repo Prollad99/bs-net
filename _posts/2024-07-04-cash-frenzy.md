@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Cash Frenzy Free Coins: Today's Free Bonuses"
+title: "Cash Frenzy Free Coins: Today's Bonuses"
 date: 2024-07-04
 author: "Admin"
 description: "Discover the best ways to collect free coins daily in Cash Frenzy. Boost your gameplay with these tips and tricks."
