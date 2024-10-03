@@ -12,7 +12,7 @@ manifest: /manifests/heart-of-vegas.json
 app_name: "Heart of Vegas Free Coins"
 ---
 
-Welcome to BonusCollector.net, your ultimate source for daily Hearts of Vegas free coins! Stay updated with the latest rewards and maximize your gameplay with our regularly updated links.
+Welcome to BonusCollector.net, your ultimate source for daily Hearts of Vegas free coins! Stay updated with the latest rewards, free spins, and exclusive coin bonuses to maximize your gameplay. With our regularly updated links for Heart of Vegas free coins, you can enjoy an enhanced casino experience, unlocking special features and bonus rounds. Don't miss out on free chips and other Heart of Vegas coin rewards to keep the fun going!
 
 ## How to Get Your Daily Hearts of Vegas Free Coins
 
