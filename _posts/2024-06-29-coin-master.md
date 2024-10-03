@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Coin Master Free Spins: Daily Links & Tips"
+title: "Coin Master Free Spins: Daily Links"
 date: 2024-06-29
 author: "Admin"
 description: "Get your daily Coin Master free spins and discover tips to maximize your rewards. Bookmark our site for the latest updates!"
