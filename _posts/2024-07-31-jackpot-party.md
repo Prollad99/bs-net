@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Jackpot Party Free Coins: Daily Rewards & Tips"
+title: "Jackpot Party Free Coins: Daily Rewards"
 date: 2024-07-31
 author: "Admin"
 description: "Get your daily Jackpot Party free coins and maximize your gameplay with our updated rewards and tips."
