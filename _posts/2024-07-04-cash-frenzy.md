@@ -12,7 +12,7 @@ manifest: /manifests/cash-frenzy.json
 app_name: "Cash Frenzy Free Coins"
 ---
 
-Welcome to your ultimate source for **Cash Frenzy free coins**! Every day, we provide the latest links to help you collect free coins and maximize your winnings in the game. No need to search through multiple sites—find everything you need right here on BonusCollector.net.
+Welcome to your ultimate source for Cash Frenzy free coins and spins! Every day, we provide the latest free coins links to help you collect bonus coins, daily rewards, and maximize your winnings in the game. No need to search through multiple sites—find everything you need for free coin giveaways, Cash Frenzy promotions, and free spins right here on BonusCollector.net.
 
 ## Today's Free Coin Links
 Collect your rewards with these links:
