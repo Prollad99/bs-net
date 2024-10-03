@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hit It Rich Free Coins: Collect Today’s Bonuses"
+title: "Hit It Rich Free Coins: Today's Bonuses"
 date: 2024-06-29
 author: "Admin"
 description: "Get your daily Hit It Rich free coins here! Updated daily to ensure you have enough coins to keep spinning and winning."
