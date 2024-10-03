@@ -13,15 +13,13 @@ layout: null
 
   <!-- Pages -->
   {% for page in site.pages %}
-    {% if page.layout != "tag" %}
-      <url>
-        <loc>{{ site.url }}{{ page.url }}</loc>
-        {% if page.last_modified_at %}
-          <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
-        {% endif %}
-        <priority>0.5</priority>
-      </url>
-    {% endif %}
+    <url>
+      <loc>{{ site.url }}{{ page.url }}</loc>
+      {% if page.last_modified_at %}
+        <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      <priority>0.5</priority>
+    </url>
   {% endfor %}
 
   <!-- Posts -->
@@ -32,17 +30,6 @@ layout: null
         <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
       {% endif %}
       <priority>1.0</priority>
-    </url>
-  {% endfor %}
-
-  <!-- Blog Posts -->
-  {% for blog in site.blogs %}
-    <url>
-      <loc>{{ site.url }}{{ blog.url }}</loc>
-      {% if blog.last_modified_at %}
-        <lastmod>{{ blog.last_modified_at | date_to_xmlschema }}</lastmod>
-      {% endif %}
-      <priority>0.5</priority>
     </url>
   {% endfor %}
 </urlset>
