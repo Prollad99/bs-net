@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Bingo Blitz Free Credits: Today’s Free Links"
+title: "Bingo Blitz Free Credits: Today's Links"
 date: 2024-06-30
 description: "Discover how to collect daily Bingo Blitz free credits. Stay updated with the latest free credit links and maximize your gameplay."
 lang: en
