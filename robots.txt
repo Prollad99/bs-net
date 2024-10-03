@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /tag/
 Disallow: /assets/
 
 Sitemap: https://bonuscollector.net/sitemap.xml
