@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Island King Free Spins: Daily Free Links"
+title: "Island King Free Spins: Daily Links"
 date: 2024-07-04
 author: "Admin"
 description: "Get the latest Island King free spins links updated daily. Learn how to maximize your rewards in Island King with our comprehensive guide."
