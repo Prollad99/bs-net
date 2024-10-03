@@ -12,7 +12,7 @@ manifest: /manifests/wizard-of-oz.json
 app_name: "Wizard of Oz Free Coins"
 ---
 
-Welcome to BonusCollector.net, your ultimate source for daily updates and rewards for **Wizard of Oz Slots**. Here, you can collect free coins every day without the hassle of searching multiple websites. We gather and provide the latest links and bonuses to ensure you have a seamless gaming experience.
+Welcome to BonusCollector.net, your ultimate source for daily updates and rewards for Wizard of Oz Slots free coins. Here, you can collect free Wizard of Oz coins every day without the hassle of searching multiple websites. We gather and provide the latest free coin links, daily bonuses, and coin rewards to ensure you have a seamless gaming experience. Keep checking back for updated free Wizard of Oz Slots coins and bonuses to boost your gameplay.
 
 ## How to Collect Wizard of Oz Free Coins
 
