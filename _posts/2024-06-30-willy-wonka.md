@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Willy Wonka Free Coins: Daily Free Spins & Coins"
+title: "Willy Wonka Free Coins: Daily Spins & Coins"
 date: 2024-06-30
 author: "Admin"
 description: "Get daily updates on Willy Wonka free coins to enhance your gaming experience. Bookmark BonusCollector.net for the latest links and tips."
