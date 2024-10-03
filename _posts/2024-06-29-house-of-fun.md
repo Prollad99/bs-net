@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "House of Fun Free Coins: Updated Daily"
+title: "House of Fun Free Coins: Daily Links"
 date: 2024-06-29
 author: "Admin"
 description: "Stay updated with the latest House of Fun free coins links. Collect daily rewards and enhance your gaming experience without spending a dime."
