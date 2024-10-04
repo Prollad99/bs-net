@@ -39,7 +39,7 @@ jobs:
         from googleapiclient.discovery import build
 
         # Fetch sitemap
-        sitemap_url = 'https://bonuscollector.net/sitemap.xml'
+        sitemap_url = 'https://www.bonuscollector.net/sitemap.xml'
         response = requests.get(sitemap_url)
         sitemap = xmltodict.parse(response.content)
 
