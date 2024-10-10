@@ -6,7 +6,7 @@
   <title>
   {% if page.title %}
     {{ page.title | escape }}
-  {% elsif page.url == "/" or page.url == "/es/" or page.url == "/de/" or page.url == "/it/" %}
+  {% elsif page.path == "index.html" or page.path == "es/index.html" or page.path == "de/index.html" or page.path == "it/index.html" %}
     {{ site.title | escape }}
   {% else %}
     {{ site.title | escape }}
