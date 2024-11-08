@@ -1,5 +1,21 @@
 [
   {
+    "href": "https://api.playtika.com/redirector/?coupon_token=1_3_1730907890247_l6nm6ymn",
+    "date": "2024-11-08"
+  },
+  {
+    "href": "https://api.playtika.com/redirector/?coupon_token=1_3_1731007800122_2pw7lky2",
+    "date": "2024-11-08"
+  },
+  {
+    "href": "https://api.playtika.com/redirector/?coupon_token=1_3_1730909089697_7egjdy4l",
+    "date": "2024-11-08"
+  },
+  {
+    "href": "https://api.playtika.com/redirector/?coupon_token=1_3_1730906953765_kdey3pw4",
+    "date": "2024-11-08"
+  },
+  {
     "href": "https://api.playtika.com/redirector/?coupon_token=1_3_1730917800365_w5388gxm",
     "date": "2024-11-07"
   },
@@ -382,21 +398,5 @@
   {
     "href": "https://api.playtika.com/redirector/?coupon_token=1_3_1729103400332_pyx8leo2",
     "date": "2024-10-17"
-  },
-  {
-    "href": "https://api.playtika.com/redirector/?coupon_token=1_3_1729107000144_ywgrol9r",
-    "date": "2024-10-17"
-  },
-  {
-    "href": "https://api.playtika.com/redirector/?coupon_token=1_3_1728478137706_pyy8dg8w",
-    "date": "2024-10-17"
-  },
-  {
-    "href": "https://api.playtika.com/redirector/?coupon_token=1_3_1728547903312_ywwpklz8",
-    "date": "2024-10-17"
-  },
-  {
-    "href": "https://api.playtika.com/redirector/?coupon_token=1_3_1727616060207_kd0nyn4g",
-    "date": "2024-10-16"
   }
 ]
