@@ -45,7 +45,7 @@ async function main() {
     const $ = cheerio.load(data);
     const newLinks = [];
 
-    $('a[href*="bit.ly"]').each((index, element) => {
+    $('a[href*="bit.ly"], a[href*="sc-ls.net"]').each((index, element) => {
       const link = $(element).attr('href');
       const existingLink = existingLinks.find(l => l.href === link);
       const date = existingLink ? existingLink.date : currentDate;
