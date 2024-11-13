@@ -24,6 +24,7 @@ jobs:
           - zynga-poker
           - scatter-slots
           - game-of-thrones-slots
+          - 8-ball-pool
 
     steps:
       - name: Checkout repository
