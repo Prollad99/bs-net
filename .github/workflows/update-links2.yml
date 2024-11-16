@@ -25,6 +25,7 @@ jobs:
           - scatter-slots
           - game-of-thrones-slots
           - 8-ball-pool
+          - travel-town
 
     steps:
       - name: Checkout repository
