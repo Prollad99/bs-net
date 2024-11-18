@@ -3,7 +3,7 @@ layout: post
 title: "Solitaire Grand Harvest free coins: Consigue tus recompensas diarias"  
 date: 2024-08-07  
 author: "Admin"
-description: Descubre cómo obtener monedas gratis diariamente en Solitaire Grand Harvest y maximiza tu experiencia de juego con nuestras recompensas actualizadas.  
+description: "Reclama Solitaire Grand Harvest free coins y disfruta de más niveles con monedas adicionales. Aprovecha las recompensas diarias y juega sin parar en este juego de cartas."
 lang: es
 permalink: /es/solitaire-grand-harvest-free-coins/
 image: /assets/images/solitaire-grand-harvest.webp
