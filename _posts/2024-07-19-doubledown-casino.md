@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "DoubleDown Free Chips: Daily Rewards & Codes"
+title: "DoubleDown Free Chips: Daily Rewards & Promo Codes"
 date: 2024-07-19
 author: "Admin"
 description: "Get your daily dose of DoubleDown Casino free chips with our latest promo codes and rewards. Updated daily to ensure you never miss out!"
