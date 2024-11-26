@@ -21,7 +21,7 @@ function formatDateCustom(dateString) {
   return `${month}-${day}-${year}`; // Return formatted date
 }
 
-const url = 'https://www.haktuts.in/2018/09/Coin-master-50-free-spin-and-coin-link.html';
+const url = 'https://www.haktuts.in/2018/09/Coin-master-50-free-spin-and-coin-link.html?m=1';
 const currentDate = getCurrentDate();
 const dir = 'links-json';
 const filePath = path.join(dir, 'coin-master.json');
