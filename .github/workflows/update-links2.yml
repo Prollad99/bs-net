@@ -26,6 +26,7 @@ jobs:
           - game-of-thrones-slots
           - 8-ball-pool
           - travel-town
+          - spin-a-spell
 
     steps:
       - name: Checkout repository
