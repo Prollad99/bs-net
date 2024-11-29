@@ -27,6 +27,7 @@ jobs:
           - 8-ball-pool
           - travel-town
           - spin-a-spell
+          - take-5-slots
 
     steps:
       - name: Checkout repository
