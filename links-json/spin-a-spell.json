@@ -1,5 +1,13 @@
 [
   {
+    "href": "https://magiccoast.forevernine.com/api/rewardLink?code=06HA02H5",
+    "date": "2024-12-30"
+  },
+  {
+    "href": "https://magiccoast.forevernine.com/api/rewardLink?code=NGST0000",
+    "date": "2024-12-30"
+  },
+  {
     "href": "https://magiccoast.forevernine.com/api/rewardLink?code=4GGVLCIC",
     "date": "2024-12-29"
   },
@@ -389,14 +397,6 @@
   },
   {
     "href": "https://magiccoast.forevernine.com/api/rewardLink?code=ISGJ4WV8",
-    "date": "2024-11-27"
-  },
-  {
-    "href": "https://magiccoast.forevernine.com/api/rewardLink?code=B7W7RFSF",
-    "date": "2024-11-27"
-  },
-  {
-    "href": "https://magiccoast.forevernine.com/api/rewardLink?code=QTV311R6",
     "date": "2024-11-27"
   }
 ]
