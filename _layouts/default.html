@@ -43,17 +43,10 @@
   {% if page.last_modified_at %}
     <meta name="last-modified" content="{{ page.last_modified_at | date: "%Y-%m-%dT%H:%M:%S%z" }}">
   {% endif %}
-  <meta name="description" content="{{ page.description | default: site.description }}">
-  <meta name="author" content="BonusCollector.net">
+  <meta name="author" content="BonusCollector">
   <meta property="og:title" content="{{ page.title | default: site.title }}">
-  <meta property="og:description" content="{{ page.description | default: site.description }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="{{ page.image | default: site.image }}">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ page.title | default: site.title }}">
-  <meta name="twitter:description" content="{{ page.description | default: site.description }}">
-  <meta name="twitter:image" content="{{ page.image | default: site.image }}">
 
   <!-- Styles and Icons -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
