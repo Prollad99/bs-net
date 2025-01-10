@@ -37,7 +37,7 @@ lang: en
                   {% assign file_info = site.data.include_files[include_file] %}
                   {% if file_info and file_info.last_modified %}
                     Last updated:
-                    <strong class="last-updated">{{ file_info.last_modified }}</strong>
+                    <strong class="last-updated" data-last-modified="{{ file_info.last_modified }}"></strong>
                   {% else %}
                     Last updated: <strong>Not available</strong>
                   {% endif %}
@@ -52,3 +52,6 @@ lang: en
     {% endfor %}
   </div>
 </div>
+
+<!-- Include the timeAgo.js script -->
+<script src="{{ site.baseurl }}/assets/js/timeAgo.js"></script>
