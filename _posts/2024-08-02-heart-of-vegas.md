@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hearts of Vegas Free Coins: Daily Bonuses"
+title: "Hearts of Vegas Free Coins"
 date: 2024-08-02
 author: "BonusCollector"
 permalink: /hearts-of-vegas-free-coins/
