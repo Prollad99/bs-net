@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Cashman Casino Free Coins: Daily Freebies"
+title: "Cashman Casino Free Coins"
 date: 2024-07-04
 author: "BonusCollector"
 permalink: /cashman-casino-free-coins/
