@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Spin A Spell Free Spins: Collect Daily Rewards!"
+title: "Spin A Spell Free Spins"
 date: 2024-11-27
 author: "BonusCollector"
 permalink: /spin-a-spell-free-spins/
