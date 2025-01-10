@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "Slotomania Free Coins"
-description: "Collect Slotomania Free Coins daily! Get exclusive links for free coins Slotomania and boost your gameplay instantly. Updated bonuses every day—don’t miss out!"
 date: 2024-06-29
-lang: en
 author: "BonusCollector"
 permalink: /slotomania-free-coins/
 image: /assets/images/gifts.svg
