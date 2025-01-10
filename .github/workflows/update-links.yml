@@ -60,7 +60,7 @@ jobs:
       - name: Generate Dynamic Post Content
         run: |
           GAME_NAME=${{ matrix.game }}
-          GAME_NAME_CAPITALIZED=$(echo "$GAME_NAME" | sed -E 's/([a-z])([A-Z])/\1 \2/g' | sed -E 's/(^|-)([a-z])/\U\2/g') # Adds spaces and capitalizes
+          GAME_NAME_CAPITALIZED=$(echo "$GAME_NAME" | sed -E 's/-/ /g' | sed -E 's/(^| )([a-z])/\U\2/g') # Replaces dashes with spaces and capitalizes each word
 
           PARAGRAPH_FILE="_includes/${GAME_NAME}_post.html"
 
@@ -78,7 +78,7 @@ jobs:
       - name: Generate Dynamic Footer Content
         run: |
           GAME_NAME=${{ matrix.game }}
-          GAME_NAME_CAPITALIZED=$(echo "$GAME_NAME" | sed -E 's/([a-z])([A-Z])/\1 \2/g' | sed -E 's/(^|-)([a-z])/\U\2/g') # Adds spaces and capitalizes
+          GAME_NAME_CAPITALIZED=$(echo "$GAME_NAME" | sed -E 's/-/ /g' | sed -E 's/(^| )([a-z])/\U\2/g') # Replaces dashes with spaces and capitalizes each word
 
           FOOTER_FILE="_includes/${GAME_NAME}_footer.html"
 
@@ -102,31 +102,20 @@ jobs:
 
       - name: Update Include File Last Modified Date
         run: |
-          # Set timezone to UTC
           export TZ=UTC
-
-          # Get the current timestamp in UTC
           TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M:%S")
-
-          # Read the current content of _data/include_files.yml
           INCLUDE_FILES_YML="_data/include_files.yml"
 
-          # Check if the include file has been modified
           if git diff --quiet _includes/${{ matrix.game }}.html; then
             echo "_includes/${{ matrix.game }}.html has not been modified. Skipping last modified date update."
           else
-            # Update the entry for the current game with the new timestamp
             if grep -q "${{ matrix.game }}.html:" "$INCLUDE_FILES_YML"; then
-              # Update the existing entry with the new timestamp
               sed -i "/${{ matrix.game }}.html:/,/last_modified:/s|last_modified: .*|last_modified: $TIMESTAMP|" "$INCLUDE_FILES_YML"
             else
-              # Add a new entry for the current game
               echo -e "\n${{ matrix.game }}.html:\n  last_modified: $TIMESTAMP" >> "$INCLUDE_FILES_YML"
             fi
             echo "Updated last modified date for _includes/${{ matrix.game }}.html"
           fi
-
-          # Display the updated content
           echo "Updated content of $INCLUDE_FILES_YML:"
           cat $INCLUDE_FILES_YML
 
@@ -142,17 +131,9 @@ jobs:
           git add _includes/${{ matrix.game }}.html _includes/${{ matrix.game }}_post.html _includes/${{ matrix.game }}_footer.html links-json/${{ matrix.game }}.json _data/include_files.yml
           git add package.json package-lock.json || true
           git commit -m "Update ${{ matrix.game }} reward links, content, and last modified date" || true
-
-          # Stash changes before pulling
           git stash
-
-          # Pull with rebase to ensure the latest changes are included
           git pull --rebase || true
-
-          # Apply stashed changes
           git stash pop || true
-
-          # Push changes, retry if necessary
           for i in {1..5}; do
             git push https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/Prollad99/bs-net.git && break
             echo "Retry $i: Push failed, retrying in 5 seconds..."
