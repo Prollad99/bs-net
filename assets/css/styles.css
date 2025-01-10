@@ -46,22 +46,6 @@ line-height:1.625;
   color: #6c757d; /* Color for the active breadcrumb item */
   font-weight: bold; /* Bold text for the active breadcrumb item */
 }
-.navbar-nav .nav-link,
-    .navbar-toggler-icon {
-      color: white !important;
-    }
-    .navbar-toggler {
-      border-color: white;
-    }
-    .custom-glass-button {
-      background: rgba(255, 255, 255, 0.3);
-      backdrop-filter: blur(10px);
-      border: none;
-      color: white;
-    }
-    .custom-glass-button:hover {
-      background: rgba(255, 255, 255, 0.5);
-    }
 .list-group-item {
       padding: 1rem 1.5rem;
       margin-bottom: 0.5rem;
