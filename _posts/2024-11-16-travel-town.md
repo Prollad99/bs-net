@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Travel Town Free Energy: Grab Your Daily Rewards Now!"
+title: "Travel Town Free Energy"
 date: 2024-11-16
 author: "BonusCollector"
 permalink: /travel-town-free-energy/
