@@ -60,7 +60,8 @@ jobs:
       - name: Generate Dynamic Post Content
         run: |
           GAME_NAME=${{ matrix.game }}
-          GAME_NAME_CAPITALIZED=$(echo "$GAME_NAME" | sed -E 's/-/ /g' | sed -E 's/(^| )([a-z])/\U\2/g') # Replaces dashes with spaces and capitalizes each word
+          # Fixed logic for GAME_NAME_CAPITALIZED
+          GAME_NAME_CAPITALIZED=$(echo "$GAME_NAME" | sed 's/-/ /g' | sed 's/\b./\u\1/g') # Replaces dashes with spaces and capitalizes each word
 
           PARAGRAPH_FILE="_includes/${GAME_NAME}_post.html"
 
@@ -78,7 +79,8 @@ jobs:
       - name: Generate Dynamic Footer Content
         run: |
           GAME_NAME=${{ matrix.game }}
-          GAME_NAME_CAPITALIZED=$(echo "$GAME_NAME" | sed -E 's/-/ /g' | sed -E 's/(^| )([a-z])/\U\2/g') # Replaces dashes with spaces and capitalizes each word
+          # Fixed logic for GAME_NAME_CAPITALIZED
+          GAME_NAME_CAPITALIZED=$(echo "$GAME_NAME" | sed 's/-/ /g' | sed 's/\b./\u\1/g') # Replaces dashes with spaces and capitalizes each word
 
           FOOTER_FILE="_includes/${GAME_NAME}_footer.html"
 
