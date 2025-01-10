@@ -8,11 +8,15 @@ layout: default
     <h1 class="card-title mb-4">{{ page.title }}</h1>
 
     <p class="card-subtitle text-muted mb-3">
-      By <strong>{{ page.author }}</strong> | 
-      {% if page.last_modified_at %}
-        Last updated: <strong><span class="last-updated" data-last-modified="{{ page.last_modified_at }}"></span></strong>
-      {% endif %}
-    </p>
+  By <strong>{{ page.author }}</strong> | 
+  {% assign include_file = page.include_file | prepend: "_includes/" %}
+  {% if site.data.include_files[page.include_file].last_modified %}
+    Last updated: 
+    <strong id="last-updated" data-last-modified="{{ site.data.include_files[page.include_file].last_modified | date: "%Y-%m-%dT%H:%M:%SZ" }}"></strong>
+  {% else %}
+    Last updated: <strong>{{ page.last_modified_at | date: "%B %d, %Y" }}</strong>
+  {% endif %}
+</p>
 
     {% if page.app_name %}
     <!-- App Install Section -->
