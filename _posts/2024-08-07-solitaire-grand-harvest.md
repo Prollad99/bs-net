@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Solitaire Grand Harvest Free Coins: Daily Links"
+title: "Solitaire Grand Harvest Free Coins"
 date: 2024-08-07
 author: "BonusCollector"
 permalink: /solitaire-grand-harvest-free-coins/
