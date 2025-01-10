@@ -12,10 +12,8 @@ manifest: /manifests/bingo-bash.json
 app_name: "Bingo Bash Free Chips"
 ---
 
-Love playing mobile games? If yes, then you must’ve undoubtedly come acrossn [Bingo Bash](https://www.bingobash.com/) Games. As one of the most popular games in play stores by [Scopely](https://www.scopely.com/), it has over 10 million downloads.
-
-**Bingo Bash free chips** are first shared on this website which we collect from the official social media page of Bingo Bash Games. Bingo Bash games post links on their social media platforms like Facebook, Twitter, Instagram daily. Visit this website daily and bookmark it so you don't miss daily updates, exciting gifts, free chips and coins.
-
-## Daily Bingo Bash free chips links:
+{% include bingo-bash_post.html %}
 
 {% include bingo-bash.html %}
+
+{% include bingo-bash_footer.html %}
