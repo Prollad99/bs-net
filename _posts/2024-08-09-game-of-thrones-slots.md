@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Game of Thrones Slots Free Coins: Daily Rewards"
+title: "Game of Thrones Slots Free Coins"
 date: 2024-08-09
 author: "BonusCollector"
 permalink: /game-of-thrones-slots-free-coins/
