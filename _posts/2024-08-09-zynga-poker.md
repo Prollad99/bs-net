@@ -2,9 +2,7 @@
 layout: post
 title: "Zynga Poker Free Chips: Daily Reward Links"
 date: 2024-08-09
-author: "Admin"
-description: "Get Zynga Poker Free Chips daily! Access updated free chips links for Zynga Poker to boost your gameplay. Claim your free chips now and play smarter!"
-lang: en
+author: "BonusCollector"
 permalink: /zynga-poker-free-chips/
 image: /assets/images/zynga-poker.webp
 include_file: zynga-poker.html
