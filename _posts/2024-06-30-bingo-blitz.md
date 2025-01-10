@@ -2,8 +2,6 @@
 layout: post
 title: "Bingo Blitz Free Credits"
 date: 2024-06-30
-description: "Collect Bingo Blitz Free Credits daily! Get the latest bingo blitz freebies and exclusive offers. Don't miss out on free credits—start playing now!"
-lang: en
 author: "BonusCollector"
 permalink: /bingo-blitz-free-credits/
 image: /assets/images/bingo-blitz.webp
