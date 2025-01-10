@@ -1,92 +1,87 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: 'en' }}">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
-  {% if page.title %}
-    {{ page.title | escape }}
-  {% else %}
-    {{ site.title | escape }}
+    {% if page.title %}
+      {{ page.title | escape }}
+    {% else %}
+      {{ site.title | escape }}
+    {% endif %}
+  </title>
+
+  {% if page.manifest %}
+    <link rel="manifest" href="{{ page.manifest }}">
   {% endif %}
-</title>
-{% if page.manifest %}
-    <link rel="manifest" href="{{ page.manifest }}" />
-  {% endif %}
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('{{ site.baseurl }}/assets/sw.js')
-      .then(registration => {
-        console.log('Service Worker registered with scope:', registration.scope);
-      })
-      .catch(error => {
-        console.log('Service Worker registration failed:', error);
+
+  <!-- Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('{{ site.baseurl }}/assets/sw.js')
+        .then(registration => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch(error => {
+          console.log('Service Worker registration failed:', error);
+        });
       });
-    });
-  }
-</script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVSB78P7CF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    }
+  </script>
 
-  gtag('config', 'G-EVSB78P7CF');
-</script>
-{% if page.last_modified_at %}
-    <meta name="last-modified" content="{{ page.last_modified_at | date: "%Y-%m-%dT%H:%M:%S%z" }}" />
-  {% endif %}
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVSB78P7CF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-EVSB78P7CF');
+  </script>
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9883001954705974"
-     crossorigin="anonymous"></script>
-  {% if page.layout == "tag" %}
-    <meta name="robots" content="noindex">
+  <!-- Meta Tags -->
+  {% if page.last_modified_at %}
+    <meta name="last-modified" content="{{ page.last_modified_at | date: "%Y-%m-%dT%H:%M:%S%z" }}">
   {% endif %}
   <meta name="description" content="{{ page.description | default: site.description }}">
   <meta name="author" content="BonusCollector.net">
-  <!-- Twitter Card Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ page.title | default: site.title }}">
-  <meta name="twitter:description" content="{{ page.description | default: site.description }}">
-  <meta name="twitter:image" content="{{ page.image | default: site.image }}">
-  <!-- Open Graph Tags -->
   <meta property="og:title" content="{{ page.title | default: site.title }}">
   <meta property="og:description" content="{{ page.description | default: site.description }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:type" content="website">
   <meta property="og:image" content="{{ page.image | default: site.image }}">
-    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet' />
-    <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css' rel='stylesheet' />
-  <link rel="canonical" href="{{ page.url | absolute_url }}">
-  <link rel="icon" href="{{ site.baseurl }}/assets/favicon.ico" type="image/x-icon">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title | default: site.title }}">
+  <meta name="twitter:description" content="{{ page.description | default: site.description }}">
+  <meta name="twitter:image" content="{{ page.image | default: site.image }}">
+
+  <!-- Styles and Icons -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+  <link rel="icon" href="{{ site.baseurl }}/assets/favicon.ico" type="image/x-icon">
+
+  <!-- Ads -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9883001954705974" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container-fluid">
         <a class="navbar-brand" href="{{ site.baseurl }}/"><i class="bi bi-gift-fill"></i> <b>Bonus Collector</b></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+        <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="{{ site.baseurl }}/"><i class="bi bi-house-fill"></i> Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ site.baseurl }}/about/"><i class="bi bi-file-person"></i> About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ site.baseurl }}/contact/"><i class="bi bi-person-lines-fill"></i> Contact</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/"><i class="bi bi-house-fill"></i> Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/about/"><i class="bi bi-file-person"></i> About</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/contact/"><i class="bi bi-person-lines-fill"></i> Contact</a></li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 More
               </a>
-              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="{{ site.baseurl }}/privacy-policy/"><i class="bi bi-caret-right-fill"></i> Privacy Policy</a></li>
                 <li><a class="dropdown-item" href="{{ site.baseurl }}/disclaimer/"><i class="bi bi-caret-right-fill"></i> Disclaimer</a></li>
                 <li><a class="dropdown-item" href="{{ site.baseurl }}/dmca/"><i class="bi bi-caret-right-fill"></i> DMCA</a></li>
@@ -100,94 +95,61 @@
 
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{{ site.baseurl }}/"><i class="bi bi-house-fill"></i> Home</a></li>
-        {% if page.categories %}
-            {% for category in page.categories %}
-                <li class="breadcrumb-item">
-                    <a href="{{ site.baseurl }}/{{ category | downcase }}/">{{ category | replace: "-", " " | capitalize }}</a>
-                </li>
-            {% endfor %}
-        {% endif %}
-        <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+      <li class="breadcrumb-item"><a href="{{ site.baseurl }}/"><i class="bi bi-house-fill"></i> Home</a></li>
+      {% if page.categories %}
+        {% for category in page.categories %}
+          <li class="breadcrumb-item">
+            <a href="{{ site.baseurl }}/{{ category | downcase }}/">{{ category | replace: "-", " " | capitalize }}</a>
+          </li>
+        {% endfor %}
+      {% endif %}
+      <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
     </ol>
-</nav>
+  </nav>
 
-  <!--search start -->
-{% assign is_homepage = false %}
-{% if page.url == "/" %}
-  {% assign is_homepage = true %}
-{% else %}
-  {% for lang in site.data.languages.languages %}
-    {% assign lang_homepage_url = "/" | append: lang.code | append: "/" %}
-    {% if page.url == lang_homepage_url %}
-      {% assign is_homepage = true %}
-    {% endif %}
-  {% endfor %}
-{% endif %}
-
-{% if is_homepage %}
-<div class="container mt-4">
-  <div class="input-group">
-    <input type="search" id="search-input" class="form-control" placeholder="Search for Games..." aria-label="Search">
-    <div class="input-group-append">
-      <button class="btn btn-primary" type="button" id="search-button">
-        <i class="bi bi-search"></i>
-      </button>
+  {% if page.url == "/" %}
+    <div class="container mt-4">
+      <div class="input-group">
+        <input type="search" id="search-input" class="form-control" placeholder="Search for Games..." aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button" id="search-button">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </div>
+      <div id="results-container" class="mt-4"></div>
     </div>
-  </div>
-  <div id="results-container" class="mt-4"></div>
-</div>
-{% endif %}
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-jekyll-search/1.7.2/simple-jekyll-search.min.js"></script>
-                      <script>
-      var currentLang = "{{ page.lang }}";
-      var searchInput = document.getElementById('search-input');
-      var resultsContainer = document.getElementById('results-container');
-      var searchButton = document.getElementById('search-button');
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-jekyll-search/1.7.2/simple-jekyll-search.min.js"></script>
+    <script>
+      const searchInput = document.getElementById('search-input');
+      const resultsContainer = document.getElementById('results-container');
+      const searchButton = document.getElementById('search-button');
 
       function performSearch(query) {
         fetch('{{ site.baseurl }}/search.json')
           .then(response => response.json())
           .then(data => {
-            var results = data.filter(post => post.content.includes(query) && post.lang === currentLang);
-            resultsContainer.innerHTML = '';
-            if (results.length > 0) {
-              results.forEach(result => {
-                var div = document.createElement('div');
-                div.innerHTML = '<a href="' + result.url + '">' + result.app_name + '</a>';
-                resultsContainer.appendChild(div);
-              });
-            } else {
-              resultsContainer.innerHTML = 'No results found';
-            }
+            const results = data.filter(post => post.content.includes(query));
+            resultsContainer.innerHTML = results.length > 0
+              ? results.map(result => `<div><a href="${result.url}">${result.app_name}</a></div>`).join('')
+              : 'No results found';
           });
       }
 
-      searchButton.addEventListener('click', function() {
-        var query = searchInput.value.trim();
-        if (query) {
-          performSearch(query);
-        } else {
-          resultsContainer.innerHTML = '';
-        }
+      searchButton.addEventListener('click', () => {
+        const query = searchInput.value.trim();
+        if (query) performSearch(query);
       });
 
-      searchInput.addEventListener('keypress', function(event) {
+      searchInput.addEventListener('keypress', (event) => {
         if (event.key === 'Enter') {
-          var query = searchInput.value.trim();
-          if (query) {
-            performSearch(query);
-          } else {
-            resultsContainer.innerHTML = '';
-          }
+          const query = searchInput.value.trim();
+          if (query) performSearch(query);
         }
       });
     </script>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <!-- search end -->
+  {% endif %}
 
   <main class="container">
     {{ content }}
@@ -195,38 +157,14 @@
 
   <footer class="bg-primary text-white py-4">
     <div class="container text-center">
-      <p>Copyright &copy; <script type='text/javascript'>var creditsyear = new Date();document.write(creditsyear.getFullYear());</script> | <a href="{{ site.baseurl }}/" class="text-white"><b>Bonus Collector</b></a>. All Rights Reserved.</p>
+      <p>&copy; {{ site.time | date: "%Y" }} | <a href="{{ site.baseurl }}/" class="text-white"><b>Bonus Collector</b></a>. All Rights Reserved.</p>
       <p>
         <a href="{{ site.baseurl }}/about" class="text-white"><i class="bi bi-file-person"></i> About</a> |
         <a href="{{ site.baseurl }}/contact/" class="text-white"><i class="bi bi-person-lines-fill"></i> Contact</a>
       </p>
-
-      {% if page.show_language_dropdown != false %}
-        <!-- Language Dropdown -->
-        <div class="dropdown mt-3">
-          <button class="btn custom-glass-button dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-translate"></i> Language
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-            {% for lang in site.data.languages.languages %}
-              <li>
-                {% if lang.default %}
-                  <a class="dropdown-item" href="{{ page.url | remove_lang_prefix }}">
-                    {{ lang.name }}
-                  </a>
-                {% else %}
-                  <a class="dropdown-item" href="{{ page.url | remove_lang_prefix | prepend: lang.code | prepend: '/' }}">
-                    {{ lang.name }}
-                  </a>
-                {% endif %}
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
-      {% endif %}
     </div>
   </footer>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="{{ '/assets/js/timeAgo.js' | relative_url }}"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
