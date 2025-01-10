@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Gold Fish Slots Free Coins: Daily Rewards"
+title: "Gold Fish Slots Free Coins"
 date: 2024-08-08
 author: "BonusCollector"
 permalink: /gold-fish-slots-free-coins/
