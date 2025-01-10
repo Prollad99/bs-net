@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Island King Free Spins: Daily Links"
+title: "Island King Free Spins and Coins"
 date: 2024-07-04
 author: "BonusCollector"
 permalink: /island-king-free-spins/
