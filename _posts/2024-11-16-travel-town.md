@@ -2,9 +2,7 @@
 layout: post
 title: "Travel Town Free Energy: Grab Your Daily Rewards Now!"
 date: 2024-11-16
-author: "Admin"
-description: "Get your daily dose of Travel Town Free Energy! Claim free energy links daily to keep merging and building in Travel Town seamlessly. Stay energized today!"
-lang: en
+author: "BonusCollector"
 permalink: /travel-town-free-energy/
 image: /assets/images/travel-town.webp
 include_file: travel-town.html
