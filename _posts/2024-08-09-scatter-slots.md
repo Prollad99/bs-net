@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Scatter Slots Free Coins: Daily Rewards"
+title: "Scatter Slots Free Coins"
 date: 2024-08-09
 author: "BonusCollector"
 permalink: /scatter-slots-free-coins/
