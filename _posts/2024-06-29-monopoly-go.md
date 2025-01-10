@@ -3,8 +3,6 @@ layout: post
 title: "Monopoly Go Free Dice and Rolls"
 date: 2024-06-29
 author: "BonusCollector"
-description: "Get daily Monopoly Go Free Dice and Free Rolls links! Collect your free rewards every day to boost your gameplay and dominate the board. Visit now for updates!"
-lang: en
 permalink: /monopoly-go-free-dice/
 image: /assets/images/monopoly-go.webp
 include_file: monopoly-go.html
