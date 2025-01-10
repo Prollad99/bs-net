@@ -23,7 +23,13 @@ layout: default
                 <a href="{{ post.url }}">
                   <h5 class="card-title" style="font-size: 1rem;">{{ post.app_name }}</h5>
                 </a>
-                <p class="card-text" style="font-size: 0.9rem;">{{ post.description }}</p>
+                <p class="card-text" style="font-size: 0.9rem;">
+                  {% if post.description %}
+                    {{ post.description }}
+                  {% else %}
+                    {{ post.content | strip_html | truncatewords: 30 }}
+                  {% endif %}
+                </p>
               </div>
             </div>
           </div>
