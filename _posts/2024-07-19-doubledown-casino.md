@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "DoubleDown Free Chips: Daily Rewards & Promo Codes"
+title: "DoubleDown Casino Free Chips"
 date: 2024-07-19
 author: "BonusCollector"
 permalink: /doubledown-casino-free-chips/
