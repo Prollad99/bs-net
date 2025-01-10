@@ -15,29 +15,3 @@ plugins:
 collections:
   pages:
     output: true
-
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      lang: "en"
-  - scope:
-      path: "es"
-      type: "posts"
-    values:
-      layout: "post"
-      lang: "es"
-  - scope:
-      path: "de"
-      type: "posts"
-    values:
-      layout: "post"
-      lang: "de"
-  - scope:
-      path: "it"
-      type: "posts"
-    values:
-      layout: "post"
-      lang: "it"
