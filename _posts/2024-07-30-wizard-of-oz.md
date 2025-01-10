@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Wizard of Oz Free Coins: Daily Rewards"
+title: "Wizard of Oz Free Coins and Credits"
 date: 2024-07-30
 author: "BonusCollector"
 permalink: /wizard-of-oz-free-coins/
