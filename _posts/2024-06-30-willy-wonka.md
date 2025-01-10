@@ -3,8 +3,6 @@ layout: post
 title: "Willy Wonka Free Coins"
 date: 2024-06-30
 author: "BonusCollector"
-description: "Get Willy Wonka Free Coins & Credits! Collect daily rewards & bonus links for Willy Wonka Slots. Boost your gameplay with free spins & coins today!"
-lang: en
 permalink: /willy-wonka-free-coins/
 image: /assets/images/willy-wonka.jpeg
 include_file: willy-wonka.html
