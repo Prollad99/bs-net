@@ -42,7 +42,12 @@ layout: default
                     Last updated: <strong>Not available</strong>
                   {% endif %}
                 {% else %}
-                  Last updated: <strong>{{ post.last_modified_at | date: "%d %B %Y" }}</strong>
+                  <!-- Fallback to post's last modified date if not available in include_file -->
+                  {% if post.last_modified_at %}
+                    Last updated: <strong>{{ post.last_modified_at | date: "%d %B %Y" }}</strong>
+                  {% else %}
+                    Last updated: <strong>Not available</strong>
+                  {% endif %}
                 {% endif %}
                 <!-- Hidden input field for include_file -->
                 <input type="hidden" name="include_file" value="{{ post.include_file }}">
