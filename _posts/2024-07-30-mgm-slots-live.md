@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "MGM Slots Live Free Chips: Daily Rewards"
+title: "MGM Slots Live Free Chips and Coins"
 date: 2024-07-30
 author: "BonusCollector"
 permalink: /mgm-slots-live-free-chips/
