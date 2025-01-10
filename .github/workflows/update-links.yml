@@ -58,63 +58,76 @@ jobs:
           cat _includes/${{ matrix.game }}.html
 
       - name: Generate Dynamic Post Content
-        run: |
-          GAME_NAME=${{ matrix.game }}
-          GAME_NAME_WITH_SPACES=$(echo "$GAME_NAME" | sed -E 's/-/ /g' | sed -E 's/(^| )(.)/\U\2/g') # Replace hyphens with spaces and capitalize
+  run: |
+    GAME_NAME=${{ matrix.game }}
+    GAME_NAME_CAPITALIZED=$(echo "$GAME_NAME" | sed -E 's/([a-z])([A-Z])/\1 \2/g' | sed -E 's/(^|-)([a-z])/\U\2/g') # Adds spaces and capitalizes
 
-          PARAGRAPH_FILE="_includes/${GAME_NAME}_post.html"
+    PARAGRAPH_FILE="_includes/${GAME_NAME}_post.html"
 
-          # Template for the post content
-          PARAGRAPH="Discover Daily ${GAME_NAME_WITH_SPACES} Rewards!\n\n
-          Are you a fan of ${GAME_NAME_WITH_SPACES} and looking to enhance your gameplay? You've come to the right place! This page is dedicated to all ${GAME_NAME_WITH_SPACES} enthusiasts who are eager to claim free rewards every day. Here, you'll find the latest links to collect free spins, coins, chips, and other exciting bonuses to help you level up and enjoy the game even more.\n\n
-          ${GAME_NAME_WITH_SPACES} is an engaging and fun game that millions love to play. Whether you're aiming to reach higher levels or just enjoy the thrill of spinning, our daily reward links will keep you in the game without breaking a sweat.\n\n
-          Please note: ${GAME_NAME_WITH_SPACES} is a free-to-play app designed purely for entertainment purposes. Bonuscollector.net is an independent platform and is not affiliated with or endorsed by the creators or owners of ${GAME_NAME_WITH_SPACES}.\n\n
-          Check back daily to make sure you never miss a reward!"
+    # Template for the post content
+    PARAGRAPH="Discover Daily ${GAME_NAME_CAPITALIZED} Rewards!\n\n
+    Are you a fan of ${GAME_NAME_CAPITALIZED} and looking to enhance your gameplay? You've come to the right place! This page is dedicated to all ${GAME_NAME_CAPITALIZED} enthusiasts who are eager to claim free rewards every day. Here, you'll find the latest links to collect free spins, coins, chips, and other exciting bonuses to help you level up and enjoy the game even more.\n\n
+    ${GAME_NAME_CAPITALIZED} is an engaging and fun game that millions love to play. Whether you're aiming to reach higher levels or just enjoy the thrill of spinning, our daily reward links will keep you in the game without breaking a sweat.\n\n
+    Please note: ${GAME_NAME_CAPITALIZED} is a free-to-play app designed purely for entertainment purposes. Bonuscollector.net is an independent platform and is not affiliated with or endorsed by the creators or owners of ${GAME_NAME_CAPITALIZED}.\n\n
+    Check back daily to make sure you never miss a reward!"
 
-          echo -e "$PARAGRAPH" > "$PARAGRAPH_FILE"
-          echo "Generated post content for ${GAME_NAME}:"
-          cat "$PARAGRAPH_FILE"
+    echo -e "$PARAGRAPH" > "$PARAGRAPH_FILE"
+    echo "Generated post content for ${GAME_NAME}:"
+    cat "$PARAGRAPH_FILE"
 
       - name: Generate Dynamic Footer Content
-        run: |
-          GAME_NAME=${{ matrix.game }}
-          GAME_NAME_WITH_SPACES=$(echo "$GAME_NAME" | sed -E 's/-/ /g' | sed -E 's/(^| )(.)/\U\2/g') # Replace hyphens with spaces and capitalize
+  run: |
+    GAME_NAME=${{ matrix.game }}
+    GAME_NAME_CAPITALIZED=$(echo "$GAME_NAME" | sed -E 's/([a-z])([A-Z])/\1 \2/g' | sed -E 's/(^|-)([a-z])/\U\2/g') # Adds spaces and capitalizes
 
-          FOOTER_FILE="_includes/${GAME_NAME}_footer.html"
+    FOOTER_FILE="_includes/${GAME_NAME}_footer.html"
 
-          # Template for the footer content
-          FOOTER="### How to Claim Your ${GAME_NAME_WITH_SPACES} Rewards\n\n
-          Claiming your daily rewards in ${GAME_NAME_WITH_SPACES} is quick and easy! Just follow these simple steps:\n
-          1. Browse through the reward links provided above and select the ones you want to claim.\n
-          2. Click on a link, and it will automatically redirect you to your ${GAME_NAME_WITH_SPACES} app or website.\n
-          3. Log in with your account if prompted.\n
-          4. The reward (e.g., free spins, coins, chips, or bonuses) will be added to your account instantly.\n\n
-          **Tips for Claiming Rewards:**\n
-          - Make sure you are logged into your ${GAME_NAME_WITH_SPACES} account before clicking the links.\n
-          - Each reward link can usually be claimed only once, so check back daily for fresh links.\n
-          - If a link does not work, it might have expired. Be sure to claim rewards as soon as they are posted.\n\n
-          Enjoy your free rewards and have fun playing ${GAME_NAME_WITH_SPACES}!\n\n
-          Please note: These rewards are provided officially by ${GAME_NAME_WITH_SPACES} and collected from publicly available sources. Bonuscollector.net is not responsible for any issues with claiming rewards."
+    # Template for the footer content
+    FOOTER="### How to Claim Your ${GAME_NAME_CAPITALIZED} Rewards\n\n
+    Claiming your daily rewards in ${GAME_NAME_CAPITALIZED} is quick and easy! Just follow these simple steps:\n
+    1. Browse through the reward links provided above and select the ones you want to claim.\n
+    2. Click on a link, and it will automatically redirect you to your ${GAME_NAME_CAPITALIZED} app or website.\n
+    3. Log in with your account if prompted.\n
+    4. The reward (e.g., free spins, coins, chips, or bonuses) will be added to your account instantly.\n\n
+    **Tips for Claiming Rewards:**\n
+    - Make sure you are logged into your ${GAME_NAME_CAPITALIZED} account before clicking the links.\n
+    - Each reward link can usually be claimed only once, so check back daily for fresh links.\n
+    - If a link does not work, it might have expired. Be sure to claim rewards as soon as they are posted.\n\n
+    Enjoy your free rewards and have fun playing ${GAME_NAME_CAPITALIZED}!\n\n
+    Please note: These rewards are provided officially by ${GAME_NAME_CAPITALIZED} and collected from publicly available sources. Bonuscollector.net is not responsible for any issues with claiming rewards."
 
-          echo -e "$FOOTER" > "$FOOTER_FILE"
-          echo "Generated footer content for ${GAME_NAME}:"
-          cat "$FOOTER_FILE"
+    echo -e "$FOOTER" > "$FOOTER_FILE"
+    echo "Generated footer content for ${GAME_NAME}:"
+    cat "$FOOTER_FILE"
 
       - name: Update Include File Last Modified Date
         run: |
+          # Set timezone to UTC
           export TZ=UTC
+
+          # Get the current timestamp in UTC
           TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M:%S")
+
+          # Read the current content of _data/include_files.yml
           INCLUDE_FILES_YML="_data/include_files.yml"
+
+          # Check if the include file has been modified
           if git diff --quiet _includes/${{ matrix.game }}.html; then
             echo "_includes/${{ matrix.game }}.html has not been modified. Skipping last modified date update."
           else
+            # Update the entry for the current game with the new timestamp
             if grep -q "${{ matrix.game }}.html:" "$INCLUDE_FILES_YML"; then
+              # Update the existing entry with the new timestamp
               sed -i "/${{ matrix.game }}.html:/,/last_modified:/s|last_modified: .*|last_modified: $TIMESTAMP|" "$INCLUDE_FILES_YML"
             else
+              # Add a new entry for the current game
               echo -e "\n${{ matrix.game }}.html:\n  last_modified: $TIMESTAMP" >> "$INCLUDE_FILES_YML"
             fi
             echo "Updated last modified date for _includes/${{ matrix.game }}.html"
           fi
+
+          # Display the updated content
+          echo "Updated content of $INCLUDE_FILES_YML:"
           cat $INCLUDE_FILES_YML
 
       - name: Configure Git
@@ -129,9 +142,17 @@ jobs:
           git add _includes/${{ matrix.game }}.html _includes/${{ matrix.game }}_post.html _includes/${{ matrix.game }}_footer.html links-json/${{ matrix.game }}.json _data/include_files.yml
           git add package.json package-lock.json || true
           git commit -m "Update ${{ matrix.game }} reward links, content, and last modified date" || true
+
+          # Stash changes before pulling
           git stash
+
+          # Pull with rebase to ensure the latest changes are included
           git pull --rebase || true
+
+          # Apply stashed changes
           git stash pop || true
+
+          # Push changes, retry if necessary
           for i in {1..5}; do
             git push https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/Prollad99/bs-net.git && break
             echo "Retry $i: Push failed, retrying in 5 seconds..."
