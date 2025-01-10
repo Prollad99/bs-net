@@ -10,7 +10,7 @@ layout: default
     <p class="card-subtitle text-muted mb-3">
       By <strong>{{ page.author }}</strong> | 
       {% if page.last_modified_at %}
-        Last updated: <strong>{{ page.last_modified_at | date: "%B %d, %Y" }}</strong>
+        Last updated: <strong><span class="last-updated" data-last-modified="{{ page.last_modified_at }}"></span></strong>
       {% endif %}
     </p>
 
