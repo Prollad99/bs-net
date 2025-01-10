@@ -8,7 +8,6 @@ layout: null
     "url": "{{ post.url | absolute_url }}",
     "date": "{{ post.date | date: '%B %d, %Y' }}",
     "content": "{{ post.content | strip_html | strip_newlines | escape }}",
-    "lang": "{{ post.lang }}",
     "app_name": "{{ post.app_name | escape }}"
   }{% if forloop.last %}{% else %},{% endif %}
   {% endfor %}
