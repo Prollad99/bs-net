@@ -3,7 +3,6 @@ layout: post
 title: "Coin Master Free Spins and Coins"
 date: 2024-06-29
 author: "BonusCollector"
-description: "Get the latest Coin Master free spins and free coins! Collect daily rewards with updated links to boost your gameplay and grow your village faster."
 permalink: /coin-master-free-spins/
 image: /assets/images/coin-master.webp
 include_file: coin-master.html
