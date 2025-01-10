@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Jackpot Party Free Coins: Daily Rewards"
+title: "Jackpot Party Free Coins"
 date: 2024-07-31
 author: "BonusCollector"
 permalink: /jackpot-party-free-coins/
