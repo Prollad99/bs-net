@@ -61,7 +61,7 @@ jobs:
         run: |
           GAME_NAME=${{ matrix.game }}
           # Fixed logic for GAME_NAME_CAPITALIZED
-          GAME_NAME_CAPITALIZED=$(echo "$GAME_NAME" | sed 's/-/ /g' | sed 's/\b./\u\1/g') # Replaces dashes with spaces and capitalizes each word
+          GAME_NAME_CAPITALIZED=$(echo "$GAME_NAME" | sed 's/-/ /g' | sed 's/\b./\U\1/g') # Replaces dashes with spaces and capitalizes each word
 
           PARAGRAPH_FILE="_includes/${GAME_NAME}_post.html"
 
@@ -80,7 +80,7 @@ jobs:
         run: |
           GAME_NAME=${{ matrix.game }}
           # Fixed logic for GAME_NAME_CAPITALIZED
-          GAME_NAME_CAPITALIZED=$(echo "$GAME_NAME" | sed 's/-/ /g' | sed 's/\b./\u\1/g') # Replaces dashes with spaces and capitalizes each word
+          GAME_NAME_CAPITALIZED=$(echo "$GAME_NAME" | sed 's/-/ /g' | sed 's/\b./\U\1/g') # Replaces dashes with spaces and capitalizes each word
 
           FOOTER_FILE="_includes/${GAME_NAME}_footer.html"
 
