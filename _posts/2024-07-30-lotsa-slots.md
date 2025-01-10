@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Lotsa Slots Free Coins: Daily Bonuses"
+title: "Lotsa Slots Free Coins"
 date: 2024-07-30
 author: "BonusCollector"
 permalink: /lotsa-slots-free-coins/
