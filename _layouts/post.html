@@ -6,30 +6,26 @@ layout: default
   <div class="card-body">
 
     <h1 class="card-title mb-4">{{ page.title }}</h1>
- 
-<p class="card-subtitle text-muted mb-3">
-  By <strong>{{ page.author }}</strong> | 
-  {% assign include_file = page.include_file | prepend: "_includes/" %}
-  {% if site.data.include_files[page.include_file].last_modified %}
-    Last updated: 
-    <strong id="last-updated" data-last-modified="{{ site.data.include_files[page.include_file].last_modified | date: "%Y-%m-%dT%H:%M:%SZ" }}"></strong>
-  {% else %}
-    Last updated: <strong>{{ page.last_modified_at | date: "%B %d, %Y" }}</strong>
-  {% endif %}
-</p>
 
-{% if page.app_name %}
-  <!-- App Install Section -->
-  <div class="d-flex align-items-center mb-3 mt-3 p-2 border rounded" style="background-color: #f8f9fa;">
-    <img src="{{ page.app_logo | default: '/assets/icons/icon-512x512.png' }}" alt="{{ page.app_name }} logo" class="mr-2" style="max-width: 40px;">
-    <div class="flex-grow-1">
-      <span class="font-weight-bold mb-0">{{ page.app_name }}</span>
+    <p class="card-subtitle text-muted mb-3">
+      By <strong>{{ page.author }}</strong> | 
+      {% if page.last_modified_at %}
+        Last updated: <strong>{{ page.last_modified_at | date: "%B %d, %Y" }}</strong>
+      {% endif %}
+    </p>
+
+    {% if page.app_name %}
+    <!-- App Install Section -->
+    <div class="d-flex align-items-center mb-3 mt-3 p-2 border rounded" style="background-color: #f8f9fa;">
+      <img src="{{ page.app_logo | default: '/assets/icons/icon-512x512.png' }}" alt="{{ page.app_name }} logo" class="mr-2" style="max-width: 40px;">
+      <div class="flex-grow-1">
+        <span class="font-weight-bold mb-0">{{ page.app_name }}</span>
+      </div>
+      <div class="ml-auto">
+        <button id="install-button" class="btn btn-primary btn-sm">Install</button>
+      </div>
     </div>
-    <div class="ml-auto">
-      <button id="install-button" class="btn btn-primary btn-sm">Install</button>
-    </div>
-  </div>
-{% endif %}
+    {% endif %}
 
     <div class="card-text">{{ content }}</div>
 
@@ -51,9 +47,8 @@ layout: default
       </a>
     </div>
 
-    <!-- List of All Posts -->
+    <!-- Search Section -->
     <h2>All Games</h2>
-
     <div class="container mt-4">
       <div class="input-group">
         <input type="search" id="search-input" class="form-control" placeholder="Search for Games..." aria-label="Search">
@@ -66,64 +61,46 @@ layout: default
       <div id="results-container" class="mt-4"></div>
     </div>
     <script>
-      var currentLang = "{{ page.lang }}";
-      var searchInput = document.getElementById('search-input');
-      var resultsContainer = document.getElementById('results-container');
-      var searchButton = document.getElementById('search-button');
+      const searchInput = document.getElementById('search-input');
+      const resultsContainer = document.getElementById('results-container');
+      const searchButton = document.getElementById('search-button');
 
       function performSearch(query) {
         fetch('{{ site.baseurl }}/search.json')
           .then(response => response.json())
           .then(data => {
-            var results = data.filter(post => post.content.includes(query) && post.lang === currentLang);
-            resultsContainer.innerHTML = '';
-            if (results.length > 0) {
-              results.forEach(result => {
-                var div = document.createElement('div');
-                div.innerHTML = '<a href="' + result.url + '">' + result.app_name + '</a>';
-                resultsContainer.appendChild(div);
-              });
-            } else {
-              resultsContainer.innerHTML = 'No results found';
-            }
+            const results = data.filter(post => post.content.includes(query));
+            resultsContainer.innerHTML = results.length > 0
+              ? results.map(result => `<div><a href="${result.url}">${result.app_name}</a></div>`).join('')
+              : 'No results found';
           });
       }
 
-      searchButton.addEventListener('click', function() {
-        var query = searchInput.value.trim();
-        if (query) {
-          performSearch(query);
-        } else {
-          resultsContainer.innerHTML = '';
-        }
+      searchButton.addEventListener('click', () => {
+        const query = searchInput.value.trim();
+        if (query) performSearch(query);
       });
 
-      searchInput.addEventListener('keypress', function(event) {
+      searchInput.addEventListener('keypress', (event) => {
         if (event.key === 'Enter') {
-          var query = searchInput.value.trim();
-          if (query) {
-            performSearch(query);
-          } else {
-            resultsContainer.innerHTML = '';
-          }
+          const query = searchInput.value.trim();
+          if (query) performSearch(query);
         }
       });
     </script>
 
+    <!-- All Posts List -->
     <ul class="list-group fixed-height-scroll">
-  {% assign current_lang = page.lang %}
-  {% assign sorted_posts = site.posts | sort: 'app_name' %}
-  {% for post in sorted_posts %}
-    {% if post.lang == current_lang %}
-      <li class="list-group-item">
-        <img src="{{ post.image }}" alt="{{ post.app_name }}" class="list-group-item-image"/>
-        <a href="{{ post.url }}">{{ post.app_name }}</a>
-      </li>
-    {% endif %}
-  {% endfor %}
-</ul>
+      {% assign sorted_posts = site.posts | sort: 'app_name' %}
+      {% for post in sorted_posts %}
+        <li class="list-group-item">
+          <img src="{{ post.image }}" alt="{{ post.app_name }}" class="list-group-item-image"/>
+          <a href="{{ post.url }}">{{ post.app_name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
 
-<!-- Install button logic -->
+    <!-- Install Button Logic -->
     <script>
       let deferredPrompt;
       const installButton = document.getElementById('install-button');
