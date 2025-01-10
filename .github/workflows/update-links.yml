@@ -57,10 +57,48 @@ jobs:
           echo "Content of _includes/${{ matrix.game }}.html:"
           cat _includes/${{ matrix.game }}.html
 
-      - name: Update Reward Page
+      - name: Generate Dynamic Post Content
         run: |
-          echo "Updated reward page for ${{ matrix.game }}:"
-          cat _includes/${{ matrix.game }}.html
+          GAME_NAME=${{ matrix.game }}
+          GAME_NAME_CAPITALIZED=$(echo "$GAME_NAME" | sed -E 's/(^|-)([a-z])/\U\2/g') # Capitalizes game name
+
+          PARAGRAPH_FILE="_includes/${GAME_NAME}_post.html"
+
+          # Template for the post content
+          PARAGRAPH="Discover Daily ${GAME_NAME_CAPITALIZED} Rewards!\n\n
+          Are you a fan of ${GAME_NAME_CAPITALIZED} and looking to enhance your gameplay? You've come to the right place! This page is dedicated to all ${GAME_NAME_CAPITALIZED} enthusiasts who are eager to claim free rewards every day. Here, you'll find the latest links to collect free spins, coins, chips, and other exciting bonuses to help you level up and enjoy the game even more.\n\n
+          ${GAME_NAME_CAPITALIZED} is an engaging and fun game that millions love to play. Whether you're aiming to reach higher levels or just enjoy the thrill of spinning, our daily reward links will keep you in the game without breaking a sweat.\n\n
+          Please note: ${GAME_NAME_CAPITALIZED} is a free-to-play app designed purely for entertainment purposes. Bonuscollector.net is an independent platform and is not affiliated with or endorsed by the creators or owners of ${GAME_NAME_CAPITALIZED}.\n\n
+          Check back daily to make sure you never miss a reward!"
+
+          echo -e "$PARAGRAPH" > "$PARAGRAPH_FILE"
+          echo "Generated post content for ${GAME_NAME}:"
+          cat "$PARAGRAPH_FILE"
+
+      - name: Generate Dynamic Footer Content
+        run: |
+          GAME_NAME=${{ matrix.game }}
+          GAME_NAME_CAPITALIZED=$(echo "$GAME_NAME" | sed -E 's/(^|-)([a-z])/\U\2/g') # Capitalizes game name
+
+          FOOTER_FILE="_includes/${GAME_NAME}_footer.html"
+
+          # Template for the footer content
+          FOOTER="### How to Claim Your ${GAME_NAME_CAPITALIZED} Rewards\n\n
+          Claiming your daily rewards in ${GAME_NAME_CAPITALIZED} is quick and easy! Just follow these simple steps:\n
+          1. Browse through the reward links provided above and select the ones you want to claim.\n
+          2. Click on a link, and it will automatically redirect you to your ${GAME_NAME_CAPITALIZED} app or website.\n
+          3. Log in with your account if prompted.\n
+          4. The reward (e.g., free spins, coins, chips, or bonuses) will be added to your account instantly.\n\n
+          **Tips for Claiming Rewards:**\n
+          - Make sure you are logged into your ${GAME_NAME_CAPITALIZED} account before clicking the links.\n
+          - Each reward link can usually be claimed only once, so check back daily for fresh links.\n
+          - If a link does not work, it might have expired. Be sure to claim rewards as soon as they are posted.\n\n
+          Enjoy your free rewards and have fun playing ${GAME_NAME_CAPITALIZED}!\n\n
+          Please note: These rewards are provided officially by ${GAME_NAME_CAPITALIZED} and collected from publicly available sources. Bonuscollector.net is not responsible for any issues with claiming rewards."
+
+          echo -e "$FOOTER" > "$FOOTER_FILE"
+          echo "Generated footer content for ${GAME_NAME}:"
+          cat "$FOOTER_FILE"
 
       - name: Update Include File Last Modified Date
         run: |
@@ -101,9 +139,9 @@ jobs:
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         run: |
-          git add _includes/${{ matrix.game }}.html links-json/${{ matrix.game }}.json _data/include_files.yml
+          git add _includes/${{ matrix.game }}.html _includes/${{ matrix.game }}_post.html _includes/${{ matrix.game }}_footer.html links-json/${{ matrix.game }}.json _data/include_files.yml
           git add package.json package-lock.json || true
-          git commit -m "Update ${{ matrix.game }} reward links and last modified date" || true
+          git commit -m "Update ${{ matrix.game }} reward links, content, and last modified date" || true
 
           # Stash changes before pulling
           git stash
