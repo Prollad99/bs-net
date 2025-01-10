@@ -2,9 +2,7 @@
 layout: post
 title: "Spin A Spell Free Spins: Collect Daily Rewards!"
 date: 2024-11-27
-author: "Admin"
-description: "Discover daily Spin A Spell free spins links to boost your magical journey and claim exclusive rewards effortlessly!"
-lang: en
+author: "BonusCollector"
 permalink: /spin-a-spell-free-spins/
 image: /assets/images/spin-a-spell.webp
 include_file: spin-a-spell.html
