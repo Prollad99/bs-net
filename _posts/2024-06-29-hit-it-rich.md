@@ -3,7 +3,6 @@ layout: post
 title: "Hit It Rich Free Coins"
 date: 2024-06-29
 author: "BonusCollector"
-description: "Collect daily free coins for Hit It Rich! Access updated links for Hit It Rich free coins and boost your slots gameplay with easy, free coin rewards every day!"
 permalink: /hit-it-rich-free-coins/
 image: /assets/images/hit-it-rich.jpeg
 include_file: hit-it-rich.html
