@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Zynga Poker Free Chips: Daily Reward Links"
+title: "Zynga Poker Free Chips"
 date: 2024-08-09
 author: "BonusCollector"
 permalink: /zynga-poker-free-chips/
