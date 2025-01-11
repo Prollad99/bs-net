@@ -7,7 +7,6 @@ permalink: /gold-fish-slots-free-coins/
 image: /assets/images/gold-fish-slots.jpg
 include_file: gold-fish-slots.html
 manifest: /manifests/gold-fish-slots.json
-app_name: "Gold Fish Slots Free Coins"
 ---
 
 {% include gold-fish-slots_post.html %}
