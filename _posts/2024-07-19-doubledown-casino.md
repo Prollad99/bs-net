@@ -7,7 +7,6 @@ permalink: /doubledown-casino-free-chips/
 image: /assets/images/doubledown-casino.jpeg
 include_file: doubledown-casino.html
 manifest: /manifests/doubledown-casino.json
-app_name: "DoubleDown Casino Free Chips"
 ---
 
 {% include doubledown-casino_post.html %}
