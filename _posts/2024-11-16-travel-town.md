@@ -2,7 +2,7 @@
 layout: post
 title: "Travel Town Free Energy"
 date: 2024-11-16
-author: "BonusCollector"
+author: "Bonus Collector"
 permalink: /travel-town-free-energy/
 image: /assets/images/travel-town.webp
 include_file: travel-town.html
