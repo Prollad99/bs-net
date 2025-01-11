@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="container">
-  <h1 class="my-4">{{ page.tag | replace: '-', ' ' }}</h1>
+  <h1 class="my-4">{{ page.title | replace: '-', ' ' }}</h1>
 
   <div class="row">
     {% assign normalized_tag = page.tag | replace: '-', ' ' %}
