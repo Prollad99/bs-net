@@ -2,7 +2,7 @@
 layout: post
 title: "Scatter Slots Free Coins"
 date: 2024-08-09
-author: "BonusCollector"
+author: "Bonus Collector"
 permalink: /scatter-slots-free-coins/
 image: /assets/images/scatter-slots.webp
 include_file: scatter-slots.html
