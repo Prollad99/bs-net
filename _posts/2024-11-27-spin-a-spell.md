@@ -2,7 +2,7 @@
 layout: post
 title: "Spin A Spell Free Spins"
 date: 2024-11-27
-author: "BonusCollector"
+author: "Bonus Collector"
 permalink: /spin-a-spell-free-spins/
 image: /assets/images/spin-a-spell.webp
 include_file: spin-a-spell.html
