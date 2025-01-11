@@ -5,7 +5,9 @@ module Jekyll
     def generate(site)
       if site.layouts.key? 'tag'
         site.tags.each do |tag, posts|
-          site.pages << TagPage.new(site, site.source, File.join('tag', tag), tag)
+          # Replace spaces with hyphens in the tag
+          sanitized_tag = tag.gsub(' ', '-')
+          site.pages << TagPage.new(site, site.source, File.join('tag', sanitized_tag), tag)
         end
       end
     end
