@@ -23,10 +23,10 @@ module Jekyll
 
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'tag.html')
-      # Set the raw tag for internal logic
-      self.data['tag'] = tag
-      # Set the title with capitalization
-      self.data['title'] = tag.split.map(&:capitalize).join(' ')
+      # Capitalize both 'tag' and 'title'
+      capitalized_tag = tag.split.map(&:capitalize).join(' ')
+      self.data['tag'] = capitalized_tag
+      self.data['title'] = capitalized_tag
     end
   end
 end
