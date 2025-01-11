@@ -2,7 +2,7 @@
 layout: post
 title: "Zynga Poker Free Chips"
 date: 2024-08-09
-author: "BonusCollector"
+author: "Bonus Collector"
 permalink: /zynga-poker-free-chips/
 image: /assets/images/zynga-poker.webp
 include_file: zynga-poker.html
