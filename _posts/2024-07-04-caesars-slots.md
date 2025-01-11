@@ -7,7 +7,6 @@ permalink: /caesars-slots-free-coins/
 image: /assets/images/caesars-slots.webp
 include_file: caesars-slots.html
 manifest: /manifests/caesars-slots.json
-app_name: "Caesars Slots Free Coins"
 ---
 
 {% include caesars-slots_post.html %}
