@@ -2,7 +2,7 @@
 layout: post
 title: "Willy Wonka Free Coins"
 date: 2024-06-30
-author: "BonusCollector"
+author: "Bonus Collector"
 permalink: /willy-wonka-free-coins/
 image: /assets/images/willy-wonka.jpeg
 include_file: willy-wonka.html
