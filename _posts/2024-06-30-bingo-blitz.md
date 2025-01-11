@@ -2,7 +2,7 @@
 layout: post
 title: "Bingo Blitz Free Credits"
 date: 2024-06-30
-author: "BonusCollector"
+author: "Bonus Collector"
 permalink: /bingo-blitz-free-credits/
 image: /assets/images/bingo-blitz.webp
 include_file: bingo-blitz.html
