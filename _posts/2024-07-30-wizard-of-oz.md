@@ -2,7 +2,7 @@
 layout: post
 title: "Wizard of Oz Free Coins and Credits"
 date: 2024-07-30
-author: "BonusCollector"
+author: "Bonus Collector"
 permalink: /wizard-of-oz-free-coins/
 image: /assets/images/wizard-of-oz.webp
 include_file: wizard-of-oz.html
