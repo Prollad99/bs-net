@@ -2,7 +2,7 @@
 layout: post
 title: "Solitaire Grand Harvest Free Coins"
 date: 2024-08-07
-author: "BonusCollector"
+author: "Bonus Collector"
 permalink: /solitaire-grand-harvest-free-coins/
 image: /assets/images/solitaire-grand-harvest.webp
 include_file: solitaire-grand-harvest.html
