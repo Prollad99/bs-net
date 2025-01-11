@@ -2,7 +2,7 @@
 layout: post
 title: "Caesars Slots Free Coins"
 date: 2024-07-04
-author: "BonusCollector"
+author: "Bonus Collector"
 permalink: /caesars-slots-free-coins/
 image: /assets/images/caesars-slots.webp
 include_file: caesars-slots.html
