@@ -4,12 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
-    {% if page.title %}
-      {{ page.title | escape }}
+  {% if page.title %}
+    {% if page.date %}
+      {{ page.title }} {{ page.date | date: "%B %Y" }} - {{ site.title }}
     {% else %}
-      {{ site.title | escape }}
+      {{ page.title }} - {{ site.title }}
     {% endif %}
-  </title>
+  {% elsif page.url == "/" or page.url == "/index.html" %}
+    {{ site.title }}
+  {% else %}
+    {{ site.title }}
+  {% endif %}
+</title>
 
   {% if page.manifest %}
     <link rel="manifest" href="{{ page.manifest }}">
@@ -43,8 +49,7 @@
   {% if page.last_modified_at %}
     <meta name="last-modified" content="{{ page.last_modified_at | date: "%Y-%m-%dT%H:%M:%S%z" }}">
   {% endif %}
-  <meta name="author" content="BonusCollector">
-  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta name="author" content="Bonus Collector">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:type" content="website">
 
