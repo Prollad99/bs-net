@@ -18,12 +18,12 @@ layout: default
   {% endif %}
 </p>
 
-    {% if page.app_name %}
+    {% if page.title %}
     <!-- App Install Section -->
     <div class="d-flex align-items-center mb-3 mt-3 p-2 border rounded" style="background-color: #f8f9fa;">
-      <img src="{{ page.app_logo | default: '/assets/icons/icon-512x512.png' }}" alt="{{ page.app_name }} logo" class="mr-2" style="max-width: 40px;">
+      <img src="{{ page.app_logo | default: '/assets/icons/icon-512x512.png' }}" alt="{{ page.title }} logo" class="mr-2" style="max-width: 40px;">
       <div class="flex-grow-1">
-        <span class="font-weight-bold mb-0">{{ page.app_name }}</span>
+        <span class="font-weight-bold mb-0">{{ page.title }}</span>
       </div>
       <div class="ml-auto">
         <button id="install-button" class="btn btn-primary btn-sm">Install</button>
@@ -75,7 +75,7 @@ layout: default
           .then(data => {
             const results = data.filter(post => post.content.includes(query));
             resultsContainer.innerHTML = results.length > 0
-              ? results.map(result => `<div><a href="${result.url}">${result.app_name}</a></div>`).join('')
+              ? results.map(result => `<div><a href="${result.url}">${result.title}</a></div>`).join('')
               : 'No results found';
           });
       }
@@ -95,11 +95,11 @@ layout: default
 
     <!-- All Posts List -->
     <ul class="list-group fixed-height-scroll">
-      {% assign sorted_posts = site.posts | sort: 'app_name' %}
+      {% assign sorted_posts = site.posts | sort: 'title' %}
       {% for post in sorted_posts %}
         <li class="list-group-item">
-          <img src="{{ post.image }}" alt="{{ post.app_name }}" class="list-group-item-image"/>
-          <a href="{{ post.url }}">{{ post.app_name }}</a>
+          <img src="{{ post.image }}" alt="{{ post.title }}" class="list-group-item-image"/>
+          <a href="{{ post.url }}">{{ post.title }}</a>
         </li>
       {% endfor %}
     </ul>
