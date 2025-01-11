@@ -2,7 +2,7 @@
 layout: post
 title: "Gold Fish Slots Free Coins"
 date: 2024-08-08
-author: "BonusCollector"
+author: "Bonus Collector"
 permalink: /gold-fish-slots-free-coins/
 image: /assets/images/gold-fish-slots.jpg
 include_file: gold-fish-slots.html
