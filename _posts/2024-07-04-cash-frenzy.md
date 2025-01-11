@@ -7,7 +7,6 @@ permalink: /cash-frenzy-free-coins/
 image: /assets/images/cash-frenzy.webp
 include_file: cash-frenzy.html
 manifest: /manifests/cash-frenzy.json
-app_name: "Cash Frenzy Free Coins"
 ---
 
 {% include cash-frenzy_post.html %}
