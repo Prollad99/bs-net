@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
   {% if page.title %}
-    {% if page.date %}
-      {{ page.title }} {{ page.date | date: "%B %Y" }} - {{ site.title }}
+    {% if page.layout == "post" %}
+      {{ page.title }} {{ "now" | date: "%B %Y" }} - {{ site.title }}
     {% else %}
       {{ page.title }} - {{ site.title }}
     {% endif %}
