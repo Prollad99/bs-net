@@ -2,7 +2,7 @@
 layout: post
 title: "Huuuge Casino Free Chips"
 date: 2024-06-29
-author: "BonusCollector"
+author: "Bonus Collector"
 permalink: /huuuge-casino-free-chips/
 image: /assets/images/huuuge-casino.webp
 include_file: huuuge-casino.html
