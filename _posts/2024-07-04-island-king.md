@@ -2,7 +2,7 @@
 layout: post
 title: "Island King Free Spins and Coins"
 date: 2024-07-04
-author: "BonusCollector"
+author: "Bonus Collector"
 permalink: /island-king-free-spins/
 image: /assets/images/island-king.jpg
 include_file: island-king.html
