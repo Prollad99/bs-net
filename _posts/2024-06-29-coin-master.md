@@ -7,7 +7,6 @@ permalink: /coin-master-free-spins/
 image: /assets/images/coin-master.webp
 include_file: coin-master.html
 manifest: /manifests/coin-master.json
-app_name: "Coin Master Free Spins"
 ---
 
 {% include coin-master_post.html %}
