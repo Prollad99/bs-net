@@ -1,10 +1,9 @@
 ---
 layout: page
 title: "Privacy Policy"
-author: "Prollad"
+author: "Bonus Collector"
 date: 2024-06-13
 permalink: /privacy-policy/
-show_language_dropdown: false
 ---
 
 ## Privacy Policy for Bonus Collector
