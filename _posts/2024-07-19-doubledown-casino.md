@@ -2,7 +2,7 @@
 layout: post
 title: "DoubleDown Casino Free Chips and Promo Codes"
 date: 2024-07-19
-author: "BonusCollector"
+author: "Bonus Collector"
 permalink: /doubledown-casino-free-chips/
 image: /assets/images/doubledown-casino.jpeg
 include_file: doubledown-casino.html
