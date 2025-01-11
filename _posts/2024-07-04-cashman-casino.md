@@ -2,7 +2,7 @@
 layout: post
 title: "Cashman Casino Free Coins"
 date: 2024-07-04
-author: "BonusCollector"
+author: "Bonus Collector"
 permalink: /cashman-casino-free-coins/
 image: /assets/images/cashman-casino.webp
 include_file: cashman-casino.html
