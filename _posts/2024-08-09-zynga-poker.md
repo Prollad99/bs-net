@@ -7,7 +7,6 @@ permalink: /zynga-poker-free-chips/
 image: /assets/images/zynga-poker.webp
 include_file: zynga-poker.html
 manifest: /manifests/zynga-poker.json
-app_name: "Zynga Poker Free Chips"
 ---
 
 {% include zynga-poker_post.html %}
