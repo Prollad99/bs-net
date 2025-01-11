@@ -2,7 +2,7 @@
 layout: post
 title: "Slotomania Free Coins"
 date: 2024-06-29
-author: "BonusCollector"
+author: "Bonus Collector"
 permalink: /slotomania-free-coins/
 image: /assets/images/gifts.svg
 include_file: slotomania.html
