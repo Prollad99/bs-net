@@ -2,7 +2,7 @@
 layout: post
 title: "Cash Frenzy Free Coins"
 date: 2024-07-04
-author: "BonusCollector"
+author: "Bonus Collector"
 permalink: /cash-frenzy-free-coins/
 image: /assets/images/cash-frenzy.webp
 include_file: cash-frenzy.html
