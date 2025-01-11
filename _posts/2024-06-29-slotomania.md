@@ -7,7 +7,6 @@ permalink: /slotomania-free-coins/
 image: /assets/images/gifts.svg
 include_file: slotomania.html
 manifest: /manifests/slotomania.json
-app_name: "Slotomania Free Coins"
 ---
 
 {% include slotomania_post.html %}
