@@ -2,7 +2,7 @@
 layout: post
 title: "DoubleU Casino Free Chips and Coins"
 date: 2024-07-19
-author: "BonusCollector"
+author: "Bonus Collector"
 permalink: /doubleu-casino-free-chips/
 image: /assets/images/doubleu-casino.jpg
 include_file: doubleu-casino.html
