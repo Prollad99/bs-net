@@ -7,7 +7,6 @@ permalink: /huuuge-casino-free-chips/
 image: /assets/images/huuuge-casino.webp
 include_file: huuuge-casino.html
 manifest: /manifests/huuuge-casino.json
-app_name: "Huuuge Casino Free Chips"
 ---
 
 {% include huuuge-casino_post.html %}
