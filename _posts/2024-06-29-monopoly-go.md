@@ -2,7 +2,7 @@
 layout: post
 title: "Monopoly Go Free Dice and Rolls"
 date: 2024-06-29
-author: "BonusCollector"
+author: "Bonus Collector"
 permalink: /monopoly-go-free-dice/
 image: /assets/images/monopoly-go.webp
 include_file: monopoly-go.html
