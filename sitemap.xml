@@ -5,20 +5,12 @@ layout: null
   <!-- Homepage URL -->
   <url>
     <loc>{{ site.url }}/</loc>
-    <priority>1.0</priority>
-    {% if site.time %}
-      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    {% endif %}
   </url>
 
   <!-- Posts -->
   {% for post in site.posts %}
     <url>
       <loc>{{ site.url }}{{ post.url }}</loc>
-      {% if post.last_modified_at %}
-        <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
-      {% endif %}
-      <priority>1.0</priority>
     </url>
   {% endfor %}
 </urlset>
