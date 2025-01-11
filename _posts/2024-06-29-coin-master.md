@@ -2,7 +2,7 @@
 layout: post
 title: "Coin Master Free Spins and Coins"
 date: 2024-06-29
-author: "BonusCollector"
+author: "Bonus Collector"
 permalink: /coin-master-free-spins/
 image: /assets/images/coin-master.webp
 include_file: coin-master.html
