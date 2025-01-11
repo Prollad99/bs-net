@@ -6,23 +6,25 @@ layout: default
   <h1 class="my-4">{{ page.tag }}</h1>
 
   <div class="row">
-    {% assign sorted_tag_posts = site.tags[page.tag] | sort: 'app_name' %}
+    {% assign sorted_tag_posts = site.tags[page.tag] | sort: 'title' %}
     {% for post in sorted_tag_posts %}
       <div class="col-md-6 mb-4">
         <div class="card shadow-sm">
           <div class="row no-gutters">
             <div class="col-4 d-flex flex-column align-items-center justify-content-center">
               {% if post.image %}
-                <img src="{{ post.image }}" class="card-img" alt="{{ post.app_name }}" style="max-width: 80px; max-height: 80px; margin: 10px;">
+                <img src="{{ post.image }}" class="card-img" alt="{{ post.title }}" style="max-width: 80px; max-height: 80px; margin: 10px;">
               {% endif %}
               <a href="{{ post.url }}" class="btn btn-primary btn-sm mt-2 mb-2">Claim Now</a>
             </div>
             <div class="col-8">
               <div class="card-body">
                 <a href="{{ post.url }}">
-                  <h5 class="card-title" style="font-size: 1rem;">{{ post.app_name }}</h5>
+                  <h5 class="card-title" style="font-size: 1rem;">{{ post.title }}</h5>
                 </a>
-                <p class="card-text" style="font-size: 0.9rem;">{{ post.description }}</p>
+                <p class="card-text" style="font-size: 0.9rem;">
+                  {{ post.content | strip_html | truncatewords: 30 }}
+                </p>
               </div>
             </div>
           </div>
