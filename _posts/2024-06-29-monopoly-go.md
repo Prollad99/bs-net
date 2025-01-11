@@ -7,7 +7,6 @@ permalink: /monopoly-go-free-dice/
 image: /assets/images/monopoly-go.webp
 include_file: monopoly-go.html
 manifest: /manifests/monopoly-go.json
-app_name: "Monopoly Go Free Dice"
 ---
 
 {% include monopoly-go_post.html %}
