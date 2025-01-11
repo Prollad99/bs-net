@@ -3,7 +3,8 @@ layout: default
 ---
 
 <div class="container">
-  <h1 class="my-4">{{ page.tag | replace: '-', ' ' }}</h1>
+  <!-- Capitalize first letter of each word in tag -->
+  <h1 class="my-4">{{ page.tag | replace: '-', ' ' | split: ' ' | map: 'capitalize' | join: ' ' }}</h1>
 
   <div class="row">
     {% assign normalized_tag = page.tag | replace: '-', ' ' %}
