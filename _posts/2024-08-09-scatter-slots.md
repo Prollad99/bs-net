@@ -7,7 +7,6 @@ permalink: /scatter-slots-free-coins/
 image: /assets/images/scatter-slots.webp
 include_file: scatter-slots.html
 manifest: /manifests/scatter-slots.json
-app_name: "Scatter Slots Free Coins"
 ---
 
 {% include scatter-slots_post.html %}
