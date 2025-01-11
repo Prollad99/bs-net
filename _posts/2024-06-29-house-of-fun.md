@@ -7,7 +7,6 @@ permalink: /house-of-fun-free-coins/
 image: /assets/images/gifts.svg
 include_file: house-of-fun.html
 manifest: /manifests/house-of-fun.json
-app_name: "House of Fun Free Coins"
 ---
 
 {% include house-of-fun_post.html %}
