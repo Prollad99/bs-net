@@ -7,7 +7,6 @@ permalink: /jackpot-world-free-coins/
 image: /assets/images/jackpot-world.webp
 include_file: jackpot-world.html
 manifest: /manifests/jackpot-world.json
-app_name: "Jackpot World Free Coins"
 ---
 
 {% include jackpot-world_post.html %}
