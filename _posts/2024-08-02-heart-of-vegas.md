@@ -2,7 +2,7 @@
 layout: post
 title: "Hearts of Vegas Free Coins"
 date: 2024-08-02
-author: "BonusCollector"
+author: "Bonus Collector"
 permalink: /hearts-of-vegas-free-coins/
 image: /assets/images/heart-of-vegas.webp
 include_file: heart-of-vegas.html
