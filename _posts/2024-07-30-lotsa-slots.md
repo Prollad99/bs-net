@@ -7,7 +7,6 @@ permalink: /lotsa-slots-free-coins/
 image: /assets/images/lotsa-slots.jpg
 include_file: lotsa-slots.html
 manifest: /manifests/lotsa-slots.json
-app_name: "Lotsa Slots Free Coins"
 ---
 
 {% include lotsa-slots_post.html %}
