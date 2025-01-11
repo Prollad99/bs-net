@@ -2,7 +2,7 @@
 layout: post
 title: "MGM Slots Live Free Chips and Coins"
 date: 2024-07-30
-author: "BonusCollector"
+author: "Bonus Collector"
 permalink: /mgm-slots-live-free-chips/
 image: /assets/images/mgm-slots-live.webp
 include_file: mgm-slots-live.html
