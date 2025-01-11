@@ -7,7 +7,6 @@ permalink: /wizard-of-oz-free-coins/
 image: /assets/images/wizard-of-oz.webp
 include_file: wizard-of-oz.html
 manifest: /manifests/wizard-of-oz.json
-app_name: "Wizard of Oz Free Coins"
 ---
 
 {% include wizard-of-oz_post.html %}
