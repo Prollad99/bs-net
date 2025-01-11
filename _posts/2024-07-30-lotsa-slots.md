@@ -2,7 +2,7 @@
 layout: post
 title: "Lotsa Slots Free Coins"
 date: 2024-07-30
-author: "BonusCollector"
+author: "Bonus Collector"
 permalink: /lotsa-slots-free-coins/
 image: /assets/images/lotsa-slots.jpg
 include_file: lotsa-slots.html
