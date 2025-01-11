@@ -7,7 +7,6 @@ permalink: /hearts-of-vegas-free-coins/
 image: /assets/images/heart-of-vegas.webp
 include_file: heart-of-vegas.html
 manifest: /manifests/heart-of-vegas.json
-app_name: "Heart of Vegas Free Coins"
 ---
 
 {% include heart-of-vegas_post.html %}
