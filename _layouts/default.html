@@ -46,10 +46,6 @@
   </script>
 
   <!-- Meta Tags -->
-  {% if page.last_modified_at %}
-    <meta name="last-modified" content="{{ page.last_modified_at | date: "%Y-%m-%dT%H:%M:%S%z" }}">
-  {% endif %}
-  <meta name="author" content="Bonus Collector">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:type" content="website">
 
