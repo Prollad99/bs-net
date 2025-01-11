@@ -2,7 +2,7 @@
 layout: post
 title: "Jackpot Party Free Coins"
 date: 2024-07-31
-author: "BonusCollector"
+author: "Bonus Collector"
 permalink: /jackpot-party-free-coins/
 image: /assets/images/jackpot-party.webp
 include_file: jackpot-party.html
