@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:sitemap="http://www.sitemaps.org/schemas/sitemap/0.9">
   <xsl:output method="html" encoding="UTF-8" indent="yes" />
-  
   <xsl:template match="/">
     <html>
       <head>
@@ -44,15 +43,15 @@
             </tr>
           </thead>
           <tbody>
-            <xsl:for-each select="urlset/url">
+            <xsl:for-each select="sitemap:urlset/sitemap:url">
               <tr>
                 <td>
-                  <a href="{loc}">
-                    <xsl:value-of select="loc" />
+                  <a href="{sitemap:loc}">
+                    <xsl:value-of select="sitemap:loc" />
                   </a>
                 </td>
                 <td>
-                  <xsl:value-of select="lastmod" />
+                  <xsl:value-of select="sitemap:lastmod" />
                 </td>
               </tr>
             </xsl:for-each>
