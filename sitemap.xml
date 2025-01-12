@@ -6,16 +6,22 @@ layout: null
   <!-- Sitemap for Posts -->
   <sitemap>
     <loc>{{ site.url }}/post-sitemap.xml</loc>
+    {% assign post_sitemap_last_modified = site.time | date: "%Y-%m-%dT%H:%M:%S%:z" %}
+    <lastmod>{{ post_sitemap_last_modified }}</lastmod>
   </sitemap>
 
   <!-- Sitemap for Pages -->
   <sitemap>
     <loc>{{ site.url }}/page-sitemap.xml</loc>
+    {% assign page_sitemap_last_modified = site.time | date: "%Y-%m-%dT%H:%M:%S%:z" %}
+    <lastmod>{{ page_sitemap_last_modified }}</lastmod>
   </sitemap>
 
   <!-- Sitemap for Tag Pages -->
   <sitemap>
     <loc>{{ site.url }}/post_tag-sitemap.xml</loc>
+    {% assign tag_sitemap_last_modified = site.time | date: "%Y-%m-%dT%H:%M:%S%:z" %}
+    <lastmod>{{ tag_sitemap_last_modified }}</lastmod>
   </sitemap>
 
 </sitemapindex>
