@@ -1,0 +1,18 @@
+---
+layout: null
+---
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Pages -->
+  {% for page in site.pages %}
+    <url>
+      <loc>{{ site.url }}{{ page.url }}</loc>
+      
+      {% if page.last_modified_at %}
+        <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      
+    </url>
+  {% endfor %}
+
+</urlset>
