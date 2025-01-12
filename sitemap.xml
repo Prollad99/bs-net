@@ -25,10 +25,15 @@ layout: null
   <sitemap>
     <loc>{{ site.url }}/post_tag-sitemap.xml</loc>
     <lastmod>
-      {% assign all_tagged_posts = site.tags | map: 'posts' | flatten %}
-      {% assign last_modified_tags = all_tagged_posts | sort: 'last_modified_at' | last %}
-      {% if last_modified_tags %}
-        {{ last_modified_tags.last_modified_at | date: "%Y-%m-%dT%H:%M:%S%:z" }}
+      {% assign all_posts_with_tags = "" %}
+      {% for tag in site.tags %}
+        {% assign all_posts_with_tags = all_posts_with_tags | append: tag[1] | split: ',' %}
+      {% endfor %}
+      {% assign unique_posts_with_tags = all_posts_with_tags | uniq %}
+      {% assign sorted_posts_with_tags = unique_posts_with_tags | sort: 'last_modified_at' %}
+      {% assign last_modified_post = sorted_posts_with_tags | last %}
+      {% if last_modified_post %}
+        {{ last_modified_post.last_modified_at | date: "%Y-%m-%dT%H:%M:%S%:z" }}
       {% endif %}
     </lastmod>
   </sitemap>
