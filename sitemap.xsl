@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:sitemap="http://www.sitemaps.org/schemas/sitemap/0.9">
   <xsl:output method="html" encoding="UTF-8" indent="yes" />
   <xsl:template match="/">
     <html>
@@ -9,7 +9,7 @@
           body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 0;
+            margin: 20px;
             padding: 20px;
             background-color: #f9f9f9;
           }
@@ -43,15 +43,15 @@
             </tr>
           </thead>
           <tbody>
-            <xsl:for-each select="sitemapindex/sitemap">
+            <xsl:for-each select="sitemap:sitemapindex/sitemap:sitemap">
               <tr>
                 <td>
-                  <a href="{loc}">
-                    <xsl:value-of select="loc" />
+                  <a href="{sitemap:loc}">
+                    <xsl:value-of select="sitemap:loc" />
                   </a>
                 </td>
                 <td>
-                  <xsl:value-of select="lastmod" />
+                  <xsl:value-of select="sitemap:lastmod" />
                 </td>
               </tr>
             </xsl:for-each>
