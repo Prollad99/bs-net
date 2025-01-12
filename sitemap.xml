@@ -7,15 +7,8 @@ layout: null
   {% for post in site.posts %}
     <url>
       <loc>{{ site.url }}{{ post.url }}</loc>
-      {% assign post_file = post.path | split: '/' | last %}
-      {% assign post_data = site.data.include_files[post_file] %}
-      <!-- Debug: Show post_file and post_data -->
-      <!-- {{ post_file }}: {{ post_data | inspect }} -->
-      {% if post_data and post_data.last_modified %}
-        <lastmod>{{ post_data.last_modified | date_to_xmlschema }}</lastmod>
-      {% else %}
-        <!-- Debug: Show missing last_modified -->
-        <!-- No last_modified for {{ post_file }} -->
+      {% if post.include_file and site.data.include_files[post.include_file] %}
+        <lastmod>{{ site.data.include_files[post.include_file].last_modified | date_to_xmlschema }}</lastmod>
       {% endif %}
     </url>
   {% endfor %}
