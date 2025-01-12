@@ -1,6 +1,8 @@
 ---
 layout: null
 ---
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="{{ site.url }}/sitemap.xsl"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Sitemap for Posts -->
@@ -21,20 +23,20 @@ layout: null
     </lastmod>
   </sitemap>
 
-  <!-- Sitemap for Tag Pages -->
+  <!-- Sitemap for Tags -->
   <sitemap>
     <loc>{{ site.url }}/post_tag-sitemap.xml</loc>
     <lastmod>
-      {% assign latest_modified_date = nil %}
+      {% assign latest_modified_tag = nil %}
       {% for tag in site.tags %}
         {% for post in tag[1] %}
-          {% if latest_modified_date == nil or post.last_modified_at > latest_modified_date %}
-            {% assign latest_modified_date = post.last_modified_at %}
+          {% if latest_modified_tag == nil or post.last_modified_at > latest_modified_tag %}
+            {% assign latest_modified_tag = post.last_modified_at %}
           {% endif %}
         {% endfor %}
       {% endfor %}
-      {% if latest_modified_date %}
-        {{ latest_modified_date | date: "%Y-%m-%dT%H:%M:%S%:z" }}
+      {% if latest_modified_tag %}
+        {{ latest_modified_tag | date: "%Y-%m-%dT%H:%M:%S%:z" }}
       {% endif %}
     </lastmod>
   </sitemap>
