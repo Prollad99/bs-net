@@ -1,0 +1,21 @@
+---
+layout: null
+---
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Sitemap for Posts -->
+  <sitemap>
+    <loc>{{ site.url }}/post-sitemap.xml</loc>
+  </sitemap>
+
+  <!-- Sitemap for Pages -->
+  <sitemap>
+    <loc>{{ site.url }}/page-sitemap.xml</loc>
+  </sitemap>
+
+  <!-- Sitemap for Tag Pages -->
+  <sitemap>
+    <loc>{{ site.url }}/post_tag-sitemap.xml</loc>
+  </sitemap>
+
+</sitemapindex>
