@@ -1,5 +1,9 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="{{ site.url }}/sitemap.xsl"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Sitemap for Posts -->
@@ -7,7 +11,9 @@
     <loc>{{ site.url }}/post-sitemap.xml</loc>
     <lastmod>
       {% assign last_modified_posts = site.posts | sort: 'last_modified_at' | last %}
-      {{ last_modified_posts.last_modified_at | date: "%Y-%m-%dT%H:%M:%S%:z" }}
+      {% if last_modified_posts %}
+        {{ last_modified_posts.last_modified_at | date: "%Y-%m-%dT%H:%M:%S%:z" }}
+      {% endif %}
     </lastmod>
   </sitemap>
 
@@ -16,7 +22,9 @@
     <loc>{{ site.url }}/page-sitemap.xml</loc>
     <lastmod>
       {% assign last_modified_pages = site.pages | sort: 'last_modified_at' | last %}
-      {{ last_modified_pages.last_modified_at | date: "%Y-%m-%dT%H:%M:%S%:z" }}
+      {% if last_modified_pages %}
+        {{ last_modified_pages.last_modified_at | date: "%Y-%m-%dT%H:%M:%S%:z" }}
+      {% endif %}
     </lastmod>
   </sitemap>
 
