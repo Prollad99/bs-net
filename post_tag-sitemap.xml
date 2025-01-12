@@ -7,12 +7,25 @@ layout: null
   {% for tag in site.tags %}
     <url>
       <loc>{{ site.url }}/tag/{{ tag[0] }}</loc>
-      {% assign tag_data = site.data.include_files[tag[0]] %}
-      {% if tag_data and tag_data.last_modified %}
-        <lastmod>{{ tag_data.last_modified | date_to_xmlschema }}</lastmod>
-      {% else %}
-        <!-- If no last_modified is found, it won't display -->
+      
+      {% assign latest_last_modified = nil %}
+      
+      <!-- Loop through posts for this tag and find the latest modified date -->
+      {% for post in tag[1] %}
+        {% assign include_file = post.include_file %}
+        {% assign file_info = site.data.include_files[include_file] %}
+        {% if file_info and file_info.last_modified %}
+          {% assign post_last_modified = file_info.last_modified %}
+          {% if latest_last_modified == nil or post_last_modified > latest_last_modified %}
+            {% assign latest_last_modified = post_last_modified %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      
+      {% if latest_last_modified %}
+        <lastmod>{{ latest_last_modified | date_to_xmlschema }}</lastmod>
       {% endif %}
+      
     </url>
   {% endfor %}
 
