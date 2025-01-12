@@ -6,11 +6,10 @@ layout: null
   <!-- Tags -->
   {% for tag in site.tags %}
     <url>
-      <loc>{{ site.url }}/tag/{{ tag[0] }}</loc>
+      <loc>{{ site.url }}/tag/{{ tag[0] | replace: ' ', '-' }}</loc>
       
       {% assign latest_last_modified = nil %}
       
-      <!-- Loop through posts for this tag and find the latest modified date -->
       {% for post in tag[1] %}
         {% assign include_file = post.include_file %}
         {% assign file_info = site.data.include_files[include_file] %}
