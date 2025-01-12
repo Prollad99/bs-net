@@ -2,15 +2,16 @@
 layout: null
 ---
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage URL -->
-  <url>
-    <loc>{{ site.url }}/</loc>
-  </url>
 
   <!-- Posts -->
   {% for post in site.posts %}
     <url>
       <loc>{{ site.url }}{{ post.url }}</loc>
+      {% assign post_file = post.path | split: '/' | last %}
+      {% assign post_data = site.data.include_files[post_file] %}
+      {% if post_data and post_data.last_modified %}
+        <lastmod>{{ post_data.last_modified | date_to_xmlschema }}</lastmod>
+      {% endif %}
     </url>
   {% endfor %}
 </urlset>
