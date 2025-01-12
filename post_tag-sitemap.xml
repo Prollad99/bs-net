@@ -10,6 +10,8 @@ layout: null
       {% assign tag_data = site.data.include_files[tag[0]] %}
       {% if tag_data and tag_data.last_modified %}
         <lastmod>{{ tag_data.last_modified | date_to_xmlschema }}</lastmod>
+      {% else %}
+        <!-- If no last_modified is found, it won't display -->
       {% endif %}
     </url>
   {% endfor %}
