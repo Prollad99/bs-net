@@ -10,7 +10,9 @@ layout: null
     <loc>{{ site.url }}/post-sitemap.xml</loc>
     <lastmod>
       {% assign last_modified_posts = site.posts | sort: 'last_modified_at' | last %}
-      {{ last_modified_posts.last_modified_at | date: "%Y-%m-%dT%H:%M:%S%:z" }}
+      {% if last_modified_posts %}
+        {{ last_modified_posts.last_modified_at | date: "%Y-%m-%dT%H:%M:%S%:z" }}
+      {% endif %}
     </lastmod>
   </sitemap>
 
@@ -19,7 +21,9 @@ layout: null
     <loc>{{ site.url }}/page-sitemap.xml</loc>
     <lastmod>
       {% assign last_modified_pages = site.pages | sort: 'last_modified_at' | last %}
-      {{ last_modified_pages.last_modified_at | date: "%Y-%m-%dT%H:%M:%S%:z" }}
+      {% if last_modified_pages %}
+        {{ last_modified_pages.last_modified_at | date: "%Y-%m-%dT%H:%M:%S%:z" }}
+      {% endif %}
     </lastmod>
   </sitemap>
 
