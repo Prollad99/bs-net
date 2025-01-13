@@ -5,10 +5,9 @@ module Jekyll
     def generate(site)
       if site.layouts.key? 'tag'
         site.tags.each do |tag, posts|
-          # Replace spaces with hyphens in the tag for URL purposes
           sanitized_tag = tag.gsub(' ', '-')
-          # Ensure the URL ends with a trailing slash
-          site.pages << TagPage.new(site, site.source, File.join('tag', sanitized_tag, ''), tag)
+          # Ensure directory ends with a slash
+          site.pages << TagPage.new(site, site.source, "tag/#{sanitized_tag}/", tag)
         end
       end
     end
@@ -23,9 +22,7 @@ module Jekyll
 
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'tag.html')
-      # Set the raw tag for internal logic
       self.data['tag'] = tag
-      # Set the title with capitalization
       self.data['title'] = tag.split.map(&:capitalize).join(' ')
     end
   end
