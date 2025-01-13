@@ -5,8 +5,9 @@ module Jekyll
     def generate(site)
       if site.layouts.key?('tag')
         site.tags.each do |tag, posts|
-          sanitized_tag = tag.gsub(' ', '-').downcase # Sanitize tag (lowercase, hyphens for spaces)
-          site.pages << TagPage.new(site, site.source, "tag/#{sanitized_tag}/", tag)
+          sanitized_tag = tag.gsub(' ', '-').downcase # Sanitize tag
+          dir = File.join('tag', sanitized_tag) # Enforce directory structure
+          site.pages << TagPage.new(site, site.source, dir, tag)
         end
       end
     end
@@ -16,13 +17,13 @@ module Jekyll
     def initialize(site, base, dir, tag)
       @site = site
       @base = base
-      @dir  = dir # Directory structure ensures trailing slash
-      @name = 'index.html' # File is always index.html
+      @dir = "#{dir}/" # Ensure trailing slash for directories
+      @name = 'index.html' # File name is always index.html
 
       self.process(@name)
-      self.read_yaml(File.join(base, '_layouts'), 'tag.html') # Use tag.html as the layout
+      self.read_yaml(File.join(base, '_layouts'), 'tag.html')
       self.data['tag'] = tag
-      self.data['title'] = tag.split.map(&:capitalize).join(' ') # Capitalize tag for display
+      self.data['title'] = tag.split.map(&:capitalize).join(' ')
     end
   end
 end
