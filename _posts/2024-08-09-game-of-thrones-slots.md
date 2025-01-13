@@ -7,6 +7,7 @@ permalink: /game-of-thrones-slots-free-coins/
 image: /assets/images/game-of-thrones-slots.webp
 include_file: game-of-thrones-slots.html
 manifest: /manifests/game-of-thrones-slots.json
+tags: [game of thrones coins and secrets, got slots free coins]
 ---
 
 {% include game-of-thrones-slots_post.html %}
