@@ -7,6 +7,7 @@ permalink: /island-king-free-spins/
 image: /assets/images/island-king.jpg
 include_file: island-king.html
 manifest: /manifests/island-king.json
+tags: [island king pro free spins, island king free spin and coin, free spins on island king, island king rewards]
 ---
 
 {% include island-king_post.html %}
