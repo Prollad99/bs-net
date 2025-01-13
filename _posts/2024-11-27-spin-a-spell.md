@@ -7,6 +7,7 @@ permalink: /spin-a-spell-free-spins/
 image: /assets/images/spin-a-spell.webp
 include_file: spin-a-spell.html
 manifest: /manifests/spin-a-spell.json
+tags: [spin a spell gift codes, free spins for spin a spell]
 ---
 
 {% include spin-a-spell_post.html %}
