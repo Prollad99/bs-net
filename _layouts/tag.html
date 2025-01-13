@@ -8,6 +8,7 @@ layout: default
   <div class="row">
     {% assign normalized_tag = page.tag | replace: '-', ' ' %}
     {% assign sorted_tag_posts = site.tags[normalized_tag] | sort: 'title' %}
+    
     {% if sorted_tag_posts %}
       {% for post in sorted_tag_posts %}
         <div class="col-md-6 mb-4">
