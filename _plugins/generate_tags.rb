@@ -3,17 +3,14 @@ module Jekyll
     safe true
 
     def generate(site)
-      if site.layouts.key?('tag')
+      if site.layouts.key? 'tag'
         site.tags.each do |tag, posts|
-          # Sanitize the tag for use in URL
-          sanitized_tag = tag.gsub(' ', '-').downcase
-          dir = File.join('tag', sanitized_tag) # Directory path for the tag page
-
-          # Add trailing slash to the tag URL path
-          dir = "#{dir}/" unless dir.end_with?("/")
-
-          # Generate a page for each tag
-          site.pages << TagPage.new(site, site.source, dir, tag)
+          # Replace spaces with hyphens in the tag for URL purposes
+          sanitized_tag = tag.gsub(' ', '-')
+          # Ensure the URL ends with a trailing slash
+          sanitized_tag_with_slash = "#{sanitized_tag}/"
+          # Generate the tag page
+          site.pages << TagPage.new(site, site.source, File.join('tag', sanitized_tag_with_slash), tag)
         end
       end
     end
@@ -23,13 +20,15 @@ module Jekyll
     def initialize(site, base, dir, tag)
       @site = site
       @base = base
-      @dir = dir # This will create the directory with the tag name
-      @name = 'index.html' # The name of the generated page
+      @dir  = dir
+      @name = 'index.html'
 
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'tag.html')
+      # Set the raw tag for internal logic
       self.data['tag'] = tag
-      self.data['title'] = tag.split.map(&:capitalize).join(' ') # Capitalize the tag for the title
+      # Set the title with capitalization
+      self.data['title'] = tag.split.map(&:capitalize).join(' ')
     end
   end
 end
