@@ -5,11 +5,11 @@ module Jekyll
     def generate(site)
       if site.layouts.key?('tag')
         site.tags.each do |tag, posts|
-          # Sanitize the tag name for use in URLs
+          # Sanitize the tag for use in URL
           sanitized_tag = tag.gsub(' ', '-').downcase
           dir = File.join('tag', sanitized_tag) # Directory path for the tag page
 
-          # Ensure that the URL ends with a slash
+          # Add trailing slash to the tag URL path
           dir = "#{dir}/" unless dir.end_with?("/")
 
           # Generate a page for each tag
