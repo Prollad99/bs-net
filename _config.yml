@@ -1,7 +1,10 @@
 title: "Bonus Collector"
 
-baseurl: ""
 url: "https://bonuscollector.net"
+baseurl: ""
+
+permalink: pretty
+trailing_slash: true
 
 markdown: kramdown
 
@@ -13,5 +16,3 @@ plugins:
 collections:
   pages:
     output: true
-
-permalink: pretty
