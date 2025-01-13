@@ -7,6 +7,7 @@ permalink: /quick-hit-slots-free-coins/
 image: /assets/images/quick-hit-slots.webp
 include_file: quick-hit-slots.html
 manifest: /manifests/quick-hit-slots.json
+tags: [free coins quick hit slots, free coins for quick hits]
 ---
 
 {% include quick-hit-slots_post.html %}
