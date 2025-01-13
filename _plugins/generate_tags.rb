@@ -7,8 +7,8 @@ module Jekyll
         site.tags.each do |tag, posts|
           # Replace spaces with hyphens in the tag for URL purposes
           sanitized_tag = tag.gsub(' ', '-')
-          # Generate the tag page
-          site.pages << TagPage.new(site, site.source, File.join('tag', sanitized_tag), tag)
+          # Ensure the URL ends with a trailing slash
+          site.pages << TagPage.new(site, site.source, File.join('tag', sanitized_tag, ''), tag)
         end
       end
     end
