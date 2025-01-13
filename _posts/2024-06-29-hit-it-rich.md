@@ -7,6 +7,7 @@ permalink: /hit-it-rich-free-coins/
 image: /assets/images/hit-it-rich.jpeg
 include_file: hit-it-rich.html
 manifest: /manifests/hit-it-rich.json
+tags: [free coins for hit it rich, free coins hit it rich slots, hit it rich freebies]
 ---
 
 {% include hit-it-rich_post.html %}
