@@ -7,6 +7,7 @@ permalink: /travel-town-free-energy/
 image: /assets/images/travel-town.webp
 include_file: travel-town.html
 manifest: /manifests/travel-town.json
+tags: [free energy travel town, free energy for travel town]
 ---
 
 {% include travel-town_post.html %}
