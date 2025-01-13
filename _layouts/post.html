@@ -37,7 +37,7 @@ layout: default
   <div class="tags mt-3">
     <span class="badge badge-primary">Tags:</span>
     {% for tag in page.tags %}
-      <a href="{{ site.baseurl }}/tag/{{ tag | replace: ' ', '-' }}" class="badge badge-secondary">{{ tag }}</a>
+      <a href="{{ site.baseurl }}/tag/{{ tag | replace: ' ', '-' }}/" class="badge badge-secondary">{{ tag }}</a>
     {% endfor %}
   </div>
 {% endif %}
