@@ -8,7 +8,6 @@ layout: default
   <div class="row">
     {% assign normalized_tag = page.tag | replace: '-', ' ' %}
     {% assign sorted_tag_posts = site.tags[normalized_tag] | sort: 'title' %}
-    
     {% if sorted_tag_posts %}
       {% for post in sorted_tag_posts %}
         <div class="col-md-6 mb-4">
@@ -18,11 +17,11 @@ layout: default
                 {% if post.image %}
                   <img src="{{ post.image }}" class="card-img" alt="{{ post.title }}" style="max-width: 80px; max-height: 80px; margin: 10px;">
                 {% endif %}
-                <a href="{{ post.url | append: '/' }}" class="btn btn-primary btn-sm mt-2 mb-2">Claim Now</a>
+                <a href="{{ post.url }}" class="btn btn-primary btn-sm mt-2 mb-2">Claim Now</a>
               </div>
               <div class="col-8">
                 <div class="card-body">
-                  <a href="{{ post.url | append: '/' }}">
+                  <a href="{{ post.url }}">
                     <h5 class="card-title" style="font-size: 1rem;">{{ post.title }}</h5>
                   </a>
                   <p class="card-text" style="font-size: 0.9rem;">
