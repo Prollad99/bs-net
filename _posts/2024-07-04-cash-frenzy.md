@@ -7,6 +7,7 @@ permalink: /cash-frenzy-free-coins/
 image: /assets/images/cash-frenzy.webp
 include_file: cash-frenzy.html
 manifest: /manifests/cash-frenzy.json
+tags: [cash frenzy casino free coins, free coins for cash frenzy, cash frenzy free chips]
 ---
 
 {% include cash-frenzy_post.html %}
