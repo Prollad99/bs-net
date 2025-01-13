@@ -8,7 +8,8 @@ layout: null
   <!-- Tags -->
   {% for tag in site.tags %}
     <url>
-      <loc>{{ site.url }}/tag/{{ tag[0] | replace: ' ', '-' }}</loc>
+      <!-- Ensure the tag URL includes a trailing slash -->
+      <loc>{{ site.url }}/tag/{{ tag[0] | replace: ' ', '-' }}/</loc>
 
       {% assign latest_last_modified = nil %}
 
