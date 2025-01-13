@@ -13,3 +13,5 @@ plugins:
 collections:
   pages:
     output: true
+
+permalink: pretty
