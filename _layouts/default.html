@@ -44,7 +44,11 @@
     gtag('js', new Date());
     gtag('config', 'G-EVSB78P7CF');
   </script>
-
+{% if page.url == "/" %}
+  <link rel="canonical" href="https://bonuscollector.net/" />
+{% else %}
+  <link rel="canonical" href="https://bonuscollector.net{{ page.url | replace:'index.html','' }}" />
+{% endif %}
   <!-- Meta Tags -->
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:type" content="website">
