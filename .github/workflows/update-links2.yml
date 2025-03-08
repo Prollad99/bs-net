@@ -31,10 +31,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Cache node modules
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -42,7 +42,9 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies
-        run: npm install jq axios cheerio
+        run: |
+          sudo apt-get update && sudo apt-get install -y jq
+          npm ci
 
       - name: Fetch and Update Links
         run: |
@@ -114,8 +116,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.email "prolladmail@gmail.com"
-          git config --global user.name "Prollad99"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
 
       - name: Commit and Push changes
         env:
@@ -128,7 +130,7 @@ jobs:
           git pull --rebase || true
           git stash pop || true
           for i in {1..5}; do
-            git push https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/Prollad99/bs-net.git && break
+            git push origin main && break
             echo "Retry $i: Push failed, retrying in 5 seconds..."
             sleep 5
             git pull --rebase || true
