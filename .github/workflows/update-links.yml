@@ -36,10 +36,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Cache node modules
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -47,7 +47,9 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies
-        run: npm install jq axios cheerio
+        run: |
+          sudo apt-get update && sudo apt-get install -y jq
+          npm ci
 
       - name: Fetch and Update Links
         run: |
@@ -60,12 +62,10 @@ jobs:
       - name: Generate Dynamic Post Content
         run: |
           GAME_NAME=${{ matrix.game }}
-          # Replace dashes with spaces and capitalize each word
           GAME_NAME_CAPITALIZED=$(echo "$GAME_NAME" | sed 's/-/ /g' | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) substr($i,2)}1')
 
           PARAGRAPH_FILE="_includes/${GAME_NAME}_post.html"
 
-          # Template for the post content
           PARAGRAPH="Discover Daily ${GAME_NAME_CAPITALIZED} Rewards!\n\n
           Are you a fan of ${GAME_NAME_CAPITALIZED} and looking to enhance your gameplay? You've come to the right place! This page is dedicated to all ${GAME_NAME_CAPITALIZED} enthusiasts who are eager to claim free rewards every day. Here, you'll find the latest links to collect free spins, coins, chips, and other exciting bonuses to help you level up and enjoy the game even more.\n\n
           ${GAME_NAME_CAPITALIZED} is an engaging and fun game that millions love to play. Whether you're aiming to reach higher levels or just enjoy the thrill of spinning, our daily reward links will keep you in the game without breaking a sweat.\n\n
@@ -79,12 +79,10 @@ jobs:
       - name: Generate Dynamic Footer Content
         run: |
           GAME_NAME=${{ matrix.game }}
-          # Replace dashes with spaces and capitalize each word
           GAME_NAME_CAPITALIZED=$(echo "$GAME_NAME" | sed 's/-/ /g' | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) substr($i,2)}1')
 
           FOOTER_FILE="_includes/${GAME_NAME}_footer.html"
 
-          # Template for the footer content
           FOOTER="### How to Claim Your ${GAME_NAME_CAPITALIZED} Rewards\n\n
           Claiming your daily rewards in ${GAME_NAME_CAPITALIZED} is quick and easy! Just follow these simple steps:\n
           1. Browse through the reward links provided above and select the ones you want to claim.\n
@@ -123,8 +121,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.email "prolladmail@gmail.com"
-          git config --global user.name "Prollad99"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
 
       - name: Commit and Push changes
         env:
@@ -137,7 +135,7 @@ jobs:
           git pull --rebase || true
           git stash pop || true
           for i in {1..5}; do
-            git push https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/Prollad99/bs-net.git && break
+            git push origin main && break
             echo "Retry $i: Push failed, retrying in 5 seconds..."
             sleep 5
             git pull --rebase || true
